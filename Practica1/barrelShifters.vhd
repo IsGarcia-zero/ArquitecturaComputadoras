@@ -18,7 +18,7 @@ ARCHITECTURE shifters OF barrelShifters IS
     SIGNAL salidMed : STD_LOGIC;
 
 BEGIN
-
+    --Mi divisor de frecuencias
     DivisorFrecuencia : PROCESS (clk, iniciar)
     BEGIN
         IF iniciar = '0' THEN
@@ -35,14 +35,14 @@ BEGIN
     END PROCESS DivisorFrecuencia;
 
     salidaLC <= salidaMed;
-
+    --Las opciones del shifter
     Shifter : PROCESS (salidaMed, iniciar, a, cntrl)
     BEGIN
         IF iniciar = '0' THEN
             aux <= "0000000000";
         ELSIF rising_edge(salidaMed) THEN
             IF (cntrl = '0') THEN
-                aux <= a(8 DOWNTO 0) & '0';
+                aux <= a(8 DOWNTO 0) & '0'; --LSL
             ELSE
                 aux <= a(9) & a(9 DOWNTO 1);-- Arithmetic Shifter Right
             END IF;
@@ -50,5 +50,5 @@ BEGIN
     END PROCESS Shifter;
 
     salShifters <= aux;
-
+    a <= aux;
 END ARCHITECTURE shifters;
