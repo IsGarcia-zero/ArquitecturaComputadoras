@@ -1,0 +1,38 @@
+\section{Desarrollo Experimental}
+	\setlength{\parindent}{1em}
+	\setlength{\parskip}{10pt}
+	\subsection{Objetivo Espec\'ifico}
+	\begin{enumerate}
+		\item Desarrollar en la FPGA un programa en VHDL de una ALU,  en cu\'al se puedan seleccionar tres tipos de operaciones, L\'ogicas, Aritm\'eticas y Shifters, est\'as son:
+		\begin{itemize}
+			\item L\'ogicas (A y B de 10 bits):
+			\begin{enumerate}
+				\item Negaci\'on o Complemento a 1 de A.
+				\item Complemento a 2 de A.
+				\item AND entre A y B.
+				\item OR entre A y B.
+			\end{enumerate}
+			\item Shifters (A de 10 bits):
+			\begin{enumerate}
+				\item LSL (Logical Shift Left).
+				\item ASR. (Arithmetic Shift Right).
+			\end{enumerate}
+			\item Aritm\'eticas (A y B)
+			\begin{enumerate}
+				\item Suma 1 byte c/ carry out.
+				\item Resta 1 byte.
+				\item Multiplicaci\'on de 5 bits
+			\end{enumerate}
+		\end{itemize}
+		\item Con los siguientes especificaciones:
+		\begin{itemize}
+			\item Realizar el programa en VHDL que incluya todas las operaciones b\'asicas (L\'ogicas, Shifters, Aritm\'eticas ) del tama\~no de dato correcto como se solicita en la descripci\'on.
+			\item Recuerde que todas las operaciones anteriores deben funcionar como una unidad, para este inciso se deben programar todas las opciones por componentes o multi procesos.
+			\item Para las opciones de corrimientos de debe incluir un clock para sincronizar los desplazamientos.
+			\item Todas las entradas deben ser consideradas dependiendo de la operaci\'on a realizar, estas deber\'an ser introducidas por medio de microswitches.
+			\item La asignaci\'on de pines se debe de hacer de acuerdo a la disponibilidad en las terminales de salida en la FPGA.
+			\item La salida del bloque aritm\'etico se tendr\'a que ser desplegada en el display de 7 seg. 4 digitos y a su vez la salida de los shifters y la unidad l\'ogica se  mostrara \'unicamente mediante Leds.
+		\end{itemize}
+		\item Se manejara el mismo programa del inciso anterior pero ahora todas las operaciones tanto Aritm\'eticas,  shifters  o  l\'ogicas se  mostraran mediante mensaje  de  texto  pregrabado  en memoria ROM indexada en VHDL para el texto identificador de la operaci\'on por ejemplo: SunnA,  rEstA,  nnulti,  And, or,  not,  Co1,  Co2,  ror,  roL,  LSL,LSren  tipo  ventana  deslizante display de 4 d\'igitos de tipo \'anodo com\'un de 7 seg. El cual se multiplexar\'a para que se despliegue 5 segundos antes de mostrar el resultado de la operaci\'on. Cada  una  de  las  letras  ser\'a  almacenada  en  un  solo  byte,  y  se  multiplexar\'a similar  a  los n\'umeros pero con ventana deslizante que significa que el mensaje se desplaza para mostrar todas las letras durante 5 segundos de forma autom\'atica antes de mostrar el resultado.
+	\end{enumerate}
+\clearpage
