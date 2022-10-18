@@ -34,13 +34,13 @@ BEGIN
         END IF;
     END PROCESS DivisorFrecuencia;
 
-    salidaLC <= salidaMed;
+    salidaLC <= salidMed;
     --Las opciones del shifter
-    Shifter : PROCESS (salidaMed, iniciar, a, cntrl)
+    Shifter : PROCESS (salidMed, iniciar, a, cntrl)
     BEGIN
         IF iniciar = '0' THEN
             aux <= "0000000000";
-        ELSIF rising_edge(salidaMed) THEN
+        ELSIF rising_edge(salidMed) THEN
             IF (cntrl = '0') THEN
                 aux <= a(8 DOWNTO 0) & '0'; --LSL
             ELSE
@@ -50,5 +50,4 @@ BEGIN
     END PROCESS Shifter;
 
     salShifters <= aux;
-    a <= aux;
 END ARCHITECTURE shifters;
