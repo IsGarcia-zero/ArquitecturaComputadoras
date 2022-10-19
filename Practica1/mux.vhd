@@ -10,13 +10,12 @@ entity mux is
     );
 end entity mux;
 architecture muxArch of mux is
-    signal auxSM : std_logic_vector(9 downto 0);
-    signal auxSAL: std_logic_vector(9 downto 0);
+    signal aux : std_logic_vector(9 downto 0);
 begin
-    Multiplexacion: process(a, b, sM, sA, sL, sS, salida)
+    Multiplexacion: process(a, b, sM, salida)
     begin
     if sM = "00" then --Artimethic
-        
+        aux <= salida;
     elsif sM = "01" then --Shifter
         
     elsif sM = "10" then --Logic
