@@ -9,7 +9,7 @@ entity divisorFrecuencia is
 end entity divisorFrecuencia;
 architecture divFre of divisorFrecuencia is
     SIGNAL contador : INTEGER RANGE 0 TO 49999999 := 0;
-    SIGNAL salidMed : in std_logic;
+    SIGNAL salidMed : std_logic;
 begin
     
     DivisorFrecuencia : PROCESS (clk, iniciar)
