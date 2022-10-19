@@ -1,61 +1,50 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+ENTITY logicas IS PORT (
 
-
-entity logicas is port (
-
-        a: in std_logic_vector(9 downto 0); 
-		b: in std_logic_vector(9 downto 0); 
-		clk: inout std_logic; 
-		Ya: out std_logic_vector(10 downto 0);
+	a : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	b : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	clk : INOUT STD_LOGIC;
+	Ya : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
 
 );
-		
-end logicas;
 
+END logicas;
+ARCHITECTURE Logicas OF logicas IS
+BEGIN
 
-architecture Logicas of logicas is 
+	logica : PROCESS (clk, sel, sel_esp, Aa, Ba, bandera, var)
 
+	BEGIN
 
-begin
-	
-	logica: process(clk,sel,sel_esp,Aa,Ba,bandera,var)
+		IF rising_edge(clk) THEN
+			CASE sel IS
+				WHEN "00" => --logicas
+					IF (sel_esp = "00") THEN --negacion 
+						Ya <= NOT('0' & Aa);
+					ELSIF (sel_esp = "01") THEN --complemento a 2	
+						IF ((NOT Aa) = "1111111111") THEN
+							Ya <= (NOT('1' & Aa)) + 1;
+						ELSE
+							Ya <= (NOT('0' & Aa)) + 1;
+						END IF;
+					ELSIF (sel_esp = "10") THEN --and
+						Ya <= '0' & (Aa AND Ba);
+					ELSE
+						Ya <= '0' & (Aa OR Ba); --or
+					END IF;
 
-begin 
-
-
-
-if rising_edge(clk) then
-			case sel is
-				when "00" =>   --logicas
-					if(sel_esp="00")then --negacion 
-						Ya <= not('0'&Aa);
-					elsif(sel_esp="01") then  --complemento a 2	
-						if((not Aa)="1111111111") then
-							Ya <= (not('1'&Aa))+1;
-						else
-							Ya <= (not('0'&Aa))+1;
-						end if;
-					elsif(sel_esp="10")then  --and
-						Ya<='0'&(Aa AND Ba);
-					else
-					   Ya<='0'&(Aa OR Ba);  --or
-					end if;
-					
-				when "01" =>   --shifters
-					if(cont=0) then
+				WHEN "01" => --shifters
+					IF (cont = 0) THEN
 						bandera <= '1'; --
-					else
-						Ya <= '0'&var;
-						if (cont>9) then
-							bandera <= '0';  -- 0
-						end if;
-					end if;
+					ELSE
+						Ya <= '0' & var;
+						IF (cont > 9) THEN
+							bandera <= '0'; -- 0
+						END IF;
+					END IF;
+			END PROCESS logica;
 
-
-			end process logica;
-					
-END ARCHITECTURE logicas;
-
+		END ARCHITECTURE logicas;
