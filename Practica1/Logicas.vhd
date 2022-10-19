@@ -9,11 +9,9 @@ entity logicas is port (
         a: in std_logic_vector(9 downto 0); 
 		b: in std_logic_vector(9 downto 0); 
 		clk: inout std_logic; 
-		Ya: out std_logic_vector(10 downto 0);
-
+		salida: out std_logic_vector(10 downto 0);
 );
-		
-end logicas;
+end entity logicas ;
 
 
 architecture Logicas of logicas is 
@@ -21,41 +19,27 @@ architecture Logicas of logicas is
 
 begin
 	
-	logica: process(clk,sel,sel_esp,Aa,Ba,bandera,var)
+	
+	logica : process (clk,sel,sel_esp,a,b,bandera,var)
 
 begin 
-
-
 
 if rising_edge(clk) then
 			case sel is
 				when "00" =>   --logicas
 					if(sel_esp="00")then --negacion 
-						Ya <= not('0'&Aa);
+						salida <= not('0'&a);
 					elsif(sel_esp="01") then  --complemento a 2	
 						if((not Aa)="1111111111") then
-							Ya <= (not('1'&Aa))+1;
+							salida <= (not('1'&a))+1;
 						else
-							Ya <= (not('0'&Aa))+1;
+							salida <= (not('0'&a))+1;
 						end if;
 					elsif(sel_esp="10")then  --and
-						Ya<='0'&(Aa AND Ba);
+						salida <='0'&(a AND b);
 					else
-					   Ya<='0'&(Aa OR Ba);  --or
+					   salida <='0'&(a OR b);  --or
 					end if;
-					
-				when "01" =>   --shifters
-					if(cont=0) then
-						bandera <= '1'; --
-					else
-						Ya <= '0'&var;
-						if (cont>9) then
-							bandera <= '0';  -- 0
-						end if;
-					end if;
-
-
 			end process logica;
 					
-END ARCHITECTURE logicas;
-
+end architecture logicas;
