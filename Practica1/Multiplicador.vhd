@@ -1,60 +1,84 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
---Arregla esta MIERDA
+
 entity Multiplicador is port (
     A,B : in std_logic_vector(4 downto 0);
     S : out std_logic_vector(9 downto 0);
-    CF, OvF, ZF, SF : out std_logic_vector (4 downto 0)
+	 Carry, Overflow, Zero, Sum : out std_logic
 );
 end Multiplicador;
 
 architecture Mult of Multiplicador is 
 
     signal C : std_logic_vector (24 downto 0);
-    signal S_prime : std_logic_vector (17 downto 0);
+    signal S_prime : std_logic_vector (20 downto 0);
+	 signal CF, OvF, ZF, SF : std_logic_vector (4 downto 0);
 
-    component Full_Adder_wF is PORT( 
+    component Full_Adder_Five is PORT( 
         selector : in std_logic;
-        A,B : in std_logic_vector(3 downto 0);
-        S : out std_logic_vector(3 downto 0);
+        A,B : in std_logic_vector(4 downto 0);
+        S : out std_logic_vector(4 downto 0);
         Carry, Overflow, Zero, Sum : out std_logic
     );
     end component;
 
     begin
 
+		  --Primer Sumador
         C(0 ) <= B(0) AND A(0);
         C(1 ) <= B(1) AND A(0);
         C(2 ) <= B(2) AND A(0);
         C(3 ) <= B(3) AND A(0);
         C(4 ) <= B(4) AND A(0);
+		  
+		  --Segundo Sumador
         C(5 ) <= B(0) AND A(1);
         C(6 ) <= B(1) AND A(1);
         C(7 ) <= B(2) AND A(1);
         C(8 ) <= B(3) AND A(1);
         C(9 ) <= B(4) AND A(1);
-        C(10) <= B(0) AND A(2);
+        
+		  --Tercer Sumador
+		  C(10) <= B(0) AND A(2);
         C(11) <= B(1) AND A(2);
         C(12) <= B(2) AND A(2);
         C(13) <= B(3) AND A(2);
         C(14) <= B(4) AND A(2);
-        C(15) <= B(0) AND A(3);
+        
+		  --Cuarto Sumador
+		  C(15) <= B(0) AND A(3);
         C(16) <= B(1) AND A(3);
         C(17) <= B(2) AND A(3);
         C(18) <= B(3) AND A(3);
         C(19) <= B(4) AND A(3);
-        C(20) <= B(0) AND A(4);
+        
+		  --Quinto Sumador
+		  C(20) <= B(0) AND A(4);
         C(21) <= B(1) AND A(4);
         C(22) <= B(2) AND A(4);
         C(23) <= B(3) AND A(4);
         C(24) <= B(4) AND A(4);
-                
-        S(0) <= C(0);
-        Sum1: Full_Adder_wF Port Map('0' ,C(1)      , C( 5), S_Prime( 0), CF(0), OvF(0), ZF(0), SF(0));
-        Sum2: Full_Adder_wF Port Map('0' ,S_Prime(1), C( 9), S_Prime( 5), CF(1), OvF(1), ZF(1), SF(1));
-        Sum3: Full_Adder_wF Port Map('0' ,S_Prime(5), C(17), S_Prime( 9), CF(2), OvF(2), ZF(2), SF(2));
-        Sum4: Full_Adder_wF Port Map('0' ,S_Prime(9), C(21), S_Prime(13), CF(3), OvF(3), ZF(3), SF(3));
-        
+											--Selector        A(5)           B(5)      S(5)      CF     OvF     ZF     SF
+        Sum1: Full_Adder_Five Port Map('0' ,C(4 downto 1)                , C(9 downto 5), S_Prime(4 downto 0), CF(0), OvF(0), ZF(0), SF(0));
+		  Sum2: Full_Adder_Five Port Map('0' ,S_Prime(4 downto  1) & CF(0) , C(14 downto 10), S_Prime(9 downto  5), CF(1), OvF(1), ZF(1), SF(1));
+		  Sum3: Full_Adder_Five Port Map('0' ,S_Prime(9 downto  6) & CF(1) , C(19 downto 15), S_Prime(14 downto 10), CF(2), OvF(2), ZF(2), SF(2));
+		  Sum4: Full_Adder_Five Port Map('0' ,S_Prime(14 downto 11) & CF(2), C(24 downto 20), S_Prime(20 downto 16), CF(3), OvF(3), ZF(3), SF(3));  
+		 
+		  S(0) <= C(0);
+		  S(1) <= S_Prime(0);
+		  S(2) <= S_Prime(5);
+		  S(3) <= S_Prime(10);
+		  S(4) <= S_Prime(15);
+		  S(5) <= S_Prime(16);
+		  S(6) <= S_Prime(17);
+		  S(7) <= S_Prime(18);
+		  S(8) <= S_Prime(19);
+		  S(9) <= S_Prime(20);
+		  
+		  Carry  <= CF(3);
+		  Overflow <= OvF(3);
+		  Zero <= ZF(0) AND ZF(1) AND ZF(2) AND ZF(3);
+		  Sum <= S_Prime(20);
         
 end Mult;

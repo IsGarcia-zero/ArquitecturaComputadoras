@@ -1,5 +1,5 @@
 LIBRARY IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use STD_LOGIC_1164.ALL;
 
 entity Fadder is PORT( 
     A, B, Cin: in std_logic;
