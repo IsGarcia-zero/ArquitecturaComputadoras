@@ -18,6 +18,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	signal A_Prime, B_Prime : std_logic_vector(5 downto 0);
 	signal A_Temp, B_Temp : std_logic_vector(7 downto 0);
 	signal S_Prime : std_logic_vector(7 downto 0);
+	signal S_Prime_2 : std_logic_vector(7 downto 0);
 	signal S_Temp : std_logic_vector(9 downto 0);
 	 
 	 component Full_Adder_wF is PORT( 
@@ -43,7 +44,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 A_Prime <= A(0) & A(1) & A(2) & A(3) & A(4);
 	 B_Prime <= B(0) & B(1) & B(2) & B(3) & B(4);
 	 
-	 Res: Full_Adder_wF Port Map('1',A_Temp,B_Temp,S_Prime,Carry,Overflow,Zero,Sum,Cout);
+	 Res: Full_Adder_wF Port Map('1',A_Temp,B_Temp,S_Prime_2,Carry,Overflow,Zero,Sum,Cout);
 	 Suma: Full_Adder_wF Port Map('0',A_Temp,B_Temp,S_Prime,Carry,Overflow,Zero,Sum,Cout);
 	 Mul: Multiplicador Port Map(A_Prime,B_Prime,S_Temp,Carry,Overflow,Zero,Sum);		 
 					 
@@ -56,7 +57,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			
 				when "01" =>
 					 --Resta
-					 S <= "00" & S_Prime;
+					 S <= "00" & S_Prime_2;
 			
 				when "10" =>
 					 --Multiplicacion
