@@ -34,13 +34,8 @@ architecture Adder_F OF Full_Adder_Five is
         Sum4: Fadder Port Map(A(3), B_Prime(3),     C(2), S_Prime(3), C(3));
         Sum5: Fadder Port Map(A(4), B_Prime(4),     C(3), S_Prime(4), C(4));
 
-		  S(0) <= S_Prime(0);
-		  S(1) <= S_Prime(1);
-		  S(2) <= S_Prime(2);
-		  S(3) <= S_Prime(3);
-		  S(4) <= S_Prime(4);
-		  
-        Carry <= selector XOR C(3);
+		  S <= S_Prime;
+        Carry <= selector XOR C(4);
         Overflow <= C(3) XOR C(4);
         Zero <= NOT(S_Prime(0) OR S_Prime(1) OR S_Prime(2) OR S_Prime(3) OR S_Prime(4));
         Sum <= S_Prime(4);

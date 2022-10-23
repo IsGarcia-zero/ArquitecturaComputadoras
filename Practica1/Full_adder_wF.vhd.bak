@@ -41,15 +41,7 @@ architecture Adder_wF OF Full_Adder_wF is
         Sum7: Fadder Port Map(A(6), B_Prime(6), C(5), S_Prime(6), C(6));
         Sum8: Fadder Port Map(A(7), B_Prime(7), C(6), S_Prime(7), C(7));
 
-		  S(0) <= S_Prime(0);
-		  S(1) <= S_Prime(1);
-		  S(2) <= S_Prime(2);
-		  S(3) <= S_Prime(3);
-		  S(4) <= S_Prime(4);
-		  S(5) <= S_Prime(5);
-		  S(6) <= S_Prime(6);
-		  S(7) <= S_Prime(7);
-		  
+		  S <= S_Prime;
         Carry <= selector XOR C(6);
         Overflow <= C(6) XOR C(7);
         Zero <= NOT(S_Prime(0) OR S_Prime(1) OR S_Prime(2) OR S_Prime(3) OR S_Prime(4) OR S_Prime(5) OR S_Prime(6) OR S_Prime(7));

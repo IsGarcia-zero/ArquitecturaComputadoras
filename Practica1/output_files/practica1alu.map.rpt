@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practica1alu
-Tue Oct 18 21:50:43 2022
+Sun Oct 23 15:36:48 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Oct 18 21:50:43 2022           ;
+; Analysis & Synthesis Status        ; Failed - Sun Oct 23 15:36:48 2022           ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; practica1alu                                ;
 ; Top-level Entity Name              ; practica1alu                                ;
@@ -162,12 +162,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Oct 18 21:50:31 2022
+    Info: Processing started: Sun Oct 23 15:36:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica1alu -c practica1alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file divisorFrecuencia.vhd
+    Info (12022): Found design unit 1: divisorFrecuencia-divFre File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 10
+    Info (12023): Found entity 1: divisorFrecuencia File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file barrelShifters.vhd
-    Info (12022): Found design unit 1: barrelShifters-shifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 14
+    Info (12022): Found design unit 1: barrelShifters-shifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 13
     Info (12023): Found entity 1: barrelShifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file practica1alu.bdf
     Info (12023): Found entity 1: practica1alu
@@ -177,22 +180,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file UAritme
 Info (12021): Found 2 design units, including 1 entities, in source file Multiplicador.vhd
     Info (12022): Found design unit 1: Multiplicador-Mult File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Multiplicador.vhd Line: 12
     Info (12023): Found entity 1: Multiplicador File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Multiplicador.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file Full_adder_Flag.vhd
-    Info (12022): Found design unit 1: Full_Adder_wF-Adder_wF File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_Flag.vhd Line: 12
-    Info (12023): Found entity 1: Full_Adder_wF File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_Flag.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Full_adder.vhd
     Info (12022): Found design unit 1: Fadder-FullA File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder.vhd Line: 10
     Info (12023): Found entity 1: Fadder File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Full_adder_Five.vhd
     Info (12022): Found design unit 1: Full_Adder_Five-Adder_F File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_Five.vhd Line: 12
     Info (12023): Found entity 1: Full_Adder_Five File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_Five.vhd Line: 4
-Info (12127): Elaborating entity "practica1alu" for the top level hierarchy
-Warning (12158): Entity "practica1alu" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 426 megabytes
-    Error: Processing ended: Tue Oct 18 21:50:43 2022
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:35
+Info (12021): Found 2 design units, including 1 entities, in source file Full_adder_wF.vhd
+    Info (12022): Found design unit 1: Full_Adder_wF-Adder_wF File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_wF.vhd Line: 12
+    Info (12023): Found entity 1: Full_Adder_wF File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_wF.vhd Line: 4
+Error (10515): VHDL type mismatch error at UAritmetica.vhd(84): std_logic type does not match string literal File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 84
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 424 megabytes
+    Error: Processing ended: Sun Oct 23 15:36:48 2022
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:40
 
 
