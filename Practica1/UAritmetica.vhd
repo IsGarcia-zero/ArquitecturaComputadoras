@@ -15,7 +15,7 @@ END ENTITY UAritmetica;
 
 ARCHITECTURE Aritmetica OF UAritmetica IS
 	
-	signal A_Prime, B_Prime : std_logic_vector(5 downto 0);
+	signal A_Prime, B_Prime : std_logic_vector(4 downto 0);
 	signal A_Temp, B_Temp : std_logic_vector(7 downto 0);
 	signal S_Prime   : std_logic_vector(7 downto 0);
 	signal S_Prime_2 : std_logic_vector(7 downto 0);
@@ -24,8 +24,8 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 
 	 component Full_Adder_wF is PORT( 
         selector : in std_logic;
-        A,B : in std_logic_vector(3 downto 0);
-        S : out std_logic_vector(3 downto 0);
+        A,B : in std_logic_vector(7 downto 0);
+        S : out std_logic_vector(7 downto 0);
         Carry, Overflow, Zero, Sum, Cout : out std_logic
     );
 	 end component;
@@ -33,7 +33,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 component Multiplicador is PORT( 
         A,B : in std_logic_vector(4 downto 0);
 		  S : out std_logic_vector(9 downto 0);
-        Carry, Overflow, Zero, Sum, Cout : out std_logic
+        Carry, Overflow, Zero, Sum : out std_logic
     ); 
 	 end component;
 
@@ -47,7 +47,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 
 	 Suma: Full_Adder_wF Port Map('0', A_Temp,  B_Temp ,S_Prime  ,Carry1,Overflow1,Zero1,Sum1,Cout1);
 	 Res:  Full_Adder_wF Port Map('1', A_Temp,  B_Temp ,S_Prime_2,Carry2,Overflow2,Zero2,Sum2,Cout2);
-	 Mul:  Multiplicador Port Map(     A_Prime, B_Prime,S_Temp   ,Carry3,Overflow3,Zero3,Sum3,Cout3);		 
+	 Mul:  Multiplicador Port Map(     A_Prime, B_Prime,S_Temp   ,Carry3,Overflow3,Zero3,Sum3);		 
 					 
 	 process(selector,A,B) is
 		begin
@@ -81,11 +81,11 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			
 				when others =>
 					 S <= "0000000000";
-					 Carry <= "0";
-					 Overflow <= "0";
-					 Zero <= "0";
-					 Sum <= "0";
-					 Cout <= "0";
+					 Carry <= '0';
+					 Overflow <= '0';
+					 Zero <= '0';
+					 Sum <= '0';
+					 Cout <= '0';
 		end case;
 	end process;
 END ARCHITECTURE Aritmetica;
