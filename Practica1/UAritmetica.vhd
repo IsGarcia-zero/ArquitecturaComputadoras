@@ -56,7 +56,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			case selector is
 				when "00" =>
 					 --Suma
-					 S <= S_Prime & "00";
+					 S <= "00" & S_Prime;
 					 Carry <= Carry1;
 					 Overflow <= Overflow1;
 					 Zero <= Zero1;
@@ -65,7 +65,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			
 				when "01" =>
 					 --Resta
-					 S <= S_Prime_2 & "00";
+					 S <= "00" & S_Prime_2 ;
 					 Carry <= Carry2;
 					 Overflow <= Overflow2;
 					 Zero <= Zero2;
