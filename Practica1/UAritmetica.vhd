@@ -39,6 +39,8 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 
 	 BEGIN
 	 
+	 Cout3 = '0';
+	 
 	 A_Temp <= A(7 downto 0);
 	 B_Temp <= B(7 downto 0);
 	 
@@ -54,7 +56,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			case selector is
 				when "00" =>
 					 --Suma
-					 S <= "00" & S_Prime;
+					 S <= S_Prime & "00";
 					 Carry <= Carry1;
 					 Overflow <= Overflow1;
 					 Zero <= Zero1;
