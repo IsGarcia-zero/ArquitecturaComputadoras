@@ -63,7 +63,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 			
 				when "01" =>
 					 --Resta
-					 S <= "00" & S_Prime_2;
+					 S <= S_Prime_2 & "00";
 					 Carry <= Carry2;
 					 Overflow <= Overflow2;
 					 Zero <= Zero2;
