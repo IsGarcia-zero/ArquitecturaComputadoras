@@ -2,28 +2,31 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_arith.ALL;
 USE ieee.std_logic_unsigned.ALL;
-entity Logicas is
-	port (
-		a, b: in STD_LOGIC_VECTOR(9 DOWNTO 0);
-		cntrl: in STD_LOGIC_VECTOR(1 DOWNTO 0);
-		salida: out STD_LOGIC_VECTOR(9 DOWNTO 0)
+ENTITY Logicas IS
+	PORT (
+		a, b : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		cntrl : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		clk : IN STD_LOGIC;
+		salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
-end entity Logicas;
+END ENTITY Logicas;
 
-architecture ArqLogicas of Logicas is
+ARCHITECTURE ArqLogicas OF Logicas IS
 	SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0);
-begin
-	OperacionesLogicas: process(cntrl, a, b)
-	begin
-		if cntrl = "00" then --Operacion AND
-			aux <= a and b;
-		elsif cntrl = "01" then --Operacion OR
-			aux <= a or b;
-		elsif cntrl = "10" then -- Complemento a 1
-			aux <= not a;
-		elsif cntrl = "11" then -- Complemento a 2
-			aux <= not( '0' & a ) + 1;
-		end if;
-	end process OperacionesLogicas;
+BEGIN
+	OperacionesLogicas : PROCESS (cntrl, a, b, clk)
+	BEGIN
+		IF rising_edge(clk) THEN
+			IF cntrl = "00" THEN --Operacion AND
+				aux <= a AND b;
+			ELSIF cntrl = "01" THEN --Operacion OR
+				aux <= a OR b;
+			ELSIF cntrl = "10" THEN -- Complemento a 1
+				aux <= NOT a;
+			ELSIF cntrl = "11" THEN -- Complemento a 2
+				aux <= NOT('0' & a) + 1;
+			END IF;
+		END IF;
+	END PROCESS OperacionesLogicas;
 	salida <= aux;
-end architecture ArqLogicas;
+END ARCHITECTURE ArqLogicas;
