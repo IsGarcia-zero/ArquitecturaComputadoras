@@ -31,7 +31,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 end component;
 	 
 	 component Multiplicador is PORT( 
-        A,B : in std_logic_vector(4 downto 0);
+        selector, A,B : in std_logic_vector(4 downto 0);
 		  S : out std_logic_vector(9 downto 0);
         Carry, Overflow, Zero, Sum : out std_logic
     ); 
@@ -45,11 +45,11 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	 B_Temp <= B(7 downto 0);
 	 
 	 A_Prime <= A(4 downto 0);
-	 B_Prime <= B(4 downto 0);
+	 B_Prime <= B(4 downto 0);2
 	 
 	 Suma: Full_Adder_wF Port Map('0', A_Temp,  B_Temp ,S_Prime  ,Carry1,Overflow1,Zero1,Sum1,Cout1);
 	 Res:  Full_Adder_wF Port Map('1', A_Temp,  B_Temp ,S_Prime_2,Carry2,Overflow2,Zero2,Sum2,Cout2);
-	 Mul:  Multiplicador Port Map(     A_Prime, B_Prime,S_Temp   ,Carry3,Overflow3,Zero3,Sum3);		 
+	 Mul:  Multiplicador Port Map('0', A_Prime, B_Prime,S_Temp   ,Carry3,Overflow3,Zero3,Sum3);		 
 					 
 	 process(selector,A,B) is
 		begin
@@ -80,6 +80,15 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 					 Zero <= Zero3;
 					 Sum <= Sum3;
 					 Cout <= Cout3;
+				
+				when "11" =>
+						--Dividir
+						S <= "0000000000";
+						Carry <= '0';
+						Overflow <= '0';
+						Zero <= '0';
+						Sum <= '0';
+						Cout <= '0';
 			
 				when others =>
 					 S <= "0000000000";
