@@ -60,12 +60,12 @@ architecture Mult of Multiplicador is
         C(23) <= B(3) AND A(4);
         C(24) <= B(4) AND A(4);
 											--Selector        A(5)           B(5)      S(5)      CF     OvF     ZF     SF
-        Sum1: Full_Adder_Five Port Map('0' ,C(4 downto 1) & '0'          , C(9 downto 5), S_Prime(4 downto 0), CF(0), OvF(0), ZF(0), SF(0));
-		  Sum2: Full_Adder_Five Port Map('0' ,S_Prime(4 downto  1) & CF(0) , C(14 downto 10), S_Prime(9 downto  5), CF(1), OvF(1), ZF(1), SF(1));
-		  Sum3: Full_Adder_Five Port Map('0' ,S_Prime(9 downto  6) & CF(1) , C(19 downto 15), S_Prime(14 downto 10), CF(2), OvF(2), ZF(2), SF(2));
-		  Sum4: Full_Adder_Five Port Map('0' ,S_Prime(14 downto 11) & CF(2), C(24 downto 20), S_Prime(19 downto 15), CF(3), OvF(3), ZF(3), SF(3));  
+        Sum1: Full_Adder_Five Port Map('0' ,'0' & C(3 downto 0)          , C(9 downto 5), S_Prime(4 downto 0), CF(0), OvF(0), ZF(0), SF(0));
+		  Sum2: Full_Adder_Five Port Map('0' ,S_Prime(3 downto  0) & CF(0) , C(14 downto 10), S_Prime(9 downto  5), CF(1), OvF(1), ZF(1), SF(1));
+		  Sum3: Full_Adder_Five Port Map('0' ,S_Prime(8 downto  5) & CF(1) , C(19 downto 15), S_Prime(14 downto 10), CF(2), OvF(2), ZF(2), SF(2));
+		  Sum4: Full_Adder_Five Port Map('0' ,S_Prime(13 downto 10) & CF(2), C(24 downto 20), S_Prime(19 downto 15), CF(3), OvF(3), ZF(3), SF(3));  
 		 
-		  S(0) <= C(0);
+		  S(0) <= C(4);
 		  S(1) <= S_Prime(0);
 		  S(2) <= S_Prime(5);
 		  S(3) <= S_Prime(10);
@@ -74,7 +74,7 @@ architecture Mult of Multiplicador is
 		  S(6) <= S_Prime(17);
 		  S(7) <= S_Prime(18);
 		  S(8) <= S_Prime(19);
-		  S(9) <= '0';
+		  S(9) <= CF(3);
 		  
 		  Carry  <= CF(3);
 		  Overflow <= OvF(3);
