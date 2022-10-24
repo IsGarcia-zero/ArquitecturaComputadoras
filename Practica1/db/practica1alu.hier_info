@@ -1,3 +1,761 @@
-|practica1alu
+|UAritmetica
+selector[0] => Mux0.IN4
+selector[0] => Mux1.IN4
+selector[0] => Mux2.IN2
+selector[0] => Mux3.IN2
+selector[0] => Mux4.IN2
+selector[0] => Mux5.IN2
+selector[0] => Mux6.IN2
+selector[0] => Mux7.IN2
+selector[0] => Mux8.IN2
+selector[0] => Mux9.IN2
+selector[0] => Mux10.IN2
+selector[0] => Mux11.IN2
+selector[0] => Mux12.IN2
+selector[0] => Mux13.IN2
+selector[0] => Mux14.IN3
+selector[1] => Mux0.IN3
+selector[1] => Mux1.IN3
+selector[1] => Mux2.IN1
+selector[1] => Mux3.IN1
+selector[1] => Mux4.IN1
+selector[1] => Mux5.IN1
+selector[1] => Mux6.IN1
+selector[1] => Mux7.IN1
+selector[1] => Mux8.IN1
+selector[1] => Mux9.IN1
+selector[1] => Mux10.IN1
+selector[1] => Mux11.IN1
+selector[1] => Mux12.IN1
+selector[1] => Mux13.IN1
+selector[1] => Mux14.IN2
+A[0] => Full_Adder_wF:Suma.A[0]
+A[0] => Full_Adder_wF:Res.A[0]
+A[0] => Multiplicador:Mul.A[0]
+A[1] => Full_Adder_wF:Suma.A[1]
+A[1] => Full_Adder_wF:Res.A[1]
+A[1] => Multiplicador:Mul.A[1]
+A[2] => Full_Adder_wF:Suma.A[2]
+A[2] => Full_Adder_wF:Res.A[2]
+A[2] => Multiplicador:Mul.A[2]
+A[3] => Full_Adder_wF:Suma.A[3]
+A[3] => Full_Adder_wF:Res.A[3]
+A[3] => Multiplicador:Mul.A[3]
+A[4] => Full_Adder_wF:Suma.A[4]
+A[4] => Full_Adder_wF:Res.A[4]
+A[4] => Multiplicador:Mul.A[4]
+A[5] => Full_Adder_wF:Suma.A[5]
+A[5] => Full_Adder_wF:Res.A[5]
+A[6] => Full_Adder_wF:Suma.A[6]
+A[6] => Full_Adder_wF:Res.A[6]
+A[7] => Full_Adder_wF:Suma.A[7]
+A[7] => Full_Adder_wF:Res.A[7]
+A[8] => ~NO_FANOUT~
+A[9] => ~NO_FANOUT~
+B[0] => Full_Adder_wF:Suma.B[0]
+B[0] => Full_Adder_wF:Res.B[0]
+B[0] => Multiplicador:Mul.B[0]
+B[1] => Full_Adder_wF:Suma.B[1]
+B[1] => Full_Adder_wF:Res.B[1]
+B[1] => Multiplicador:Mul.B[1]
+B[2] => Full_Adder_wF:Suma.B[2]
+B[2] => Full_Adder_wF:Res.B[2]
+B[2] => Multiplicador:Mul.B[2]
+B[3] => Full_Adder_wF:Suma.B[3]
+B[3] => Full_Adder_wF:Res.B[3]
+B[3] => Multiplicador:Mul.B[3]
+B[4] => Full_Adder_wF:Suma.B[4]
+B[4] => Full_Adder_wF:Res.B[4]
+B[4] => Multiplicador:Mul.B[4]
+B[5] => Full_Adder_wF:Suma.B[5]
+B[5] => Full_Adder_wF:Res.B[5]
+B[6] => Full_Adder_wF:Suma.B[6]
+B[6] => Full_Adder_wF:Res.B[6]
+B[7] => Full_Adder_wF:Suma.B[7]
+B[7] => Full_Adder_wF:Res.B[7]
+B[8] => ~NO_FANOUT~
+B[9] => ~NO_FANOUT~
+S[0] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
+S[1] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
+S[2] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+S[3] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[4] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[5] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[6] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[7] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[8] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[9] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+Carry << Mux10.DB_MAX_OUTPUT_PORT_TYPE
+Overflow << Mux11.DB_MAX_OUTPUT_PORT_TYPE
+Zero << Mux12.DB_MAX_OUTPUT_PORT_TYPE
+Sum << Mux13.DB_MAX_OUTPUT_PORT_TYPE
+Cout << Mux14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => B_Prime[5].IN0
+selector => B_Prime[6].IN0
+selector => B_Prime[7].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+A[5] => Fadder:Sum6.A
+A[6] => Fadder:Sum7.A
+A[7] => Fadder:Sum8.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+B[5] => B_Prime[5].IN1
+B[6] => B_Prime[6].IN1
+B[7] => B_Prime[7].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+S[5] <= Fadder:Sum6.S
+S[6] <= Fadder:Sum7.S
+S[7] <= Fadder:Sum8.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum8.S
+Cout <= Fadder:Sum8.Cout
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum6
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum7
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum8
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => B_Prime[5].IN0
+selector => B_Prime[6].IN0
+selector => B_Prime[7].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+A[5] => Fadder:Sum6.A
+A[6] => Fadder:Sum7.A
+A[7] => Fadder:Sum8.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+B[5] => B_Prime[5].IN1
+B[6] => B_Prime[6].IN1
+B[7] => B_Prime[7].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+S[5] <= Fadder:Sum6.S
+S[6] <= Fadder:Sum7.S
+S[7] <= Fadder:Sum8.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum8.S
+Cout <= Fadder:Sum8.Cout
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum6
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum7
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Full_Adder_wF:Res|Fadder:Sum8
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul
+A[0] => C.IN0
+A[0] => C[1].IN0
+A[0] => C[2].IN0
+A[0] => C[3].IN0
+A[0] => C[4].IN0
+A[1] => C[5].IN0
+A[1] => C[6].IN0
+A[1] => C[7].IN0
+A[1] => C[8].IN0
+A[1] => C[9].IN0
+A[2] => C[10].IN0
+A[2] => C[11].IN0
+A[2] => C[12].IN0
+A[2] => C[13].IN0
+A[2] => C[14].IN0
+A[3] => C[15].IN0
+A[3] => C[16].IN0
+A[3] => C[17].IN0
+A[3] => C[18].IN0
+A[3] => C[19].IN0
+A[4] => C[20].IN0
+A[4] => C[21].IN0
+A[4] => C[22].IN0
+A[4] => C[23].IN0
+A[4] => C[24].IN0
+B[0] => C.IN1
+B[0] => C[5].IN1
+B[0] => C[10].IN1
+B[0] => C[15].IN1
+B[0] => C[20].IN1
+B[1] => C[1].IN1
+B[1] => C[6].IN1
+B[1] => C[11].IN1
+B[1] => C[16].IN1
+B[1] => C[21].IN1
+B[2] => C[2].IN1
+B[2] => C[7].IN1
+B[2] => C[12].IN1
+B[2] => C[17].IN1
+B[2] => C[22].IN1
+B[3] => C[3].IN1
+B[3] => C[8].IN1
+B[3] => C[13].IN1
+B[3] => C[18].IN1
+B[3] => C[23].IN1
+B[4] => C[4].IN1
+B[4] => C[9].IN1
+B[4] => C[14].IN1
+B[4] => C[19].IN1
+B[4] => C[24].IN1
+S[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Full_Adder_Five:Sum1.S[0]
+S[2] <= Full_Adder_Five:Sum2.S[0]
+S[3] <= Full_Adder_Five:Sum3.S[0]
+S[4] <= <GND>
+S[5] <= Full_Adder_Five:Sum4.S[0]
+S[6] <= Full_Adder_Five:Sum4.S[1]
+S[7] <= Full_Adder_Five:Sum4.S[2]
+S[8] <= Full_Adder_Five:Sum4.S[3]
+S[9] <= Full_Adder_Five:Sum4.S[4]
+Carry <= Full_Adder_Five:Sum4.Carry
+Overflow <= Full_Adder_Five:Sum4.Overflow
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Full_Adder_Five:Sum4.S[4]
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum5.S
+Cout <= Fadder:Sum5.Cout
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum5.S
+Cout <= Fadder:Sum5.Cout
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum5.S
+Cout <= Fadder:Sum5.Cout
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4
+selector => B_Prime[0].IN0
+selector => B_Prime[1].IN0
+selector => B_Prime[2].IN0
+selector => B_Prime[3].IN0
+selector => B_Prime[4].IN0
+selector => Carry.IN1
+selector => Fadder:Sum1.Cin
+A[0] => Fadder:Sum1.A
+A[1] => Fadder:Sum2.A
+A[2] => Fadder:Sum3.A
+A[3] => Fadder:Sum4.A
+A[4] => Fadder:Sum5.A
+B[0] => B_Prime[0].IN1
+B[1] => B_Prime[1].IN1
+B[2] => B_Prime[2].IN1
+B[3] => B_Prime[3].IN1
+B[4] => B_Prime[4].IN1
+S[0] <= Fadder:Sum1.S
+S[1] <= Fadder:Sum2.S
+S[2] <= Fadder:Sum3.S
+S[3] <= Fadder:Sum4.S
+S[4] <= Fadder:Sum5.S
+Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Fadder:Sum5.S
+Cout <= Fadder:Sum5.Cout
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum1
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum2
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum3
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum4
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum5
+A => S.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 

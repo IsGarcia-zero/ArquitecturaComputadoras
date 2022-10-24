@@ -39,7 +39,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 
 	 BEGIN
 	 
-	 Cout3 = '0';
+	 Cout3 <= '0';
 	 
 	 A_Temp <= A(7 downto 0);
 	 B_Temp <= B(7 downto 0);
