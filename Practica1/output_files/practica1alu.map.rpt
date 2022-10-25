@@ -1,6 +1,11 @@
 Analysis & Synthesis report for practica1alu
+<<<<<<< HEAD
 Tue Oct 25 14:54:45 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+=======
+Sun Oct 23 13:14:02 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+>>>>>>> main
 
 
 ---------------------
@@ -10,6 +15,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
+<<<<<<< HEAD
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
@@ -26,13 +32,16 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  18. Post-Synthesis Netlist Statistics for Top Partition
  19. Elapsed Time Per Partition
  20. Analysis & Synthesis Messages
+=======
+  5. Analysis & Synthesis Messages
+>>>>>>> main
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -52,11 +61,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Tue Oct 25 14:54:45 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+=======
+; Analysis & Synthesis Status        ; Failed - Sun Oct 23 13:14:02 2022           ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+>>>>>>> main
 ; Revision Name                      ; practica1alu                                ;
-; Top-level Entity Name              ; UAritmetica                                 ;
+; Top-level Entity Name              ; practica1alu                                ;
 ; Family                             ; Cyclone IV E                                ;
+<<<<<<< HEAD
 ; Total logic elements               ; 177                                         ;
 ;     Total combinational functions  ; 177                                         ;
 ;     Dedicated logic registers      ; 0                                           ;
@@ -66,6 +81,17 @@ https://fpgasoftware.intel.com/eula.
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
+=======
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+>>>>>>> main
 +------------------------------------+---------------------------------------------+
 
 
@@ -75,7 +101,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; UAritmetica        ; practica1alu       ;
+; Top-level entity name                                            ; practica1alu       ; practica1alu       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,8 +186,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -171,6 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                            ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
@@ -421,24 +448,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 
 
+=======
+>>>>>>> main
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
+<<<<<<< HEAD
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
     Info: Processing started: Tue Oct 25 14:54:01 2022
+=======
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Sun Oct 23 13:13:57 2022
+>>>>>>> main
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica1alu -c practica1alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file divisorFrecuencia.vhd
-    Info (12022): Found design unit 1: divisorFrecuencia-divFre File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 10
-    Info (12023): Found entity 1: divisorFrecuencia File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file barrelShifters.vhd
-    Info (12022): Found design unit 1: barrelShifters-shifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 13
-    Info (12023): Found entity 1: barrelShifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 5
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file divisorfrecuencia.vhd
+    Info (12022): Found design unit 1: divisorFrecuencia-divFre File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 10
+    Info (12023): Found entity 1: divisorFrecuencia File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Practica1/divisorFrecuencia.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file barrelshifters.vhd
+    Info (12022): Found design unit 1: barrelShifters-shifters File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 13
+    Info (12023): Found entity 1: barrelShifters File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file practica1alu.bdf
     Info (12023): Found entity 1: practica1alu
+<<<<<<< HEAD
 Info (12021): Found 2 design units, including 1 entities, in source file UAritmetica.vhd
     Info (12022): Found design unit 1: UAritmetica-Aritmetica File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 16
     Info (12023): Found entity 1: UAritmetica File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 5
@@ -502,5 +537,14 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
     Info: Processing ended: Tue Oct 25 14:54:45 2022
     Info: Elapsed time: 00:00:44
     Info: Total CPU time (on all processors): 00:00:33
+=======
+Info (12127): Elaborating entity "practica1alu" for the top level hierarchy
+Error (12061): Can't synthesize current design -- Top partition does not contain any logic
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4788 megabytes
+    Error: Processing ended: Sun Oct 23 13:14:02 2022
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:12
+>>>>>>> main
 
 

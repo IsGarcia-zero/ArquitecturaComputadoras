@@ -11,25 +11,22 @@ ENTITY barrelShifters IS
 END ENTITY barrelShifters;
 
 ARCHITECTURE shifters OF barrelShifters IS
-
-    
-    SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0) := "0000000000";
-
+    SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0);
+    SIGNAL aux2 : STD_LOGIC_VECTOR(9 DOWNTO 0);
 BEGIN
-
+    aux <= a;
     --Las opciones del shifter
     Shifter : PROCESS (clk, iniciar, a, cntrl)
     BEGIN
-        IF iniciar = '0' THEN
-            aux <= "0000000000";
-        ELSIF rising_edge(clk) THEN
+			IF (rising_edge(clk)) THEN
             IF (cntrl = '0') THEN
-                aux <= a(8 DOWNTO 0) & '0'; --LSL
+                aux <= aux(8 DOWNTO 0) & '0';
+                salShifters <= aux; --LSL
             ELSE
-                aux <= a(9) & a(9 DOWNTO 1);-- Arithmetic Shifter Right
+                aux <= aux(9) & aux(9 DOWNTO 1);
+                salShifters <= aux;-- Arithmetic Shifter Right
             END IF;
         END IF;
     END PROCESS Shifter;
-
-    salShifters <= aux;
+    
 END ARCHITECTURE shifters;

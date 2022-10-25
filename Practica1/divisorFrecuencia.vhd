@@ -8,7 +8,7 @@ entity divisorFrecuencia is
     );
 end entity divisorFrecuencia;
 architecture divFre of divisorFrecuencia is
-    SIGNAL contador : INTEGER RANGE 0 TO 49999999 := 0;
+    SIGNAL contador : INTEGER RANGE 0 TO 9999999 := 0;
     SIGNAL salidMed : std_logic;
 begin
     
@@ -18,7 +18,7 @@ begin
             salidMed <= '0';
             contador <= 0;
         ELSIF rising_edge(clk) THEN
-            IF contador = 49999999 THEN
+            IF contador = 9999999 THEN
                 contador <= 0;
                 salidMed <= NOT salidMed;
             ELSE
