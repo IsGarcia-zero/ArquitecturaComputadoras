@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Oct 23 17:15:06 2022
+Analysis & Synthesis Status : Successful - Tue Oct 25 14:54:45 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : practica1alu
 Top-level Entity Name : UAritmetica
 Family : Cyclone IV E
-Total logic elements : 123
-    Total combinational functions : 123
+Total logic elements : 177
+    Total combinational functions : 177
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 37

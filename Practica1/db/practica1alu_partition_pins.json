@@ -64,11 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "B[4]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
@@ -76,7 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "selector[0]",
+					"name" : "B[0]",
 					"strict" : false
 				},
 				{
@@ -88,11 +88,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "selector[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "A[2]",
 					"strict" : false
 				},
 				{
@@ -100,11 +100,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
