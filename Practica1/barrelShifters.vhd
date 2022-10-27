@@ -18,7 +18,7 @@ BEGIN
     Shifter : PROCESS (clk, cntrl)
     BEGIN
         IF iniciar = '0' THEN
-            aux <= "0000";
+            aux <= "0000000000";
         ELSIF (rising_edge(clk)) THEN
             IF (cntrl = '0') THEN
                 --LSL
