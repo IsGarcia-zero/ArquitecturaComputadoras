@@ -4,10 +4,10 @@ USE IEEE.numeric_std.ALL;
 --Checa bien las entradas y las salidas de cada uno de los 
 --Archivos
 ENTITY Multiplicador IS PORT (
-    ope : IN STD_LOGIC;
-	 A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    Carry, Overflow, Zero, Sum : OUT STD_LOGIC
+		ope : IN STD_LOGIC;
+		VarA, VarB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		Salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		carryF, overflowF, zeroF, sumF : OUT STD_LOGIC
 );
 END Multiplicador;
 
@@ -28,39 +28,39 @@ ARCHITECTURE Mult OF Multiplicador IS
 BEGIN
 
     --Primer Sumador
-    C(0) <= B(0) AND A(0);
-    C(1) <= B(1) AND A(0);
-    C(2) <= B(2) AND A(0);
-    C(3) <= B(3) AND A(0);
-    C(4) <= B(4) AND A(0);
+    C(0) <= VarB(0) AND VarA(0);
+    C(1) <= VarB(1) AND VarA(0);
+    C(2) <= VarB(2) AND VarA(0);
+    C(3) <= VarB(3) AND VarA(0);
+    C(4) <= VarB(4) AND VarA(0);
 
     --Segundo Sumador
-    C(5) <= B(0) AND A(1);
-    C(6) <= B(1) AND A(1);
-    C(7) <= B(2) AND A(1);
-    C(8) <= B(3) AND A(1);
-    C(9) <= B(4) AND A(1);
+    C(5) <= VarB(0) AND VarA(1);
+    C(6) <= VarB(1) AND VarA(1);
+    C(7) <= VarB(2) AND VarA(1);
+    C(8) <= VarB(3) AND VarA(1);
+    C(9) <= VarB(4) AND VarA(1);
 
     --Tercer Sumador
-    C(10) <= B(0) AND A(2);
-    C(11) <= B(1) AND A(2);
-    C(12) <= B(2) AND A(2);
-    C(13) <= B(3) AND A(2);
-    C(14) <= B(4) AND A(2);
+    C(10) <= VarB(0) AND VarA(2);
+    C(11) <= VarB(1) AND VarA(2);
+    C(12) <= VarB(2) AND VarA(2);
+    C(13) <= VarB(3) AND VarA(2);
+    C(14) <= VarB(4) AND VarA(2);
 
     --Cuarto Sumador
-    C(15) <= B(0) AND A(3);
-    C(16) <= B(1) AND A(3);
-    C(17) <= B(2) AND A(3);
-    C(18) <= B(3) AND A(3);
-    C(19) <= B(4) AND A(3);
+    C(15) <= VarB(0) AND VarA(3);
+    C(16) <= VarB(1) AND VarA(3);
+    C(17) <= VarB(2) AND VarA(3);
+    C(18) <= VarB(3) AND VarA(3);
+    C(19) <= VarB(4) AND VarA(3);
 
     --Quinto Sumador
-    C(20) <= B(0) AND A(4);
-    C(21) <= B(1) AND A(4);
-    C(22) <= B(2) AND A(4);
-    C(23) <= B(3) AND A(4);
-    C(24) <= B(4) AND A(4);
+    C(20) <= VarB(0) AND VarA(4);
+    C(21) <= VarB(1) AND VarA(4);
+    C(22) <= VarB(2) AND VarA(4);
+    C(23) <= VarB(3) AND VarA(4);
+    C(24) <= VarB(4) AND VarA(4);
     
 	 Aux1 <= '0' & C(4 downto 1);							        
     Sum1: Full_Adder_Five Port Map(ope ,Aux1 , C(9 downto   5), S_Prime(4  downto  0), CF(0), OvF(0), ZF(0), SF(0));
@@ -74,20 +74,20 @@ BEGIN
 	 Aux4 <= CF(2) & S_Prime(14 downto 11);
 	 Sum4: Full_Adder_Five Port Map(ope ,Aux4 , C(24 downto 20), S_Prime(20 downto 16), CF(3), OvF(3), ZF(3), SF(3));  
 		 
-    S(0) <= C(4);
-    S(1) <= S_Prime(4);
-    S(2) <= S_Prime(9);
-    S(3) <= S_Prime(10);
-    S(4) <= S_Prime(14);
-    S(5) <= S_Prime(15);
-    S(6) <= S_Prime(16);
-    S(7) <= S_Prime(17);
-    S(8) <= S_Prime(18);
-    S(9) <= S_Prime(19);
+    Salida(0) <= C(4);
+    Salida(1) <= S_Prime(4);
+    Salida(2) <= S_Prime(9);
+    Salida(3) <= S_Prime(10);
+    Salida(4) <= S_Prime(14);
+    Salida(5) <= S_Prime(15);
+    Salida(6) <= S_Prime(16);
+    Salida(7) <= S_Prime(17);
+    Salida(8) <= S_Prime(18);
+    Salida(9) <= S_Prime(19);
 
-    Carry <= CF(3);
-    Overflow <= OvF(3);
-    Zero <= ZF(0) AND ZF(1) AND ZF(2) AND ZF(3);
-    Sum <= S_Prime(19);
+    carryF <= CF(3);
+    overflowF <= OvF(3);
+    zeroF <= ZF(0) AND ZF(1) AND ZF(2) AND ZF(3);
+    sumF <= S_Prime(19);
 
 END Mult;
