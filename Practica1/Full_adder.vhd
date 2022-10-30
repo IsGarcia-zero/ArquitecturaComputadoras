@@ -9,6 +9,6 @@ END Fadder;
 
 ARCHITECTURE FullA OF Fadder IS
 BEGIN
-    S <= A XOR B XOR Cin;
-    Cout <= (A AND B) OR (Cin AND (A XOR B));
+    S <= Cin XOR (A XOR B);
+    Cout <= (A AND B) OR (B AND Cin) OR (A AND Cin);
 END FullA;
