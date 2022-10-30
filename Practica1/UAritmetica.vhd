@@ -34,7 +34,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	END COMPONENT;
 
 	COMPONENT Multiplicador IS PORT (
-		selector : IN STD_LOGIC;
+		ope : IN STD_LOGIC;
 		A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 		S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 		Carry, Overflow, Zero, Sum : OUT STD_LOGIC
@@ -94,7 +94,6 @@ BEGIN
 				Sum <= '0';
 				Cout <= '0';
 				SalidaMux <= "1000";
-				
 			WHEN OTHERS =>
 				S <= "0000000000";
 				Carry <= '0';
