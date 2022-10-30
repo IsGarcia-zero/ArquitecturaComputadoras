@@ -1,12 +1,15 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
-
+--nombre de las varriables cambiaselos por si acaso, de los selectores
+--aparte de checar bien que va a entrar y salir, porq luego quien sabe
+--de donde obtienes los datos, por ejemplo el selector de los full adders
 ENTITY UAritmetica IS
 	PORT (
 		selector : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		A, B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		SalidaMux: out std_logic_vector(3 downto 0);
 		Carry, Overflow, Zero, Sum, Cout : OUT STD_LOGIC
 	);
 END ENTITY UAritmetica;
@@ -63,7 +66,7 @@ BEGIN
 				Zero <= Zero1;
 				Sum <= Sum1;
 				Cout <= Cout1;
-
+				SalidaMux <= "0001";
 			WHEN "01" =>
 				--Resta
 				S <= "00" & S_Prime_2;
@@ -72,7 +75,7 @@ BEGIN
 				Zero <= Zero2;
 				Sum <= Sum2;
 				Cout <= Cout2;
-
+				SalidaMux <= "0010";
 			WHEN "10" =>
 				--Multiplicacion
 				S <= S_Temp;
@@ -81,7 +84,7 @@ BEGIN
 				Zero <= Zero3;
 				Sum <= Sum3;
 				Cout <= Cout3;
-
+				SalidaMux <= "0100";
 			WHEN "11" =>
 				--Dividir
 				S <= "0000000000";
@@ -90,7 +93,7 @@ BEGIN
 				Zero <= '0';
 				Sum <= '0';
 				Cout <= '0';
-
+				SalidaMux <= "1000";
 			WHEN OTHERS =>
 				S <= "0000000000";
 				Carry <= '0';

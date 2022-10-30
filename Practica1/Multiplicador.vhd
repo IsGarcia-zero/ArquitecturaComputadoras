@@ -1,7 +1,8 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
-
+--Checa bien las entradas y las salidas de cada uno de los 
+--Archivos
 ENTITY Multiplicador IS PORT (
     selector, A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);

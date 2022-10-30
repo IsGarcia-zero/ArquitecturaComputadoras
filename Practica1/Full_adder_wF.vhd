@@ -31,7 +31,7 @@ BEGIN
     B_Prime(5) <= B(5) XOR selector;
     B_Prime(6) <= B(6) XOR selector;
     B_Prime(7) <= B(7) XOR selector;
-
+    --Que krajos hace S_Prime
     Sum1 : Fadder PORT MAP(A(0), B_Prime(0), selector, S_Prime(0), C(0));
     Sum2 : Fadder PORT MAP(A(1), B_Prime(1), C(0), S_Prime(1), C(1));
     Sum3 : Fadder PORT MAP(A(2), B_Prime(2), C(1), S_Prime(2), C(2));

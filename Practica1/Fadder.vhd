@@ -6,7 +6,8 @@ ENTITY Fadder IS PORT (
     S, Cout : OUT STD_LOGIC
 );
 END Fadder;
-
+--El nombre del archivo .vhdl tiene q ser el mismo que de la entidad
+--Corregi, las operaciones logicas que hacen cada uno
 ARCHITECTURE FullA OF Fadder IS
 BEGIN
     S <= Cin XOR (A XOR B);
