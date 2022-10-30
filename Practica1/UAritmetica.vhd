@@ -32,7 +32,7 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 		CarryF, OverflowF, ZeroF, SumF, CoutF : OUT STD_LOGIC
 		);
 	END COMPONENT;
-
+--Falta este
 	COMPONENT Multiplicador IS PORT (
 		ope : IN STD_LOGIC;
 		A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
