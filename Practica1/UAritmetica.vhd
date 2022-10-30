@@ -26,15 +26,16 @@ ARCHITECTURE Aritmetica OF UAritmetica IS
 	SIGNAL Carry1, Overflow1, Zero1, Sum1, Cout1, Carry2, Overflow2, Zero2, Sum2, Cout2, Carry3, Overflow3, Zero3, Sum3, Cout3 : STD_LOGIC;
 
 	COMPONENT Full_Adder_wF IS PORT (
-		selector : IN STD_LOGIC;
-		A, B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-		S : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-		Carry, Overflow, Zero, Sum, Cout : OUT STD_LOGIC
+		operation : IN STD_LOGIC;
+		Var1, Var2 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		Res : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		CarryF, OverflowF, ZeroF, SumF, CoutF : OUT STD_LOGIC
 		);
 	END COMPONENT;
 
 	COMPONENT Multiplicador IS PORT (
-		selector, A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		selector : IN STD_LOGIC;
+		A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 		S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 		Carry, Overflow, Zero, Sum : OUT STD_LOGIC
 		);
@@ -49,7 +50,6 @@ BEGIN
 
 	A_Prime <= A(4 DOWNTO 0);
 	B_Prime <= B(4 DOWNTO 0);
-	2
 
 	Suma : Full_Adder_wF PORT MAP('0', A_Temp, B_Temp, S_Prime, Carry1, Overflow1, Zero1, Sum1, Cout1);
 	Res : Full_Adder_wF PORT MAP('1', A_Temp, B_Temp, S_Prime_2, Carry2, Overflow2, Zero2, Sum2, Cout2);
@@ -94,6 +94,7 @@ BEGIN
 				Sum <= '0';
 				Cout <= '0';
 				SalidaMux <= "1000";
+				
 			WHEN OTHERS =>
 				S <= "0000000000";
 				Carry <= '0';
@@ -101,6 +102,7 @@ BEGIN
 				Zero <= '0';
 				Sum <= '0';
 				Cout <= '0';
+				SalidaMux <= "0000";
 		END CASE;
 	END PROCESS;
 END ARCHITECTURE Aritmetica;
