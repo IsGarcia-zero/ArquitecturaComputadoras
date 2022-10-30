@@ -1,14 +1,14 @@
 LIBRARY IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_1164.ALL;
 
-entity Fadder is PORT( 
-    A, B, Cin: in std_logic;
-    S, Cout: out std_logic
-    );
-end Fadder;
+ENTITY Fadder IS PORT (
+    A, B, Cin : IN STD_LOGIC;
+    S, Cout : OUT STD_LOGIC
+);
+END Fadder;
 
-architecture FullA of Fadder is 
-    Begin
-    S <= A xor B xor Cin;
-    Cout <= (A and B) or (Cin and (A xor B));
-end FullA;
+ARCHITECTURE FullA OF Fadder IS
+BEGIN
+    S <= A XOR B XOR Cin;
+    Cout <= (A AND B) OR (Cin AND (A XOR B));
+END FullA;
