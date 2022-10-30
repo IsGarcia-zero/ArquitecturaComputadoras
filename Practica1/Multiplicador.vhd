@@ -72,7 +72,7 @@ BEGIN
 	 Sum3: Full_Adder_Five Port Map(ope ,Aux3 , C(19 downto 15), S_Prime(14 downto 10), CF(2), OvF(2), ZF(2), SF(2));
 		  
 	 Aux4 <= CF(2) & S_Prime(14 downto 11);
-	 Sum4: Full_Adder_Five Port Map(ope ,Aux4 , C(24 downto 20), S_Prime(20 downto 16), CF(3), OvF(3), ZF(3), SF(3));  
+	 Sum4: Full_Adder_Five Port Map(ope ,Aux4 , C(24 downto 20), S_Prime(19 downto 15), CF(3), OvF(3), ZF(3), SF(3));  
 		 
     Salida(0) <= C(4);
     Salida(1) <= S_Prime(4);

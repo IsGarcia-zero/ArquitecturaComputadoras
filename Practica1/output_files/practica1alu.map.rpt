@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practica1alu
-Sun Oct 30 15:10:56 2022
+Sun Oct 30 15:31:25 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -10,7 +10,21 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum4"
+ 11. Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum3"
+ 12. Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum2"
+ 13. Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum1"
+ 14. Port Connectivity Checks: "Multiplicador:Mul"
+ 15. Port Connectivity Checks: "Full_Adder_wF:Res"
+ 16. Port Connectivity Checks: "Full_Adder_wF:Suma"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +51,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Oct 30 15:10:56 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 30 15:31:25 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; practica1alu                                ;
-; Top-level Entity Name              ; practica1alu                                ;
+; Top-level Entity Name              ; UAritmetica                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 114                                         ;
+;     Total combinational functions  ; 114                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 41                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -60,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; practica1alu       ; practica1alu       ;
+; Top-level entity name                                            ; UAritmetica        ; practica1alu       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,13 +170,235 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; UAritmetica.vhd                  ; yes             ; User VHDL File  ; /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd     ;         ;
+; Multiplicador.vhd                ; yes             ; User VHDL File  ; /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Multiplicador.vhd   ;         ;
+; Full_adder_wF.vhd                ; yes             ; User VHDL File  ; /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_wF.vhd   ;         ;
+; Full_adder_Five.vhd              ; yes             ; User VHDL File  ; /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_Five.vhd ;         ;
+; Fadder.vhd                       ; yes             ; User VHDL File  ; /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Fadder.vhd          ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 114               ;
+;                                             ;                   ;
+; Total combinational functions               ; 114               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 78                ;
+;     -- 3 input functions                    ; 24                ;
+;     -- <=2 input functions                  ; 12                ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 114               ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 41                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; selector[0]~input ;
+; Maximum fan-out                             ; 30                ;
+; Total fan-out                               ; 468               ;
+; Average fan-out                             ; 2.39              ;
++---------------------------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name     ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
+; |UAritmetica                 ; 114 (50)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |UAritmetica                                                    ; UAritmetica     ; work         ;
+;    |Full_Adder_wF:Res|       ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res                                  ; Full_Adder_wF   ; work         ;
+;       |Fadder:Sum2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum2                      ; Fadder          ; work         ;
+;       |Fadder:Sum3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum3                      ; Fadder          ; work         ;
+;       |Fadder:Sum4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum4                      ; Fadder          ; work         ;
+;       |Fadder:Sum5|          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum5                      ; Fadder          ; work         ;
+;       |Fadder:Sum6|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum6                      ; Fadder          ; work         ;
+;       |Fadder:Sum7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum7                      ; Fadder          ; work         ;
+;       |Fadder:Sum8|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Res|Fadder:Sum8                      ; Fadder          ; work         ;
+;    |Full_Adder_wF:Suma|      ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma                                 ; Full_Adder_wF   ; work         ;
+;       |Fadder:Sum1|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum1                     ; Fadder          ; work         ;
+;       |Fadder:Sum2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum2                     ; Fadder          ; work         ;
+;       |Fadder:Sum3|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum3                     ; Fadder          ; work         ;
+;       |Fadder:Sum4|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum4                     ; Fadder          ; work         ;
+;       |Fadder:Sum5|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum5                     ; Fadder          ; work         ;
+;       |Fadder:Sum6|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum6                     ; Fadder          ; work         ;
+;       |Fadder:Sum7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum7                     ; Fadder          ; work         ;
+;       |Fadder:Sum8|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Full_Adder_wF:Suma|Fadder:Sum8                     ; Fadder          ; work         ;
+;    |Multiplicador:Mul|       ; 40 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul                                  ; Multiplicador   ; work         ;
+;       |Full_Adder_Five:Sum1| ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1             ; Full_Adder_Five ; work         ;
+;          |Fadder:Sum1|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum1 ; Fadder          ; work         ;
+;          |Fadder:Sum2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum2 ; Fadder          ; work         ;
+;          |Fadder:Sum3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum3 ; Fadder          ; work         ;
+;          |Fadder:Sum4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum4 ; Fadder          ; work         ;
+;          |Fadder:Sum5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum5 ; Fadder          ; work         ;
+;       |Full_Adder_Five:Sum2| ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2             ; Full_Adder_Five ; work         ;
+;          |Fadder:Sum1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum1 ; Fadder          ; work         ;
+;          |Fadder:Sum2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum2 ; Fadder          ; work         ;
+;          |Fadder:Sum3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum3 ; Fadder          ; work         ;
+;          |Fadder:Sum4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum4 ; Fadder          ; work         ;
+;          |Fadder:Sum5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum5 ; Fadder          ; work         ;
+;       |Full_Adder_Five:Sum3| ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3             ; Full_Adder_Five ; work         ;
+;          |Fadder:Sum1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum1 ; Fadder          ; work         ;
+;          |Fadder:Sum2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum2 ; Fadder          ; work         ;
+;          |Fadder:Sum3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum3 ; Fadder          ; work         ;
+;          |Fadder:Sum4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum4 ; Fadder          ; work         ;
+;          |Fadder:Sum5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum5 ; Fadder          ; work         ;
+;       |Full_Adder_Five:Sum4| ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4             ; Full_Adder_Five ; work         ;
+;          |Fadder:Sum1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum1 ; Fadder          ; work         ;
+;          |Fadder:Sum2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum2 ; Fadder          ; work         ;
+;          |Fadder:Sum3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum3 ; Fadder          ; work         ;
+;          |Fadder:Sum4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum4 ; Fadder          ; work         ;
+;          |Fadder:Sum5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum5 ; Fadder          ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |UAritmetica|Mux2          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |UAritmetica|Mux8          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum4"                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; sum  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; cout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum3"                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; sum      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; cout     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum2"                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; s[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; sum      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; cout     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplicador:Mul|Full_Adder_Five:Sum1"                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; a[4]     ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; s[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; sum      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; cout     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "Multiplicador:Mul" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; ope  ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "Full_Adder_wF:Res" ;
++-----------+-------+----------+----------------+
+; Port      ; Type  ; Severity ; Details        ;
++-----------+-------+----------+----------------+
+; operation ; Input ; Info     ; Stuck at VCC   ;
++-----------+-------+----------+----------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Full_Adder_wF:Suma" ;
++-----------+-------+----------+-----------------+
+; Port      ; Type  ; Severity ; Details         ;
++-----------+-------+----------+-----------------+
+; operation ; Input ; Info     ; Stuck at GND    ;
++-----------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 41                          ;
+; cycloneiii_lcell_comb ; 115                         ;
+;     normal            ; 115                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 78                          ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 9.73                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Oct 30 15:10:41 2022
+    Info: Processing started: Sun Oct 30 15:31:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica1alu -c practica1alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -192,12 +428,47 @@ Info (12021): Found 2 design units, including 1 entities, in source file barrelS
     Info (12023): Found entity 1: barrelShifters File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/barrelShifters.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file practica1alu.bdf
     Info (12023): Found entity 1: practica1alu
-Info (12127): Elaborating entity "practica1alu" for the top level hierarchy
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 426 megabytes
-    Error: Processing ended: Sun Oct 30 15:10:56 2022
-    Error: Elapsed time: 00:00:15
-    Error: Total CPU time (on all processors): 00:00:43
+Info (12127): Elaborating entity "UAritmetica" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(64): signal "S_Prime" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(65): signal "Carry1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(66): signal "Overflow1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(67): signal "Zero1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(68): signal "Sum1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(69): signal "Cout1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(73): signal "S_Prime_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(74): signal "Carry2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(75): signal "Overflow2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(76): signal "Zero2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(77): signal "Sum2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(78): signal "Cout2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(82): signal "S_Temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(83): signal "Carry3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(84): signal "Overflow3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(85): signal "Zero3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(86): signal "Sum3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at UAritmetica.vhd(87): signal "Cout3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 87
+Info (12128): Elaborating entity "Full_Adder_wF" for hierarchy "Full_Adder_wF:Suma" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 55
+Info (12128): Elaborating entity "Fadder" for hierarchy "Full_Adder_wF:Suma|Fadder:Sum1" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Full_adder_wF.vhd Line: 36
+Info (12128): Elaborating entity "Multiplicador" for hierarchy "Multiplicador:Mul" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at Multiplicador.vhd(18): object "SF" assigned a value but never read File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Multiplicador.vhd Line: 18
+Info (12128): Elaborating entity "Full_Adder_Five" for hierarchy "Multiplicador:Mul|Full_Adder_Five:Sum1" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/Multiplicador.vhd Line: 66
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "A[8]" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 10
+    Warning (15610): No output dependent on input pin "A[9]" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B[8]" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 10
+    Warning (15610): No output dependent on input pin "B[9]" File: /home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/Practica1/UAritmetica.vhd Line: 10
+Info (21057): Implemented 155 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 114 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 455 megabytes
+    Info: Processing ended: Sun Oct 30 15:31:25 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:41
 
 
