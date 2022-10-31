@@ -1,33 +1,623 @@
 \section{C\'odigo}
-	\begin{lstlisting}[language={vhdl}, caption={Barrel Shifter (Prototipo)}, label={Script}]
+\begin{lstlisting}[language={vhdl}, caption={Selector Operaciones}, label={Script}]
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY selectorOp IS 
+	PORT(
+		a,b,c,d : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		sal, salLed : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF selectorOp IS
+BEGIN
+	
+	PROCESS(a,b,c,d,sel)
+	BEGIN
+		CASE sel IS
+			WHEN "00" => 
+				sal <= a;
+				salLed <= "0000000000";
+			WHEN "01" => 
+				sal <= "0000000000";
+				salLed <= b;
+			WHEN "10" =>
+				sal <= "0000000000";
+				salLed <= c;
+			WHEN "11" => 
+				sal <= d;
+				salLed <= d;
+		END CASE;
+	END PROCESS;
+END ARCHITECTURE;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Full adder}, label={Script}]
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY Fadder IS PORT (
+    A, B, Cin : IN STD_LOGIC;
+    S, Cout : OUT STD_LOGIC
+);
+END Fadder;
+--El nombre del archivo .vhdl tiene q ser el mismo que de la entidad
+--Corregi, las operaciones logicas que hacen cada uno
+ARCHITECTURE FullA OF Fadder IS
+BEGIN
+    S <= Cin XOR (A XOR B);
+    Cout <= (A AND B) OR (B AND Cin) OR (A AND Cin);
+END FullA;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Full adder fw}, label={Script}]
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY Full_Adder_wF IS PORT (
+		operation : IN STD_LOGIC;
+		Var1, Var2 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		Res : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		CarryF, OverflowF, ZeroF, SumF, CoutF : OUT STD_LOGIC
+);
+END Full_Adder_wF;
+
+ARCHITECTURE Adder_wF OF Full_Adder_wF IS
+
+    SIGNAL C : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    SIGNAL B_Prime : STD_LOGIC_VECTOR (7 DOWNTO 0);
+    SIGNAL S_Prime : STD_LOGIC_VECTOR (7 DOWNTO 0);
+
+    COMPONENT Fadder IS PORT (
+        A, B, Cin : IN STD_LOGIC;
+        S, Cout : OUT STD_LOGIC
+        );
+    END COMPONENT;
+
+BEGIN
+
+    B_Prime(0) <= Var2(0) XOR operation;
+    B_Prime(1) <= Var2(1) XOR operation;
+    B_Prime(2) <= Var2(2) XOR operation;
+    B_Prime(3) <= Var2(3) XOR operation;
+    B_Prime(4) <= Var2(4) XOR operation;
+    B_Prime(5) <= Var2(5) XOR operation;
+    B_Prime(6) <= Var2(6) XOR operation;
+    B_Prime(7) <= Var2(7) XOR operation;
+    
+	 --Que krajos hace S_Prime
+    Sum1 : Fadder PORT MAP(Var1(0), B_Prime(0), operation, S_Prime(0), C(0));
+    Sum2 : Fadder PORT MAP(Var1(1), B_Prime(1), C(0), S_Prime(1), C(1));
+    Sum3 : Fadder PORT MAP(Var1(2), B_Prime(2), C(1), S_Prime(2), C(2));
+    Sum4 : Fadder PORT MAP(Var1(3), B_Prime(3), C(2), S_Prime(3), C(3));
+    Sum5 : Fadder PORT MAP(Var1(4), B_Prime(4), C(3), S_Prime(4), C(4));
+    Sum6 : Fadder PORT MAP(Var1(5), B_Prime(5), C(4), S_Prime(5), C(5));
+    Sum7 : Fadder PORT MAP(Var1(6), B_Prime(6), C(5), S_Prime(6), C(6));
+    Sum8 : Fadder PORT MAP(Var1(7), B_Prime(7), C(6), S_Prime(7), C(7));
+
+    Res <= S_Prime;
+    CarryF <= operation XOR C(7);
+    OverflowF <= C(6) XOR C(7);
+    ZeroF <= NOT(S_Prime(0) OR S_Prime(1) OR S_Prime(2) OR S_Prime(3) OR S_Prime(4) OR S_Prime(5) OR S_Prime(6) OR S_Prime(7));
+    SumF <= S_Prime(7);
+    CoutF <= C(7);
+
+END Adder_wF;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Full adder 5}, label={Script}]
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY Full_Adder_Five IS PORT (
+    selector : IN STD_LOGIC;
+    A, B : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    S : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+    Carry, Overflow, Zero, Sum, Cout : OUT STD_LOGIC
+);
+END Full_Adder_Five;
+
+ARCHITECTURE Adder_F OF Full_Adder_Five IS
+
+    SIGNAL C : STD_LOGIC_VECTOR (4 DOWNTO 0);
+    SIGNAL B_Prime : STD_LOGIC_VECTOR (4 DOWNTO 0);
+    SIGNAL S_Prime : STD_LOGIC_VECTOR (4 DOWNTO 0);
+
+    COMPONENT Fadder IS PORT (
+        A, B, Cin : IN STD_LOGIC;
+        S, Cout : OUT STD_LOGIC);
+    END COMPONENT;
+
+BEGIN
+
+    B_Prime(0) <= B(0) XOR selector;
+    B_Prime(1) <= B(1) XOR selector;
+    B_Prime(2) <= B(2) XOR selector;
+    B_Prime(3) <= B(3) XOR selector;
+    B_Prime(4) <= B(4) XOR selector;
+
+    Sum1 : Fadder PORT MAP(A(0), B_Prime(0), selector, S_Prime(0), C(0));
+    Sum2 : Fadder PORT MAP(A(1), B_Prime(1), C(0), S_Prime(1), C(1));
+    Sum3 : Fadder PORT MAP(A(2), B_Prime(2), C(1), S_Prime(2), C(2));
+    Sum4 : Fadder PORT MAP(A(3), B_Prime(3), C(2), S_Prime(3), C(3));
+    Sum5 : Fadder PORT MAP(A(4), B_Prime(4), C(3), S_Prime(4), C(4));
+
+    S <= S_Prime;
+    Carry <= selector XOR C(4);
+    Overflow <= C(3) XOR C(4);
+    Zero <= NOT(S_Prime(0) OR S_Prime(1) OR S_Prime(2) OR S_Prime(3) OR S_Prime(4));
+    Sum <= S_Prime(4);
+    Cout <= C(4);
+
+END Adder_F;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Unidad Aritmetica}, label={Script}]
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
+--nombre de las varriables cambiaselos por si acaso, de los selectores
+--aparte de checar bien que va a entrar y salir, porq luego quien sabe
+--de donde obtienes los datos, por ejemplo el selector de los full adders
+ENTITY UAritmetica IS
+	PORT (
+		selector : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+		A, B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		S : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		SalidaMux: out std_logic_vector(3 downto 0);
+		Carry, Overflow, Zero, Sum, Cout : OUT STD_LOGIC
+	);
+END ENTITY UAritmetica;
 
-ENTITY barrelShifters IS
+--- Suma(1 byte), Resta(1 byte) y Multiplicacion(5 bits)
+
+ARCHITECTURE Aritmetica OF UAritmetica IS
+
+	SIGNAL A_Prime, B_Prime : STD_LOGIC_VECTOR(4 DOWNTO 0);
+	SIGNAL A_Temp, B_Temp : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL S_Prime : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL S_Prime_2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL S_Temp : STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SIGNAL Carry1, Overflow1, Zero1, Sum1, Cout1, Carry2, Overflow2, Zero2, Sum2, Cout2, Carry3, Overflow3, Zero3, Sum3, Cout3 : STD_LOGIC;
+
+	COMPONENT Full_Adder_wF IS PORT (
+		operation : IN STD_LOGIC;
+		Var1, Var2 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		Res : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		CarryF, OverflowF, ZeroF, SumF, CoutF : OUT STD_LOGIC
+		);
+	END COMPONENT;
+	
+--Falta este
+	COMPONENT Multiplicador IS PORT (
+		ope : IN STD_LOGIC;
+		VarA, VarB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		Salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		carryF, overflowF, zeroF, sumF : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+BEGIN
+
+	Cout3 <= '0';
+
+	A_Temp <= A(7 DOWNTO 0);
+	B_Temp <= B(7 DOWNTO 0);
+
+	A_Prime <= A(4 DOWNTO 0);
+	B_Prime <= B(4 DOWNTO 0);
+
+	Suma : Full_Adder_wF PORT MAP('0', A_Temp, B_Temp, S_Prime, Carry1, Overflow1, Zero1, Sum1, Cout1);
+	Res : Full_Adder_wF PORT MAP('1', A_Temp, B_Temp, S_Prime_2, Carry2, Overflow2, Zero2, Sum2, Cout2);
+	Mul : Multiplicador PORT MAP('0', A_Prime, B_Prime, S_Temp, Carry3, Overflow3, Zero3, Sum3);
+
+	PROCESS (selector, A, B) IS
+	BEGIN
+		CASE selector IS
+			WHEN "00" =>
+				--Suma
+				S <= "00" & S_Prime;
+				Carry <= Carry1;
+				Overflow <= Overflow1;
+				Zero <= Zero1;
+				Sum <= Sum1;
+				Cout <= Cout1;
+				SalidaMux <= "0001";
+			WHEN "01" =>
+				--Resta
+				S <= "00" & S_Prime_2;
+				Carry <= Carry2;
+				Overflow <= Overflow2;
+				Zero <= Zero2;
+				Sum <= Sum2;
+				Cout <= Cout2;
+				SalidaMux <= "0010";
+			WHEN "10" =>
+				--Multiplicacion
+				S <= S_Temp;
+				Carry <= Carry3;
+				Overflow <= Overflow3;
+				Zero <= Zero3;
+				Sum <= Sum3;
+				Cout <= Cout3;
+				SalidaMux <= "0100";
+			WHEN "11" =>
+				--Dividir
+				S <= "0000000000";
+				Carry <= '0';
+				Overflow <= '0';
+				Zero <= '0';
+				Sum <= '0';
+				Cout <= '0';
+				SalidaMux <= "1000";
+			WHEN OTHERS =>
+				S <= "0000000000";
+				Carry <= '0';
+				Overflow <= '0';
+				Zero <= '0';
+				Sum <= '0';
+				Cout <= '0';
+				SalidaMux <= "0000";
+		END CASE;
+	END PROCESS;
+END ARCHITECTURE Aritmetica;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={L\'ogicas}, label={Script}]
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+ENTITY Logicas IS
+	PORT (
+		a, b : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		cntrl : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		clk : IN STD_LOGIC;
+		salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		sf : OUT STD_LOGIC
+	);
+END ENTITY Logicas;
+
+ARCHITECTURE ArqLogicas OF Logicas IS
+	SIGNAL aux : STD_LOGIC_VECTOR(10 DOWNTO 0);
+BEGIN
+	OperacionesLogicas : PROCESS (cntrl, a, b, clk)
+	BEGIN
+		IF rising_edge(clk) THEN
+			IF cntrl = "00" THEN --Operacion AND
+				salida <= a AND b;
+				sf <= '0';
+			ELSIF cntrl = "01" THEN --Operacion OR
+				salida <= a OR b;
+				sf <= '0';
+			ELSIF cntrl = "10" THEN -- Complemento a 1
+				salida <= NOT a;
+				sf <= '0';
+			ELSIF cntrl = "11" THEN -- Complemento a 2
+				aux <= NOT('0' & a) + 1;
+				salida <= aux(9 DOWNTO 0);
+				sf <= aux(10);
+			END IF;
+		END IF;
+	END PROCESS OperacionesLogicas;
+END ARCHITECTURE ArqLogicas;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Letras}, label={Script}]
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY letras IS
+	PORT(
+		addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		word : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF letras IS
+
+	SUBTYPE textos IS STD_LOGIC_VECTOR(6 DOWNTO 0);
+	TYPE textos_pantalla IS ARRAY (11 DOWNTO 0) OF textos;
+	
+	CONSTANT memory : textos_pantalla := (
+		0 => "0010010",
+		1 => "1000001",
+		2 => "0101011",
+		3 => "0001000",
+		4 => "0101111",
+		5 => "0000110",
+		6 => "0000111",
+		7 => "1000111",
+		8 => "1001111",
+		9 => "0100001",
+		10 => "0100011",
+		11 => "1000110"
+		);
+BEGIN
+	PROCESS(addr)
+	BEGIN
+		CASE addr IS
+			WHEN "0000" => word <= memory(0);
+			WHEN "0001" => word <= memory(1);
+			WHEN "0010" => word <= memory(2);
+			WHEN "0011" => word <= memory(3);
+			WHEN "0100" => word <= memory(4);
+			WHEN "0101" => word <= memory(5);
+			WHEN "0110" => word <= memory(6);
+			WHEN "0111" => word <= memory(7);
+			WHEN "1000" => word <= memory(8);
+			WHEN "1001" => word <= memory(9);
+			WHEN "1010" => word <= memory(10);
+			WHEN "1011" => word <= memory(11);
+			WHEN OTHERS => word <= "1000000";
+		END CASE;
+	END PROCESS;
+END ARCHITECTURE;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Display}, label={Script}]
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED;
+USE IEEE.NUMERIC_STD;
+
+ENTITY display IS 
+	PORT(
+		en : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		operacion : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+		clk, trigger : IN STD_LOGIC;
+		d1,d2,d3,d4 : OUT STD_LOGIC;
+		a,b,c,d,e,f,g : OUT STD_LOGIC;
+		led : OUT STD_LOGIC
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF display IS
+	SIGNAL sel : INTEGER RANGE 0 TO 3 := 0;
+	SIGNAL var : INTEGER RANGE 0 TO 9999999 := 0;
+	SIGNAL seg : INTEGER RANGE 0 TO 15 := 0;
+	SIGNAL contador : INTEGER RANGE 0 TO 100 := 0;
+	SIGNAL aux : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL selector : STD_lOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL msg, message : STD_lOGIC_VECTOR(19 DOWNTO 0);
+	SIGNAL disp, letter : STD_lOGIC_VECTOR(6 DOWNTO 0) := "0000000";
+	SIGNAL ledsito : STD_lOGIC := '0';
+	SIGNAL disparador : STD_lOGIC := trigger;
+	--SIGNAL disparador : STD_lOGIC := '1';
+	SIGNAL letrita : STD_lOGIC_VECTOR(3 DOWNTO 0) := "0000";
+	SIGNAL l1,l2,l3,l4 : STD_lOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL op : STD_LOGIC_VECTOR(3 DOWNTO 0):= "0000";
+	
+	COMPONENT letras IS
+		PORT(
+			addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			word : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT texto IS
+		PORT(
+			address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			palabra : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
+		);
+	END COMPONENT;
+BEGIN
+	
+	desplegar: PROCESS(clk)
+	BEGIN
+		IF(RISING_EDGE(clk)) THEN
+			IF disparador = '1' THEN
+				-- Asignar 1 sola vez el valor de la letra
+				IF var = 0 THEN
+					message <= msg;
+				END IF;
+				IF seg < 15 THEN
+					-- Ventana deslizante operacion
+					l1 <= message(7 DOWNTO 4);
+					l2 <= message(11 DOWNTO 8);
+					l3 <= message(15 DOWNTO 12);
+					l4 <= message(19 DOWNTO 16);
+					IF (contador = 100) THEN
+						contador <= 0;
+						message <= message(15 DOWNTO 0) & l4;
+						var <= var + 1;
+						seg <= seg + 1;
+					END IF;
+					IF sel = 3 THEN
+						sel <= 0;
+					END IF;
+				ELSE
+					-- Salida numerica y obtener la entrada de la UA
+					ledsito <= '1';
+					l4 <= en(15 DOWNTO 12);
+					l3 <= en(11 DOWNTO 8);
+					l2 <= en(7 DOWNTO 4);
+					l1 <= en(3 DOWNTO 0);
+				END IF;
+				-- Colocar digito en el display correspondiente
+				CASE sel IS
+					WHEN 0 => selector <= "1000";aux <= l4;
+					WHEN 1 => selector <= "0100";aux <= l3;
+					WHEN 2 => selector <= "0010";aux <= l2;
+					WHEN 3 => selector <= "0001";aux <= l1;
+				END CASE;
+				-- Aumentar contadores
+				sel <= sel + 1;
+				contador <= contador + 1;
+			ELSE
+				aux <= "1111";
+			END IF;
+		END IF;
+		letrita <= aux;
+		IF ledsito = '0' THEN
+			disp <= letter;
+		ELSE
+			CASE letrita IS
+				-- Binario a BCD
+				WHEN "0000" => disp <= "1000000";
+				WHEN "0001" => disp <= "1111001";
+				WHEN "0010" => disp <= "0100100";
+				WHEN "0011" => disp <= "0110000";
+				WHEN "0100" => disp <= "0011001";
+				WHEN "0101" => disp <= "0010010";
+				WHEN "0110" => disp <= "0000010";
+				WHEN "0111" => disp <= "1111000";
+				WHEN "1000" => disp <= "0000000";
+				WHEN "1001" => disp <= "0010000";
+				WHEN "1111" => disp <= "1111111";
+				WHEN OTHERS => disp <= "0111111";
+			END CASE;
+		END IF;
+	END PROCESS desplegar;
+	
+	
+	selOperacion : PROCESS(operacion)
+	BEGIN
+		CASE operacion IS
+			WHEN "000000000001" => op <= "0000";
+			WHEN "000000000010" => op <= "0001";
+			WHEN "000000000100" => op <= "0010";
+			WHEN "000000001000" => op <= "0011";
+			WHEN "000000010000" => op <= "0100";
+			WHEN "000000100000" => op <= "0101";
+			WHEN "000001000000" => op <= "0110";
+			WHEN "000010000000" => op <= "0111";
+			WHEN "000100000000" => op <= "1000";
+			WHEN "001000000000" => op <= "1001";
+			WHEN "010000000000" => op <= "1010";
+			WHEN "100000000000" => op <= "1011";
+			WHEN OTHERS => op <= "1111";
+		END CASE;
+	END PROCESS selOPeracion;
+	d4 <= selector(3);
+	d3 <= selector(2);
+	d2 <= selector(1);
+	d1 <= selector(0);
+	a <= disp(0);
+	b <= disp(1);
+	c <= disp(2);
+	d <= disp(3);
+	e <= disp(4);
+	f <= disp(5);
+	g <= disp(6);
+
+	mensaje: texto PORT MAP(op, msg);
+	letra: letras PORT MAP(letrita, letter);
+END ARCHITECTURE;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Display}, label={Script}]
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY texto IS
+	PORT(
+		address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		palabra : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF texto IS
+
+SUBTYPE textos IS STD_LOGIC_VECTOR(19 DOWNTO 0);
+	TYPE textos_pantalla IS ARRAY (11 DOWNTO 0) OF textos;
+	
+	CONSTANT memory : textos_pantalla := (
+		0 => "00000001001000100011",--suma
+		1 => "01000101000001100011",--resta
+		--2 => "001000100001011101101000",--multi
+		2 => "00100010000101110110",--mult
+		3 => "00110010100111111111",--and
+		4 => "10100100111111111111",--or
+		5 => "00101010011011111111",--not
+		6 => "10111010111111111111",--c01
+		7 => "10110011110011111111",--cA2
+		8 => "01001010010011111111",--ror
+		9 => "01001010011111111111",--rol
+		10 => "01110000011111111111",--LSL
+		11 => "01110000010011111111"--LSr
+		);
+
+BEGIN
+	PROCESS(address)
+	BEGIN
+		CASE address IS
+			WHEN "0000" => palabra <= memory(0); --suma
+			WHEN "0001" => palabra <= memory(1); --suma
+			WHEN "0010" => palabra <= memory(2); --suma
+			WHEN "0011" => palabra <= memory(3); --suma
+			WHEN "0100" => palabra <= memory(4); --suma
+			WHEN "0101" => palabra <= memory(5); --suma
+			WHEN "0110" => palabra <= memory(6); --suma
+			WHEN "0111" => palabra <= memory(7); --suma
+			WHEN "1000" => palabra <= memory(8); --suma
+			WHEN "1001" => palabra <= memory(9); --suma
+			WHEN "1010" => palabra <= memory(10); --suma
+			WHEN "1011" => palabra <= memory(11); --suma
+			WHEN OTHERS => palabra <= "11111111111111111111"; --suma
+		END CASE;
+	END PROCESS;
+END ARCHITECTURE;
+	\end{lstlisting}
+	\begin{lstlisting}[language={vhdl}, caption={Barrel Shifter}, label={Script}]
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+use IEEE.std_logic_unsigned.all;
+ENTITY barrelShifter IS
     PORT (
         a : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
         cntrl, clk, iniciar : IN STD_LOGIC;
-        salidaLC : OUT STD_LOGIC;
-        salShifters : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+        salShifters : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+        salPrub : OUT STD_LOGIC
     );
-END ENTITY barrelShifters;
+END ENTITY barrelShifter;
 
-ARCHITECTURE shifters OF barrelShifters IS
-
-    SIGNAL contador : INTEGER RANGE 0 TO 49999999 := 0;
-    SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0) := "0000000000";
-    SIGNAL salidMed : STD_LOGIC;
-
+ARCHITECTURE shifters OF prueba IS
+    SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0);
+    signal i: INTEGER RANGE 0 TO 9 := 0;
 BEGIN
-    --Mi divisor de frecuencias
+    --Las opciones del shifter
+    Shifter : PROCESS (clk, cntrl)
+    BEGIN
+        IF iniciar = '0' THEN
+            aux <= "0000000000";
+        ELSIF (rising_edge(clk)) THEN
+            IF (cntrl = '0') THEN
+                --LSL
+                aux(9 downto 1) <= aux(8 DOWNTO 0);
+                aux(0) <= a(i);
+                i <= i + 1;
+            ELSE
+                aux <= aux(9) & aux(9 DOWNTO 1); --ASR
+                aux(9) <= a(i);
+                i <= i + 1;
+            END IF;
+            salShifters <= aux;
+        END IF;
+    END PROCESS Shifter;
+    salPrub <= clk;
+END ARCHITECTURE shifters;
+	\end{lstlisting}
+\begin{lstlisting}[language={vhdl}, caption={Divisor de frecuencia}, label={Script}]
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+entity divisorFrecuencia is
+    port (
+        clk, iniciar: in STD_LOGIC;
+        salidaLC : OUT STD_LOGIC
+    );
+end entity divisorFrecuencia;
+architecture divFre of divisorFrecuencia is
+    SIGNAL contador : INTEGER RANGE 0 TO 9999999 := 0;
+    SIGNAL salidMed : std_logic;
+begin
+    
     DivisorFrecuencia : PROCESS (clk, iniciar)
     BEGIN
         IF iniciar = '0' THEN
             salidMed <= '0';
             contador <= 0;
         ELSIF rising_edge(clk) THEN
-            IF contador = 49999999 THEN
+            IF contador = 9999999 THEN
                 contador <= 0;
                 salidMed <= NOT salidMed;
             ELSE
@@ -35,101 +625,6 @@ BEGIN
             END IF;
         END IF;
     END PROCESS DivisorFrecuencia;
-
-    salidaLC <= salidaMed;
-    --Las opciones del shifter
-    Shifter : PROCESS (salidaMed, iniciar, a, cntrl)
-    BEGIN
-        IF iniciar = '0' THEN
-            aux <= "0000000000";
-        ELSIF rising_edge(salidaMed) THEN
-            IF (cntrl = '0') THEN
-                aux <= a(8 DOWNTO 0) & '0'; --LSL
-            ELSE
-                aux <= a(9) & a(9 DOWNTO 1);-- Arithmetic Shifter Right
-            END IF;
-        END IF;
-    END PROCESS Shifter;
-
-    salShifters <= aux;
-    a <= aux;
-END ARCHITECTURE shifters;
-	\end{lstlisting}
-\begin{lstlisting}[language={vhdl}, caption={Display Operaciones (Prototipo)}, label={Script}]
--- PROTOTIPO
-LIBRARY IEEE;
-USE IEEE.std_logic_1164.ALL;
-USE IEEE.numeric_std.ALL;
-ENTITY displayOperaciones IS
-    PORT (
-        cntrlSeg : IN STD_LOGIC_VECTOR(0 TO 1);
-        cntrlArt : IN STD_LOGIC_VECTOR(0 TO 1);
-        cntrlShf : IN STD_LOGIC;
-        cntrlLog : IN STD_LOGIC_VECTOR(0 TO 1);
-        d0, d1, d2, d3 : OUT STD_LOGIC_VECTOR(0 TO 6)
-    );
-END ENTITY displayOperaciones;
-ARCHITECTURE dOperaciones OF displayOperaciones IS
-    SIGNAL ad0, ad1, ad2, ad3 : STD_LOGIC_VECTOR(0 TO 6);
-BEGIN
-    ProcDisplay : PROCESS (cntrlSeg, cntrlArt, cntrlShf, cntrlLog, ad1, ad2, ad0, ad3)
-    BEGIN
-        IF cntrlSeg = "00" THEN --Artimethic
-            IF cntrlArt = "00" THEN --Suma
-                ad0 <= "0100100"; --S Anodo
-                ad1 <= "1000001"; --U Anodo
-                ad2 <= "1101010"; --n Andodo
-                ad3 <= "1101010"; --n Andodo
-            ELSIF cntrlArt = "01" THEN -- Resta
-                ad0 <= "1111010"; --r Anodo
-                ad1 <= "0110000"; --E Anodo
-                ad2 <= "0100100"; --S Anodo
-                ad3 <= "1110000"; --t Andodo
-            ELSIF cntrlArt = "10" THEN --Mult
-                ad0 <= "1101010"; --n Anodo
-                ad1 <= "1101010"; --n Anodo
-                ad2 <= "1000001"; --U Anodo
-                ad3 <= "1110001"; --L Andodo
-            END IF;
-        ELSIF cntrlSeg = "01" THEN --Shifter
-            IF cntrlShf = '0' THEN -- LSL
-                ad0 <= "1110001"; --L Anodo
-                ad1 <= "0100100"; --S Anodo
-                ad2 <= "1110001"; --L Andodo
-                ad3 <= "1111111"; --NULL Andodo
-            ELSE --ASR
-                ad0 <= "0001000"; --A Anodo
-                ad1 <= "0100100"; --S Anodo
-                ad2 <= "1111010"; --r Andodo
-                ad3 <= "1111111"; --NULL Andodo
-            END IF;
-        ELSIF cntrlSeg = "10" THEN --Logic
-            IF cntrlLog = "00" THEN --NOT
-                ad0 <= "1101010"; --n Anodo
-                ad1 <= "1100010"; --o Anodo
-                ad2 <= "1110000"; --t Andodo
-                ad3 <= "1111111"; --null Andodo
-            ELSIF cntrlLog = "01" THEN -- COMP2
-                ad0 <= "0110001"; --C Anodo
-                ad1 <= "1100010"; --o Anodo
-                ad2 <= "0011000"; --P Anodo
-                ad3 <= "0010010"; --2 Andodo
-            ELSIF cntrlLog = "10" THEN --AND
-                ad0 <= "0001000"; --A Anodo
-                ad1 <= "1101010"; --n Anodo
-                ad2 <= "1000010"; --d Anodo
-                ad3 <= "1111111"; --null Andodo
-            ELSIF cntrlLog = "11" THEN --OR
-                ad0 <= "1111111"; --null Anodo
-                ad1 <= "1100010"; --o Anodo
-                ad2 <= "1111010"; --r Anodo
-                ad3 <= "1111111"; --null Andodo
-            END IF;
-        END IF;
-    END PROCESS ProcDisplay;
-    d0 <= ad0;
-    d1 <= ad1;
-    d2 <= ad2;
-    d3 <= ad3;
-END ARCHITECTURE dOperaciones;
+    salidaLC <= salidMed;
+end architecture divFre;
 	\end{lstlisting}
