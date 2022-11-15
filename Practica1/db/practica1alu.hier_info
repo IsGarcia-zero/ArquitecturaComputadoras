@@ -1,881 +1,1465 @@
-|UAritmetica
-selector[0] => Mux0.IN4
-selector[0] => Mux1.IN4
-selector[0] => Mux2.IN2
-selector[0] => Mux3.IN2
-selector[0] => Mux4.IN2
-selector[0] => Mux5.IN2
-selector[0] => Mux6.IN2
-selector[0] => Mux7.IN2
-selector[0] => Mux8.IN2
-selector[0] => Mux9.IN2
-selector[0] => Mux10.IN2
-selector[0] => Mux11.IN2
-selector[0] => Mux12.IN2
-selector[0] => Mux13.IN2
-selector[0] => Mux14.IN3
-selector[0] => Mux15.IN5
-selector[0] => Mux16.IN5
-selector[0] => Mux17.IN5
-selector[0] => Mux18.IN5
-selector[1] => Mux0.IN3
-selector[1] => Mux1.IN3
-selector[1] => Mux2.IN1
-selector[1] => Mux3.IN1
-selector[1] => Mux4.IN1
-selector[1] => Mux5.IN1
-selector[1] => Mux6.IN1
-selector[1] => Mux7.IN1
-selector[1] => Mux8.IN1
-selector[1] => Mux9.IN1
-selector[1] => Mux10.IN1
-selector[1] => Mux11.IN1
-selector[1] => Mux12.IN1
-selector[1] => Mux13.IN1
-selector[1] => Mux14.IN2
-selector[1] => Mux15.IN4
-selector[1] => Mux16.IN4
-selector[1] => Mux17.IN4
-selector[1] => Mux18.IN4
-A[0] => Full_Adder_wF:Suma.Var1[0]
-A[0] => Full_Adder_wF:Res.Var1[0]
-A[0] => Multiplicador:Mul.VarA[0]
-A[1] => Full_Adder_wF:Suma.Var1[1]
-A[1] => Full_Adder_wF:Res.Var1[1]
-A[1] => Multiplicador:Mul.VarA[1]
-A[2] => Full_Adder_wF:Suma.Var1[2]
-A[2] => Full_Adder_wF:Res.Var1[2]
-A[2] => Multiplicador:Mul.VarA[2]
-A[3] => Full_Adder_wF:Suma.Var1[3]
-A[3] => Full_Adder_wF:Res.Var1[3]
-A[3] => Multiplicador:Mul.VarA[3]
-A[4] => Full_Adder_wF:Suma.Var1[4]
-A[4] => Full_Adder_wF:Res.Var1[4]
-A[4] => Multiplicador:Mul.VarA[4]
-A[5] => Full_Adder_wF:Suma.Var1[5]
-A[5] => Full_Adder_wF:Res.Var1[5]
-A[6] => Full_Adder_wF:Suma.Var1[6]
-A[6] => Full_Adder_wF:Res.Var1[6]
-A[7] => Full_Adder_wF:Suma.Var1[7]
-A[7] => Full_Adder_wF:Res.Var1[7]
+|practica1alu
+d1 <= display:inst2.d1
+clk => frecuencia_5Hz:inst3.reloj
+rst => frecuencia_5Hz:inst3.reset
+A[0] => unidad_aritmetica:inst.A[0]
+A[1] => unidad_aritmetica:inst.A[1]
+A[2] => unidad_aritmetica:inst.A[2]
+A[3] => unidad_aritmetica:inst.A[3]
+A[4] => unidad_aritmetica:inst.A[4]
+A[5] => unidad_aritmetica:inst.A[5]
+A[6] => unidad_aritmetica:inst.A[6]
+A[7] => unidad_aritmetica:inst.A[7]
+A[8] => unidad_aritmetica:inst.A[8]
+A[9] => unidad_aritmetica:inst.A[9]
+B[0] => unidad_aritmetica:inst.B[0]
+B[1] => unidad_aritmetica:inst.B[1]
+B[2] => unidad_aritmetica:inst.B[2]
+B[3] => unidad_aritmetica:inst.B[3]
+B[4] => unidad_aritmetica:inst.B[4]
+B[5] => unidad_aritmetica:inst.B[5]
+B[6] => unidad_aritmetica:inst.B[6]
+B[7] => unidad_aritmetica:inst.B[7]
+B[8] => unidad_aritmetica:inst.B[8]
+B[9] => unidad_aritmetica:inst.B[9]
+sel_op[0] => unidad_aritmetica:inst.sel_op[0]
+sel_op[1] => unidad_aritmetica:inst.sel_op[1]
+d2 <= display:inst2.d2
+d3 <= display:inst2.d3
+d4 <= display:inst2.d4
+a_seg <= display:inst2.a
+b_seg <= display:inst2.b
+c_seg <= display:inst2.c
+d_seg <= display:inst2.d
+e_seg <= display:inst2.e
+f_seg <= display:inst2.f
+g_seg <= display:inst2.g
+
+
+|practica1alu|display:inst2
+en[0] => l1.DATAA
+en[1] => l1.DATAA
+en[2] => l1.DATAA
+en[3] => l1.DATAA
+en[4] => l2.DATAA
+en[5] => l2.DATAA
+en[6] => l2.DATAA
+en[7] => l2.DATAA
+en[8] => l3.DATAA
+en[9] => l3.DATAA
+en[10] => l3.DATAA
+en[11] => l3.DATAA
+en[12] => l4.DATAA
+en[13] => l4.DATAA
+en[14] => l4.DATAA
+en[15] => l4.DATAA
+operacion[0] => Equal1.IN3
+operacion[0] => texto:mensaje.address[0]
+operacion[0] => op_real[0].DATAIN
+operacion[1] => Equal1.IN2
+operacion[1] => texto:mensaje.address[1]
+operacion[1] => op_real[1].DATAIN
+operacion[2] => Equal1.IN1
+operacion[2] => texto:mensaje.address[2]
+operacion[2] => op_real[2].DATAIN
+operacion[3] => Equal1.IN0
+operacion[3] => texto:mensaje.address[3]
+operacion[3] => op_real[3].DATAIN
+clk => aux[0].CLK
+clk => aux[1].CLK
+clk => aux[2].CLK
+clk => aux[3].CLK
+clk => selector[0].CLK
+clk => selector[1].CLK
+clk => selector[2].CLK
+clk => selector[3].CLK
+clk => sel[0].CLK
+clk => sel[1].CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => l4[0].CLK
+clk => l4[1].CLK
+clk => l4[2].CLK
+clk => l4[3].CLK
+clk => l3[0].CLK
+clk => l3[1].CLK
+clk => l3[2].CLK
+clk => l3[3].CLK
+clk => l2[0].CLK
+clk => l2[1].CLK
+clk => l2[2].CLK
+clk => l2[3].CLK
+clk => l1[0].CLK
+clk => l1[1].CLK
+clk => l1[2].CLK
+clk => l1[3].CLK
+clk => seg[0].CLK
+clk => seg[1].CLK
+clk => seg[2].CLK
+clk => seg[3].CLK
+clk => var[0].CLK
+clk => var[1].CLK
+clk => var[2].CLK
+clk => var[3].CLK
+clk => var[4].CLK
+clk => var[5].CLK
+clk => var[6].CLK
+clk => var[7].CLK
+clk => var[8].CLK
+clk => var[9].CLK
+clk => var[10].CLK
+clk => var[11].CLK
+clk => var[12].CLK
+clk => var[13].CLK
+clk => var[14].CLK
+clk => var[15].CLK
+clk => var[16].CLK
+clk => var[17].CLK
+clk => var[18].CLK
+clk => var[19].CLK
+clk => var[20].CLK
+clk => var[21].CLK
+clk => var[22].CLK
+clk => var[23].CLK
+clk => ledsito.CLK
+clk => op_real[0].CLK
+clk => op_real[1].CLK
+clk => op_real[2].CLK
+clk => op_real[3].CLK
+clk => message[0].CLK
+clk => message[1].CLK
+clk => message[2].CLK
+clk => message[3].CLK
+clk => message[4].CLK
+clk => message[5].CLK
+clk => message[6].CLK
+clk => message[7].CLK
+clk => message[8].CLK
+clk => message[9].CLK
+clk => message[10].CLK
+clk => message[11].CLK
+clk => message[12].CLK
+clk => message[13].CLK
+clk => message[14].CLK
+clk => message[15].CLK
+clk => message[16].CLK
+clk => message[17].CLK
+clk => message[18].CLK
+clk => message[19].CLK
+d1 <= selector[0].DB_MAX_OUTPUT_PORT_TYPE
+d2 <= selector[1].DB_MAX_OUTPUT_PORT_TYPE
+d3 <= selector[2].DB_MAX_OUTPUT_PORT_TYPE
+d4 <= selector[3].DB_MAX_OUTPUT_PORT_TYPE
+a <= disp.DB_MAX_OUTPUT_PORT_TYPE
+b <= disp.DB_MAX_OUTPUT_PORT_TYPE
+c <= disp.DB_MAX_OUTPUT_PORT_TYPE
+d <= disp.DB_MAX_OUTPUT_PORT_TYPE
+e <= disp.DB_MAX_OUTPUT_PORT_TYPE
+f <= disp.DB_MAX_OUTPUT_PORT_TYPE
+g <= disp.DB_MAX_OUTPUT_PORT_TYPE
+led <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|display:inst2|texto:mensaje
+address[0] => Mux0.IN19
+address[0] => Mux1.IN19
+address[0] => Mux3.IN19
+address[0] => Mux4.IN19
+address[0] => Mux5.IN19
+address[0] => Mux6.IN19
+address[0] => Mux7.IN19
+address[0] => Mux8.IN19
+address[0] => Mux10.IN19
+address[0] => Mux11.IN19
+address[0] => Mux12.IN19
+address[0] => Mux13.IN19
+address[0] => Mux15.IN19
+address[0] => Mux17.IN19
+address[1] => Mux0.IN18
+address[1] => Mux1.IN18
+address[1] => Mux2.IN10
+address[1] => Mux3.IN18
+address[1] => Mux4.IN18
+address[1] => Mux5.IN18
+address[1] => Mux6.IN18
+address[1] => Mux7.IN18
+address[1] => Mux8.IN18
+address[1] => Mux10.IN18
+address[1] => Mux11.IN18
+address[1] => Mux12.IN18
+address[1] => Mux13.IN18
+address[1] => Mux14.IN10
+address[1] => Mux15.IN18
+address[1] => Mux16.IN10
+address[1] => Mux17.IN18
+address[2] => Mux0.IN17
+address[2] => Mux1.IN17
+address[2] => Mux2.IN9
+address[2] => Mux3.IN17
+address[2] => Mux4.IN17
+address[2] => Mux5.IN17
+address[2] => Mux6.IN17
+address[2] => Mux7.IN17
+address[2] => Mux8.IN17
+address[2] => Mux9.IN5
+address[2] => Mux10.IN17
+address[2] => Mux11.IN17
+address[2] => Mux12.IN17
+address[2] => Mux13.IN17
+address[2] => Mux14.IN9
+address[2] => Mux15.IN17
+address[2] => Mux16.IN9
+address[2] => Mux17.IN17
+address[3] => Mux0.IN16
+address[3] => Mux1.IN16
+address[3] => Mux2.IN8
+address[3] => Mux3.IN16
+address[3] => Mux4.IN16
+address[3] => Mux5.IN16
+address[3] => Mux6.IN16
+address[3] => Mux7.IN16
+address[3] => Mux8.IN16
+address[3] => Mux9.IN4
+address[3] => Mux10.IN16
+address[3] => Mux11.IN16
+address[3] => Mux12.IN16
+address[3] => Mux13.IN16
+address[3] => Mux14.IN8
+address[3] => Mux15.IN16
+address[3] => Mux16.IN8
+address[3] => Mux17.IN16
+palabra[0] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+palabra[1] <= <VCC>
+palabra[2] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+palabra[3] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+palabra[4] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+palabra[5] <= <VCC>
+palabra[6] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+palabra[7] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+palabra[8] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+palabra[9] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+palabra[10] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+palabra[11] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+palabra[12] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+palabra[13] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+palabra[14] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+palabra[15] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+palabra[16] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+palabra[17] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+palabra[18] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+palabra[19] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|display:inst2|letras:letra
+addr[0] => Mux0.IN19
+addr[0] => Mux1.IN19
+addr[0] => Mux2.IN19
+addr[0] => Mux3.IN19
+addr[0] => Mux4.IN19
+addr[0] => Mux5.IN19
+addr[0] => Mux6.IN19
+addr[1] => Mux0.IN18
+addr[1] => Mux1.IN18
+addr[1] => Mux2.IN18
+addr[1] => Mux3.IN18
+addr[1] => Mux4.IN18
+addr[1] => Mux5.IN18
+addr[1] => Mux6.IN18
+addr[2] => Mux0.IN17
+addr[2] => Mux1.IN17
+addr[2] => Mux2.IN17
+addr[2] => Mux3.IN17
+addr[2] => Mux4.IN17
+addr[2] => Mux5.IN17
+addr[2] => Mux6.IN17
+addr[3] => Mux0.IN16
+addr[3] => Mux1.IN16
+addr[3] => Mux2.IN16
+addr[3] => Mux3.IN16
+addr[3] => Mux4.IN16
+addr[3] => Mux5.IN16
+addr[3] => Mux6.IN16
+word[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+word[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+word[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+word[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+word[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+word[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+word[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|frecuencia_5Hz:inst3
+reloj => salida2.CLK
+reloj => cuenta2[0].CLK
+reloj => cuenta2[1].CLK
+reloj => cuenta2[2].CLK
+reloj => cuenta2[3].CLK
+reloj => cuenta2[4].CLK
+reloj => cuenta2[5].CLK
+reloj => cuenta2[6].CLK
+reloj => cuenta2[7].CLK
+reloj => cuenta2[8].CLK
+reloj => cuenta2[9].CLK
+reloj => cuenta2[10].CLK
+reloj => cuenta2[11].CLK
+reloj => cuenta2[12].CLK
+reloj => cuenta2[13].CLK
+reloj => cuenta2[14].CLK
+reloj => cuenta2[15].CLK
+reloj => cuenta2[16].CLK
+reloj => cuenta2[17].CLK
+reloj => cuenta2[18].CLK
+reloj => cuenta2[19].CLK
+reloj => cuenta2[20].CLK
+reloj => cuenta2[21].CLK
+reloj => cuenta2[22].CLK
+reloj => cuenta2[23].CLK
+reloj => cuenta2[24].CLK
+reloj => cuenta2[25].CLK
+reloj => cuenta[0].CLK
+reloj => cuenta[1].CLK
+reloj => cuenta[2].CLK
+reloj => cuenta[3].CLK
+reloj => cuenta[4].CLK
+reloj => cuenta[5].CLK
+reloj => cuenta[6].CLK
+reloj => cuenta[7].CLK
+reloj => cuenta[8].CLK
+reloj => cuenta[9].CLK
+reloj => cuenta[10].CLK
+reloj => cuenta[11].CLK
+reloj => cuenta[12].CLK
+reloj => cuenta[13].CLK
+reloj => cuenta[14].CLK
+reloj => cuenta[15].CLK
+reloj => cuenta[16].CLK
+reloj => cuenta[17].CLK
+reloj => cuenta[18].CLK
+reloj => cuenta[19].CLK
+reloj => cuenta[20].CLK
+reloj => cuenta[21].CLK
+reloj => cuenta[22].CLK
+reloj => cuenta[23].CLK
+reloj => cuenta[24].CLK
+reloj => cuenta[25].CLK
+reloj => salida.CLK
+reset => cuenta[0].ACLR
+reset => cuenta[1].ACLR
+reset => cuenta[2].ACLR
+reset => cuenta[3].ACLR
+reset => cuenta[4].ACLR
+reset => cuenta[5].ACLR
+reset => cuenta[6].ACLR
+reset => cuenta[7].ACLR
+reset => cuenta[8].ACLR
+reset => cuenta[9].ACLR
+reset => cuenta[10].ACLR
+reset => cuenta[11].ACLR
+reset => cuenta[12].ACLR
+reset => cuenta[13].ACLR
+reset => cuenta[14].ACLR
+reset => cuenta[15].ACLR
+reset => cuenta[16].ACLR
+reset => cuenta[17].ACLR
+reset => cuenta[18].ACLR
+reset => cuenta[19].ACLR
+reset => cuenta[20].ACLR
+reset => cuenta[21].ACLR
+reset => cuenta[22].ACLR
+reset => cuenta[23].ACLR
+reset => cuenta[24].ACLR
+reset => cuenta[25].ACLR
+reset => salida.ACLR
+reset => salida2.ENA
+reset => cuenta2[25].ENA
+reset => cuenta2[24].ENA
+reset => cuenta2[23].ENA
+reset => cuenta2[22].ENA
+reset => cuenta2[21].ENA
+reset => cuenta2[20].ENA
+reset => cuenta2[19].ENA
+reset => cuenta2[18].ENA
+reset => cuenta2[17].ENA
+reset => cuenta2[16].ENA
+reset => cuenta2[15].ENA
+reset => cuenta2[14].ENA
+reset => cuenta2[13].ENA
+reset => cuenta2[12].ENA
+reset => cuenta2[11].ENA
+reset => cuenta2[10].ENA
+reset => cuenta2[9].ENA
+reset => cuenta2[8].ENA
+reset => cuenta2[7].ENA
+reset => cuenta2[6].ENA
+reset => cuenta2[5].ENA
+reset => cuenta2[4].ENA
+reset => cuenta2[3].ENA
+reset => cuenta2[2].ENA
+reset => cuenta2[1].ENA
+reset => cuenta2[0].ENA
+sal <= salida.DB_MAX_OUTPUT_PORT_TYPE
+sal2 <= salida2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|convertidor:inst1
+en[0] => LessThan1.IN8
+en[0] => Add1.IN8
+en[0] => digitos.DATAA
+en[1] => LessThan2.IN8
+en[1] => Add2.IN8
+en[1] => digitos.DATAA
+en[2] => LessThan4.IN8
+en[2] => Add4.IN8
+en[2] => digitos.DATAA
+en[3] => LessThan6.IN8
+en[3] => Add6.IN8
+en[3] => digitos.DATAA
+en[4] => LessThan8.IN8
+en[4] => Add8.IN8
+en[4] => digitos.DATAA
+en[5] => LessThan11.IN8
+en[5] => Add11.IN8
+en[5] => digitos.DATAA
+en[6] => s[0].DATAIN
+en[7] => LessThan0.IN6
+en[7] => Add0.IN6
+en[7] => digitos.DATAA
+en[8] => LessThan0.IN5
+en[8] => Add0.IN5
+en[8] => digitos.DATAA
+en[9] => LessThan0.IN4
+en[9] => Add0.IN4
+en[9] => digitos.DATAA
+s[0] <= en[6].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[8] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[9] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[10] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[11] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[12] <= digitos.DB_MAX_OUTPUT_PORT_TYPE
+s[13] <= <GND>
+s[14] <= <GND>
+s[15] <= <GND>
+
+
+|practica1alu|unidad_aritmetica:inst
+A[0] => eight_bit_adder:sumador.A[0]
+A[0] => eight_bit_adder:restador.A[0]
+A[0] => multiplicador:multiplicacion.A[0]
+A[1] => eight_bit_adder:sumador.A[1]
+A[1] => eight_bit_adder:restador.A[1]
+A[1] => multiplicador:multiplicacion.A[1]
+A[2] => eight_bit_adder:sumador.A[2]
+A[2] => eight_bit_adder:restador.A[2]
+A[2] => multiplicador:multiplicacion.A[2]
+A[3] => eight_bit_adder:sumador.A[3]
+A[3] => eight_bit_adder:restador.A[3]
+A[3] => multiplicador:multiplicacion.A[3]
+A[4] => eight_bit_adder:sumador.A[4]
+A[4] => eight_bit_adder:restador.A[4]
+A[4] => multiplicador:multiplicacion.A[4]
+A[5] => eight_bit_adder:sumador.A[5]
+A[5] => eight_bit_adder:restador.A[5]
+A[6] => eight_bit_adder:sumador.A[6]
+A[6] => eight_bit_adder:restador.A[6]
+A[7] => eight_bit_adder:sumador.A[7]
+A[7] => eight_bit_adder:restador.A[7]
 A[8] => ~NO_FANOUT~
 A[9] => ~NO_FANOUT~
-B[0] => Full_Adder_wF:Suma.Var2[0]
-B[0] => Full_Adder_wF:Res.Var2[0]
-B[0] => Multiplicador:Mul.VarB[0]
-B[1] => Full_Adder_wF:Suma.Var2[1]
-B[1] => Full_Adder_wF:Res.Var2[1]
-B[1] => Multiplicador:Mul.VarB[1]
-B[2] => Full_Adder_wF:Suma.Var2[2]
-B[2] => Full_Adder_wF:Res.Var2[2]
-B[2] => Multiplicador:Mul.VarB[2]
-B[3] => Full_Adder_wF:Suma.Var2[3]
-B[3] => Full_Adder_wF:Res.Var2[3]
-B[3] => Multiplicador:Mul.VarB[3]
-B[4] => Full_Adder_wF:Suma.Var2[4]
-B[4] => Full_Adder_wF:Res.Var2[4]
-B[4] => Multiplicador:Mul.VarB[4]
-B[5] => Full_Adder_wF:Suma.Var2[5]
-B[5] => Full_Adder_wF:Res.Var2[5]
-B[6] => Full_Adder_wF:Suma.Var2[6]
-B[6] => Full_Adder_wF:Res.Var2[6]
-B[7] => Full_Adder_wF:Suma.Var2[7]
-B[7] => Full_Adder_wF:Res.Var2[7]
+B[0] => eight_bit_adder:sumador.B[0]
+B[0] => eight_bit_adder:restador.B[0]
+B[0] => multiplicador:multiplicacion.B[0]
+B[1] => eight_bit_adder:sumador.B[1]
+B[1] => eight_bit_adder:restador.B[1]
+B[1] => multiplicador:multiplicacion.B[1]
+B[2] => eight_bit_adder:sumador.B[2]
+B[2] => eight_bit_adder:restador.B[2]
+B[2] => multiplicador:multiplicacion.B[2]
+B[3] => eight_bit_adder:sumador.B[3]
+B[3] => eight_bit_adder:restador.B[3]
+B[3] => multiplicador:multiplicacion.B[3]
+B[4] => eight_bit_adder:sumador.B[4]
+B[4] => eight_bit_adder:restador.B[4]
+B[4] => multiplicador:multiplicacion.B[4]
+B[5] => eight_bit_adder:sumador.B[5]
+B[5] => eight_bit_adder:restador.B[5]
+B[6] => eight_bit_adder:sumador.B[6]
+B[6] => eight_bit_adder:restador.B[6]
+B[7] => eight_bit_adder:sumador.B[7]
+B[7] => eight_bit_adder:restador.B[7]
 B[8] => ~NO_FANOUT~
 B[9] => ~NO_FANOUT~
-S[0] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
-S[1] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
-S[2] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
-S[3] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
-S[4] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
-S[5] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
-S[6] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
-S[7] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
-S[8] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
-S[9] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
-SalidaMux[0] << Mux18.DB_MAX_OUTPUT_PORT_TYPE
-SalidaMux[1] << Mux17.DB_MAX_OUTPUT_PORT_TYPE
-SalidaMux[2] << Mux16.DB_MAX_OUTPUT_PORT_TYPE
-SalidaMux[3] << Mux15.DB_MAX_OUTPUT_PORT_TYPE
-Carry << Mux10.DB_MAX_OUTPUT_PORT_TYPE
-Overflow << Mux11.DB_MAX_OUTPUT_PORT_TYPE
-Zero << Mux12.DB_MAX_OUTPUT_PORT_TYPE
-Sum << Mux13.DB_MAX_OUTPUT_PORT_TYPE
-Cout << Mux14.DB_MAX_OUTPUT_PORT_TYPE
+sel_op[0] => Mux0.IN4
+sel_op[0] => Mux1.IN2
+sel_op[0] => Mux2.IN2
+sel_op[0] => Mux3.IN2
+sel_op[0] => Mux4.IN2
+sel_op[0] => Mux5.IN2
+sel_op[0] => Mux6.IN2
+sel_op[0] => Mux7.IN2
+sel_op[0] => Mux8.IN2
+sel_op[0] => Mux9.IN2
+sel_op[1] => Mux0.IN3
+sel_op[1] => Mux1.IN1
+sel_op[1] => Mux2.IN1
+sel_op[1] => Mux3.IN1
+sel_op[1] => Mux4.IN1
+sel_op[1] => Mux5.IN1
+sel_op[1] => Mux6.IN1
+sel_op[1] => Mux7.IN1
+sel_op[1] => Mux8.IN1
+sel_op[1] => Mux9.IN1
+S[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma
-operation => B_Prime[0].IN0
-operation => B_Prime[1].IN0
-operation => B_Prime[2].IN0
-operation => B_Prime[3].IN0
-operation => B_Prime[4].IN0
-operation => B_Prime[5].IN0
-operation => B_Prime[6].IN0
-operation => B_Prime[7].IN0
-operation => CarryF.IN1
-operation => Fadder:Sum1.Cin
-Var1[0] => Fadder:Sum1.A
-Var1[1] => Fadder:Sum2.A
-Var1[2] => Fadder:Sum3.A
-Var1[3] => Fadder:Sum4.A
-Var1[4] => Fadder:Sum5.A
-Var1[5] => Fadder:Sum6.A
-Var1[6] => Fadder:Sum7.A
-Var1[7] => Fadder:Sum8.A
-Var2[0] => B_Prime[0].IN1
-Var2[1] => B_Prime[1].IN1
-Var2[2] => B_Prime[2].IN1
-Var2[3] => B_Prime[3].IN1
-Var2[4] => B_Prime[4].IN1
-Var2[5] => B_Prime[5].IN1
-Var2[6] => B_Prime[6].IN1
-Var2[7] => B_Prime[7].IN1
-Res[0] <= Fadder:Sum1.S
-Res[1] <= Fadder:Sum2.S
-Res[2] <= Fadder:Sum3.S
-Res[3] <= Fadder:Sum4.S
-Res[4] <= Fadder:Sum5.S
-Res[5] <= Fadder:Sum6.S
-Res[6] <= Fadder:Sum7.S
-Res[7] <= Fadder:Sum8.S
-CarryF <= CarryF.DB_MAX_OUTPUT_PORT_TYPE
-OverflowF <= OverflowF.DB_MAX_OUTPUT_PORT_TYPE
-ZeroF <= ZeroF.DB_MAX_OUTPUT_PORT_TYPE
-SumF <= Fadder:Sum8.S
-CoutF <= Fadder:Sum8.Cout
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+Cout <= full_adder:fullAdder8.Cout
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder1
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder2
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder3
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder4
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder5
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum6
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder6
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum7
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder7
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Suma|Fadder:Sum8
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:sumador|full_adder:fullAdder8
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res
-operation => B_Prime[0].IN0
-operation => B_Prime[1].IN0
-operation => B_Prime[2].IN0
-operation => B_Prime[3].IN0
-operation => B_Prime[4].IN0
-operation => B_Prime[5].IN0
-operation => B_Prime[6].IN0
-operation => B_Prime[7].IN0
-operation => CarryF.IN1
-operation => Fadder:Sum1.Cin
-Var1[0] => Fadder:Sum1.A
-Var1[1] => Fadder:Sum2.A
-Var1[2] => Fadder:Sum3.A
-Var1[3] => Fadder:Sum4.A
-Var1[4] => Fadder:Sum5.A
-Var1[5] => Fadder:Sum6.A
-Var1[6] => Fadder:Sum7.A
-Var1[7] => Fadder:Sum8.A
-Var2[0] => B_Prime[0].IN1
-Var2[1] => B_Prime[1].IN1
-Var2[2] => B_Prime[2].IN1
-Var2[3] => B_Prime[3].IN1
-Var2[4] => B_Prime[4].IN1
-Var2[5] => B_Prime[5].IN1
-Var2[6] => B_Prime[6].IN1
-Var2[7] => B_Prime[7].IN1
-Res[0] <= Fadder:Sum1.S
-Res[1] <= Fadder:Sum2.S
-Res[2] <= Fadder:Sum3.S
-Res[3] <= Fadder:Sum4.S
-Res[4] <= Fadder:Sum5.S
-Res[5] <= Fadder:Sum6.S
-Res[6] <= Fadder:Sum7.S
-Res[7] <= Fadder:Sum8.S
-CarryF <= CarryF.DB_MAX_OUTPUT_PORT_TYPE
-OverflowF <= OverflowF.DB_MAX_OUTPUT_PORT_TYPE
-ZeroF <= ZeroF.DB_MAX_OUTPUT_PORT_TYPE
-SumF <= Fadder:Sum8.S
-CoutF <= Fadder:Sum8.Cout
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+Cout <= full_adder:fullAdder8.Cout
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder1
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder2
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder3
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder4
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder5
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum6
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder6
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum7
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder7
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Full_Adder_wF:Res|Fadder:Sum8
+|practica1alu|unidad_aritmetica:inst|eight_bit_adder:restador|full_adder:fullAdder8
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul
-ope => Full_Adder_Five:Sum1.selector
-ope => Full_Adder_Five:Sum2.selector
-ope => Full_Adder_Five:Sum3.selector
-ope => Full_Adder_Five:Sum4.selector
-VarA[0] => Aux1[0].IN0
-VarA[0] => Aux1[1].IN0
-VarA[0] => Aux1[2].IN0
-VarA[0] => C.IN0
-VarA[1] => C[5].IN0
-VarA[1] => C[6].IN0
-VarA[1] => C[7].IN0
-VarA[1] => C[8].IN0
-VarA[1] => C[9].IN0
-VarA[2] => C[10].IN0
-VarA[2] => C[11].IN0
-VarA[2] => C[12].IN0
-VarA[2] => C[13].IN0
-VarA[2] => C[14].IN0
-VarA[3] => C[15].IN0
-VarA[3] => C[16].IN0
-VarA[3] => C[17].IN0
-VarA[3] => C[18].IN0
-VarA[3] => C[19].IN0
-VarA[4] => C[20].IN0
-VarA[4] => C[21].IN0
-VarA[4] => C[22].IN0
-VarA[4] => C[23].IN0
-VarA[4] => C[24].IN0
-VarB[0] => C[5].IN1
-VarB[0] => C[10].IN1
-VarB[0] => C[15].IN1
-VarB[0] => C[20].IN1
-VarB[1] => Aux1[0].IN1
-VarB[1] => C[6].IN1
-VarB[1] => C[11].IN1
-VarB[1] => C[16].IN1
-VarB[1] => C[21].IN1
-VarB[2] => Aux1[1].IN1
-VarB[2] => C[7].IN1
-VarB[2] => C[12].IN1
-VarB[2] => C[17].IN1
-VarB[2] => C[22].IN1
-VarB[3] => Aux1[2].IN1
-VarB[3] => C[8].IN1
-VarB[3] => C[13].IN1
-VarB[3] => C[18].IN1
-VarB[3] => C[23].IN1
-VarB[4] => C.IN1
-VarB[4] => C[9].IN1
-VarB[4] => C[14].IN1
-VarB[4] => C[19].IN1
-VarB[4] => C[24].IN1
-Salida[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
-Salida[1] <= Full_Adder_Five:Sum1.S[4]
-Salida[2] <= Full_Adder_Five:Sum2.S[4]
-Salida[3] <= Full_Adder_Five:Sum3.S[0]
-Salida[4] <= Full_Adder_Five:Sum3.S[4]
-Salida[5] <= Full_Adder_Five:Sum4.S[0]
-Salida[6] <= Full_Adder_Five:Sum4.S[1]
-Salida[7] <= Full_Adder_Five:Sum4.S[2]
-Salida[8] <= Full_Adder_Five:Sum4.S[3]
-Salida[9] <= Full_Adder_Five:Sum4.S[4]
-carryF <= Full_Adder_Five:Sum4.Carry
-overflowF <= Full_Adder_Five:Sum4.Overflow
-zeroF <= zeroF.DB_MAX_OUTPUT_PORT_TYPE
-sumF <= Full_Adder_Five:Sum4.S[4]
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion
+A[0] => and_aux1[4].IN0
+A[0] => and_aux2[4].IN0
+A[0] => and_aux3[4].IN0
+A[0] => and_aux4[4].IN0
+A[0] => and_aux5[4].IN0
+A[1] => and_aux1[3].IN0
+A[1] => and_aux2[3].IN0
+A[1] => and_aux3[3].IN0
+A[1] => and_aux4[3].IN0
+A[1] => and_aux5[3].IN0
+A[2] => and_aux1[2].IN0
+A[2] => and_aux2[2].IN0
+A[2] => and_aux3[2].IN0
+A[2] => and_aux4[2].IN0
+A[2] => and_aux5[2].IN0
+A[3] => and_aux1[1].IN0
+A[3] => and_aux2[1].IN0
+A[3] => and_aux3[1].IN0
+A[3] => and_aux4[1].IN0
+A[3] => and_aux5[1].IN0
+A[4] => and_aux1[0].IN0
+A[4] => and_aux2[0].IN0
+A[4] => and_aux3[0].IN0
+A[4] => and_aux4[0].IN0
+A[4] => and_aux5[0].IN0
+B[0] => and_aux1[4].IN1
+B[0] => and_aux1[3].IN1
+B[0] => and_aux1[2].IN1
+B[0] => and_aux1[1].IN1
+B[0] => and_aux1[0].IN1
+B[0] => and_aux2[1].IN1
+B[0] => and_aux5[1].IN1
+B[1] => and_aux2[4].IN1
+B[1] => and_aux2[3].IN1
+B[1] => and_aux2[2].IN1
+B[1] => and_aux2[0].IN1
+B[2] => and_aux3[4].IN1
+B[2] => and_aux3[3].IN1
+B[2] => and_aux3[2].IN1
+B[2] => and_aux3[1].IN1
+B[2] => and_aux3[0].IN1
+B[3] => and_aux4[4].IN1
+B[3] => and_aux4[3].IN1
+B[3] => and_aux4[2].IN1
+B[3] => and_aux4[1].IN1
+B[3] => and_aux4[0].IN1
+B[4] => and_aux5[4].IN1
+B[4] => and_aux5[3].IN1
+B[4] => and_aux5[2].IN1
+B[4] => and_aux5[0].IN1
+S[0] <= ten_bit_adder:suma4.S[0]
+S[1] <= ten_bit_adder:suma4.S[1]
+S[2] <= ten_bit_adder:suma4.S[2]
+S[3] <= ten_bit_adder:suma4.S[3]
+S[4] <= ten_bit_adder:suma4.S[4]
+S[5] <= ten_bit_adder:suma4.S[5]
+S[6] <= ten_bit_adder:suma4.S[6]
+S[7] <= ten_bit_adder:suma4.S[7]
+S[8] <= ten_bit_adder:suma4.S[8]
+S[9] <= ten_bit_adder:suma4.S[9]
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1
-selector => B_Prime[0].IN0
-selector => B_Prime[1].IN0
-selector => B_Prime[2].IN0
-selector => B_Prime[3].IN0
-selector => B_Prime[4].IN0
-selector => Carry.IN1
-selector => Fadder:Sum1.Cin
-A[0] => Fadder:Sum1.A
-A[1] => Fadder:Sum2.A
-A[2] => Fadder:Sum3.A
-A[3] => Fadder:Sum4.A
-A[4] => Fadder:Sum5.A
-B[0] => B_Prime[0].IN1
-B[1] => B_Prime[1].IN1
-B[2] => B_Prime[2].IN1
-B[3] => B_Prime[3].IN1
-B[4] => B_Prime[4].IN1
-S[0] <= Fadder:Sum1.S
-S[1] <= Fadder:Sum2.S
-S[2] <= Fadder:Sum3.S
-S[3] <= Fadder:Sum4.S
-S[4] <= Fadder:Sum5.S
-Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
-Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
-Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
-Sum <= Fadder:Sum5.S
-Cout <= Fadder:Sum5.Cout
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+A[8] => full_adder:fullAdder9.A
+A[9] => full_adder:fullAdder10.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+B[8] => full_adder:fullAdder9.B
+B[9] => full_adder:fullAdder10.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+S[8] <= full_adder:fullAdder9.S
+S[9] <= full_adder:fullAdder10.S
+Cout <= full_adder:fullAdder10.Cout
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder1
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder2
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder3
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder4
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum1|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder5
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2
-selector => B_Prime[0].IN0
-selector => B_Prime[1].IN0
-selector => B_Prime[2].IN0
-selector => B_Prime[3].IN0
-selector => B_Prime[4].IN0
-selector => Carry.IN1
-selector => Fadder:Sum1.Cin
-A[0] => Fadder:Sum1.A
-A[1] => Fadder:Sum2.A
-A[2] => Fadder:Sum3.A
-A[3] => Fadder:Sum4.A
-A[4] => Fadder:Sum5.A
-B[0] => B_Prime[0].IN1
-B[1] => B_Prime[1].IN1
-B[2] => B_Prime[2].IN1
-B[3] => B_Prime[3].IN1
-B[4] => B_Prime[4].IN1
-S[0] <= Fadder:Sum1.S
-S[1] <= Fadder:Sum2.S
-S[2] <= Fadder:Sum3.S
-S[3] <= Fadder:Sum4.S
-S[4] <= Fadder:Sum5.S
-Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
-Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
-Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
-Sum <= Fadder:Sum5.S
-Cout <= Fadder:Sum5.Cout
-
-
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder6
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder7
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder8
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder9
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum2|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma1|full_adder:fullAdder10
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3
-selector => B_Prime[0].IN0
-selector => B_Prime[1].IN0
-selector => B_Prime[2].IN0
-selector => B_Prime[3].IN0
-selector => B_Prime[4].IN0
-selector => Carry.IN1
-selector => Fadder:Sum1.Cin
-A[0] => Fadder:Sum1.A
-A[1] => Fadder:Sum2.A
-A[2] => Fadder:Sum3.A
-A[3] => Fadder:Sum4.A
-A[4] => Fadder:Sum5.A
-B[0] => B_Prime[0].IN1
-B[1] => B_Prime[1].IN1
-B[2] => B_Prime[2].IN1
-B[3] => B_Prime[3].IN1
-B[4] => B_Prime[4].IN1
-S[0] <= Fadder:Sum1.S
-S[1] <= Fadder:Sum2.S
-S[2] <= Fadder:Sum3.S
-S[3] <= Fadder:Sum4.S
-S[4] <= Fadder:Sum5.S
-Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
-Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
-Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
-Sum <= Fadder:Sum5.S
-Cout <= Fadder:Sum5.Cout
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+A[8] => full_adder:fullAdder9.A
+A[9] => full_adder:fullAdder10.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+B[8] => full_adder:fullAdder9.B
+B[9] => full_adder:fullAdder10.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+S[8] <= full_adder:fullAdder9.S
+S[9] <= full_adder:fullAdder10.S
+Cout <= full_adder:fullAdder10.Cout
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder1
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder2
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder3
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder4
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum3|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder5
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4
-selector => B_Prime[0].IN0
-selector => B_Prime[1].IN0
-selector => B_Prime[2].IN0
-selector => B_Prime[3].IN0
-selector => B_Prime[4].IN0
-selector => Carry.IN1
-selector => Fadder:Sum1.Cin
-A[0] => Fadder:Sum1.A
-A[1] => Fadder:Sum2.A
-A[2] => Fadder:Sum3.A
-A[3] => Fadder:Sum4.A
-A[4] => Fadder:Sum5.A
-B[0] => B_Prime[0].IN1
-B[1] => B_Prime[1].IN1
-B[2] => B_Prime[2].IN1
-B[3] => B_Prime[3].IN1
-B[4] => B_Prime[4].IN1
-S[0] <= Fadder:Sum1.S
-S[1] <= Fadder:Sum2.S
-S[2] <= Fadder:Sum3.S
-S[3] <= Fadder:Sum4.S
-S[4] <= Fadder:Sum5.S
-Carry <= Carry.DB_MAX_OUTPUT_PORT_TYPE
-Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
-Zero <= Zero.DB_MAX_OUTPUT_PORT_TYPE
-Sum <= Fadder:Sum5.S
-Cout <= Fadder:Sum5.Cout
-
-
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum1
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder6
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum2
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder7
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum3
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder8
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum4
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder9
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
-Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UAritmetica|Multiplicador:Mul|Full_Adder_Five:Sum4|Fadder:Sum5
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma2|full_adder:fullAdder10
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => S.IN1
 B => Cout.IN1
-B => Cout.IN0
 Cin => S.IN1
 Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+A[8] => full_adder:fullAdder9.A
+A[9] => full_adder:fullAdder10.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+B[8] => full_adder:fullAdder9.B
+B[9] => full_adder:fullAdder10.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+S[8] <= full_adder:fullAdder9.S
+S[9] <= full_adder:fullAdder10.S
+Cout <= full_adder:fullAdder10.Cout
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder4
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder5
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder6
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder7
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder8
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder9
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma3|full_adder:fullAdder10
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4
+A[0] => full_adder:fullAdder1.A
+A[1] => full_adder:fullAdder2.A
+A[2] => full_adder:fullAdder3.A
+A[3] => full_adder:fullAdder4.A
+A[4] => full_adder:fullAdder5.A
+A[5] => full_adder:fullAdder6.A
+A[6] => full_adder:fullAdder7.A
+A[7] => full_adder:fullAdder8.A
+A[8] => full_adder:fullAdder9.A
+A[9] => full_adder:fullAdder10.A
+B[0] => full_adder:fullAdder1.B
+B[1] => full_adder:fullAdder2.B
+B[2] => full_adder:fullAdder3.B
+B[3] => full_adder:fullAdder4.B
+B[4] => full_adder:fullAdder5.B
+B[5] => full_adder:fullAdder6.B
+B[6] => full_adder:fullAdder7.B
+B[7] => full_adder:fullAdder8.B
+B[8] => full_adder:fullAdder9.B
+B[9] => full_adder:fullAdder10.B
+Cin => full_adder:fullAdder1.Cin
+S[0] <= full_adder:fullAdder1.S
+S[1] <= full_adder:fullAdder2.S
+S[2] <= full_adder:fullAdder3.S
+S[3] <= full_adder:fullAdder4.S
+S[4] <= full_adder:fullAdder5.S
+S[5] <= full_adder:fullAdder6.S
+S[6] <= full_adder:fullAdder7.S
+S[7] <= full_adder:fullAdder8.S
+S[8] <= full_adder:fullAdder9.S
+S[9] <= full_adder:fullAdder10.S
+Cout <= full_adder:fullAdder10.Cout
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder4
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder5
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder6
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder7
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder8
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder9
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica1alu|unidad_aritmetica:inst|multiplicador:multiplicacion|ten_bit_adder:suma4|full_adder:fullAdder10
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+Cin => S.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE

@@ -4,95 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "S[0]",
+					"name" : "d1",
 					"strict" : false
 				},
 				{
-					"name" : "S[1]",
+					"name" : "d2",
 					"strict" : false
 				},
 				{
-					"name" : "S[2]",
+					"name" : "d3",
 					"strict" : false
 				},
 				{
-					"name" : "S[3]",
+					"name" : "d4",
 					"strict" : false
 				},
 				{
-					"name" : "S[4]",
+					"name" : "a_seg",
 					"strict" : false
 				},
 				{
-					"name" : "S[5]",
+					"name" : "b_seg",
 					"strict" : false
 				},
 				{
-					"name" : "S[6]",
+					"name" : "c_seg",
 					"strict" : false
 				},
 				{
-					"name" : "S[7]",
+					"name" : "d_seg",
 					"strict" : false
 				},
 				{
-					"name" : "S[8]",
+					"name" : "e_seg",
 					"strict" : false
 				},
 				{
-					"name" : "S[9]",
+					"name" : "f_seg",
 					"strict" : false
 				},
 				{
-					"name" : "SalidaMux[0]",
+					"name" : "g_seg",
 					"strict" : false
 				},
 				{
-					"name" : "SalidaMux[1]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "SalidaMux[2]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "SalidaMux[3]",
+					"name" : "sel_op[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Carry",
-					"strict" : false
-				},
-				{
-					"name" : "Overflow",
-					"strict" : false
-				},
-				{
-					"name" : "Zero",
-					"strict" : false
-				},
-				{
-					"name" : "Sum",
-					"strict" : false
-				},
-				{
-					"name" : "Cout",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "selector[1]",
-					"strict" : false
-				},
-				{
-					"name" : "selector[0]",
+					"name" : "sel_op[0]",
 					"strict" : false
 				},
 				{
@@ -100,11 +68,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
 					"strict" : false
 				},
 				{
@@ -116,19 +88,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
 					"name" : "A[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "B[5]",
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
@@ -136,11 +108,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "B[6]",
+					"name" : "B[5]",
 					"strict" : false
 				},
 				{
@@ -149,6 +117,14 @@
 				},
 				{
 					"name" : "B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[6]",
 					"strict" : false
 				}
 			]
