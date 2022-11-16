@@ -5,7 +5,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY valores IS
 	PORT(
 		address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		valor : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		valor : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END ENTITY;
 
@@ -26,7 +26,7 @@ ARCHITECTURE bhr OF valores IS
 	9 => "00000010", -- 2
 	10 => "00000111", -- 7
 	11 => "00000101", -- 5
-	12 => "00000101", -- 5
+	12 => "00000101" -- 5
 	);
 BEGIN
 
@@ -47,6 +47,7 @@ BEGIN
 			WHEN "1011" => valor <= codigos(11);
 			WHEN "1100" => valor <= codigos(12);
 			WHEN OTHERS => valor <= "11111111";
+		END CASE;
 	END PROCESS;
 	
-END ARCHITECTURE
+END ARCHITECTURE;
