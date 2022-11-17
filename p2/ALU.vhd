@@ -7,7 +7,7 @@ ENTITY ALU IS
 		A,B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		clk, rst : STD_LOGIC;
+		clk, rst : IN STD_LOGIC; -- No puse in XDDDD
 		z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
 	);
 END ENTITY ALU;
