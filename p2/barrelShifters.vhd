@@ -13,7 +13,7 @@ END ENTITY barrelShifters;
 
 ARCHITECTURE shifters OF barrelShifters IS
     SIGNAL aux : STD_LOGIC_VECTOR(9 DOWNTO 0);
-    signal i: INTEGER RANGE 0 TO 9 := 0;
+    --signal i: INTEGER RANGE 0 TO 3 := 0;
 BEGIN
     --Las opciones del shifter
     Shifter : PROCESS (clk, cntrl, iniciar)
@@ -23,13 +23,10 @@ BEGIN
         ELSIF (rising_edge(clk)) THEN
             IF (cntrl = '0') THEN
                 --LSL
-                aux(9 downto 1) <= aux(8 DOWNTO 0);
-                aux(0) <= a(i);
-                i <= i + 1;
+                aux <= a(8 DOWNTO 0) & '0';
+                --salShifters <= aux(2 DOWNTO 0);
             ELSE
-                aux <= aux(9) & aux(9 DOWNTO 1); --ASR
-                aux(9) <= a(i);
-                i <= i + 1;
+                aux <= a(9) & a(9 DOWNTO 1); --ASR
             END IF;
             salShifters <= aux;
         END IF;

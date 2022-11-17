@@ -1,0 +1,76 @@
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY ALU IS 
+	PORT(
+		A,B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		clk, rst : STD_LOGIC;
+		z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
+	);
+END ENTITY ALU;
+
+ARCHITECTURE bhr OF ALU IS
+
+	SIGNAL sel_aux : STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SIGNAL ua_sal,log_sal,bar_sal : STD_LOGIC_VECTOR(9 DOWNTO 0);
+	SIGNAL rlj_aux : STD_LOGIC;
+-- Llamamos a todos los componentes
+COMPONENT uapro IS
+    PORT (
+        Xi, Yi : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+        selector : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+        clk, rst : IN STD_LOGIC;
+        Si : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+        C, Z, Ov, S : OUT STD_LOGIC
+    );
+END COMPONENT uapro;
+
+COMPONENT Logicas IS
+	PORT (
+		a, b : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		cntrl : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		clk : IN STD_LOGIC;
+		salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		s_op : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		sf : OUT STD_LOGIC
+	);
+END COMPONENT Logicas;
+
+COMPONENT barrelShifters IS
+    PORT (
+        a : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+        cntrl, clk, iniciar : IN STD_LOGIC;
+        salShifters : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+        salPrub : OUT STD_LOGIC
+    );
+END COMPONENT barrelShifters;
+
+COMPONENT frecuencia_5Hz is
+	port(
+		reloj : in std_logic;
+		reset : in std_logic;
+		sal,sal2 : out std_logic
+	);
+	
+end frecuencia_5Hz;
+
+
+BEGIN
+
+	PROCESS(sel)
+	BEGIN
+		CASE sel IS
+			WHEN "0000"
+	
+	END PROCESS;
+
+reloj: frecuencia_5Hz PORT MAP(clk, rst,rlj_aux, c);	
+unidad_aritmetica: uapro PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),"00", clk,rst,ua_sal,c_flag,z_flag,ov_flag,s_flag);
+unidad_logica: Logicas PORT MAP(A,B. "00", clk, log_sal,a,b);
+barrel_shifters: barrelShifters PORT MAP(A,'0',rlj_aux, '1', bar_sal, d);
+
+
+END ARCHITECTURE;

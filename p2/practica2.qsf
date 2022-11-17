@@ -55,6 +55,14 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE divisor.vhd
+set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name VHDL_FILE convertidor.vhd
 set_global_assignment -name VHDL_FILE uapro.vhd
 set_global_assignment -name VHDL_FILE negativoP.vhd
 set_global_assignment -name VHDL_FILE Logicas.vhd
@@ -70,10 +78,45 @@ set_global_assignment -name VHDL_FILE barrelShifters.vhd
 set_global_assignment -name VHDL_FILE OP_SELEC.vhd
 set_global_assignment -name VHDL_FILE indexed_data.vhd
 set_global_assignment -name VHDL_FILE valores.vhd
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE practica2.bdf
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_location_assignment PIN_30 -to A[0]
+set_location_assignment PIN_31 -to A[1]
+set_location_assignment PIN_32 -to A[2]
+set_location_assignment PIN_33 -to A[3]
+set_location_assignment PIN_38 -to A[4]
+set_location_assignment PIN_39 -to A[5]
+set_location_assignment PIN_42 -to A[6]
+set_location_assignment PIN_43 -to A[7]
+set_location_assignment PIN_44 -to A[8]
+set_location_assignment PIN_46 -to A[9]
+set_location_assignment PIN_59 -to B[0]
+set_location_assignment PIN_60 -to B[1]
+set_location_assignment PIN_64 -to B[2]
+set_location_assignment PIN_65 -to B[3]
+set_location_assignment PIN_66 -to B[4]
+set_location_assignment PIN_67 -to B[5]
+set_location_assignment PIN_68 -to B[6]
+set_location_assignment PIN_69 -to B[7]
+set_location_assignment PIN_70 -to B[8]
+set_location_assignment PIN_72 -to B[9]
+set_location_assignment PIN_91 -to clk
+set_location_assignment PIN_111 -to R[0]
+set_location_assignment PIN_113 -to R[1]
+set_location_assignment PIN_114 -to R[2]
+set_location_assignment PIN_119 -to R[3]
+set_location_assignment PIN_121 -to R[4]
+set_location_assignment PIN_110 -to R[5]
+set_location_assignment PIN_112 -to R[6]
+set_location_assignment PIN_115 -to R[7]
+set_location_assignment PIN_120 -to R[8]
+set_location_assignment PIN_124 -to R[9]
+set_location_assignment PIN_144 -to sel[0]
+set_location_assignment PIN_1 -to sel[1]
+set_location_assignment PIN_2 -to sel[2]
+set_location_assignment PIN_3 -to sel[3]
+set_location_assignment PIN_51 -to carry_f
+set_location_assignment PIN_52 -to overflow_f
+set_location_assignment PIN_53 -to sign_f
+set_location_assignment PIN_54 -to zero_f
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
