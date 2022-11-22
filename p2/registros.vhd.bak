@@ -1,0 +1,41 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+ENTITY registros IS
+	PORT(
+		address : IN STD_lOGIC_VECTOR(3 DOWNTO 0);
+		res: OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF registros IS
+
+	TYPE registrosos IS ARRAY(15 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
+
+	SIGNAL registro : registrosos := (
+		0 <= x"00",
+		1 <= x"00",
+		2 <= x"00",
+		3 <= x"00",
+		4 <= x"00",
+		5 <= x"00",
+		6 <= x"00",
+		7 <= x"00",
+		8 <= x"00",
+		9 <= x"00",
+		10 <= x"00",
+		11 <= x"00",
+		12 <= x"00",
+		13 <= x"00",
+		14 <= x"00",
+		15 <= x"00"
+	);
+
+
+BEGIN
+
+
+
+END ARCHITECTURE;

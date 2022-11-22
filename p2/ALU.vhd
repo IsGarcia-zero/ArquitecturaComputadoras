@@ -51,20 +51,14 @@ COMPONENT barrelShifters IS
     );
 END COMPONENT barrelShifters;
 
-COMPONENT frecuencia_5Hz is
-	port(
-		reloj : in std_logic;
-		reset : in std_logic;
-		sal,sal2 : out std_logic
-	);
-	
-end COMPONENT frecuencia_5Hz;
+
 
 
 BEGIN
 
 	PROCESS(sel, log_sal, ua_sal, bar_sal, sel_aux_2)
 	BEGIN
+		
 		CASE sel IS
 			WHEN "0000" => 
 				R <= "0000000000";
@@ -97,7 +91,7 @@ BEGIN
 				sel_aux <= "10";
 				R <= ua_sal;
 			WHEN "1010" => -- DIVISION
-				sel_aux <= "00";
+				sel_aux <= "11";
 				R <= ua_sal;
 			WHEN OTHERS => 
 				R <= "1111111111";
@@ -105,10 +99,10 @@ BEGIN
 		END CASE;
 	END PROCESS;
 
-reloj: frecuencia_5Hz PORT MAP(clk, rst,rlj_aux, c_aux);	
-unidad_aritmetica: uapro PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),sel_aux, rlj_aux,rst,ua_sal,c_flag,z_flag,ov_flag,s_flag);
-unidad_logica: Logicas PORT MAP(A,B, sel_aux, rlj_aux, log_sal,a_aux,b_aux);
-barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,rlj_aux, '1', bar_sal, d_aux);
+
+unidad_aritmetica: uapro PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),sel_aux, clk,rst,ua_sal,c_flag,z_flag,ov_flag,s_flag);
+unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk, log_sal,a_aux,b_aux);
+barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal, d_aux);
 
 
 END ARCHITECTURE;

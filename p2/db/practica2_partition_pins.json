@@ -4,155 +4,43 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "zero_f",
+					"name" : "d1",
 					"strict" : false
 				},
 				{
-					"name" : "sign_f",
+					"name" : "d2",
 					"strict" : false
 				},
 				{
-					"name" : "overflow_f",
+					"name" : "d4",
 					"strict" : false
 				},
 				{
-					"name" : "carry_f",
+					"name" : "d3",
 					"strict" : false
 				},
 				{
-					"name" : "R[9]",
+					"name" : "pin_name1",
 					"strict" : false
 				},
 				{
-					"name" : "R[8]",
+					"name" : "sal_prueb[3]",
 					"strict" : false
 				},
 				{
-					"name" : "R[7]",
+					"name" : "sal_prueb[2]",
 					"strict" : false
 				},
 				{
-					"name" : "R[6]",
+					"name" : "sal_prueb[1]",
 					"strict" : false
 				},
 				{
-					"name" : "R[5]",
+					"name" : "sal_prueb[0]",
 					"strict" : false
 				},
 				{
-					"name" : "R[4]",
-					"strict" : false
-				},
-				{
-					"name" : "R[3]",
-					"strict" : false
-				},
-				{
-					"name" : "R[2]",
-					"strict" : false
-				},
-				{
-					"name" : "R[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "B[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[9]",
-					"strict" : false
-				},
-				{
-					"name" : "B[9]",
-					"strict" : false
-				},
-				{
-					"name" : "A[8]",
-					"strict" : false
-				},
-				{
-					"name" : "B[8]",
+					"name" : "rst_clk",
 					"strict" : false
 				},
 				{

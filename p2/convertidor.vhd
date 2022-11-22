@@ -6,6 +6,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 ENTITY convertidor IS
 	PORT(
 		en : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		clk : in STD_lOGIC;
 		s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END ENTITY;
@@ -15,8 +16,10 @@ ARCHITECTURE bhr OF convertidor IS
 	--VARIABLE contador, aux : INTEGER RANGE 0 TO 9:= 0;
 BEGIN
 	PROCESS(en)
+	
 	VARIABLE digitos : STD_LOGIC_VECTOR(15 DOWNTO 0):="0000000000000000";
 	BEGIN
+	IF (RISING_EDGE(clk)) THEN
 		FOR j IN 0 TO 15 LOOP
 			digitos(j) := '0';
 		END LOOP;
@@ -37,6 +40,8 @@ BEGIN
 			digitos := digitos(14 downto 0) & en(6 - i);
 		END LOOP;
 		--digitos := "0001001000110100";
+	
 		s <= digitos;
+		END IF;
 	END PROCESS;	
 END ARCHITECTURE;

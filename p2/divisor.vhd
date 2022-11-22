@@ -26,6 +26,7 @@ begin
 			
 		elsif rising_edge(reloj) then
 			if cuenta = 80000 then
+			--if cuenta2 = 9999999 then
 				cuenta <= 0;
 				salida <=not salida;
 				
