@@ -65,5 +65,5 @@ BEGIN
     Cfm <= Cfmm(3);
     Zfm <= Zfmm(3);
     Ovfm <= Ovfmm(3);
-    Sfm <= rS XOR gS XOR Sfmm(3);
+    Sfm <= rS XOR gS;
 END ARCHITECTURE Behavioral;

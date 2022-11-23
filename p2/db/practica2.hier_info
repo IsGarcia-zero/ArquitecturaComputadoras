@@ -1,308 +1,49 @@
 |practica2
-d1 <= display:inst6.d1
-clk => display:inst6.clk
-clk => FinalSelection:inst.clk
-rst => FinalSelection:inst.rst
-ec[0] => FinalSelection:inst.ecuacion[0]
-ec[1] => FinalSelection:inst.ecuacion[1]
-d2 <= display:inst6.d2
-d4 <= display:inst6.d4
-c <= display:inst6.c
-d <= display:inst6.d
-e <= display:inst6.e
-f <= display:inst6.f
-g <= display:inst6.g
-d3 <= display:inst6.d3
-a <= display:inst6.a
-b <= display:inst6.b
-pin_name1 <= rst_clk.DB_MAX_OUTPUT_PORT_TYPE
-rst_clk => pin_name1.DATAIN
-resultado[0] <= FinalSelection:inst.resultado[0]
-resultado[1] <= FinalSelection:inst.resultado[1]
-resultado[2] <= FinalSelection:inst.resultado[2]
-resultado[3] <= FinalSelection:inst.resultado[3]
-resultado[4] <= FinalSelection:inst.resultado[4]
-resultado[5] <= FinalSelection:inst.resultado[5]
-resultado[6] <= FinalSelection:inst.resultado[6]
-resultado[7] <= FinalSelection:inst.resultado[7]
-resultado[8] <= FinalSelection:inst.resultado[8]
-resultado[9] <= FinalSelection:inst.resultado[9]
-sal_prueb[0] <= FinalSelection:inst.s[0]
-sal_prueb[1] <= FinalSelection:inst.s[1]
-sal_prueb[2] <= FinalSelection:inst.s[2]
-sal_prueb[3] <= FinalSelection:inst.s[3]
-sal_prueb[4] <= FinalSelection:inst.s[4]
-sal_prueb[5] <= FinalSelection:inst.s[5]
-sal_prueb[6] <= FinalSelection:inst.s[6]
-sal_prueb[7] <= FinalSelection:inst.s[7]
-sal_prueb[8] <= FinalSelection:inst.s[8]
-sal_prueb[9] <= FinalSelection:inst.s[9]
-sal_prueb[10] <= FinalSelection:inst.s[10]
-sal_prueb[11] <= FinalSelection:inst.s[11]
-sal_prueb[12] <= FinalSelection:inst.s[12]
-sal_prueb[13] <= FinalSelection:inst.s[13]
-sal_prueb[14] <= FinalSelection:inst.s[14]
-sal_prueb[15] <= FinalSelection:inst.s[15]
+ZF <= ALU:inst1.z_flag
+s1 => ALU:inst1.s1
+s2 => ALU:inst1.s2
+clk => ALU:inst1.clk
+rst => ALU:inst1.rst
+A[0] => ALU:inst1.A[0]
+A[1] => ALU:inst1.A[1]
+A[2] => ALU:inst1.A[2]
+A[3] => ALU:inst1.A[3]
+A[4] => ALU:inst1.A[4]
+A[5] => ALU:inst1.A[5]
+A[6] => ALU:inst1.A[6]
+A[7] => ALU:inst1.A[7]
+A[8] => ALU:inst1.A[8]
+A[9] => ALU:inst1.A[9]
+B[0] => ALU:inst1.B[0]
+B[1] => ALU:inst1.B[1]
+B[2] => ALU:inst1.B[2]
+B[3] => ALU:inst1.B[3]
+B[4] => ALU:inst1.B[4]
+B[5] => ALU:inst1.B[5]
+B[6] => ALU:inst1.B[6]
+B[7] => ALU:inst1.B[7]
+B[8] => ALU:inst1.B[8]
+B[9] => ALU:inst1.B[9]
+sel[0] => ALU:inst1.sel[0]
+sel[1] => ALU:inst1.sel[1]
+sel[2] => ALU:inst1.sel[2]
+sel[3] => ALU:inst1.sel[3]
+SF <= ALU:inst1.s_flag
+OVF <= ALU:inst1.ov_flag
+CF <= ALU:inst1.c_flag
+R[0] <= ALU:inst1.R[0]
+R[1] <= ALU:inst1.R[1]
+R[2] <= ALU:inst1.R[2]
+R[3] <= ALU:inst1.R[3]
+R[4] <= ALU:inst1.R[4]
+R[5] <= ALU:inst1.R[5]
+R[6] <= ALU:inst1.R[6]
+R[7] <= ALU:inst1.R[7]
+R[8] <= ALU:inst1.R[8]
+R[9] <= ALU:inst1.R[9]
 
 
-|practica2|display:inst6
-en[0] => Mux7.IN3
-en[1] => Mux6.IN3
-en[2] => Mux5.IN3
-en[3] => Mux4.IN3
-en[4] => Mux7.IN2
-en[5] => Mux6.IN2
-en[6] => Mux5.IN2
-en[7] => Mux4.IN2
-en[8] => Mux7.IN1
-en[9] => Mux6.IN1
-en[10] => Mux5.IN1
-en[11] => Mux4.IN1
-en[12] => Mux7.IN0
-en[13] => Mux6.IN0
-en[14] => Mux5.IN0
-en[15] => Mux4.IN0
-clk => contador[0].CLK
-clk => contador[1].CLK
-clk => tmp[0].CLK
-clk => tmp[1].CLK
-clk => tmp[2].CLK
-clk => tmp[3].CLK
-clk => arreglo[0].CLK
-clk => arreglo[1].CLK
-clk => arreglo[2].CLK
-clk => arreglo[3].CLK
-d1 <= arreglo[0].DB_MAX_OUTPUT_PORT_TYPE
-d2 <= arreglo[1].DB_MAX_OUTPUT_PORT_TYPE
-d3 <= arreglo[2].DB_MAX_OUTPUT_PORT_TYPE
-d4 <= arreglo[3].DB_MAX_OUTPUT_PORT_TYPE
-a <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
-b <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-c <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-d <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-e <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-f <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-g <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst
-ecuacion[0] => ecuaciones:ecuacion1.ec[0]
-ecuacion[1] => ecuaciones:ecuacion1.ec[1]
-resultado[0] <= ecuaciones:ecuacion1.resultado[0]
-resultado[1] <= ecuaciones:ecuacion1.resultado[1]
-resultado[2] <= ecuaciones:ecuacion1.resultado[2]
-resultado[3] <= ecuaciones:ecuacion1.resultado[3]
-resultado[4] <= ecuaciones:ecuacion1.resultado[4]
-resultado[5] <= ecuaciones:ecuacion1.resultado[5]
-resultado[6] <= ecuaciones:ecuacion1.resultado[6]
-resultado[7] <= ecuaciones:ecuacion1.resultado[7]
-resultado[8] <= ecuaciones:ecuacion1.resultado[8]
-resultado[9] <= ecuaciones:ecuacion1.resultado[9]
-s[0] <= convertidor:conv1.s[0]
-s[1] <= convertidor:conv1.s[1]
-s[2] <= convertidor:conv1.s[2]
-s[3] <= convertidor:conv1.s[3]
-s[4] <= convertidor:conv1.s[4]
-s[5] <= convertidor:conv1.s[5]
-s[6] <= convertidor:conv1.s[6]
-s[7] <= convertidor:conv1.s[7]
-s[8] <= convertidor:conv1.s[8]
-s[9] <= convertidor:conv1.s[9]
-s[10] <= convertidor:conv1.s[10]
-s[11] <= convertidor:conv1.s[11]
-s[12] <= convertidor:conv1.s[12]
-s[13] <= convertidor:conv1.s[13]
-s[14] <= convertidor:conv1.s[14]
-s[15] <= convertidor:conv1.s[15]
-clk => ecuaciones:ecuacion1.clk
-clk => aux_out[0].CLK
-clk => aux_out[1].CLK
-clk => aux_out[2].CLK
-clk => aux_out[3].CLK
-clk => convertidor:conv1.clk
-clk => pr_state~1.DATAIN
-rst => ecuaciones:ecuacion1.rst
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1
-addr[0] => ~NO_FANOUT~
-addr[1] => ~NO_FANOUT~
-addr[2] => ~NO_FANOUT~
-addr[3] => ~NO_FANOUT~
-ec[0] => ~NO_FANOUT~
-ec[1] => ~NO_FANOUT~
-resultado[0] <= ALU:alu1.R[0]
-resultado[1] <= ALU:alu1.R[1]
-resultado[2] <= ALU:alu1.R[2]
-resultado[3] <= ALU:alu1.R[3]
-resultado[4] <= ALU:alu1.R[4]
-resultado[5] <= ALU:alu1.R[5]
-resultado[6] <= ALU:alu1.R[6]
-resultado[7] <= ALU:alu1.R[7]
-resultado[8] <= ALU:alu1.R[8]
-resultado[9] <= ALU:alu1.R[9]
-clk => ALU:alu1.clk
-clk => registro[0][0].CLK
-clk => registro[0][1].CLK
-clk => registro[0][2].CLK
-clk => registro[0][3].CLK
-clk => registro[0][4].CLK
-clk => registro[0][5].CLK
-clk => registro[0][6].CLK
-clk => registro[0][7].CLK
-clk => registro[0][8].CLK
-clk => registro[0][9].CLK
-clk => registro[1][0].CLK
-clk => registro[1][1].CLK
-clk => registro[1][2].CLK
-clk => registro[1][3].CLK
-clk => registro[1][4].CLK
-clk => registro[1][5].CLK
-clk => registro[1][6].CLK
-clk => registro[1][7].CLK
-clk => registro[1][8].CLK
-clk => registro[1][9].CLK
-clk => registro[2][0].CLK
-clk => registro[2][1].CLK
-clk => registro[2][2].CLK
-clk => registro[2][3].CLK
-clk => registro[2][4].CLK
-clk => registro[2][5].CLK
-clk => registro[2][6].CLK
-clk => registro[2][7].CLK
-clk => registro[2][8].CLK
-clk => registro[2][9].CLK
-clk => registro[3][0].CLK
-clk => registro[3][1].CLK
-clk => registro[3][2].CLK
-clk => registro[3][3].CLK
-clk => registro[3][4].CLK
-clk => registro[3][5].CLK
-clk => registro[3][6].CLK
-clk => registro[3][7].CLK
-clk => registro[3][8].CLK
-clk => registro[3][9].CLK
-clk => MREG[0].CLK
-clk => MREG[1].CLK
-clk => MREG[2].CLK
-clk => MREG[3].CLK
-clk => MREG[4].CLK
-clk => MREG[5].CLK
-clk => MREG[6].CLK
-clk => MREG[7].CLK
-clk => MREG[8].CLK
-clk => MREG[9].CLK
-clk => MREG[10].CLK
-clk => MREG[11].CLK
-clk => MREG[12].CLK
-clk => MREG[13].CLK
-clk => MREG[14].CLK
-clk => MREG[15].CLK
-clk => MREG[16].CLK
-clk => MREG[17].CLK
-clk => MREG[18].CLK
-clk => MREG[19].CLK
-clk => MREG[20].CLK
-clk => MREG[21].CLK
-clk => MREG[22].CLK
-clk => MREG[23].CLK
-clk => addr2[0].CLK
-clk => addr2[1].CLK
-clk => addr2[2].CLK
-clk => addr2[3].CLK
-clk => addr1[0].CLK
-clk => addr1[1].CLK
-clk => addr1[2].CLK
-clk => addr1[3].CLK
-clk => pr_state~1.DATAIN
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => pr_state.OUTPUTSELECT
-rst => ALU:alu1.rst
-rst => registro[1][6].ENA
-rst => registro[1][5].ENA
-rst => registro[1][4].ENA
-rst => registro[1][3].ENA
-rst => registro[1][2].ENA
-rst => registro[1][1].ENA
-rst => registro[1][0].ENA
-rst => registro[0][9].ENA
-rst => registro[0][8].ENA
-rst => registro[0][7].ENA
-rst => registro[0][6].ENA
-rst => registro[0][5].ENA
-rst => registro[0][4].ENA
-rst => registro[0][3].ENA
-rst => registro[0][2].ENA
-rst => registro[0][1].ENA
-rst => registro[0][0].ENA
-rst => registro[1][7].ENA
-rst => registro[1][8].ENA
-rst => registro[1][9].ENA
-rst => registro[2][0].ENA
-rst => registro[2][1].ENA
-rst => registro[2][2].ENA
-rst => registro[2][3].ENA
-rst => registro[2][4].ENA
-rst => registro[2][5].ENA
-rst => registro[2][6].ENA
-rst => registro[2][7].ENA
-rst => registro[2][8].ENA
-rst => registro[2][9].ENA
-rst => registro[3][0].ENA
-rst => registro[3][1].ENA
-rst => registro[3][2].ENA
-rst => registro[3][3].ENA
-rst => registro[3][4].ENA
-rst => registro[3][5].ENA
-rst => registro[3][6].ENA
-rst => registro[3][7].ENA
-rst => registro[3][8].ENA
-rst => registro[3][9].ENA
-rst => MREG[0].ENA
-rst => MREG[1].ENA
-rst => MREG[2].ENA
-rst => MREG[3].ENA
-rst => MREG[4].ENA
-rst => MREG[5].ENA
-rst => MREG[6].ENA
-rst => MREG[7].ENA
-rst => MREG[8].ENA
-rst => MREG[9].ENA
-rst => MREG[10].ENA
-rst => MREG[11].ENA
-rst => MREG[12].ENA
-rst => MREG[13].ENA
-rst => MREG[14].ENA
-rst => MREG[15].ENA
-rst => MREG[16].ENA
-rst => MREG[17].ENA
-rst => MREG[18].ENA
-rst => MREG[19].ENA
-rst => MREG[20].ENA
-rst => MREG[21].ENA
-rst => MREG[22].ENA
-rst => MREG[23].ENA
-rst => addr2[0].ENA
-rst => addr2[1].ENA
-rst => addr2[2].ENA
-rst => addr2[3].ENA
-rst => addr1[0].ENA
-rst => addr1[1].ENA
-rst => addr1[2].ENA
-rst => addr1[3].ENA
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1
+|practica2|ALU:inst1
 A[0] => uapro:unidad_aritmetica.Xi[0]
 A[0] => Logicas:unidad_logica.a[0]
 A[0] => barrelShifters:barrel_shifters.a[0]
@@ -349,6 +90,8 @@ B[7] => uapro:unidad_aritmetica.Yi[7]
 B[7] => Logicas:unidad_logica.b[7]
 B[8] => Logicas:unidad_logica.b[8]
 B[9] => Logicas:unidad_logica.b[9]
+s1 => uapro:unidad_aritmetica.aS
+s2 => uapro:unidad_aritmetica.bS
 sel[0] => Mux0.IN9
 sel[0] => Mux1.IN9
 sel[0] => Mux2.IN9
@@ -416,7 +159,7 @@ ov_flag <= uapro:unidad_aritmetica.Ov
 c_flag <= uapro:unidad_aritmetica.C
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica
+|practica2|ALU:inst1|uapro:unidad_aritmetica
 Xi[0] => fullA10b:suma.Xi[0]
 Xi[0] => fullA10b:resta.Xi[0]
 Xi[0] => multP:mult.r[0]
@@ -486,9 +229,9 @@ selector[0] => Mux7.IN1
 selector[0] => Mux8.IN1
 selector[0] => Mux9.IN1
 selector[0] => Mux10.IN2
-selector[0] => Mux11.IN2
+selector[0] => Mux11.IN1
 selector[0] => Mux12.IN1
-selector[0] => Mux13.IN2
+selector[0] => Mux13.IN1
 selector[1] => Mux0.IN1
 selector[1] => Mux1.IN1
 selector[1] => Mux2.IN0
@@ -500,11 +243,19 @@ selector[1] => Mux7.IN0
 selector[1] => Mux8.IN0
 selector[1] => Mux9.IN0
 selector[1] => Mux10.IN1
-selector[1] => Mux11.IN1
+selector[1] => Mux11.IN0
 selector[1] => Mux12.IN0
-selector[1] => Mux13.IN1
+selector[1] => Mux13.IN0
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
+aS => fullA10b:suma.aS
+aS => fullA10b:resta.aS
+aS => multP:mult.rS
+aS => Divisorsito:divi.aS
+bS => fullA10b:suma.bS
+bS => fullA10b:resta.bS
+bS => multP:mult.gS
+bS => Divisorsito:divi.bS
 Si[0] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
 Si[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
 Si[2] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
@@ -521,16 +272,16 @@ Ov <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
 S <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -540,219 +291,268 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -762,210 +562,259 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult
 r[0] => inter[0].IN0
 r[0] => inter[5].IN0
 r[0] => inter[10].IN0
@@ -1016,6 +865,8 @@ g[4] => inter[21].IN1
 g[4] => inter[22].IN1
 g[4] => inter[23].IN1
 g[4] => inter[24].IN1
+rS => Sfm.IN0
+gS => Sfm.IN1
 s[0] <= fullA10b:multi4.Si[0]
 s[1] <= fullA10b:multi4.Si[1]
 s[2] <= fullA10b:multi4.Si[2]
@@ -1029,19 +880,19 @@ s[9] <= fullA10b:multi4.Si[9]
 Cfm <= fullA10b:multi4.Cf
 Ovfm <= fullA10b:multi4.Ovf
 Zfm <= fullA10b:multi4.Zf
-Sfm <= fullA10b:multi4.Sf
+Sfm <= Sfm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -1051,219 +902,268 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -1273,219 +1173,268 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -1495,219 +1444,268 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4
-Xi[0] => fullAdder:s0.A
-Xi[1] => fullAdder:s1.A
-Xi[2] => fullAdder:s2.A
-Xi[3] => fullAdder:s3.A
-Xi[4] => fullAdder:s4.A
-Xi[5] => fullAdder:s5.A
-Xi[6] => fullAdder:s6.A
-Xi[7] => fullAdder:s7.A
-Xi[8] => fullAdder:s8.A
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4
+Xi[0] => Xop[0].IN0
+Xi[1] => Xop[1].IN0
+Xi[2] => Xop[2].IN0
+Xi[3] => Xop[3].IN0
+Xi[4] => Xop[4].IN0
+Xi[5] => Xop[5].IN0
+Xi[6] => Xop[6].IN0
+Xi[7] => Xop[7].IN0
+Xi[8] => Xop[8].IN0
 Yi[0] => Yop[0].IN0
 Yi[1] => Yop[1].IN0
 Yi[2] => Yop[2].IN0
@@ -1717,299 +1715,424 @@ Yi[5] => Yop[5].IN0
 Yi[6] => Yop[6].IN0
 Yi[7] => Yop[7].IN0
 Yi[8] => Yop[8].IN0
-Cin0 => Yop[0].IN1
-Cin0 => Yop[1].IN1
-Cin0 => Yop[2].IN1
-Cin0 => Yop[3].IN1
-Cin0 => Yop[4].IN1
-Cin0 => Yop[5].IN1
-Cin0 => Yop[6].IN1
-Cin0 => Yop[7].IN1
-Cin0 => Yop[8].IN1
-Cin0 => Cfaux.IN1
-Cin0 => fullAdder:s0.Cin
-Cin0 => Siaux[9].OUTPUTSELECT
-Cin0 => Sfaux.OUTPUTSELECT
-Si[0] <= negativoP:negativo.Sc[0]
-Si[1] <= negativoP:negativo.Sc[1]
-Si[2] <= negativoP:negativo.Sc[2]
-Si[3] <= negativoP:negativo.Sc[3]
-Si[4] <= negativoP:negativo.Sc[4]
-Si[5] <= negativoP:negativo.Sc[5]
-Si[6] <= negativoP:negativo.Sc[6]
-Si[7] <= negativoP:negativo.Sc[7]
-Si[8] <= negativoP:negativo.Sc[8]
-Si[9] <= <GND>
-Cf <= negativoP:negativo.C
-Zf <= negativoP:negativo.Z
-Ovf <= negativoP:negativo.Ov
-Sf <= negativoP:negativo.S
+aS => Xop[0].IN1
+aS => Xop[1].IN1
+aS => Xop[2].IN1
+aS => Xop[3].IN1
+aS => Xop[4].IN1
+aS => Xop[5].IN1
+aS => Xop[6].IN1
+aS => Xop[7].IN1
+aS => Xop[8].IN1
+aS => fullAdder:s0.Cin
+bS => Yop[0].IN1
+bS => Yop[1].IN1
+bS => Yop[2].IN1
+bS => Yop[3].IN1
+bS => Yop[4].IN1
+bS => Yop[5].IN1
+bS => Yop[6].IN1
+bS => Yop[7].IN1
+bS => Yop[8].IN1
+bS => fullAdder:s0.Cin2
+Si[0] <= fullAdder:s0.Suma
+Si[1] <= fullAdder:s1.Suma
+Si[2] <= fullAdder:s2.Suma
+Si[3] <= fullAdder:s3.Suma
+Si[4] <= fullAdder:s4.Suma
+Si[5] <= fullAdder:s5.Suma
+Si[6] <= fullAdder:s6.Suma
+Si[7] <= fullAdder:s7.Suma
+Si[8] <= fullAdder:s8.Suma
+Si[9] <= fullAdder:s8.Cout
+Cf <= Cf.DB_MAX_OUTPUT_PORT_TYPE
+Zf <= Zf.DB_MAX_OUTPUT_PORT_TYPE
+Ovf <= Ovf.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s0
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s0
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s1
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s1
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s2
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s2
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s3
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s3
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8
+|practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8
 A => Suma.IN0
+A => Cout.IN0
 A => Cout.IN0
 A => Cout.IN0
 B => Suma.IN1
 B => Cout.IN1
 B => Cout.IN0
+B => Cout.IN0
 Cin => Suma.IN1
 Cin => Cout.IN1
 Cin => Cout.IN1
+Cin => Cout.IN0
+Cin => Cout2.IN1
+Cin2 => Suma.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout.IN1
+Cin2 => Cout2.IN1
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
+Cout2 <= Cout2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|negativoP:negativo
-Si[0] => Saux.DATAB
-Si[0] => Add0.IN20
-Si[1] => Saux.DATAB
-Si[1] => Add0.IN19
-Si[2] => Saux.DATAB
-Si[2] => Add0.IN18
-Si[3] => Saux.DATAB
-Si[3] => Add0.IN17
-Si[4] => Saux.DATAB
-Si[4] => Add0.IN16
-Si[5] => Saux.DATAB
-Si[5] => Add0.IN15
-Si[6] => Saux.DATAB
-Si[6] => Add0.IN14
-Si[7] => Saux.DATAB
-Si[7] => Add0.IN13
-Si[8] => Saux.DATAB
-Si[8] => Add0.IN12
-Si[9] => Add0.IN11
-Cff => C.DATAIN
-Zff => Z.DATAIN
-Ovff => Ov.DATAIN
-Sff => S.DATAIN
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-Sff => Saux.OUTPUTSELECT
-C <= Cff.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Zff.DB_MAX_OUTPUT_PORT_TYPE
-Ov <= Ovff.DB_MAX_OUTPUT_PORT_TYPE
-S <= Sff.DB_MAX_OUTPUT_PORT_TYPE
-Sc[0] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[1] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[2] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[3] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[4] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[5] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[6] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi
-a[0] => LessThan3.IN8
-a[0] => Add3.IN16
+|practica2|ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi
+a[0] => LessThan7.IN8
+a[0] => Add7.IN16
 a[0] => remainderr.DATAA
-a[1] => LessThan2.IN8
-a[1] => Add2.IN16
+a[1] => LessThan6.IN8
+a[1] => Add6.IN16
 a[1] => remainderr.DATAA
-a[2] => LessThan1.IN8
-a[2] => Add1.IN16
+a[2] => LessThan5.IN8
+a[2] => Add5.IN16
 a[2] => remainderr.DATAA
-a[3] => LessThan0.IN8
-a[3] => Add0.IN16
+a[3] => LessThan4.IN8
+a[3] => Add4.IN16
 a[3] => remainderr.DATAA
-a[4] => ~NO_FANOUT~
-a[5] => ~NO_FANOUT~
-a[6] => ~NO_FANOUT~
-a[7] => ~NO_FANOUT~
+a[4] => LessThan3.IN8
+a[4] => Add3.IN16
+a[4] => remainderr.DATAA
+a[5] => LessThan2.IN8
+a[5] => Add2.IN16
+a[5] => remainderr.DATAA
+a[6] => LessThan1.IN8
+a[6] => Add1.IN16
+a[6] => remainderr.DATAA
+a[7] => LessThan0.IN8
+a[7] => Add0.IN16
+a[7] => remainderr.DATAA
 b[0] => LessThan0.IN16
 b[0] => LessThan1.IN16
 b[0] => LessThan2.IN16
 b[0] => LessThan3.IN16
+b[0] => LessThan4.IN16
+b[0] => LessThan5.IN16
+b[0] => LessThan6.IN16
+b[0] => LessThan7.IN16
 b[0] => Add0.IN15
 b[0] => Add1.IN8
 b[0] => Add2.IN8
 b[0] => Add3.IN8
+b[0] => Add4.IN8
+b[0] => Add5.IN8
+b[0] => Add6.IN8
+b[0] => Add7.IN8
 b[1] => LessThan0.IN15
 b[1] => LessThan1.IN15
 b[1] => LessThan2.IN15
 b[1] => LessThan3.IN15
+b[1] => LessThan4.IN15
+b[1] => LessThan5.IN15
+b[1] => LessThan6.IN15
+b[1] => LessThan7.IN15
 b[1] => Add0.IN14
 b[1] => Add1.IN7
 b[1] => Add2.IN7
 b[1] => Add3.IN7
+b[1] => Add4.IN7
+b[1] => Add5.IN7
+b[1] => Add6.IN7
+b[1] => Add7.IN7
 b[2] => LessThan0.IN14
 b[2] => LessThan1.IN14
 b[2] => LessThan2.IN14
 b[2] => LessThan3.IN14
+b[2] => LessThan4.IN14
+b[2] => LessThan5.IN14
+b[2] => LessThan6.IN14
+b[2] => LessThan7.IN14
 b[2] => Add0.IN13
 b[2] => Add1.IN6
 b[2] => Add2.IN6
 b[2] => Add3.IN6
+b[2] => Add4.IN6
+b[2] => Add5.IN6
+b[2] => Add6.IN6
+b[2] => Add7.IN6
 b[3] => LessThan0.IN13
 b[3] => LessThan1.IN13
 b[3] => LessThan2.IN13
 b[3] => LessThan3.IN13
+b[3] => LessThan4.IN13
+b[3] => LessThan5.IN13
+b[3] => LessThan6.IN13
+b[3] => LessThan7.IN13
 b[3] => Add0.IN12
 b[3] => Add1.IN5
 b[3] => Add2.IN5
 b[3] => Add3.IN5
+b[3] => Add4.IN5
+b[3] => Add5.IN5
+b[3] => Add6.IN5
+b[3] => Add7.IN5
 b[4] => LessThan0.IN12
 b[4] => LessThan1.IN12
 b[4] => LessThan2.IN12
 b[4] => LessThan3.IN12
+b[4] => LessThan4.IN12
+b[4] => LessThan5.IN12
+b[4] => LessThan6.IN12
+b[4] => LessThan7.IN12
 b[4] => Add0.IN11
 b[4] => Add1.IN4
 b[4] => Add2.IN4
 b[4] => Add3.IN4
+b[4] => Add4.IN4
+b[4] => Add5.IN4
+b[4] => Add6.IN4
+b[4] => Add7.IN4
 b[5] => LessThan0.IN11
 b[5] => LessThan1.IN11
 b[5] => LessThan2.IN11
 b[5] => LessThan3.IN11
+b[5] => LessThan4.IN11
+b[5] => LessThan5.IN11
+b[5] => LessThan6.IN11
+b[5] => LessThan7.IN11
 b[5] => Add0.IN10
 b[5] => Add1.IN3
 b[5] => Add2.IN3
 b[5] => Add3.IN3
+b[5] => Add4.IN3
+b[5] => Add5.IN3
+b[5] => Add6.IN3
+b[5] => Add7.IN3
 b[6] => LessThan0.IN10
 b[6] => LessThan1.IN10
 b[6] => LessThan2.IN10
 b[6] => LessThan3.IN10
+b[6] => LessThan4.IN10
+b[6] => LessThan5.IN10
+b[6] => LessThan6.IN10
+b[6] => LessThan7.IN10
 b[6] => Add0.IN9
 b[6] => Add1.IN2
 b[6] => Add2.IN2
 b[6] => Add3.IN2
+b[6] => Add4.IN2
+b[6] => Add5.IN2
+b[6] => Add6.IN2
+b[6] => Add7.IN2
 b[7] => LessThan0.IN9
 b[7] => LessThan1.IN9
 b[7] => LessThan2.IN9
 b[7] => LessThan3.IN9
+b[7] => LessThan4.IN9
+b[7] => LessThan5.IN9
+b[7] => LessThan6.IN9
+b[7] => LessThan7.IN9
 b[7] => Add0.IN8
 b[7] => Add1.IN1
 b[7] => Add2.IN1
 b[7] => Add3.IN1
+b[7] => Add4.IN1
+b[7] => Add5.IN1
+b[7] => Add6.IN1
+b[7] => Add7.IN1
+aS => sF.IN0
+bS => sF.IN1
 errorsig <= <GND>
-resultLow[0] <= LessThan3.DB_MAX_OUTPUT_PORT_TYPE
-resultLow[1] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
-resultLow[2] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-resultLow[3] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-resultLow[4] <= <GND>
-resultLow[5] <= <GND>
-resultLow[6] <= <GND>
-resultLow[7] <= <GND>
+sF <= sF.DB_MAX_OUTPUT_PORT_TYPE
+zF <= <GND>
+resultLow[0] <= LessThan7.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[1] <= LessThan6.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[2] <= LessThan5.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[3] <= LessThan4.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[4] <= LessThan3.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[5] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[6] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+resultLow[7] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 resultHigh[0] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 resultHigh[1] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 resultHigh[2] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
@@ -2020,7 +2143,7 @@ resultHigh[6] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 resultHigh[7] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica
+|practica2|ALU:inst1|Logicas:unidad_logica
 a[0] => salida.IN0
 a[0] => salida.IN0
 a[0] => salida.DATAB
@@ -2128,7 +2251,7 @@ s_op[1] <= s_op[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sf <= sf~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters
+|practica2|ALU:inst1|barrelShifters:barrel_shifters
 a[0] => aux.DATAB
 a[1] => aux.DATAB
 a[1] => aux.DATAA
@@ -2210,134 +2333,5 @@ salShifters[7] <= salShifters[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 salShifters[8] <= salShifters[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 salShifters[9] <= salShifters[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 salPrub <= clk.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|valores:val1
-address[0] => Mux0.IN19
-address[0] => Mux1.IN19
-address[0] => Mux2.IN19
-address[0] => Mux3.IN19
-address[0] => Mux4.IN19
-address[1] => Mux0.IN18
-address[1] => Mux1.IN18
-address[1] => Mux2.IN18
-address[1] => Mux3.IN18
-address[1] => Mux4.IN18
-address[2] => Mux0.IN17
-address[2] => Mux1.IN17
-address[2] => Mux2.IN17
-address[2] => Mux3.IN17
-address[2] => Mux4.IN17
-address[3] => Mux0.IN16
-address[3] => Mux1.IN16
-address[3] => Mux2.IN16
-address[3] => Mux3.IN16
-address[3] => Mux4.IN16
-valor[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-valor[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-valor[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-valor[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-valor[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-valor[5] <= <GND>
-valor[6] <= <GND>
-valor[7] <= <GND>
-valor[8] <= <GND>
-valor[9] <= <GND>
-
-
-|practica2|FinalSelection:inst|ecuaciones:ecuacion1|valores:val2
-address[0] => Mux0.IN19
-address[0] => Mux1.IN19
-address[0] => Mux2.IN19
-address[0] => Mux3.IN19
-address[0] => Mux4.IN19
-address[1] => Mux0.IN18
-address[1] => Mux1.IN18
-address[1] => Mux2.IN18
-address[1] => Mux3.IN18
-address[1] => Mux4.IN18
-address[2] => Mux0.IN17
-address[2] => Mux1.IN17
-address[2] => Mux2.IN17
-address[2] => Mux3.IN17
-address[2] => Mux4.IN17
-address[3] => Mux0.IN16
-address[3] => Mux1.IN16
-address[3] => Mux2.IN16
-address[3] => Mux3.IN16
-address[3] => Mux4.IN16
-valor[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-valor[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-valor[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-valor[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-valor[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-valor[5] <= <GND>
-valor[6] <= <GND>
-valor[7] <= <GND>
-valor[8] <= <GND>
-valor[9] <= <GND>
-
-
-|practica2|FinalSelection:inst|convertidor:conv1
-en[0] => LessThan1.IN8
-en[0] => Add1.IN8
-en[0] => digitos.DATAA
-en[1] => LessThan2.IN8
-en[1] => Add2.IN8
-en[1] => digitos.DATAA
-en[2] => LessThan4.IN8
-en[2] => Add4.IN8
-en[2] => digitos.DATAA
-en[3] => LessThan6.IN8
-en[3] => Add6.IN8
-en[3] => digitos.DATAA
-en[4] => LessThan8.IN8
-en[4] => Add8.IN8
-en[4] => digitos.DATAA
-en[5] => LessThan11.IN8
-en[5] => Add11.IN8
-en[5] => digitos.DATAA
-en[6] => s[0]~reg0.DATAIN
-en[7] => LessThan0.IN6
-en[7] => Add0.IN6
-en[7] => digitos.DATAA
-en[8] => LessThan0.IN5
-en[8] => Add0.IN5
-en[8] => digitos.DATAA
-en[9] => LessThan0.IN4
-en[9] => Add0.IN4
-en[9] => digitos.DATAA
-clk => s[0]~reg0.CLK
-clk => s[1]~reg0.CLK
-clk => s[2]~reg0.CLK
-clk => s[3]~reg0.CLK
-clk => s[4]~reg0.CLK
-clk => s[5]~reg0.CLK
-clk => s[6]~reg0.CLK
-clk => s[7]~reg0.CLK
-clk => s[8]~reg0.CLK
-clk => s[9]~reg0.CLK
-clk => s[10]~reg0.CLK
-clk => s[11]~reg0.CLK
-clk => s[12]~reg0.CLK
-clk => s[13]~reg0.CLK
-clk => s[14]~reg0.CLK
-clk => s[15]~reg0.CLK
-s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[4] <= s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[5] <= s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[6] <= s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[7] <= s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[8] <= s[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[9] <= s[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[10] <= s[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[11] <= s[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[12] <= s[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[13] <= s[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[14] <= s[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[15] <= s[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

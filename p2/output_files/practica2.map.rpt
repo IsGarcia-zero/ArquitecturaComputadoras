@@ -1,6 +1,6 @@
 Analysis & Synthesis report for practica2
-Tue Nov 22 22:37:17 2022
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Wed Nov 23 09:01:51 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -13,32 +13,30 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |practica2|FinalSelection:inst|pr_state
-  9. State Machine - |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters"
- 15. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica"
- 16. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi"
- 17. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
- 18. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
- 19. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
- 20. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
- 21. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta"
- 22. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma"
- 23. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1"
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "ALU:inst1|barrelShifters:barrel_shifters"
+ 13. Port Connectivity Checks: "ALU:inst1|Logicas:unidad_logica"
+ 14. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi"
+ 15. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
+ 16. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
+ 17. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
+ 18. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
+ 19. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta"
+ 20. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"
+ 21. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -58,16 +56,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 22 22:37:17 2022       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 23 09:01:51 2022       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; practica2                                   ;
 ; Top-level Entity Name              ; practica2                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 425                                         ;
-;     Total combinational functions  ; 379                                         ;
-;     Dedicated logic registers      ; 138                                         ;
-; Total registers                    ; 138                                         ;
-; Total pins                         ; 43                                          ;
+; Total logic elements               ; 354                                         ;
+;     Total combinational functions  ; 336                                         ;
+;     Dedicated logic registers      ; 38                                          ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -167,39 +165,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; FinalSelection.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd ;         ;
-; display.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/display.vhd        ;         ;
-; convertidor.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/convertidor.vhd    ;         ;
-; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd          ;         ;
-; negativoP.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/negativoP.vhd      ;         ;
-; Logicas.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Logicas.vhd        ;         ;
-; multP.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd          ;         ;
-; fullAdder.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullAdder.vhd      ;         ;
-; fullA10b.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd       ;         ;
-; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd    ;         ;
-; barrelShifters.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd ;         ;
-; valores.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd        ;         ;
-; practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/practica2.bdf      ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd            ;         ;
-; ecuaciones.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; uapro.vhd                        ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd          ;         ;
+; Logicas.vhd                      ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Logicas.vhd        ;         ;
+; multP.vhd                        ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/multP.vhd          ;         ;
+; fullAdder.vhd                    ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullAdder.vhd      ;         ;
+; fullA10b.vhd                     ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd       ;         ;
+; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd    ;         ;
+; barrelShifters.vhd               ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/barrelShifters.vhd ;         ;
+; practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/practica2.bdf      ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd            ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -207,176 +199,102 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 425       ;
+; Estimated Total logic elements              ; 354       ;
 ;                                             ;           ;
-; Total combinational functions               ; 379       ;
+; Total combinational functions               ; 336       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 204       ;
-;     -- 3 input functions                    ; 107       ;
-;     -- <=2 input functions                  ; 68        ;
+;     -- 4 input functions                    ; 109       ;
+;     -- 3 input functions                    ; 172       ;
+;     -- <=2 input functions                  ; 55        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 324       ;
-;     -- arithmetic mode                      ; 55        ;
+;     -- normal mode                          ; 237       ;
+;     -- arithmetic mode                      ; 99        ;
 ;                                             ;           ;
-; Total registers                             ; 138       ;
-;     -- Dedicated logic registers            ; 138       ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 43        ;
+; I/O pins                                    ; 42        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 138       ;
-; Total fan-out                               ; 1709      ;
-; Average fan-out                             ; 2.83      ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 1198      ;
+; Average fan-out                             ; 2.62      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name    ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |practica2                                   ; 379 (0)             ; 138 (0)                   ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |practica2                                                                                                                         ; practica2      ; work         ;
-;    |FinalSelection:inst|                     ; 358 (0)             ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst                                                                                                     ; FinalSelection ; work         ;
-;       |convertidor:conv1|                    ; 42 (42)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|convertidor:conv1                                                                                   ; convertidor    ; work         ;
-;       |ecuaciones:ecuacion1|                 ; 316 (46)            ; 115 (77)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1                                                                                ; ecuaciones     ; work         ;
-;          |ALU:alu1|                          ; 270 (63)            ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1                                                                       ; ALU            ; work         ;
-;             |Logicas:unidad_logica|          ; 41 (41)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica                                                 ; Logicas        ; work         ;
-;             |barrelShifters:barrel_shifters| ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters                                        ; barrelShifters ; work         ;
-;             |uapro:unidad_aritmetica|        ; 166 (9)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica                                               ; uapro          ; work         ;
-;                |Divisorsito:divi|            ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                              ; Divisorsito    ; work         ;
-;                |fullA10b:resta|              ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                                ; fullA10b       ; work         ;
-;                   |fullAdder:s1|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1                   ; fullAdder      ; work         ;
-;                   |fullAdder:s2|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2                   ; fullAdder      ; work         ;
-;                   |fullAdder:s3|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3                   ; fullAdder      ; work         ;
-;                   |fullAdder:s4|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4                   ; fullAdder      ; work         ;
-;                   |fullAdder:s5|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5                   ; fullAdder      ; work         ;
-;                   |fullAdder:s6|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6                   ; fullAdder      ; work         ;
-;                   |fullAdder:s7|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7                   ; fullAdder      ; work         ;
-;                |fullA10b:suma|               ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                 ; fullA10b       ; work         ;
-;                   |fullAdder:s1|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1                    ; fullAdder      ; work         ;
-;                   |fullAdder:s2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2                    ; fullAdder      ; work         ;
-;                   |fullAdder:s3|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3                    ; fullAdder      ; work         ;
-;                   |fullAdder:s4|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4                    ; fullAdder      ; work         ;
-;                   |fullAdder:s5|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5                    ; fullAdder      ; work         ;
-;                   |fullAdder:s6|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6                    ; fullAdder      ; work         ;
-;                   |fullAdder:s7|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7                    ; fullAdder      ; work         ;
-;                |multP:mult|                  ; 62 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                    ; multP          ; work         ;
-;                   |fullA10b:multi1|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1                    ; fullA10b       ; work         ;
-;                      |fullAdder:s1|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1       ; fullAdder      ; work         ;
-;                      |fullAdder:s2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2       ; fullAdder      ; work         ;
-;                      |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3       ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4       ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5       ; fullAdder      ; work         ;
-;                   |fullA10b:multi2|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2                    ; fullA10b       ; work         ;
-;                      |fullAdder:s2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2       ; fullAdder      ; work         ;
-;                      |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3       ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4       ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5       ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6       ; fullAdder      ; work         ;
-;                   |fullA10b:multi3|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3                    ; fullA10b       ; work         ;
-;                      |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3       ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4       ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5       ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6       ; fullAdder      ; work         ;
-;                      |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7       ; fullAdder      ; work         ;
-;                   |fullA10b:multi4|          ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4                    ; fullA10b       ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4       ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5       ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6       ; fullAdder      ; work         ;
-;                      |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7       ; fullAdder      ; work         ;
-;                      |fullAdder:s8|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8       ; fullAdder      ; work         ;
-;                      |negativoP:negativo|    ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|negativoP:negativo ; negativoP      ; work         ;
-;    |display:inst6|                           ; 21 (21)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|display:inst6                                                                                                           ; display        ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name    ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+----------------+--------------+
+; |practica2                             ; 336 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |practica2                                                                           ; practica2      ; work         ;
+;    |ALU:inst1|                         ; 336 (49)            ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1                                                                 ; ALU            ; work         ;
+;       |Logicas:unidad_logica|          ; 39 (39)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|Logicas:unidad_logica                                           ; Logicas        ; work         ;
+;       |barrelShifters:barrel_shifters| ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|barrelShifters:barrel_shifters                                  ; barrelShifters ; work         ;
+;       |uapro:unidad_aritmetica|        ; 248 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica                                         ; uapro          ; work         ;
+;          |Divisorsito:divi|            ; 157 (157)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi                        ; Divisorsito    ; work         ;
+;          |fullA10b:suma|               ; 47 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma                           ; fullA10b       ; work         ;
+;             |fullAdder:s0|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0              ; fullAdder      ; work         ;
+;             |fullAdder:s1|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1              ; fullAdder      ; work         ;
+;             |fullAdder:s2|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2              ; fullAdder      ; work         ;
+;             |fullAdder:s3|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3              ; fullAdder      ; work         ;
+;             |fullAdder:s4|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4              ; fullAdder      ; work         ;
+;             |fullAdder:s5|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5              ; fullAdder      ; work         ;
+;             |fullAdder:s6|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6              ; fullAdder      ; work         ;
+;             |fullAdder:s7|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7              ; fullAdder      ; work         ;
+;             |fullAdder:s8|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8              ; fullAdder      ; work         ;
+;          |multP:mult|                  ; 44 (5)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult                              ; multP          ; work         ;
+;             |fullA10b:multi1|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1              ; fullA10b       ; work         ;
+;                |fullAdder:s1|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1 ; fullAdder      ; work         ;
+;                |fullAdder:s2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2 ; fullAdder      ; work         ;
+;                |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3 ; fullAdder      ; work         ;
+;                |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4 ; fullAdder      ; work         ;
+;                |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5 ; fullAdder      ; work         ;
+;             |fullA10b:multi2|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2              ; fullA10b       ; work         ;
+;                |fullAdder:s2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2 ; fullAdder      ; work         ;
+;                |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3 ; fullAdder      ; work         ;
+;                |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4 ; fullAdder      ; work         ;
+;                |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5 ; fullAdder      ; work         ;
+;                |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6 ; fullAdder      ; work         ;
+;             |fullA10b:multi3|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3              ; fullA10b       ; work         ;
+;                |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3 ; fullAdder      ; work         ;
+;                |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4 ; fullAdder      ; work         ;
+;                |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5 ; fullAdder      ; work         ;
+;                |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6 ; fullAdder      ; work         ;
+;                |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7 ; fullAdder      ; work         ;
+;             |fullA10b:multi4|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4              ; fullA10b       ; work         ;
+;                |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4 ; fullAdder      ; work         ;
+;                |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5 ; fullAdder      ; work         ;
+;                |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6 ; fullAdder      ; work         ;
+;                |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7 ; fullAdder      ; work         ;
+;                |fullAdder:s8|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8 ; fullAdder      ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |practica2|FinalSelection:inst|pr_state                                                                                                                                                                                    ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name             ; pr_state.state11 ; pr_state.state10 ; pr_state.state9 ; pr_state.state8 ; pr_state.state7 ; pr_state.state6 ; pr_state.state5 ; pr_state.state4 ; pr_state.state3 ; pr_state.state2 ; pr_state.state1 ; pr_state.state0 ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; pr_state.state0  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; pr_state.state1  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
-; pr_state.state2  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
-; pr_state.state3  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
-; pr_state.state4  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state5  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state6  ; 0                ; 0                ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state7  ; 0                ; 0                ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state8  ; 0                ; 0                ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state9  ; 0                ; 0                ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state10 ; 0                ; 1                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state11 ; 1                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++---------------------------------------------------------+----------------------------------------+
+; Register name                                           ; Reason for Removal                     ;
++---------------------------------------------------------+----------------------------------------+
+; ALU:inst1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND due to stuck port data_in ;
+; ALU:inst1|barrelShifters:barrel_shifters|salShifters[0] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2                   ;                                        ;
++---------------------------------------------------------+----------------------------------------+
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state                                                                                                                                                               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name             ; pr_state.state11 ; pr_state.state10 ; pr_state.state9 ; pr_state.state8 ; pr_state.state7 ; pr_state.state6 ; pr_state.state5 ; pr_state.state4 ; pr_state.state3 ; pr_state.state2 ; pr_state.state1 ; pr_state.state0 ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; pr_state.state0  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; pr_state.state1  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
-; pr_state.state2  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
-; pr_state.state3  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
-; pr_state.state4  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state5  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state6  ; 0                ; 0                ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state7  ; 0                ; 0                ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state8  ; 0                ; 0                ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state9  ; 0                ; 0                ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state10 ; 0                ; 1                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state11 ; 1                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                              ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; Register name                                                                                   ; Reason for Removal                                            ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; FinalSelection:inst|convertidor:conv1|s[13..15]                                                 ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[2]                                               ; Stuck at VCC due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[3]                                               ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr1[2,3]                                             ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[1]                                               ; Merged with FinalSelection:inst|ecuaciones:ecuacion1|addr1[1] ;
-; FinalSelection:inst|ecuaciones:ecuacion1|pr_state.state11                                       ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state11                                                            ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|pr_state.state0                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state1                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state2                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state3                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state4                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state5                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state6                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state7                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state8                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state9                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state10                                                            ; Lost fanout                                                   ;
-; FinalSelection:inst|ecuaciones:ecuacion1|pr_state.state10                                       ; Stuck at GND due to stuck port data_in                        ;
-; Total Number of Removed Registers = 24                                                          ;                                                               ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                           ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
-; Register name                                                                           ; Reason for Removal        ; Registers Removed due to This Register                                                          ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|aux[0] ; Stuck at GND              ; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ;
-;                                                                                         ; due to stuck port data_in ;                                                                                                 ;
-; FinalSelection:inst|pr_state.state11                                                    ; Stuck at GND              ; FinalSelection:inst|pr_state.state9                                                             ;
-;                                                                                         ; due to stuck port data_in ;                                                                                                 ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                           ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------+
+; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register                  ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------+
+; ALU:inst1|barrelShifters:barrel_shifters|aux[0] ; Stuck at GND              ; ALU:inst1|barrelShifters:barrel_shifters|salShifters[0] ;
+;                                                 ; due to stuck port data_in ;                                                         ;
++-------------------------------------------------+---------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -384,33 +302,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 138   ;
-; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 7     ;
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 76    ;
+; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |practica2|display:inst6|tmp[3]                                                              ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica|salida[1] ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|MREG[15]                                 ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|MREG[6]                                  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state                                 ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Mux3                            ;
-; 18:1               ; 3 bits    ; 36 LEs        ; 15 LEs               ; 21 LEs                 ; No         ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Mux6                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|ALU:inst1|Logicas:unidad_logica|salida[8] ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |practica2|ALU:inst1|Mux1                            ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; No         ; |practica2|ALU:inst1|Mux8                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters"      ;
+; Port Connectivity Checks: "ALU:inst1|barrelShifters:barrel_shifters"                                              ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -421,7 +335,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica"            ;
+; Port Connectivity Checks: "ALU:inst1|Logicas:unidad_logica"                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -430,106 +344,106 @@ Encoding Type:  One-Hot
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi" ;
-+------------+--------+----------+---------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                               ;
-+------------+--------+----------+---------------------------------------------------------------------------------------+
-; resulthigh ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.   ;
-+------------+--------+----------+---------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4" ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                            ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------+
-; yi[3..0] ; Input ; Info     ; Stuck at GND                                                                                       ;
-; cin0     ; Input ; Info     ; Stuck at GND                                                                                       ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3" ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                           ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; yi[2..0] ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; yi[8]    ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; cin0     ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2" ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                           ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; yi[8..7] ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; yi[1..0] ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; cin0     ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1" ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                           ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-; xi[8..5] ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; yi[8..6] ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; yi[0]    ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; cin0     ; Input  ; Info     ; Stuck at GND                                                                                      ;
-; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.               ;
-+----------+--------+----------+---------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta" ;
-+-------+-------+----------+-------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                   ;
-+-------+-------+----------+-------------------------------------------------------------------------------------------+
-; xi[8] ; Input ; Info     ; Stuck at GND                                                                              ;
-; yi[8] ; Input ; Info     ; Stuck at GND                                                                              ;
-; cin0  ; Input ; Info     ; Stuck at VCC                                                                              ;
-+-------+-------+----------+-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi"                                       ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; resulthigh ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" ;
-+-------+-------+----------+------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                  ;
-+-------+-------+----------+------------------------------------------------------------------------------------------+
-; xi[8] ; Input ; Info     ; Stuck at GND                                                                             ;
-; yi[8] ; Input ; Info     ; Stuck at GND                                                                             ;
-; cin0  ; Input ; Info     ; Stuck at GND                                                                             ;
-+-------+-------+----------+------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; yi[3..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; as       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bs       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1"                                     ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; z_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ov_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; yi[2..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; yi[8]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; as       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bs       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; yi[8..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; yi[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; as       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bs       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; xi[8..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; yi[8..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; yi[0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; as       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bs       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; si[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ovf      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sf       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta" ;
++-------+-------+----------+---------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                           ;
++-------+-------+----------+---------------------------------------------------+
+; xi[8] ; Input ; Info     ; Stuck at GND                                      ;
+; yi[8] ; Input ; Info     ; Stuck at GND                                      ;
++-------+-------+----------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; cout2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma" ;
++-------+-------+----------+--------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                          ;
++-------+-------+----------+--------------------------------------------------+
+; xi[8] ; Input ; Info     ; Stuck at GND                                     ;
+; yi[8] ; Input ; Info     ; Stuck at GND                                     ;
++-------+-------+----------+--------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -537,25 +451,23 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 43                          ;
-; cycloneiii_ff         ; 138                         ;
-;     ENA               ; 69                          ;
-;     ENA SLD           ; 7                           ;
-;     SCLR              ; 1                           ;
-;     plain             ; 61                          ;
-; cycloneiii_lcell_comb ; 382                         ;
-;     arith             ; 55                          ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 35                          ;
-;     normal            ; 327                         ;
+; boundary_port         ; 42                          ;
+; cycloneiii_ff         ; 38                          ;
+;     ENA               ; 9                           ;
+;     plain             ; 29                          ;
+; cycloneiii_lcell_comb ; 337                         ;
+;     arith             ; 99                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 87                          ;
+;     normal            ; 238                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 72                          ;
-;         4 data inputs ; 204                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 85                          ;
+;         4 data inputs ; 109                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 11.11                       ;
+; Max LUT depth         ; 22.20                       ;
+; Average LUT depth     ; 14.11                       ;
 +-----------------------+-----------------------------+
 
 
@@ -564,7 +476,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -573,120 +485,113 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Nov 22 22:37:11 2022
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Wed Nov 23 09:01:33 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica2 -c practica2
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file finalselection.vhd
-    Info (12022): Found design unit 1: FinalSelection-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 17
-    Info (12023): Found entity 1: FinalSelection File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 8
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file FinalSelection.vhd
+    Info (12022): Found design unit 1: FinalSelection-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 17
+    Info (12023): Found entity 1: FinalSelection File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
-    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/divisor.vhd Line: 13
-    Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/divisor.vhd Line: 4
+    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/divisor.vhd Line: 13
+    Info (12023): Found entity 1: frecuencia_5Hz File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/divisor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/display.vhd Line: 15
-    Info (12023): Found entity 1: display File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/display.vhd Line: 6
+    Info (12022): Found design unit 1: display-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/display.vhd Line: 15
+    Info (12023): Found entity 1: display File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/display.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file convertidor.vhd
-    Info (12022): Found design unit 1: convertidor-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/convertidor.vhd Line: 14
-    Info (12023): Found entity 1: convertidor File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/convertidor.vhd Line: 6
+    Info (12022): Found design unit 1: convertidor-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/convertidor.vhd Line: 14
+    Info (12023): Found entity 1: convertidor File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/convertidor.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file uapro.vhd
-    Info (12022): Found design unit 1: uapro-Beahvioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 13
-    Info (12023): Found entity 1: uapro File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file negativop.vhd
-    Info (12022): Found design unit 1: negativoP-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/negativoP.vhd Line: 13
-    Info (12023): Found entity 1: negativoP File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/negativoP.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file logicas.vhd
-    Info (12022): Found design unit 1: Logicas-ArqLogicas File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Logicas.vhd Line: 16
-    Info (12023): Found entity 1: Logicas File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Logicas.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file multp.vhd
-    Info (12022): Found design unit 1: multP-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd Line: 11
-    Info (12023): Found entity 1: multP File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd Line: 4
+    Info (12022): Found design unit 1: uapro-Beahvioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 14
+    Info (12023): Found entity 1: uapro File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file negativoP.vhd
+    Info (12022): Found design unit 1: negativoP-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/negativoP.vhd Line: 13
+    Info (12023): Found entity 1: negativoP File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/negativoP.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Logicas.vhd
+    Info (12022): Found design unit 1: Logicas-ArqLogicas File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Logicas.vhd Line: 16
+    Info (12023): Found entity 1: Logicas File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Logicas.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multP.vhd
+    Info (12022): Found design unit 1: multP-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/multP.vhd Line: 12
+    Info (12023): Found entity 1: multP File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/multP.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file intermedio.vhd
-    Info (12022): Found design unit 1: intermedio-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/intermedio.vhd Line: 12
-    Info (12023): Found entity 1: intermedio File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/intermedio.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
-    Info (12022): Found design unit 1: fullAdder-fAdd File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullAdder.vhd Line: 11
-    Info (12023): Found entity 1: fullAdder File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullAdder.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file fulla10b.vhd
-    Info (12022): Found design unit 1: fullA10b-fa10b File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 13
-    Info (12023): Found entity 1: fullA10b File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file divisorsito.vhd
-    Info (12022): Found design unit 1: Divisorsito-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 11
-    Info (12023): Found entity 1: Divisorsito File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file division.vhd
-    Info (12022): Found design unit 1: div-foo File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Division.vhd Line: 15
-    Info (12023): Found entity 1: div File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Division.vhd Line: 5
+    Info (12022): Found design unit 1: intermedio-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/intermedio.vhd Line: 12
+    Info (12023): Found entity 1: intermedio File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/intermedio.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fullAdder.vhd
+    Info (12022): Found design unit 1: fullAdder-fAdd File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullAdder.vhd Line: 11
+    Info (12023): Found entity 1: fullAdder File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullAdder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fullA10b.vhd
+    Info (12022): Found design unit 1: fullA10b-fa10b File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 13
+    Info (12023): Found entity 1: fullA10b File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Divisorsito.vhd
+    Info (12022): Found design unit 1: Divisorsito-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 12
+    Info (12023): Found entity 1: Divisorsito File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 4
+Warning (12019): Can't analyze file -- file Division.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file comparador4.vhd
-    Info (12022): Found design unit 1: comparador4-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/comparador4.vhd Line: 11
-    Info (12023): Found entity 1: comparador4 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/comparador4.vhd Line: 4
+    Info (12022): Found design unit 1: comparador4-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/comparador4.vhd Line: 11
+    Info (12023): Found entity 1: comparador4 File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/comparador4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file compara1.vhd
-    Info (12022): Found design unit 1: compara1-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/compara1.vhd Line: 10
-    Info (12023): Found entity 1: compara1 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/compara1.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file barrelshifters.vhd
-    Info (12022): Found design unit 1: barrelShifters-shifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 14
-    Info (12023): Found entity 1: barrelShifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 5
+    Info (12022): Found design unit 1: compara1-Behavioral File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/compara1.vhd Line: 10
+    Info (12023): Found entity 1: compara1 File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/compara1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file barrelShifters.vhd
+    Info (12022): Found design unit 1: barrelShifters-shifters File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 14
+    Info (12023): Found entity 1: barrelShifters File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file valores.vhd
-    Info (12022): Found design unit 1: valores-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd Line: 16
-    Info (12023): Found entity 1: valores File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd Line: 7
+    Info (12022): Found design unit 1: valores-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/valores.vhd Line: 16
+    Info (12023): Found entity 1: valores File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/valores.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file practica2.bdf
     Info (12023): Found entity 1: practica2
-Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 15
-    Info (12023): Found entity 1: ALU File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ALU.vhd
+    Info (12022): Found design unit 1: ALU-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 16
+    Info (12023): Found entity 1: ALU File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ecuaciones.vhd
-    Info (12022): Found design unit 1: ecuaciones-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 16
-    Info (12023): Found entity 1: ecuaciones File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 7
+    Info (12022): Found design unit 1: ecuaciones-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 16
+    Info (12023): Found entity 1: ecuaciones File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file registros.vhd
-    Info (12022): Found design unit 1: registros-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/registros.vhd Line: 15
-    Info (12023): Found entity 1: registros File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/registros.vhd Line: 6
+    Info (12022): Found design unit 1: registros-bhr File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/registros.vhd Line: 15
+    Info (12023): Found entity 1: registros File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/registros.vhd Line: 6
 Info (12127): Elaborating entity "practica2" for the top level hierarchy
-Info (12128): Elaborating entity "display" for hierarchy "display:inst6"
-Info (12128): Elaborating entity "FinalSelection" for hierarchy "FinalSelection:inst"
-Info (12128): Elaborating entity "ecuaciones" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 86
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f1" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f2" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f3" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f4" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Info (12128): Elaborating entity "ALU" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 126
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(18): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "b_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "d_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "a_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 22
-Info (12128): Elaborating entity "uapro" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 103
-Warning (10540): VHDL Signal Declaration warning at uapro.vhd(30): used explicit default value for signal "auxC4" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at uapro.vhd(31): used explicit default value for signal "auxZ4" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 31
-Warning (10540): VHDL Signal Declaration warning at uapro.vhd(33): used explicit default value for signal "auxS4" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at uapro.vhd(34): object "auxx" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 34
-Info (12128): Elaborating entity "fullA10b" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 60
-Warning (10873): Using initial value X (don't care) for net "Si[9]" at fullA10b.vhd(9) File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 9
-Info (12128): Elaborating entity "fullAdder" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 47
-Info (12128): Elaborating entity "negativoP" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 66
-Info (12128): Elaborating entity "multP" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 62
-Info (12128): Elaborating entity "Divisorsito" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 63
-Warning (10620): VHDL warning at Divisorsito.vhd(18): comparison between unequal length operands always returns FALSE File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 18
-Info (12128): Elaborating entity "Logicas" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 104
-Info (12128): Elaborating entity "barrelShifters" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 105
-Info (12128): Elaborating entity "valores" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|valores:val1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 127
-Info (12128): Elaborating entity "convertidor" for hierarchy "FinalSelection:inst|convertidor:conv1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 87
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst1"
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(19): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "b_aux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 22
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "d_aux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 22
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(23): object "a_aux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 23
+Info (12128): Elaborating entity "uapro" for hierarchy "ALU:inst1|uapro:unidad_aritmetica" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 105
+Warning (10540): VHDL Signal Declaration warning at uapro.vhd(31): used explicit default value for signal "auxC4" because signal was never assigned a value File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at uapro.vhd(35): object "auxx" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 35
+Info (12128): Elaborating entity "fullA10b" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 63
+Warning (10541): VHDL Signal Declaration warning at fullA10b.vhd(10): used implicit default value for signal "Cf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at fullA10b.vhd(10): used implicit default value for signal "Zf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at fullA10b.vhd(10): used implicit default value for signal "Ovf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at fullA10b.vhd(10): used implicit default value for signal "Sf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 10
+Warning (10036): Verilog HDL or VHDL warning at fullA10b.vhd(20): object "Cfaux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 20
+Warning (10036): Verilog HDL or VHDL warning at fullA10b.vhd(21): object "Zfaux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at fullA10b.vhd(22): object "Ovfaux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 22
+Info (12128): Elaborating entity "fullAdder" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 63
+Info (12128): Elaborating entity "multP" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|multP:mult" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 65
+Warning (10036): Verilog HDL or VHDL warning at multP.vhd(19): object "Sfmm" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/multP.vhd Line: 19
+Info (12128): Elaborating entity "Divisorsito" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/uapro.vhd Line: 66
+Warning (10620): VHDL warning at Divisorsito.vhd(40): comparison between unequal length operands always returns FALSE File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "aS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "bS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 57
+Info (12128): Elaborating entity "Logicas" for hierarchy "ALU:inst1|Logicas:unidad_logica" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 106
+Info (12128): Elaborating entity "barrelShifters" for hierarchy "ALU:inst1|barrelShifters:barrel_shifters" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 107
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sal_prueb[15]" is stuck at GND
-    Warning (13410): Pin "sal_prueb[14]" is stuck at GND
-    Warning (13410): Pin "sal_prueb[13]" is stuck at GND
+    Warning (13410): Pin "ZF" is stuck at GND
+    Warning (13410): Pin "OVF" is stuck at GND
+    Warning (13410): Pin "CF" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ec[1]"
-    Warning (15610): No output dependent on input pin "ec[0]"
-Info (21057): Implemented 481 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 438 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Tue Nov 22 22:37:17 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst"
+Info (21057): Implemented 396 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 28 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 354 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 433 megabytes
+    Info: Processing ended: Wed Nov 23 09:01:52 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:41
 
 
