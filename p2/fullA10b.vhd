@@ -70,7 +70,7 @@ BEGIN
     s7 : fullAdder PORT MAP(Xop(7), Yop(7), Caux(6),Caux2(6), Caux(7), Saux(7), Caux2(7));
     s8 : fullAdder PORT MAP(Xop(8), Yop(8), Caux(7),Caux2(7), Caux(8), Saux(8), Caux2(8));
     -- Si <= Caux(8)&Saux;
-    WITH (aS XOR bS) SELECT Siaux <=
+    WITH (aS XOR bS) SELECT Si <=
         Caux(8) & Saux WHEN '0',
         NOT Caux(8) & Saux WHEN '1';
     -- --Si <= Caux(4) & Saux;

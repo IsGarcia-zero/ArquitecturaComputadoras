@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practica2
-Wed Nov 23 09:01:51 2022
+Wed Nov 23 10:57:08 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -56,13 +56,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 23 09:01:51 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 23 10:57:08 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; practica2                                   ;
 ; Top-level Entity Name              ; practica2                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 354                                         ;
-;     Total combinational functions  ; 336                                         ;
+; Total logic elements               ; 360                                         ;
+;     Total combinational functions  ; 342                                         ;
 ;     Dedicated logic registers      ; 38                                          ;
 ; Total registers                    ; 38                                          ;
 ; Total pins                         ; 42                                          ;
@@ -199,16 +199,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 354       ;
+; Estimated Total logic elements              ; 360       ;
 ;                                             ;           ;
-; Total combinational functions               ; 336       ;
+; Total combinational functions               ; 342       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 109       ;
-;     -- 3 input functions                    ; 172       ;
-;     -- <=2 input functions                  ; 55        ;
+;     -- 4 input functions                    ; 115       ;
+;     -- 3 input functions                    ; 174       ;
+;     -- <=2 input functions                  ; 53        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 237       ;
+;     -- normal mode                          ; 243       ;
 ;     -- arithmetic mode                      ; 99        ;
 ;                                             ;           ;
 ; Total registers                             ; 38        ;
@@ -221,8 +221,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 38        ;
-; Total fan-out                               ; 1198      ;
-; Average fan-out                             ; 2.62      ;
+; Total fan-out                               ; 1224      ;
+; Average fan-out                             ; 2.64      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,26 +231,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name    ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+----------------+--------------+
-; |practica2                             ; 336 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |practica2                                                                           ; practica2      ; work         ;
-;    |ALU:inst1|                         ; 336 (49)            ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1                                                                 ; ALU            ; work         ;
-;       |Logicas:unidad_logica|          ; 39 (39)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|Logicas:unidad_logica                                           ; Logicas        ; work         ;
+; |practica2                             ; 342 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |practica2                                                                           ; practica2      ; work         ;
+;    |ALU:inst1|                         ; 342 (48)            ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1                                                                 ; ALU            ; work         ;
+;       |Logicas:unidad_logica|          ; 40 (40)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|Logicas:unidad_logica                                           ; Logicas        ; work         ;
 ;       |barrelShifters:barrel_shifters| ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|barrelShifters:barrel_shifters                                  ; barrelShifters ; work         ;
-;       |uapro:unidad_aritmetica|        ; 248 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica                                         ; uapro          ; work         ;
+;       |uapro:unidad_aritmetica|        ; 254 (5)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica                                         ; uapro          ; work         ;
 ;          |Divisorsito:divi|            ; 157 (157)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi                        ; Divisorsito    ; work         ;
-;          |fullA10b:suma|               ; 47 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma                           ; fullA10b       ; work         ;
-;             |fullAdder:s0|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0              ; fullAdder      ; work         ;
+;          |fullA10b:suma|               ; 48 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma                           ; fullA10b       ; work         ;
+;             |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0              ; fullAdder      ; work         ;
 ;             |fullAdder:s1|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1              ; fullAdder      ; work         ;
-;             |fullAdder:s2|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2              ; fullAdder      ; work         ;
+;             |fullAdder:s2|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2              ; fullAdder      ; work         ;
 ;             |fullAdder:s3|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3              ; fullAdder      ; work         ;
 ;             |fullAdder:s4|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4              ; fullAdder      ; work         ;
 ;             |fullAdder:s5|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5              ; fullAdder      ; work         ;
 ;             |fullAdder:s6|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6              ; fullAdder      ; work         ;
-;             |fullAdder:s7|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7              ; fullAdder      ; work         ;
-;             |fullAdder:s8|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8              ; fullAdder      ; work         ;
-;          |multP:mult|                  ; 44 (5)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult                              ; multP          ; work         ;
-;             |fullA10b:multi1|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1              ; fullA10b       ; work         ;
+;             |fullAdder:s7|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7              ; fullAdder      ; work         ;
+;             |fullAdder:s8|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8              ; fullAdder      ; work         ;
+;          |multP:mult|                  ; 44 (4)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult                              ; multP          ; work         ;
+;             |fullA10b:multi1|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1              ; fullA10b       ; work         ;
 ;                |fullAdder:s1|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1 ; fullAdder      ; work         ;
-;                |fullAdder:s2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2 ; fullAdder      ; work         ;
+;                |fullAdder:s2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2 ; fullAdder      ; work         ;
 ;                |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3 ; fullAdder      ; work         ;
 ;                |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4 ; fullAdder      ; work         ;
 ;                |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5 ; fullAdder      ; work         ;
@@ -318,7 +318,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|ALU:inst1|Logicas:unidad_logica|salida[8] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |practica2|ALU:inst1|Mux1                            ;
 ; 16:1               ; 7 bits    ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; No         ; |practica2|ALU:inst1|Mux8                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
@@ -455,19 +454,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 38                          ;
 ;     ENA               ; 9                           ;
 ;     plain             ; 29                          ;
-; cycloneiii_lcell_comb ; 337                         ;
+; cycloneiii_lcell_comb ; 343                         ;
 ;     arith             ; 99                          ;
 ;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 87                          ;
-;     normal            ; 238                         ;
+;     normal            ; 244                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 109                         ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 87                          ;
+;         4 data inputs ; 115                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.20                       ;
-; Average LUT depth     ; 14.11                       ;
+; Average LUT depth     ; 14.50                       ;
 +-----------------------+-----------------------------+
 
 
@@ -486,7 +485,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Nov 23 09:01:33 2022
+    Info: Processing started: Wed Nov 23 10:56:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica2 -c practica2
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file FinalSelection.vhd
@@ -584,14 +583,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst"
-Info (21057): Implemented 396 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 402 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 28 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 354 logic cells
+    Info (21061): Implemented 360 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 433 megabytes
-    Info: Processing ended: Wed Nov 23 09:01:52 2022
+    Info: Peak virtual memory: 432 megabytes
+    Info: Processing ended: Wed Nov 23 10:57:08 2022
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Total CPU time (on all processors): 00:00:43
 
 

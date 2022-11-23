@@ -56,6 +56,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
 					"name" : "B[4]",
 					"strict" : false
 				},
@@ -96,6 +100,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[7]",
+					"strict" : false
+				},
+				{
 					"name" : "A[5]",
 					"strict" : false
 				},
@@ -113,26 +133,6 @@
 				},
 				{
 					"name" : "B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[3]",
 					"strict" : false
 				},
 				{
