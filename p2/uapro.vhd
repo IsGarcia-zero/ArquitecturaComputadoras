@@ -63,7 +63,7 @@ BEGIN
     suma : fullA10b PORT MAP('0' & Xi, '0' & Yi, aS, bS, auxSalida1, auxC1, auxZ1, auxOv1, auxS1);
     resta : fullA10b PORT MAP('0' & Xi, '0' & Yi, aS, bS, auxSalida2, auxC2, auxZ2, auxOv2, auxS2);
     mult : multP PORT MAP(Xi(4 DOWNTO 0), Yi(4 DOWNTO 0),aS,bS, auxSalida3, auxC3, auxOv3, auxZ3, auxS3);
-    divi : Divisorsito PORT MAP(Xi, Yi,aS,bS, auxOv4,auxS,auxZ, auxSalida4, auxx);
+    divi : Divisorsito PORT MAP(Xi, Yi,aS,bS, auxOv4,auxS4,auxZ4, auxSalida4, auxx);
     WITH selector SELECT Si <=
         auxSalida1 WHEN "00",
         auxSalida2 WHEN "01",
