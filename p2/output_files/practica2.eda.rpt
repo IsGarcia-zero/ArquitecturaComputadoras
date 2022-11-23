@@ -1,6 +1,6 @@
 EDA Netlist Writer report for practica2
-Tue Nov 22 22:37:34 2022
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Wed Nov 23 09:04:06 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Nov 22 22:37:34 2022 ;
+; EDA Netlist Writer Status ; Successful - Wed Nov 23 09:04:06 2022 ;
 ; Revision Name             ; practica2                             ;
 ; Top-level Entity Name     ; practica2                             ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                                  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim//practica2.vho ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim//practica2.vho ;
++------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,8 +80,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and any partner logic 
     Info: functions, and any output files from any of the foregoing 
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov 22 22:37:33 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/" practica2 -c practica2
-Info (204019): Generated file practica2.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Wed Nov 23 09:04:05 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/ practica2 -c practica2
+Info (204019): Generated file practica2.vho in folder "/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Tue Nov 22 22:37:34 2022
+    Info: Peak virtual memory: 611 megabytes
+    Info: Processing ended: Wed Nov 23 09:04:06 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
