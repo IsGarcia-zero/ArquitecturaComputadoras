@@ -26,15 +26,10 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 21 21:54:31 2022
+    Info: Processing started: Tue Nov 22 22:37:33 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica2 -c practica2 --vector_source="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Waveform.vwf" --testbench_file="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/Waveform.vwf.vht"
 
-practicas/ArquitecturaComputadoras/p2/simulation/qsim/Waveform.vwf.vht for simulation
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Mon Nov 21 21:54:31 2022
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+ut pin "sal_prueb[15]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -59,12 +54,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 21 21:54:31 2022
+    Info: Processing started: Tue Nov 22 22:37:33 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/" practica2 -c practica2
 Info (204019): Generated file practica2.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4644 megabytes
-    Info: Processing ended: Mon Nov 21 21:54:32 2022
+    Info: Processing ended: Tue Nov 22 22:37:34 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -92,7 +87,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:54:33 on Nov 21,2022
+# Start time: 22:37:34 on Nov 22,2022
 # vcom -work work practica2.vho 
 
 # -- Loading package STANDARD
@@ -121,13 +116,14 @@ Reading pref.tcl
 
 # -- Compiling architecture structure of practica2
 
-# End time: 21:54:33 on Nov 21,2022, Elapsed time: 0:00:00
+# End time: 22:37:35 on Nov 22,2022, Elapsed time: 0:00:01
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:54:33 on Nov 21,2022
+# Start time: 22:37:35 on Nov 22,2022
+
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -140,12 +136,12 @@ Reading pref.tcl
 
 # -- Compiling architecture practica2_arch of practica2_vhd_vec_tst
 
-# End time: 21:54:33 on Nov 21,2022, Elapsed time: 0:00:00
+# End time: 22:37:35 on Nov 22,2022, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.practica2_vhd_vec_tst 
-# Start time: 21:54:33 on Nov 21,2022
+# Start time: 22:37:35 on Nov 22,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -165,12 +161,12 @@ Reading pref.tcl
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 90738 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 68273 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 
 # after#35
 
-# End time: 21:54:34 on Nov 21,2022, Elapsed time: 0:00:01
+# End time: 22:37:35 on Nov 22,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -183,7 +179,7 @@ Reading C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura d
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221121215434.sim.vwf
+Writing the resulting VWF to C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221122223735.sim.vwf
 
 Finished VCD to VWF conversion.
 

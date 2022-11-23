@@ -15,7 +15,7 @@ ARCHITECTURE bhr OF convertidor IS
 	
 	--VARIABLE contador, aux : INTEGER RANGE 0 TO 9:= 0;
 BEGIN
-	PROCESS(en)
+	PROCESS(en,clk)
 	
 	VARIABLE digitos : STD_LOGIC_VECTOR(15 DOWNTO 0):="0000000000000000";
 	BEGIN
@@ -40,8 +40,8 @@ BEGIN
 			digitos := digitos(14 downto 0) & en(6 - i);
 		END LOOP;
 		--digitos := "0001001000110100";
-	
 		s <= digitos;
 		END IF;
+		
 	END PROCESS;	
 END ARCHITECTURE;

@@ -1,28 +1,51 @@
 |practica2
-d1 <= display:inst4.d1
-clk => frecuencia_5Hz:inst2.reloj
-rst_clk => frecuencia_5Hz:inst2.reset
+d1 <= display:inst6.d1
+clk => display:inst6.clk
+clk => FinalSelection:inst.clk
 rst => FinalSelection:inst.rst
 ec[0] => FinalSelection:inst.ecuacion[0]
 ec[1] => FinalSelection:inst.ecuacion[1]
-d2 <= display:inst4.d2
-d4 <= display:inst4.d4
-c <= display:inst4.c
-d <= display:inst4.d
-e <= display:inst4.e
-f <= display:inst4.f
-g <= display:inst4.g
-d3 <= display:inst4.d3
-a <= display:inst4.a
-b <= display:inst4.b
-pin_name1 <= frecuencia_5Hz:inst2.sal2
+d2 <= display:inst6.d2
+d4 <= display:inst6.d4
+c <= display:inst6.c
+d <= display:inst6.d
+e <= display:inst6.e
+f <= display:inst6.f
+g <= display:inst6.g
+d3 <= display:inst6.d3
+a <= display:inst6.a
+b <= display:inst6.b
+pin_name1 <= rst_clk.DB_MAX_OUTPUT_PORT_TYPE
+rst_clk => pin_name1.DATAIN
+resultado[0] <= FinalSelection:inst.resultado[0]
+resultado[1] <= FinalSelection:inst.resultado[1]
+resultado[2] <= FinalSelection:inst.resultado[2]
+resultado[3] <= FinalSelection:inst.resultado[3]
+resultado[4] <= FinalSelection:inst.resultado[4]
+resultado[5] <= FinalSelection:inst.resultado[5]
+resultado[6] <= FinalSelection:inst.resultado[6]
+resultado[7] <= FinalSelection:inst.resultado[7]
+resultado[8] <= FinalSelection:inst.resultado[8]
+resultado[9] <= FinalSelection:inst.resultado[9]
 sal_prueb[0] <= FinalSelection:inst.s[0]
 sal_prueb[1] <= FinalSelection:inst.s[1]
 sal_prueb[2] <= FinalSelection:inst.s[2]
 sal_prueb[3] <= FinalSelection:inst.s[3]
+sal_prueb[4] <= FinalSelection:inst.s[4]
+sal_prueb[5] <= FinalSelection:inst.s[5]
+sal_prueb[6] <= FinalSelection:inst.s[6]
+sal_prueb[7] <= FinalSelection:inst.s[7]
+sal_prueb[8] <= FinalSelection:inst.s[8]
+sal_prueb[9] <= FinalSelection:inst.s[9]
+sal_prueb[10] <= FinalSelection:inst.s[10]
+sal_prueb[11] <= FinalSelection:inst.s[11]
+sal_prueb[12] <= FinalSelection:inst.s[12]
+sal_prueb[13] <= FinalSelection:inst.s[13]
+sal_prueb[14] <= FinalSelection:inst.s[14]
+sal_prueb[15] <= FinalSelection:inst.s[15]
 
 
-|practica2|display:inst4
+|practica2|display:inst6
 en[0] => Mux7.IN3
 en[1] => Mux6.IN3
 en[2] => Mux5.IN3
@@ -62,1117 +85,52 @@ f <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
 g <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|frecuencia_5Hz:inst2
-reloj => salida2.CLK
-reloj => cuenta2[0].CLK
-reloj => cuenta2[1].CLK
-reloj => cuenta2[2].CLK
-reloj => cuenta2[3].CLK
-reloj => cuenta2[4].CLK
-reloj => cuenta2[5].CLK
-reloj => cuenta2[6].CLK
-reloj => cuenta2[7].CLK
-reloj => cuenta2[8].CLK
-reloj => cuenta2[9].CLK
-reloj => cuenta2[10].CLK
-reloj => cuenta2[11].CLK
-reloj => cuenta2[12].CLK
-reloj => cuenta2[13].CLK
-reloj => cuenta2[14].CLK
-reloj => cuenta2[15].CLK
-reloj => cuenta2[16].CLK
-reloj => cuenta2[17].CLK
-reloj => cuenta2[18].CLK
-reloj => cuenta2[19].CLK
-reloj => cuenta2[20].CLK
-reloj => cuenta2[21].CLK
-reloj => cuenta2[22].CLK
-reloj => cuenta2[23].CLK
-reloj => cuenta2[24].CLK
-reloj => cuenta2[25].CLK
-reloj => cuenta[0].CLK
-reloj => cuenta[1].CLK
-reloj => cuenta[2].CLK
-reloj => cuenta[3].CLK
-reloj => cuenta[4].CLK
-reloj => cuenta[5].CLK
-reloj => cuenta[6].CLK
-reloj => cuenta[7].CLK
-reloj => cuenta[8].CLK
-reloj => cuenta[9].CLK
-reloj => cuenta[10].CLK
-reloj => cuenta[11].CLK
-reloj => cuenta[12].CLK
-reloj => cuenta[13].CLK
-reloj => cuenta[14].CLK
-reloj => cuenta[15].CLK
-reloj => cuenta[16].CLK
-reloj => cuenta[17].CLK
-reloj => cuenta[18].CLK
-reloj => cuenta[19].CLK
-reloj => cuenta[20].CLK
-reloj => cuenta[21].CLK
-reloj => cuenta[22].CLK
-reloj => cuenta[23].CLK
-reloj => cuenta[24].CLK
-reloj => cuenta[25].CLK
-reloj => salida.CLK
-reset => cuenta[0].ACLR
-reset => cuenta[1].ACLR
-reset => cuenta[2].ACLR
-reset => cuenta[3].ACLR
-reset => cuenta[4].ACLR
-reset => cuenta[5].ACLR
-reset => cuenta[6].ACLR
-reset => cuenta[7].ACLR
-reset => cuenta[8].ACLR
-reset => cuenta[9].ACLR
-reset => cuenta[10].ACLR
-reset => cuenta[11].ACLR
-reset => cuenta[12].ACLR
-reset => cuenta[13].ACLR
-reset => cuenta[14].ACLR
-reset => cuenta[15].ACLR
-reset => cuenta[16].ACLR
-reset => cuenta[17].ACLR
-reset => cuenta[18].ACLR
-reset => cuenta[19].ACLR
-reset => cuenta[20].ACLR
-reset => cuenta[21].ACLR
-reset => cuenta[22].ACLR
-reset => cuenta[23].ACLR
-reset => cuenta[24].ACLR
-reset => cuenta[25].ACLR
-reset => salida.ACLR
-reset => salida2.ENA
-reset => cuenta2[25].ENA
-reset => cuenta2[24].ENA
-reset => cuenta2[23].ENA
-reset => cuenta2[22].ENA
-reset => cuenta2[21].ENA
-reset => cuenta2[20].ENA
-reset => cuenta2[19].ENA
-reset => cuenta2[18].ENA
-reset => cuenta2[17].ENA
-reset => cuenta2[16].ENA
-reset => cuenta2[15].ENA
-reset => cuenta2[14].ENA
-reset => cuenta2[13].ENA
-reset => cuenta2[12].ENA
-reset => cuenta2[11].ENA
-reset => cuenta2[10].ENA
-reset => cuenta2[9].ENA
-reset => cuenta2[8].ENA
-reset => cuenta2[7].ENA
-reset => cuenta2[6].ENA
-reset => cuenta2[5].ENA
-reset => cuenta2[4].ENA
-reset => cuenta2[3].ENA
-reset => cuenta2[2].ENA
-reset => cuenta2[1].ENA
-reset => cuenta2[0].ENA
-sal <= salida.DB_MAX_OUTPUT_PORT_TYPE
-sal2 <= salida2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|practica2|convertidor:inst3
-en[0] => LessThan1.IN8
-en[0] => Add1.IN8
-en[0] => digitos.DATAA
-en[1] => LessThan2.IN8
-en[1] => Add2.IN8
-en[1] => digitos.DATAA
-en[2] => LessThan4.IN8
-en[2] => Add4.IN8
-en[2] => digitos.DATAA
-en[3] => LessThan6.IN8
-en[3] => Add6.IN8
-en[3] => digitos.DATAA
-en[4] => LessThan8.IN8
-en[4] => Add8.IN8
-en[4] => digitos.DATAA
-en[5] => LessThan11.IN8
-en[5] => Add11.IN8
-en[5] => digitos.DATAA
-en[6] => s[0]~reg0.DATAIN
-en[7] => LessThan0.IN6
-en[7] => Add0.IN6
-en[7] => digitos.DATAA
-en[8] => LessThan0.IN5
-en[8] => Add0.IN5
-en[8] => digitos.DATAA
-en[9] => LessThan0.IN4
-en[9] => Add0.IN4
-en[9] => digitos.DATAA
-clk => s[0]~reg0.CLK
-clk => s[1]~reg0.CLK
-clk => s[2]~reg0.CLK
-clk => s[3]~reg0.CLK
-clk => s[4]~reg0.CLK
-clk => s[5]~reg0.CLK
-clk => s[6]~reg0.CLK
-clk => s[7]~reg0.CLK
-clk => s[8]~reg0.CLK
-clk => s[9]~reg0.CLK
-clk => s[10]~reg0.CLK
-clk => s[11]~reg0.CLK
-clk => s[12]~reg0.CLK
-clk => s[13]~reg0.CLK
-clk => s[14]~reg0.CLK
-clk => s[15]~reg0.CLK
-s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[4] <= s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[5] <= s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[6] <= s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[7] <= s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[8] <= s[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[9] <= s[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[10] <= s[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[11] <= s[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[12] <= s[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[13] <= s[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[14] <= s[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[15] <= s[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |practica2|FinalSelection:inst
-ecuacion[0] => ~NO_FANOUT~
-ecuacion[1] => ~NO_FANOUT~
-resultado[0] <= resultado[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[1] <= resultado[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[2] <= resultado[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[3] <= resultado[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[4] <= resultado[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[5] <= resultado[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[6] <= resultado[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[7] <= resultado[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[8] <= resultado[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-resultado[9] <= resultado[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => ecuaciones:ec1.clk
-clk => s[0]~reg0.CLK
-clk => s[1]~reg0.CLK
-clk => s[2]~reg0.CLK
-clk => s[3]~reg0.CLK
-clk => resultado[0]~reg0.CLK
-clk => resultado[1]~reg0.CLK
-clk => resultado[2]~reg0.CLK
-clk => resultado[3]~reg0.CLK
-clk => resultado[4]~reg0.CLK
-clk => resultado[5]~reg0.CLK
-clk => resultado[6]~reg0.CLK
-clk => resultado[7]~reg0.CLK
-clk => resultado[8]~reg0.CLK
-clk => resultado[9]~reg0.CLK
+ecuacion[0] => ecuaciones:ecuacion1.ec[0]
+ecuacion[1] => ecuaciones:ecuacion1.ec[1]
+resultado[0] <= ecuaciones:ecuacion1.resultado[0]
+resultado[1] <= ecuaciones:ecuacion1.resultado[1]
+resultado[2] <= ecuaciones:ecuacion1.resultado[2]
+resultado[3] <= ecuaciones:ecuacion1.resultado[3]
+resultado[4] <= ecuaciones:ecuacion1.resultado[4]
+resultado[5] <= ecuaciones:ecuacion1.resultado[5]
+resultado[6] <= ecuaciones:ecuacion1.resultado[6]
+resultado[7] <= ecuaciones:ecuacion1.resultado[7]
+resultado[8] <= ecuaciones:ecuacion1.resultado[8]
+resultado[9] <= ecuaciones:ecuacion1.resultado[9]
+s[0] <= convertidor:conv1.s[0]
+s[1] <= convertidor:conv1.s[1]
+s[2] <= convertidor:conv1.s[2]
+s[3] <= convertidor:conv1.s[3]
+s[4] <= convertidor:conv1.s[4]
+s[5] <= convertidor:conv1.s[5]
+s[6] <= convertidor:conv1.s[6]
+s[7] <= convertidor:conv1.s[7]
+s[8] <= convertidor:conv1.s[8]
+s[9] <= convertidor:conv1.s[9]
+s[10] <= convertidor:conv1.s[10]
+s[11] <= convertidor:conv1.s[11]
+s[12] <= convertidor:conv1.s[12]
+s[13] <= convertidor:conv1.s[13]
+s[14] <= convertidor:conv1.s[14]
+s[15] <= convertidor:conv1.s[15]
+clk => ecuaciones:ecuacion1.clk
 clk => aux_out[0].CLK
 clk => aux_out[1].CLK
 clk => aux_out[2].CLK
 clk => aux_out[3].CLK
-clk => n_state~1.DATAIN
+clk => convertidor:conv1.clk
 clk => pr_state~1.DATAIN
-rst => ecuaciones:ec1.rst
-rst => pr_state~3.DATAIN
+rst => ecuaciones:ecuacion1.rst
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1
-addr[0] => Mux0.IN6
-addr[0] => Mux1.IN6
-addr[0] => Mux2.IN6
-addr[0] => Mux3.IN6
-addr[0] => Mux4.IN3
-addr[0] => Mux5.IN3
-addr[0] => Mux6.IN3
-addr[0] => Mux7.IN3
-addr[0] => Mux8.IN3
-addr[0] => Mux9.IN3
-addr[0] => Mux10.IN3
-addr[0] => Mux11.IN3
-addr[0] => Mux12.IN3
-addr[0] => Mux13.IN3
-addr[0] => Mux14.IN3
-addr[0] => Mux15.IN3
-addr[0] => Mux16.IN3
-addr[0] => Mux17.IN3
-addr[0] => Mux18.IN3
-addr[0] => Mux19.IN3
-addr[0] => Mux20.IN3
-addr[0] => Mux21.IN3
-addr[0] => Mux22.IN3
-addr[0] => Mux23.IN3
-addr[0] => Mux24.IN8
-addr[0] => Mux25.IN8
-addr[0] => Mux26.IN8
-addr[0] => Mux27.IN8
-addr[0] => Mux28.IN3
-addr[0] => Mux29.IN3
-addr[0] => Mux30.IN3
-addr[0] => Mux31.IN3
-addr[0] => Mux32.IN3
-addr[0] => Mux33.IN3
-addr[0] => Mux34.IN3
-addr[0] => Mux35.IN3
-addr[0] => Mux36.IN3
-addr[0] => Mux37.IN3
-addr[0] => Mux38.IN6
-addr[0] => Mux39.IN6
-addr[0] => Mux40.IN6
-addr[0] => Mux41.IN6
-addr[0] => Mux42.IN6
-addr[0] => Mux43.IN6
-addr[0] => Mux44.IN3
-addr[0] => Mux45.IN3
-addr[0] => Mux46.IN3
-addr[0] => Mux47.IN3
-addr[0] => Mux48.IN3
-addr[0] => Mux49.IN3
-addr[0] => Mux50.IN3
-addr[0] => Mux51.IN3
-addr[0] => Mux52.IN3
-addr[0] => Mux53.IN3
-addr[0] => Mux54.IN4
-addr[0] => Mux55.IN4
-addr[0] => Mux56.IN4
-addr[0] => Mux57.IN4
-addr[0] => Mux58.IN4
-addr[0] => Mux59.IN4
-addr[0] => Mux60.IN4
-addr[0] => Mux61.IN4
-addr[0] => Mux62.IN4
-addr[0] => Mux63.IN4
-addr[0] => Mux64.IN10
-addr[0] => Mux65.IN10
-addr[0] => Mux66.IN10
-addr[0] => Mux67.IN10
-addr[0] => Mux68.IN6
-addr[0] => Mux69.IN6
-addr[0] => Mux70.IN6
-addr[0] => Mux71.IN6
-addr[0] => Mux72.IN6
-addr[0] => Mux73.IN6
-addr[0] => Mux74.IN6
-addr[0] => Mux75.IN6
-addr[0] => Mux76.IN3
-addr[0] => Mux77.IN3
-addr[0] => Mux78.IN3
-addr[0] => Mux79.IN3
-addr[0] => Mux80.IN3
-addr[0] => Mux81.IN3
-addr[0] => Mux82.IN3
-addr[0] => Mux83.IN3
-addr[0] => Mux84.IN3
-addr[0] => Mux85.IN3
-addr[0] => Mux86.IN4
-addr[0] => Mux87.IN4
-addr[0] => Mux88.IN4
-addr[0] => Mux89.IN4
-addr[0] => Mux90.IN4
-addr[0] => Mux91.IN4
-addr[0] => Mux92.IN4
-addr[0] => Mux93.IN4
-addr[0] => Mux94.IN4
-addr[0] => Mux95.IN4
-addr[0] => Mux96.IN10
-addr[0] => Mux97.IN10
-addr[0] => Mux98.IN10
-addr[0] => Mux99.IN10
-addr[0] => Mux100.IN3
-addr[0] => Mux101.IN3
-addr[0] => Mux102.IN3
-addr[0] => Mux103.IN3
-addr[0] => Mux104.IN3
-addr[0] => Mux105.IN3
-addr[0] => Mux106.IN3
-addr[0] => Mux107.IN3
-addr[0] => Mux108.IN3
-addr[0] => Mux109.IN3
-addr[0] => Mux110.IN3
-addr[0] => Mux111.IN3
-addr[0] => Mux112.IN3
-addr[0] => Mux113.IN3
-addr[0] => Mux114.IN3
-addr[0] => Mux115.IN3
-addr[0] => Mux116.IN3
-addr[0] => Mux117.IN3
-addr[0] => Mux118.IN3
-addr[0] => Mux119.IN3
-addr[0] => Mux120.IN3
-addr[0] => Mux121.IN3
-addr[0] => Mux122.IN3
-addr[0] => Mux123.IN3
-addr[0] => Mux124.IN3
-addr[0] => Mux125.IN3
-addr[0] => Mux126.IN3
-addr[0] => Mux127.IN3
-addr[0] => Mux128.IN3
-addr[0] => Mux129.IN3
-addr[0] => Mux130.IN3
-addr[0] => Mux131.IN3
-addr[0] => Mux132.IN3
-addr[0] => Mux133.IN3
-addr[0] => Mux134.IN3
-addr[0] => Mux135.IN3
-addr[0] => Mux136.IN3
-addr[0] => Mux137.IN3
-addr[0] => Mux138.IN3
-addr[0] => Mux139.IN3
-addr[0] => Mux140.IN3
-addr[0] => Mux141.IN3
-addr[0] => Mux142.IN3
-addr[0] => Mux143.IN3
-addr[0] => Mux144.IN3
-addr[0] => Mux145.IN3
-addr[0] => Mux146.IN3
-addr[0] => Mux147.IN3
-addr[0] => Mux148.IN3
-addr[0] => Mux149.IN3
-addr[0] => Mux150.IN4
-addr[0] => Mux151.IN4
-addr[0] => Mux152.IN4
-addr[0] => Mux153.IN4
-addr[0] => Mux154.IN4
-addr[0] => Mux155.IN4
-addr[0] => Mux156.IN4
-addr[0] => Mux157.IN4
-addr[0] => Mux158.IN3
-addr[0] => Mux159.IN3
-addr[0] => Mux160.IN3
-addr[0] => Mux161.IN3
-addr[0] => Mux162.IN3
-addr[0] => Mux163.IN3
-addr[0] => Mux164.IN3
-addr[0] => Mux165.IN3
-addr[0] => Mux166.IN3
-addr[0] => Mux167.IN3
-addr[0] => Mux168.IN3
-addr[0] => Mux169.IN3
-addr[0] => Mux170.IN3
-addr[0] => Mux171.IN3
-addr[0] => Mux172.IN3
-addr[0] => Mux173.IN3
-addr[0] => Mux174.IN3
-addr[0] => Mux175.IN3
-addr[0] => Mux176.IN3
-addr[0] => Mux177.IN3
-addr[0] => Mux178.IN4
-addr[0] => Mux179.IN4
-addr[0] => Mux180.IN4
-addr[0] => Mux181.IN4
-addr[1] => Mux0.IN5
-addr[1] => Mux1.IN5
-addr[1] => Mux2.IN5
-addr[1] => Mux3.IN5
-addr[1] => Mux4.IN2
-addr[1] => Mux5.IN2
-addr[1] => Mux6.IN2
-addr[1] => Mux7.IN2
-addr[1] => Mux8.IN2
-addr[1] => Mux9.IN2
-addr[1] => Mux10.IN2
-addr[1] => Mux11.IN2
-addr[1] => Mux12.IN2
-addr[1] => Mux13.IN2
-addr[1] => Mux14.IN2
-addr[1] => Mux15.IN2
-addr[1] => Mux16.IN2
-addr[1] => Mux17.IN2
-addr[1] => Mux18.IN2
-addr[1] => Mux19.IN2
-addr[1] => Mux20.IN2
-addr[1] => Mux21.IN2
-addr[1] => Mux22.IN2
-addr[1] => Mux23.IN2
-addr[1] => Mux24.IN7
-addr[1] => Mux25.IN7
-addr[1] => Mux26.IN7
-addr[1] => Mux27.IN7
-addr[1] => Mux28.IN2
-addr[1] => Mux29.IN2
-addr[1] => Mux30.IN2
-addr[1] => Mux31.IN2
-addr[1] => Mux32.IN2
-addr[1] => Mux33.IN2
-addr[1] => Mux34.IN2
-addr[1] => Mux35.IN2
-addr[1] => Mux36.IN2
-addr[1] => Mux37.IN2
-addr[1] => Mux38.IN5
-addr[1] => Mux39.IN5
-addr[1] => Mux40.IN5
-addr[1] => Mux41.IN5
-addr[1] => Mux42.IN5
-addr[1] => Mux43.IN5
-addr[1] => Mux44.IN2
-addr[1] => Mux45.IN2
-addr[1] => Mux46.IN2
-addr[1] => Mux47.IN2
-addr[1] => Mux48.IN2
-addr[1] => Mux49.IN2
-addr[1] => Mux50.IN2
-addr[1] => Mux51.IN2
-addr[1] => Mux52.IN2
-addr[1] => Mux53.IN2
-addr[1] => Mux54.IN3
-addr[1] => Mux55.IN3
-addr[1] => Mux56.IN3
-addr[1] => Mux57.IN3
-addr[1] => Mux58.IN3
-addr[1] => Mux59.IN3
-addr[1] => Mux60.IN3
-addr[1] => Mux61.IN3
-addr[1] => Mux62.IN3
-addr[1] => Mux63.IN3
-addr[1] => Mux64.IN9
-addr[1] => Mux65.IN9
-addr[1] => Mux66.IN9
-addr[1] => Mux67.IN9
-addr[1] => Mux68.IN5
-addr[1] => Mux69.IN5
-addr[1] => Mux70.IN5
-addr[1] => Mux71.IN5
-addr[1] => Mux72.IN5
-addr[1] => Mux73.IN5
-addr[1] => Mux74.IN5
-addr[1] => Mux75.IN5
-addr[1] => Mux76.IN2
-addr[1] => Mux77.IN2
-addr[1] => Mux78.IN2
-addr[1] => Mux79.IN2
-addr[1] => Mux80.IN2
-addr[1] => Mux81.IN2
-addr[1] => Mux82.IN2
-addr[1] => Mux83.IN2
-addr[1] => Mux84.IN2
-addr[1] => Mux85.IN2
-addr[1] => Mux86.IN3
-addr[1] => Mux87.IN3
-addr[1] => Mux88.IN3
-addr[1] => Mux89.IN3
-addr[1] => Mux90.IN3
-addr[1] => Mux91.IN3
-addr[1] => Mux92.IN3
-addr[1] => Mux93.IN3
-addr[1] => Mux94.IN3
-addr[1] => Mux95.IN3
-addr[1] => Mux96.IN9
-addr[1] => Mux97.IN9
-addr[1] => Mux98.IN9
-addr[1] => Mux99.IN9
-addr[1] => Mux100.IN2
-addr[1] => Mux101.IN2
-addr[1] => Mux102.IN2
-addr[1] => Mux103.IN2
-addr[1] => Mux104.IN2
-addr[1] => Mux105.IN2
-addr[1] => Mux106.IN2
-addr[1] => Mux107.IN2
-addr[1] => Mux108.IN2
-addr[1] => Mux109.IN2
-addr[1] => Mux110.IN2
-addr[1] => Mux111.IN2
-addr[1] => Mux112.IN2
-addr[1] => Mux113.IN2
-addr[1] => Mux114.IN2
-addr[1] => Mux115.IN2
-addr[1] => Mux116.IN2
-addr[1] => Mux117.IN2
-addr[1] => Mux118.IN2
-addr[1] => Mux119.IN2
-addr[1] => Mux120.IN2
-addr[1] => Mux121.IN2
-addr[1] => Mux122.IN2
-addr[1] => Mux123.IN2
-addr[1] => Mux124.IN2
-addr[1] => Mux125.IN2
-addr[1] => Mux126.IN2
-addr[1] => Mux127.IN2
-addr[1] => Mux128.IN2
-addr[1] => Mux129.IN2
-addr[1] => Mux130.IN2
-addr[1] => Mux131.IN2
-addr[1] => Mux132.IN2
-addr[1] => Mux133.IN2
-addr[1] => Mux134.IN2
-addr[1] => Mux135.IN2
-addr[1] => Mux136.IN2
-addr[1] => Mux137.IN2
-addr[1] => Mux138.IN2
-addr[1] => Mux139.IN2
-addr[1] => Mux140.IN2
-addr[1] => Mux141.IN2
-addr[1] => Mux142.IN2
-addr[1] => Mux143.IN2
-addr[1] => Mux144.IN2
-addr[1] => Mux145.IN2
-addr[1] => Mux146.IN2
-addr[1] => Mux147.IN2
-addr[1] => Mux148.IN2
-addr[1] => Mux149.IN2
-addr[1] => Mux150.IN3
-addr[1] => Mux151.IN3
-addr[1] => Mux152.IN3
-addr[1] => Mux153.IN3
-addr[1] => Mux154.IN3
-addr[1] => Mux155.IN3
-addr[1] => Mux156.IN3
-addr[1] => Mux157.IN3
-addr[1] => Mux158.IN2
-addr[1] => Mux159.IN2
-addr[1] => Mux160.IN2
-addr[1] => Mux161.IN2
-addr[1] => Mux162.IN2
-addr[1] => Mux163.IN2
-addr[1] => Mux164.IN2
-addr[1] => Mux165.IN2
-addr[1] => Mux166.IN2
-addr[1] => Mux167.IN2
-addr[1] => Mux168.IN2
-addr[1] => Mux169.IN2
-addr[1] => Mux170.IN2
-addr[1] => Mux171.IN2
-addr[1] => Mux172.IN2
-addr[1] => Mux173.IN2
-addr[1] => Mux174.IN2
-addr[1] => Mux175.IN2
-addr[1] => Mux176.IN2
-addr[1] => Mux177.IN2
-addr[1] => Mux178.IN3
-addr[1] => Mux179.IN3
-addr[1] => Mux180.IN3
-addr[1] => Mux181.IN3
-addr[2] => Mux0.IN4
-addr[2] => Mux1.IN4
-addr[2] => Mux2.IN4
-addr[2] => Mux3.IN4
-addr[2] => Mux4.IN1
-addr[2] => Mux5.IN1
-addr[2] => Mux6.IN1
-addr[2] => Mux7.IN1
-addr[2] => Mux8.IN1
-addr[2] => Mux9.IN1
-addr[2] => Mux10.IN1
-addr[2] => Mux11.IN1
-addr[2] => Mux12.IN1
-addr[2] => Mux13.IN1
-addr[2] => Mux14.IN1
-addr[2] => Mux15.IN1
-addr[2] => Mux16.IN1
-addr[2] => Mux17.IN1
-addr[2] => Mux18.IN1
-addr[2] => Mux19.IN1
-addr[2] => Mux20.IN1
-addr[2] => Mux21.IN1
-addr[2] => Mux22.IN1
-addr[2] => Mux23.IN1
-addr[2] => Mux24.IN6
-addr[2] => Mux25.IN6
-addr[2] => Mux26.IN6
-addr[2] => Mux27.IN6
-addr[2] => Mux28.IN1
-addr[2] => Mux29.IN1
-addr[2] => Mux30.IN1
-addr[2] => Mux31.IN1
-addr[2] => Mux32.IN1
-addr[2] => Mux33.IN1
-addr[2] => Mux34.IN1
-addr[2] => Mux35.IN1
-addr[2] => Mux36.IN1
-addr[2] => Mux37.IN1
-addr[2] => Mux38.IN4
-addr[2] => Mux39.IN4
-addr[2] => Mux40.IN4
-addr[2] => Mux41.IN4
-addr[2] => Mux42.IN4
-addr[2] => Mux43.IN4
-addr[2] => Mux44.IN1
-addr[2] => Mux45.IN1
-addr[2] => Mux46.IN1
-addr[2] => Mux47.IN1
-addr[2] => Mux48.IN1
-addr[2] => Mux49.IN1
-addr[2] => Mux50.IN1
-addr[2] => Mux51.IN1
-addr[2] => Mux52.IN1
-addr[2] => Mux53.IN1
-addr[2] => Mux54.IN2
-addr[2] => Mux55.IN2
-addr[2] => Mux56.IN2
-addr[2] => Mux57.IN2
-addr[2] => Mux58.IN2
-addr[2] => Mux59.IN2
-addr[2] => Mux60.IN2
-addr[2] => Mux61.IN2
-addr[2] => Mux62.IN2
-addr[2] => Mux63.IN2
-addr[2] => Mux64.IN8
-addr[2] => Mux65.IN8
-addr[2] => Mux66.IN8
-addr[2] => Mux67.IN8
-addr[2] => Mux68.IN4
-addr[2] => Mux69.IN4
-addr[2] => Mux70.IN4
-addr[2] => Mux71.IN4
-addr[2] => Mux72.IN4
-addr[2] => Mux73.IN4
-addr[2] => Mux74.IN4
-addr[2] => Mux75.IN4
-addr[2] => Mux76.IN1
-addr[2] => Mux77.IN1
-addr[2] => Mux78.IN1
-addr[2] => Mux79.IN1
-addr[2] => Mux80.IN1
-addr[2] => Mux81.IN1
-addr[2] => Mux82.IN1
-addr[2] => Mux83.IN1
-addr[2] => Mux84.IN1
-addr[2] => Mux85.IN1
-addr[2] => Mux86.IN2
-addr[2] => Mux87.IN2
-addr[2] => Mux88.IN2
-addr[2] => Mux89.IN2
-addr[2] => Mux90.IN2
-addr[2] => Mux91.IN2
-addr[2] => Mux92.IN2
-addr[2] => Mux93.IN2
-addr[2] => Mux94.IN2
-addr[2] => Mux95.IN2
-addr[2] => Mux96.IN8
-addr[2] => Mux97.IN8
-addr[2] => Mux98.IN8
-addr[2] => Mux99.IN8
-addr[2] => Mux100.IN1
-addr[2] => Mux101.IN1
-addr[2] => Mux102.IN1
-addr[2] => Mux103.IN1
-addr[2] => Mux104.IN1
-addr[2] => Mux105.IN1
-addr[2] => Mux106.IN1
-addr[2] => Mux107.IN1
-addr[2] => Mux108.IN1
-addr[2] => Mux109.IN1
-addr[2] => Mux110.IN1
-addr[2] => Mux111.IN1
-addr[2] => Mux112.IN1
-addr[2] => Mux113.IN1
-addr[2] => Mux114.IN1
-addr[2] => Mux115.IN1
-addr[2] => Mux116.IN1
-addr[2] => Mux117.IN1
-addr[2] => Mux118.IN1
-addr[2] => Mux119.IN1
-addr[2] => Mux120.IN1
-addr[2] => Mux121.IN1
-addr[2] => Mux122.IN1
-addr[2] => Mux123.IN1
-addr[2] => Mux124.IN1
-addr[2] => Mux125.IN1
-addr[2] => Mux126.IN1
-addr[2] => Mux127.IN1
-addr[2] => Mux128.IN1
-addr[2] => Mux129.IN1
-addr[2] => Mux130.IN1
-addr[2] => Mux131.IN1
-addr[2] => Mux132.IN1
-addr[2] => Mux133.IN1
-addr[2] => Mux134.IN1
-addr[2] => Mux135.IN1
-addr[2] => Mux136.IN1
-addr[2] => Mux137.IN1
-addr[2] => Mux138.IN1
-addr[2] => Mux139.IN1
-addr[2] => Mux140.IN1
-addr[2] => Mux141.IN1
-addr[2] => Mux142.IN1
-addr[2] => Mux143.IN1
-addr[2] => Mux144.IN1
-addr[2] => Mux145.IN1
-addr[2] => Mux146.IN1
-addr[2] => Mux147.IN1
-addr[2] => Mux148.IN1
-addr[2] => Mux149.IN1
-addr[2] => Mux150.IN2
-addr[2] => Mux151.IN2
-addr[2] => Mux152.IN2
-addr[2] => Mux153.IN2
-addr[2] => Mux154.IN2
-addr[2] => Mux155.IN2
-addr[2] => Mux156.IN2
-addr[2] => Mux157.IN2
-addr[2] => Mux158.IN1
-addr[2] => Mux159.IN1
-addr[2] => Mux160.IN1
-addr[2] => Mux161.IN1
-addr[2] => Mux162.IN1
-addr[2] => Mux163.IN1
-addr[2] => Mux164.IN1
-addr[2] => Mux165.IN1
-addr[2] => Mux166.IN1
-addr[2] => Mux167.IN1
-addr[2] => Mux168.IN1
-addr[2] => Mux169.IN1
-addr[2] => Mux170.IN1
-addr[2] => Mux171.IN1
-addr[2] => Mux172.IN1
-addr[2] => Mux173.IN1
-addr[2] => Mux174.IN1
-addr[2] => Mux175.IN1
-addr[2] => Mux176.IN1
-addr[2] => Mux177.IN1
-addr[2] => Mux178.IN2
-addr[2] => Mux179.IN2
-addr[2] => Mux180.IN2
-addr[2] => Mux181.IN2
-addr[3] => Mux0.IN3
-addr[3] => Mux1.IN3
-addr[3] => Mux2.IN3
-addr[3] => Mux3.IN3
-addr[3] => Mux4.IN0
-addr[3] => Mux5.IN0
-addr[3] => Mux6.IN0
-addr[3] => Mux7.IN0
-addr[3] => Mux8.IN0
-addr[3] => Mux9.IN0
-addr[3] => Mux10.IN0
-addr[3] => Mux11.IN0
-addr[3] => Mux12.IN0
-addr[3] => Mux13.IN0
-addr[3] => Mux14.IN0
-addr[3] => Mux15.IN0
-addr[3] => Mux16.IN0
-addr[3] => Mux17.IN0
-addr[3] => Mux18.IN0
-addr[3] => Mux19.IN0
-addr[3] => Mux20.IN0
-addr[3] => Mux21.IN0
-addr[3] => Mux22.IN0
-addr[3] => Mux23.IN0
-addr[3] => Mux24.IN5
-addr[3] => Mux25.IN5
-addr[3] => Mux26.IN5
-addr[3] => Mux27.IN5
-addr[3] => Mux28.IN0
-addr[3] => Mux29.IN0
-addr[3] => Mux30.IN0
-addr[3] => Mux31.IN0
-addr[3] => Mux32.IN0
-addr[3] => Mux33.IN0
-addr[3] => Mux34.IN0
-addr[3] => Mux35.IN0
-addr[3] => Mux36.IN0
-addr[3] => Mux37.IN0
-addr[3] => Mux38.IN3
-addr[3] => Mux39.IN3
-addr[3] => Mux40.IN3
-addr[3] => Mux41.IN3
-addr[3] => Mux42.IN3
-addr[3] => Mux43.IN3
-addr[3] => Mux44.IN0
-addr[3] => Mux45.IN0
-addr[3] => Mux46.IN0
-addr[3] => Mux47.IN0
-addr[3] => Mux48.IN0
-addr[3] => Mux49.IN0
-addr[3] => Mux50.IN0
-addr[3] => Mux51.IN0
-addr[3] => Mux52.IN0
-addr[3] => Mux53.IN0
-addr[3] => Mux54.IN1
-addr[3] => Mux55.IN1
-addr[3] => Mux56.IN1
-addr[3] => Mux57.IN1
-addr[3] => Mux58.IN1
-addr[3] => Mux59.IN1
-addr[3] => Mux60.IN1
-addr[3] => Mux61.IN1
-addr[3] => Mux62.IN1
-addr[3] => Mux63.IN1
-addr[3] => Mux64.IN7
-addr[3] => Mux65.IN7
-addr[3] => Mux66.IN7
-addr[3] => Mux67.IN7
-addr[3] => Mux68.IN3
-addr[3] => Mux69.IN3
-addr[3] => Mux70.IN3
-addr[3] => Mux71.IN3
-addr[3] => Mux72.IN3
-addr[3] => Mux73.IN3
-addr[3] => Mux74.IN3
-addr[3] => Mux75.IN3
-addr[3] => Mux76.IN0
-addr[3] => Mux77.IN0
-addr[3] => Mux78.IN0
-addr[3] => Mux79.IN0
-addr[3] => Mux80.IN0
-addr[3] => Mux81.IN0
-addr[3] => Mux82.IN0
-addr[3] => Mux83.IN0
-addr[3] => Mux84.IN0
-addr[3] => Mux85.IN0
-addr[3] => Mux86.IN1
-addr[3] => Mux87.IN1
-addr[3] => Mux88.IN1
-addr[3] => Mux89.IN1
-addr[3] => Mux90.IN1
-addr[3] => Mux91.IN1
-addr[3] => Mux92.IN1
-addr[3] => Mux93.IN1
-addr[3] => Mux94.IN1
-addr[3] => Mux95.IN1
-addr[3] => Mux96.IN7
-addr[3] => Mux97.IN7
-addr[3] => Mux98.IN7
-addr[3] => Mux99.IN7
-addr[3] => Mux100.IN0
-addr[3] => Mux101.IN0
-addr[3] => Mux102.IN0
-addr[3] => Mux103.IN0
-addr[3] => Mux104.IN0
-addr[3] => Mux105.IN0
-addr[3] => Mux106.IN0
-addr[3] => Mux107.IN0
-addr[3] => Mux108.IN0
-addr[3] => Mux109.IN0
-addr[3] => Mux110.IN0
-addr[3] => Mux111.IN0
-addr[3] => Mux112.IN0
-addr[3] => Mux113.IN0
-addr[3] => Mux114.IN0
-addr[3] => Mux115.IN0
-addr[3] => Mux116.IN0
-addr[3] => Mux117.IN0
-addr[3] => Mux118.IN0
-addr[3] => Mux119.IN0
-addr[3] => Mux120.IN0
-addr[3] => Mux121.IN0
-addr[3] => Mux122.IN0
-addr[3] => Mux123.IN0
-addr[3] => Mux124.IN0
-addr[3] => Mux125.IN0
-addr[3] => Mux126.IN0
-addr[3] => Mux127.IN0
-addr[3] => Mux128.IN0
-addr[3] => Mux129.IN0
-addr[3] => Mux130.IN0
-addr[3] => Mux131.IN0
-addr[3] => Mux132.IN0
-addr[3] => Mux133.IN0
-addr[3] => Mux134.IN0
-addr[3] => Mux135.IN0
-addr[3] => Mux136.IN0
-addr[3] => Mux137.IN0
-addr[3] => Mux138.IN0
-addr[3] => Mux139.IN0
-addr[3] => Mux140.IN0
-addr[3] => Mux141.IN0
-addr[3] => Mux142.IN0
-addr[3] => Mux143.IN0
-addr[3] => Mux144.IN0
-addr[3] => Mux145.IN0
-addr[3] => Mux146.IN0
-addr[3] => Mux147.IN0
-addr[3] => Mux148.IN0
-addr[3] => Mux149.IN0
-addr[3] => Mux150.IN1
-addr[3] => Mux151.IN1
-addr[3] => Mux152.IN1
-addr[3] => Mux153.IN1
-addr[3] => Mux154.IN1
-addr[3] => Mux155.IN1
-addr[3] => Mux156.IN1
-addr[3] => Mux157.IN1
-addr[3] => Mux158.IN0
-addr[3] => Mux159.IN0
-addr[3] => Mux160.IN0
-addr[3] => Mux161.IN0
-addr[3] => Mux162.IN0
-addr[3] => Mux163.IN0
-addr[3] => Mux164.IN0
-addr[3] => Mux165.IN0
-addr[3] => Mux166.IN0
-addr[3] => Mux167.IN0
-addr[3] => Mux168.IN0
-addr[3] => Mux169.IN0
-addr[3] => Mux170.IN0
-addr[3] => Mux171.IN0
-addr[3] => Mux172.IN0
-addr[3] => Mux173.IN0
-addr[3] => Mux174.IN0
-addr[3] => Mux175.IN0
-addr[3] => Mux176.IN0
-addr[3] => Mux177.IN0
-addr[3] => Mux178.IN1
-addr[3] => Mux179.IN1
-addr[3] => Mux180.IN1
-addr[3] => Mux181.IN1
-ec[0] => Mux182.IN5
-ec[0] => Mux183.IN5
-ec[0] => Mux184.IN5
-ec[0] => Mux185.IN5
-ec[0] => Mux186.IN5
-ec[0] => Mux187.IN5
-ec[0] => Mux188.IN5
-ec[0] => Mux189.IN5
-ec[0] => Mux190.IN5
-ec[0] => Mux191.IN5
-ec[0] => Mux192.IN5
-ec[0] => Mux193.IN5
-ec[0] => Mux194.IN5
-ec[0] => Mux195.IN5
-ec[0] => Mux196.IN5
-ec[0] => Mux197.IN5
-ec[0] => Mux198.IN5
-ec[0] => Mux199.IN5
-ec[0] => Mux200.IN5
-ec[0] => Mux201.IN5
-ec[0] => Mux202.IN5
-ec[0] => Mux203.IN5
-ec[0] => Mux204.IN5
-ec[0] => Mux205.IN5
-ec[0] => Mux206.IN5
-ec[0] => Mux207.IN5
-ec[0] => Mux208.IN5
-ec[0] => Mux209.IN5
-ec[0] => Mux210.IN5
-ec[0] => Mux211.IN5
-ec[0] => Mux212.IN5
-ec[0] => Mux213.IN5
-ec[0] => Mux214.IN3
-ec[0] => Mux215.IN3
-ec[0] => Mux216.IN3
-ec[0] => Mux217.IN3
-ec[0] => Mux218.IN3
-ec[0] => Mux219.IN3
-ec[0] => Mux220.IN3
-ec[0] => Mux221.IN3
-ec[0] => Mux222.IN3
-ec[0] => Mux223.IN3
-ec[0] => Mux224.IN4
-ec[0] => Mux225.IN4
-ec[0] => Mux226.IN4
-ec[0] => Mux227.IN4
-ec[0] => Mux228.IN4
-ec[0] => Mux229.IN4
-ec[0] => Mux230.IN4
-ec[0] => Mux231.IN4
-ec[0] => Mux232.IN4
-ec[0] => Mux233.IN4
-ec[0] => Mux234.IN4
-ec[0] => Mux235.IN4
-ec[0] => Mux236.IN4
-ec[0] => Mux237.IN4
-ec[0] => Mux238.IN4
-ec[0] => Mux239.IN4
-ec[0] => Mux240.IN4
-ec[0] => Mux241.IN4
-ec[0] => Mux242.IN4
-ec[0] => Mux243.IN4
-ec[0] => Mux244.IN4
-ec[0] => Mux245.IN4
-ec[0] => Mux246.IN4
-ec[0] => Mux247.IN4
-ec[0] => Mux248.IN4
-ec[0] => Mux249.IN4
-ec[0] => Mux250.IN4
-ec[0] => Mux251.IN4
-ec[0] => Mux252.IN4
-ec[0] => Mux253.IN4
-ec[0] => Mux254.IN4
-ec[0] => Mux255.IN4
-ec[0] => Mux256.IN4
-ec[0] => Mux257.IN4
-ec[0] => Mux258.IN4
-ec[0] => Mux259.IN4
-ec[0] => Mux260.IN4
-ec[0] => Mux261.IN4
-ec[0] => Mux262.IN4
-ec[0] => Mux263.IN4
-ec[1] => Mux182.IN4
-ec[1] => Mux183.IN4
-ec[1] => Mux184.IN4
-ec[1] => Mux185.IN4
-ec[1] => Mux186.IN4
-ec[1] => Mux187.IN4
-ec[1] => Mux188.IN4
-ec[1] => Mux189.IN4
-ec[1] => Mux190.IN4
-ec[1] => Mux191.IN4
-ec[1] => Mux192.IN4
-ec[1] => Mux193.IN4
-ec[1] => Mux194.IN4
-ec[1] => Mux195.IN4
-ec[1] => Mux196.IN4
-ec[1] => Mux197.IN4
-ec[1] => Mux198.IN4
-ec[1] => Mux199.IN4
-ec[1] => Mux200.IN4
-ec[1] => Mux201.IN4
-ec[1] => Mux202.IN4
-ec[1] => Mux203.IN4
-ec[1] => Mux204.IN4
-ec[1] => Mux205.IN4
-ec[1] => Mux206.IN4
-ec[1] => Mux207.IN4
-ec[1] => Mux208.IN4
-ec[1] => Mux209.IN4
-ec[1] => Mux210.IN4
-ec[1] => Mux211.IN4
-ec[1] => Mux212.IN4
-ec[1] => Mux213.IN4
-ec[1] => Mux214.IN2
-ec[1] => Mux215.IN2
-ec[1] => Mux216.IN2
-ec[1] => Mux217.IN2
-ec[1] => Mux218.IN2
-ec[1] => Mux219.IN2
-ec[1] => Mux220.IN2
-ec[1] => Mux221.IN2
-ec[1] => Mux222.IN2
-ec[1] => Mux223.IN2
-ec[1] => Mux224.IN3
-ec[1] => Mux225.IN3
-ec[1] => Mux226.IN3
-ec[1] => Mux227.IN3
-ec[1] => Mux228.IN3
-ec[1] => Mux229.IN3
-ec[1] => Mux230.IN3
-ec[1] => Mux231.IN3
-ec[1] => Mux232.IN3
-ec[1] => Mux233.IN3
-ec[1] => Mux234.IN3
-ec[1] => Mux235.IN3
-ec[1] => Mux236.IN3
-ec[1] => Mux237.IN3
-ec[1] => Mux238.IN3
-ec[1] => Mux239.IN3
-ec[1] => Mux240.IN3
-ec[1] => Mux241.IN3
-ec[1] => Mux242.IN3
-ec[1] => Mux243.IN3
-ec[1] => Mux244.IN3
-ec[1] => Mux245.IN3
-ec[1] => Mux246.IN3
-ec[1] => Mux247.IN3
-ec[1] => Mux248.IN3
-ec[1] => Mux249.IN3
-ec[1] => Mux250.IN3
-ec[1] => Mux251.IN3
-ec[1] => Mux252.IN3
-ec[1] => Mux253.IN3
-ec[1] => Mux254.IN3
-ec[1] => Mux255.IN3
-ec[1] => Mux256.IN3
-ec[1] => Mux257.IN3
-ec[1] => Mux258.IN3
-ec[1] => Mux259.IN3
-ec[1] => Mux260.IN3
-ec[1] => Mux261.IN3
-ec[1] => Mux262.IN3
-ec[1] => Mux263.IN3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1
+addr[0] => ~NO_FANOUT~
+addr[1] => ~NO_FANOUT~
+addr[2] => ~NO_FANOUT~
+addr[3] => ~NO_FANOUT~
+ec[0] => ~NO_FANOUT~
+ec[1] => ~NO_FANOUT~
 resultado[0] <= ALU:alu1.R[0]
 resultado[1] <= ALU:alu1.R[1]
 resultado[2] <= ALU:alu1.R[2]
@@ -1184,6 +142,16 @@ resultado[7] <= ALU:alu1.R[7]
 resultado[8] <= ALU:alu1.R[8]
 resultado[9] <= ALU:alu1.R[9]
 clk => ALU:alu1.clk
+clk => registro[0][0].CLK
+clk => registro[0][1].CLK
+clk => registro[0][2].CLK
+clk => registro[0][3].CLK
+clk => registro[0][4].CLK
+clk => registro[0][5].CLK
+clk => registro[0][6].CLK
+clk => registro[0][7].CLK
+clk => registro[0][8].CLK
+clk => registro[0][9].CLK
 clk => registro[1][0].CLK
 clk => registro[1][1].CLK
 clk => registro[1][2].CLK
@@ -1214,26 +182,6 @@ clk => registro[3][6].CLK
 clk => registro[3][7].CLK
 clk => registro[3][8].CLK
 clk => registro[3][9].CLK
-clk => registro[4][0].CLK
-clk => registro[4][1].CLK
-clk => registro[4][2].CLK
-clk => registro[4][3].CLK
-clk => registro[4][4].CLK
-clk => registro[4][5].CLK
-clk => registro[4][6].CLK
-clk => registro[4][7].CLK
-clk => registro[4][8].CLK
-clk => registro[4][9].CLK
-clk => registro[5][0].CLK
-clk => registro[5][1].CLK
-clk => registro[5][2].CLK
-clk => registro[5][3].CLK
-clk => registro[5][4].CLK
-clk => registro[5][5].CLK
-clk => registro[5][6].CLK
-clk => registro[5][7].CLK
-clk => registro[5][8].CLK
-clk => registro[5][9].CLK
 clk => MREG[0].CLK
 clk => MREG[1].CLK
 clk => MREG[2].CLK
@@ -1266,12 +214,95 @@ clk => addr1[0].CLK
 clk => addr1[1].CLK
 clk => addr1[2].CLK
 clk => addr1[3].CLK
-clk => valores:val1.clk
-clk => valores:val2.clk
+clk => pr_state~1.DATAIN
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
+rst => pr_state.OUTPUTSELECT
 rst => ALU:alu1.rst
+rst => registro[1][6].ENA
+rst => registro[1][5].ENA
+rst => registro[1][4].ENA
+rst => registro[1][3].ENA
+rst => registro[1][2].ENA
+rst => registro[1][1].ENA
+rst => registro[1][0].ENA
+rst => registro[0][9].ENA
+rst => registro[0][8].ENA
+rst => registro[0][7].ENA
+rst => registro[0][6].ENA
+rst => registro[0][5].ENA
+rst => registro[0][4].ENA
+rst => registro[0][3].ENA
+rst => registro[0][2].ENA
+rst => registro[0][1].ENA
+rst => registro[0][0].ENA
+rst => registro[1][7].ENA
+rst => registro[1][8].ENA
+rst => registro[1][9].ENA
+rst => registro[2][0].ENA
+rst => registro[2][1].ENA
+rst => registro[2][2].ENA
+rst => registro[2][3].ENA
+rst => registro[2][4].ENA
+rst => registro[2][5].ENA
+rst => registro[2][6].ENA
+rst => registro[2][7].ENA
+rst => registro[2][8].ENA
+rst => registro[2][9].ENA
+rst => registro[3][0].ENA
+rst => registro[3][1].ENA
+rst => registro[3][2].ENA
+rst => registro[3][3].ENA
+rst => registro[3][4].ENA
+rst => registro[3][5].ENA
+rst => registro[3][6].ENA
+rst => registro[3][7].ENA
+rst => registro[3][8].ENA
+rst => registro[3][9].ENA
+rst => MREG[0].ENA
+rst => MREG[1].ENA
+rst => MREG[2].ENA
+rst => MREG[3].ENA
+rst => MREG[4].ENA
+rst => MREG[5].ENA
+rst => MREG[6].ENA
+rst => MREG[7].ENA
+rst => MREG[8].ENA
+rst => MREG[9].ENA
+rst => MREG[10].ENA
+rst => MREG[11].ENA
+rst => MREG[12].ENA
+rst => MREG[13].ENA
+rst => MREG[14].ENA
+rst => MREG[15].ENA
+rst => MREG[16].ENA
+rst => MREG[17].ENA
+rst => MREG[18].ENA
+rst => MREG[19].ENA
+rst => MREG[20].ENA
+rst => MREG[21].ENA
+rst => MREG[22].ENA
+rst => MREG[23].ENA
+rst => addr2[0].ENA
+rst => addr2[1].ENA
+rst => addr2[2].ENA
+rst => addr2[3].ENA
+rst => addr1[0].ENA
+rst => addr1[1].ENA
+rst => addr1[2].ENA
+rst => addr1[3].ENA
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1
 A[0] => uapro:unidad_aritmetica.Xi[0]
 A[0] => Logicas:unidad_logica.a[0]
 A[0] => barrelShifters:barrel_shifters.a[0]
@@ -1385,7 +416,7 @@ ov_flag <= uapro:unidad_aritmetica.Ov
 c_flag <= uapro:unidad_aritmetica.C
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica
 Xi[0] => fullA10b:suma.Xi[0]
 Xi[0] => fullA10b:resta.Xi[0]
 Xi[0] => multP:mult.r[0]
@@ -1490,7 +521,7 @@ Ov <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
 S <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -1538,7 +569,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1552,7 +583,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1566,7 +597,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1580,7 +611,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1594,7 +625,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1608,7 +639,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1622,7 +653,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1636,7 +667,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1650,7 +681,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1664,7 +695,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -1712,7 +743,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -1760,7 +791,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1774,7 +805,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1788,7 +819,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1802,7 +833,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1816,7 +847,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1830,7 +861,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1844,7 +875,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1858,7 +889,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1872,7 +903,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -1886,7 +917,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -1934,7 +965,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult
 r[0] => inter[0].IN0
 r[0] => inter[5].IN0
 r[0] => inter[10].IN0
@@ -2001,7 +1032,7 @@ Zfm <= fullA10b:multi4.Zf
 Sfm <= fullA10b:multi4.Sf
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -2049,7 +1080,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2063,7 +1094,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2077,7 +1108,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2091,7 +1122,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2105,7 +1136,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2119,7 +1150,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2133,7 +1164,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2147,7 +1178,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2161,7 +1192,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2175,7 +1206,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -2223,7 +1254,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -2271,7 +1302,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2285,7 +1316,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2299,7 +1330,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2313,7 +1344,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2327,7 +1358,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2341,7 +1372,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2355,7 +1386,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2369,7 +1400,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2383,7 +1414,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2397,7 +1428,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -2445,7 +1476,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -2493,7 +1524,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2507,7 +1538,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2521,7 +1552,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2535,7 +1566,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2549,7 +1580,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2563,7 +1594,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2577,7 +1608,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2591,7 +1622,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2605,7 +1636,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2619,7 +1650,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -2667,7 +1698,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4
 Xi[0] => fullAdder:s0.A
 Xi[1] => fullAdder:s1.A
 Xi[2] => fullAdder:s2.A
@@ -2715,7 +1746,7 @@ Ovf <= negativoP:negativo.Ov
 Sf <= negativoP:negativo.S
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s0
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s0
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2729,7 +1760,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s1
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s1
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2743,7 +1774,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s2
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s2
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2757,7 +1788,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s3
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s3
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2771,7 +1802,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2785,7 +1816,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2799,7 +1830,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2813,7 +1844,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2827,7 +1858,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8
 A => Suma.IN0
 A => Cout.IN0
 A => Cout.IN0
@@ -2841,7 +1872,7 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 Suma <= Suma.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|negativoP:negativo
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|negativoP:negativo
 Si[0] => Saux.DATAB
 Si[0] => Add0.IN20
 Si[1] => Saux.DATAB
@@ -2889,7 +1920,7 @@ Sc[7] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 Sc[8] <= Saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi
 a[0] => LessThan3.IN8
 a[0] => Add3.IN16
 a[0] => remainderr.DATAA
@@ -2989,7 +2020,7 @@ resultHigh[6] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 resultHigh[7] <= remainderr.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|Logicas:unidad_logica
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica
 a[0] => salida.IN0
 a[0] => salida.IN0
 a[0] => salida.DATAB
@@ -3097,7 +2128,7 @@ s_op[1] <= s_op[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 sf <= sf~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|ALU:alu1|barrelShifters:barrel_shifters
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters
 a[0] => aux.DATAB
 a[1] => aux.DATAB
 a[1] => aux.DATAA
@@ -3181,129 +2212,132 @@ salShifters[9] <= salShifters[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 salPrub <= clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|valores:val1
-address[0] => codigos~3.DATAIN
-address[0] => codigos.WADDR
-address[0] => codigos.RADDR
-address[1] => codigos~2.DATAIN
-address[1] => codigos.WADDR1
-address[1] => codigos.RADDR1
-address[2] => codigos~1.DATAIN
-address[2] => codigos.WADDR2
-address[2] => codigos.RADDR2
-address[3] => codigos~0.DATAIN
-address[3] => codigos.WADDR3
-address[3] => codigos.RADDR3
-valor[0] <= codigos.DATAOUT
-valor[1] <= codigos.DATAOUT1
-valor[2] <= codigos.DATAOUT2
-valor[3] <= codigos.DATAOUT3
-valor[4] <= codigos.DATAOUT4
-valor[5] <= codigos.DATAOUT5
-valor[6] <= codigos.DATAOUT6
-valor[7] <= codigos.DATAOUT7
-valor[8] <= codigos.DATAOUT8
-valor[9] <= codigos.DATAOUT9
-clk => codigos~14.CLK
-clk => codigos~0.CLK
-clk => codigos~1.CLK
-clk => codigos~2.CLK
-clk => codigos~3.CLK
-clk => codigos~4.CLK
-clk => codigos~5.CLK
-clk => codigos~6.CLK
-clk => codigos~7.CLK
-clk => codigos~8.CLK
-clk => codigos~9.CLK
-clk => codigos~10.CLK
-clk => codigos~11.CLK
-clk => codigos~12.CLK
-clk => codigos~13.CLK
-clk => codigos.CLK0
-wrt => codigos~14.DATAIN
-wrt => codigos.WE
-datain[0] => codigos~13.DATAIN
-datain[0] => codigos.DATAIN
-datain[1] => codigos~12.DATAIN
-datain[1] => codigos.DATAIN1
-datain[2] => codigos~11.DATAIN
-datain[2] => codigos.DATAIN2
-datain[3] => codigos~10.DATAIN
-datain[3] => codigos.DATAIN3
-datain[4] => codigos~9.DATAIN
-datain[4] => codigos.DATAIN4
-datain[5] => codigos~8.DATAIN
-datain[5] => codigos.DATAIN5
-datain[6] => codigos~7.DATAIN
-datain[6] => codigos.DATAIN6
-datain[7] => codigos~6.DATAIN
-datain[7] => codigos.DATAIN7
-datain[8] => codigos~5.DATAIN
-datain[8] => codigos.DATAIN8
-datain[9] => codigos~4.DATAIN
-datain[9] => codigos.DATAIN9
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|valores:val1
+address[0] => Mux0.IN19
+address[0] => Mux1.IN19
+address[0] => Mux2.IN19
+address[0] => Mux3.IN19
+address[0] => Mux4.IN19
+address[1] => Mux0.IN18
+address[1] => Mux1.IN18
+address[1] => Mux2.IN18
+address[1] => Mux3.IN18
+address[1] => Mux4.IN18
+address[2] => Mux0.IN17
+address[2] => Mux1.IN17
+address[2] => Mux2.IN17
+address[2] => Mux3.IN17
+address[2] => Mux4.IN17
+address[3] => Mux0.IN16
+address[3] => Mux1.IN16
+address[3] => Mux2.IN16
+address[3] => Mux3.IN16
+address[3] => Mux4.IN16
+valor[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+valor[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+valor[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+valor[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+valor[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+valor[5] <= <GND>
+valor[6] <= <GND>
+valor[7] <= <GND>
+valor[8] <= <GND>
+valor[9] <= <GND>
 
 
-|practica2|FinalSelection:inst|ecuaciones:ec1|valores:val2
-address[0] => codigos~3.DATAIN
-address[0] => codigos.WADDR
-address[0] => codigos.RADDR
-address[1] => codigos~2.DATAIN
-address[1] => codigos.WADDR1
-address[1] => codigos.RADDR1
-address[2] => codigos~1.DATAIN
-address[2] => codigos.WADDR2
-address[2] => codigos.RADDR2
-address[3] => codigos~0.DATAIN
-address[3] => codigos.WADDR3
-address[3] => codigos.RADDR3
-valor[0] <= codigos.DATAOUT
-valor[1] <= codigos.DATAOUT1
-valor[2] <= codigos.DATAOUT2
-valor[3] <= codigos.DATAOUT3
-valor[4] <= codigos.DATAOUT4
-valor[5] <= codigos.DATAOUT5
-valor[6] <= codigos.DATAOUT6
-valor[7] <= codigos.DATAOUT7
-valor[8] <= codigos.DATAOUT8
-valor[9] <= codigos.DATAOUT9
-clk => codigos~14.CLK
-clk => codigos~0.CLK
-clk => codigos~1.CLK
-clk => codigos~2.CLK
-clk => codigos~3.CLK
-clk => codigos~4.CLK
-clk => codigos~5.CLK
-clk => codigos~6.CLK
-clk => codigos~7.CLK
-clk => codigos~8.CLK
-clk => codigos~9.CLK
-clk => codigos~10.CLK
-clk => codigos~11.CLK
-clk => codigos~12.CLK
-clk => codigos~13.CLK
-clk => codigos.CLK0
-wrt => codigos~14.DATAIN
-wrt => codigos.WE
-datain[0] => codigos~13.DATAIN
-datain[0] => codigos.DATAIN
-datain[1] => codigos~12.DATAIN
-datain[1] => codigos.DATAIN1
-datain[2] => codigos~11.DATAIN
-datain[2] => codigos.DATAIN2
-datain[3] => codigos~10.DATAIN
-datain[3] => codigos.DATAIN3
-datain[4] => codigos~9.DATAIN
-datain[4] => codigos.DATAIN4
-datain[5] => codigos~8.DATAIN
-datain[5] => codigos.DATAIN5
-datain[6] => codigos~7.DATAIN
-datain[6] => codigos.DATAIN6
-datain[7] => codigos~6.DATAIN
-datain[7] => codigos.DATAIN7
-datain[8] => codigos~5.DATAIN
-datain[8] => codigos.DATAIN8
-datain[9] => codigos~4.DATAIN
-datain[9] => codigos.DATAIN9
+|practica2|FinalSelection:inst|ecuaciones:ecuacion1|valores:val2
+address[0] => Mux0.IN19
+address[0] => Mux1.IN19
+address[0] => Mux2.IN19
+address[0] => Mux3.IN19
+address[0] => Mux4.IN19
+address[1] => Mux0.IN18
+address[1] => Mux1.IN18
+address[1] => Mux2.IN18
+address[1] => Mux3.IN18
+address[1] => Mux4.IN18
+address[2] => Mux0.IN17
+address[2] => Mux1.IN17
+address[2] => Mux2.IN17
+address[2] => Mux3.IN17
+address[2] => Mux4.IN17
+address[3] => Mux0.IN16
+address[3] => Mux1.IN16
+address[3] => Mux2.IN16
+address[3] => Mux3.IN16
+address[3] => Mux4.IN16
+valor[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+valor[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+valor[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+valor[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+valor[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+valor[5] <= <GND>
+valor[6] <= <GND>
+valor[7] <= <GND>
+valor[8] <= <GND>
+valor[9] <= <GND>
+
+
+|practica2|FinalSelection:inst|convertidor:conv1
+en[0] => LessThan1.IN8
+en[0] => Add1.IN8
+en[0] => digitos.DATAA
+en[1] => LessThan2.IN8
+en[1] => Add2.IN8
+en[1] => digitos.DATAA
+en[2] => LessThan4.IN8
+en[2] => Add4.IN8
+en[2] => digitos.DATAA
+en[3] => LessThan6.IN8
+en[3] => Add6.IN8
+en[3] => digitos.DATAA
+en[4] => LessThan8.IN8
+en[4] => Add8.IN8
+en[4] => digitos.DATAA
+en[5] => LessThan11.IN8
+en[5] => Add11.IN8
+en[5] => digitos.DATAA
+en[6] => s[0]~reg0.DATAIN
+en[7] => LessThan0.IN6
+en[7] => Add0.IN6
+en[7] => digitos.DATAA
+en[8] => LessThan0.IN5
+en[8] => Add0.IN5
+en[8] => digitos.DATAA
+en[9] => LessThan0.IN4
+en[9] => Add0.IN4
+en[9] => digitos.DATAA
+clk => s[0]~reg0.CLK
+clk => s[1]~reg0.CLK
+clk => s[2]~reg0.CLK
+clk => s[3]~reg0.CLK
+clk => s[4]~reg0.CLK
+clk => s[5]~reg0.CLK
+clk => s[6]~reg0.CLK
+clk => s[7]~reg0.CLK
+clk => s[8]~reg0.CLK
+clk => s[9]~reg0.CLK
+clk => s[10]~reg0.CLK
+clk => s[11]~reg0.CLK
+clk => s[12]~reg0.CLK
+clk => s[13]~reg0.CLK
+clk => s[14]~reg0.CLK
+clk => s[15]~reg0.CLK
+s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[8] <= s[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[9] <= s[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[10] <= s[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[11] <= s[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[12] <= s[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[13] <= s[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[14] <= s[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[15] <= s[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

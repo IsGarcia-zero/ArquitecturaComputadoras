@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/21/2022 21:54:31"
+-- Generated on "11/22/2022 22:37:33"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -48,9 +48,10 @@ SIGNAL ec : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL f : STD_LOGIC;
 SIGNAL g : STD_LOGIC;
 SIGNAL pin_name1 : STD_LOGIC;
+SIGNAL resultado : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
 SIGNAL rst_clk : STD_LOGIC;
-SIGNAL sal_prueb : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL sal_prueb : STD_LOGIC_VECTOR(15 DOWNTO 0);
 COMPONENT practica2
 	PORT (
 	a : OUT STD_LOGIC;
@@ -67,9 +68,10 @@ COMPONENT practica2
 	f : OUT STD_LOGIC;
 	g : OUT STD_LOGIC;
 	pin_name1 : OUT STD_LOGIC;
+	resultado : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	rst : IN STD_LOGIC;
 	rst_clk : IN STD_LOGIC;
-	sal_prueb : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	sal_prueb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -90,6 +92,7 @@ BEGIN
 	f => f,
 	g => g,
 	pin_name1 => pin_name1,
+	resultado => resultado,
 	rst => rst,
 	rst_clk => rst_clk,
 	sal_prueb => sal_prueb

@@ -7,20 +7,20 @@ USE IEEE.NUMERIC_STD.ALL;
 ENTITY valores IS
 	PORT(
 		address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		valor : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		clk, wrt : IN STD_LOGIC;
-		datain: IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+		valor : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		--clk, wrt : IN STD_LOGIC;
+		--datain: IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END ENTITY;
 
 ARCHITECTURE bhr OF valores IS 
 	TYPE list IS ARRAY (15 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
 	
-	SIGNAL codigos : list := (
-	0 => "0000000010", -- A x
+	CONSTANT codigos : list := (
+	0 => "0000000001", -- A x
 	1 => "0000000001", -- B y
 	2 => "0000000001", -- C z
-	3 => "0000010000", -- D w
+	3 => "0000000100", -- D w
 	4 => "0000001101", -- 13
 	5 => "0000010111", -- 23
 	6 => "0000000100", -- 4
@@ -35,12 +35,12 @@ ARCHITECTURE bhr OF valores IS
 	15 => "0000000000" -- REG_C
 	);
 BEGIN
-	PROCESS(address,clk, wrt)
-	BEGIN
-	IF(RISING_EDGE(clk) AND wrt = '1') THEN
-		codigos(to_integer(unsigned(address))) <= datain;
-	END IF;
-	END PROCESS;
+--	PROCESS(address,clk, wrt)
+--	BEGIN
+--	IF(RISING_EDGE(clk) AND wrt = '1') THEN
+--		codigos(to_integer(unsigned(address))) <= datain;
+--	END IF;
+--	END PROCESS;
 	
 	valor<= codigos(to_integer(unsigned(address)));
 	

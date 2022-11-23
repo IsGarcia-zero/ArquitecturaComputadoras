@@ -1,20 +1,20 @@
 
-State Machine - |practica2|FinalSelection:inst|n_state
-Name n_state.state11 n_state.state10 n_state.state9 n_state.state8 n_state.state7 n_state.state6 n_state.state5 n_state.state4 n_state.state3 n_state.state2 n_state.state1 n_state.state0 
-n_state.state0 0 0 0 0 0 0 0 0 0 0 0 0 
-n_state.state1 0 0 0 0 0 0 0 0 0 0 1 1 
-n_state.state2 0 0 0 0 0 0 0 0 0 1 0 1 
-n_state.state3 0 0 0 0 0 0 0 0 1 0 0 1 
-n_state.state4 0 0 0 0 0 0 0 1 0 0 0 1 
-n_state.state5 0 0 0 0 0 0 1 0 0 0 0 1 
-n_state.state6 0 0 0 0 0 1 0 0 0 0 0 1 
-n_state.state7 0 0 0 0 1 0 0 0 0 0 0 1 
-n_state.state8 0 0 0 1 0 0 0 0 0 0 0 1 
-n_state.state9 0 0 1 0 0 0 0 0 0 0 0 1 
-n_state.state10 0 1 0 0 0 0 0 0 0 0 0 1 
-n_state.state11 1 0 0 0 0 0 0 0 0 0 0 1 
-
 State Machine - |practica2|FinalSelection:inst|pr_state
+Name pr_state.state11 pr_state.state10 pr_state.state9 pr_state.state8 pr_state.state7 pr_state.state6 pr_state.state5 pr_state.state4 pr_state.state3 pr_state.state2 pr_state.state1 pr_state.state0 
+pr_state.state0 0 0 0 0 0 0 0 0 0 0 0 0 
+pr_state.state1 0 0 0 0 0 0 0 0 0 0 1 1 
+pr_state.state2 0 0 0 0 0 0 0 0 0 1 0 1 
+pr_state.state3 0 0 0 0 0 0 0 0 1 0 0 1 
+pr_state.state4 0 0 0 0 0 0 0 1 0 0 0 1 
+pr_state.state5 0 0 0 0 0 0 1 0 0 0 0 1 
+pr_state.state6 0 0 0 0 0 1 0 0 0 0 0 1 
+pr_state.state7 0 0 0 0 1 0 0 0 0 0 0 1 
+pr_state.state8 0 0 0 1 0 0 0 0 0 0 0 1 
+pr_state.state9 0 0 1 0 0 0 0 0 0 0 0 1 
+pr_state.state10 0 1 0 0 0 0 0 0 0 0 0 1 
+pr_state.state11 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state
 Name pr_state.state11 pr_state.state10 pr_state.state9 pr_state.state8 pr_state.state7 pr_state.state6 pr_state.state5 pr_state.state4 pr_state.state3 pr_state.state2 pr_state.state1 pr_state.state0 
 pr_state.state0 0 0 0 0 0 0 0 0 0 0 0 0 
 pr_state.state1 0 0 0 0 0 0 0 0 0 0 1 1 

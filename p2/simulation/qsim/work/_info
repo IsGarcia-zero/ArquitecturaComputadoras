@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 dC:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim
 Ehard_block
-Z1 w1669089272
+Z1 w1669178254
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
-!i122 318
+!i122 472
 R0
 Z8 8practica2.vho
 Z9 Fpractica2.vho
@@ -27,9 +27,9 @@ VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
 Z10 OV;C;2020.1;71
 32
-Z11 !s110 1669089273
+Z11 !s110 1669178254
 !i10b 1
-Z12 !s108 1669089273.000000
+Z12 !s108 1669178254.000000
 Z13 !s90 -work|work|practica2.vho|
 Z14 !s107 practica2.vho|
 !i113 1
@@ -43,7 +43,7 @@ R5
 R6
 R7
 DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-!i122 318
+!i122 472
 l65
 L51 20
 Via>5o7W??azG@W@@eFOTF0
@@ -68,14 +68,14 @@ R4
 R5
 R6
 Z18 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
-!i122 318
+!i122 472
 R0
 R8
 R9
 l0
 L80 1
-Vmdh>5[Yo1JP7VN`c9en9F3
-!s100 k4zRJifbRjdWd?lkmi61^3
+VQeTaBF]NoZ@?I<S83CcgV3
+!s100 Uni:OXazE`9]gM4hk[<`62
 R10
 32
 R11
@@ -95,12 +95,12 @@ R4
 R5
 R6
 R18
-DEx4 work 9 practica2 0 22 mdh>5[Yo1JP7VN`c9en9F3
-!i122 318
-l899
-L132 13634
-VEUN;V:jM9ibKaT7cAiC5`2
-!s100 dgMe3fLz<B54Z7X<QZleF2
+DEx4 work 9 practica2 0 22 QeTaBF]NoZ@?I<S83CcgV3
+!i122 472
+l725
+L149 10129
+V<bEVm_D[;j`g9CSADbbm;3
+!s100 Q8`J1<MPOea:3HA0eRblO0
 R10
 32
 R11
@@ -112,10 +112,10 @@ R14
 R15
 R16
 Epractica2_vhd_vec_tst
-Z19 w1669089271
+Z19 w1669178253
 R5
 R6
-!i122 319
+!i122 473
 R0
 Z20 8Waveform.vwf.vht
 Z21 FWaveform.vwf.vht
@@ -125,30 +125,30 @@ Vhf:Q:aQT[Ga`N=;7^cb[Y3
 !s100 H]TPVGVRnFk1FW<636URH1
 R10
 32
-R11
+Z22 !s110 1669178255
 !i10b 1
-R12
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z23 !s108 1669178255.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Apractica2_arch
 R5
 R6
-Z24 DEx4 work 21 practica2_vhd_vec_tst 0 22 hf:Q:aQT[Ga`N=;7^cb[Y3
-!i122 319
-l75
-L34 102
-VM=263lXYl>M475WQS`=3T0
-!s100 220[??7l;6;IPmYI=@8Tm1
+Z26 DEx4 work 21 practica2_vhd_vec_tst 0 22 hf:Q:aQT[Ga`N=;7^cb[Y3
+!i122 473
+l77
+Z27 L34 105
+Z28 VYeCicLE68biMB66@9>;mM0
+Z29 !s100 2FokiWNM1M9K?i<jYMb=@0
 R10
 32
-R11
-!i10b 1
-R12
 R22
+!i10b 1
 R23
+R24
+R25
 !i113 1
 R15
 R16
