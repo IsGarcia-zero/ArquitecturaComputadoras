@@ -55,7 +55,7 @@ BEGIN
         resultLow <= STD_LOGIC_VECTOR(quotient);
         resultHigh <= STD_LOGIC_VECTOR(remainderr);
         sF <= aS XOR bS;
-        if (quotient = (OTHERS => '0')) then
+        if (quotient = unsigned("00000000")) then
             zF <= '1';
         else
             zF <= '0';
