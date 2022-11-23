@@ -9,14 +9,14 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica2 -c practica2 --vector_source="/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Waveform2.vwf" --testbench_file="/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/Waveform2.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Wed Nov 23 11:00:12 2022Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica2 -c practica2 --vector_source=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Waveform2.vwf --testbench_file=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/Waveform2.vwf.vht
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Wed Nov 23 12:06:32 2022Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica2 -c practica2 --vector_source=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/Waveform2.vwf --testbench_file=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/Waveform2.vwf.vht
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/" practica2 -c practica2
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Wed Nov 23 11:00:14 2022Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/ practica2 -c practica2Info (204019): Generated file practica2.vho in folder "/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings    Info: Peak virtual memory: 611 megabytes    Info: Processing ended: Wed Nov 23 11:00:14 2022    Info: Elapsed time: 00:00:00    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Wed Nov 23 12:06:34 2022Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/ practica2 -c practica2Info (204019): Generated file practica2.vho in folder "/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings    Info: Peak virtual memory: 611 megabytes    Info: Processing ended: Wed Nov 23 12:06:35 2022    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -34,7 +34,8 @@ Reading pref.tcl
 # do practica2.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:00:16 on Nov 23,2022# vcom -work work practica2.vho 
+# Start time: 12:06:40 on Nov 23,2022
+# vcom -work work practica2.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -48,20 +49,20 @@ Reading pref.tcl
 # -- Loading package altera_primitives_components
 # -- Compiling entity practica2
 # -- Compiling architecture structure of practica2
-# End time: 11:00:16 on Nov 23,2022, Elapsed time: 0:00:00
+# End time: 12:06:41 on Nov 23,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:00:16 on Nov 23,2022# vcom -work work Waveform2.vwf.vht 
+# Start time: 12:06:41 on Nov 23,2022# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity practica2_vhd_vec_tst
 # -- Compiling architecture practica2_arch of practica2_vhd_vec_tst
-# End time: 11:00:16 on Nov 23,2022, Elapsed time: 0:00:00
+# End time: 12:06:41 on Nov 23,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.practica2_vhd_vec_tst # Start time: 11:00:16 on Nov 23,2022# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.practica2_vhd_vec_tst(practica2_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.practica2(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 46460 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.practica2_vhd_vec_tst # Start time: 12:06:41 on Nov 23,2022# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.practica2_vhd_vec_tst(practica2_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading cycloneive.cycloneive_atom_pack(body)# Loading cycloneive.cycloneive_components# Loading work.practica2(structure)# Loading work.hard_block(structure)# Loading ieee.std_logic_arith(body)# Loading cycloneive.cycloneive_io_obuf(arch)# Loading cycloneive.cycloneive_io_ibuf(arch)# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)# Loading cycloneive.cycloneive_ena_reg(behave)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 49647 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
 # after#35
-# End time: 11:00:16 on Nov 23,2022, Elapsed time: 0:00:00# Errors: 0, Warnings: 1
+# End time: 12:06:43 on Nov 23,2022, Elapsed time: 0:00:02# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
@@ -72,7 +73,7 @@ Reading /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/si
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221123110017.sim.vwf
+Writing the resulting VWF to /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221123120643.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -60,7 +60,7 @@ BEGIN
     Xop(8) <= Xi(8) XOR aS;
     -- Operaciones
     --Cin0 <= aS XOR bS;
-    s0 : fullAdder PORT MAP(Xop(0), Yop(0), aS, bS, oP, Caux(0), Saux(0), Caux2(0));
+    s0 : fullAdder PORT MAP(Xop(0), Yop(0), aS, bS, oP XOR bS, Caux(0), Saux(0), Caux2(0));
     s1 : fullAdder PORT MAP(Xop(1), Yop(1), Caux(0),'0', Caux2(0), Caux(1), Saux(1), Caux2(1));
     s2 : fullAdder PORT MAP(Xop(2), Yop(2), Caux(1),'0',Caux2(1), Caux(2), Saux(2), Caux2(2));
     s3 : fullAdder PORT MAP(Xop(3), Yop(3), Caux(2),'0', Caux2(2), Caux(3), Saux(3), Caux2(3));
@@ -70,7 +70,7 @@ BEGIN
     s7 : fullAdder PORT MAP(Xop(7), Yop(7), Caux(6),'0', Caux2(6), Caux(7), Saux(7), Caux2(7));
     s8 : fullAdder PORT MAP(Xop(8), Yop(8), Caux(7),'0', Caux2(7), Caux(8), Saux(8), Caux2(8));
     -- Si <= Caux(8)&Saux;
-    WITH (aS XOR bS) SELECT Si <=
+    WITH (aS XOR bS XOR oP) SELECT Si <=
     Caux(8) & Saux WHEN '0',
     NOT Caux(8) & Saux WHEN '1';
     -- --Si <= Caux(4) & Saux;

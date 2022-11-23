@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 0 248 16)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "s1" (rect 5 0 17 12)(font "Intel Clear" ))
+	(text "s1" (rect 5 0 16 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 16 248 32)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "s2" (rect 5 0 17 12)(font "Intel Clear" ))
+	(text "s2" (rect 5 0 16 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 32 248 48)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sel[3..0]" (rect 5 0 44 12)(font "Intel Clear" ))
+	(text "sel[3..0]" (rect 5 0 43 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 48 248 64)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Intel Clear" ))
+	(text "clk" (rect 5 0 19 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -89,7 +89,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 64 248 80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "rst" (rect 5 0 18 12)(font "Intel Clear" ))
+	(text "rst" (rect 5 0 17 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 -32 248 -16)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A[9..0]" (rect 5 0 37 12)(font "Intel Clear" ))
+	(text "A[9..0]" (rect 5 0 36 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -123,7 +123,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 -16 248 0)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "B[9..0]" (rect 5 0 37 12)(font "Intel Clear" ))
+	(text "B[9..0]" (rect 5 0 36 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))

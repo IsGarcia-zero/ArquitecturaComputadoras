@@ -22,7 +22,8 @@ ARCHITECTURE bhr OF ecuaciones IS
 	SIGNAL bcd, bcd_f : STD_LOGIC_VECTOR(15 DOWNTO 0); 
 	SIGNAL MREG : STD_LOGIC_VECTOR(23 DOWNTO 0); 
 	SIGNAL addr1,addr2: STD_LOGIC_VECTOR(3 DOWNTO 0); 
-	SIGNAL f1,f2,f3,f4,c_aux, rlj_aux, wrt : STD_LOGIC; 
+	SIGNAL f1,f2,f3,f4,c_aux, rlj_aux, wrt : STD_LOGIC;
+	SIGNAL sig_1, sig_2 : STD_LOGIC := '0'	; 
 	TYPE registrosos IS ARRAY(15 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
 
 	SIGNAL registro : registrosos := (
@@ -43,15 +44,16 @@ ARCHITECTURE bhr OF ecuaciones IS
 		14 => "0000000000",
 		15 => "0000000000"
 	);
-COMPONENT ALU IS  
- PORT( 
-  A,B : IN STD_LOGIC_VECTOR(9 DOWNTO 0); 
-  sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0); 
-  R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0); 
-  clk, rst : IN STD_LOGIC;
-  z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC 
- ); 
-END COMPONENT ALU; 
+COMPONENT ALU IS 
+	PORT(
+		A,B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		s1,s2 : IN STD_LOGIC;
+		sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		clk, rst : IN STD_LOGIC; -- No puse in XDDDD
+		z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
+	);
+END COMPONENT ALU;
  
 COMPONENT valores IS
 	PORT(
@@ -111,7 +113,7 @@ BEGIN
 					
 					MREG(23 DOWNTO 14) <= registro(3);
 					MREG(13 DOWNTO 4) <= registro(2);
-					MREG(3 DOWNTO 0) <= "1000";
+					MREG(3 DOWNTO 0) <= "0111";
 					pr_state <= state9;
 				WHEN state9 =>
 					registro(4) <= res;
@@ -123,7 +125,7 @@ BEGIN
 	
 	END PROCESS; 
 	resultado <= res;
-alu1 : ALU PORT MAP(MREG(23 DOWNTO 14), MREG(13 DOWNTO 4), MREG(3 DOWNTO 0), res, clk,rst, f1,f2,f3,f4); 
+alu1 : ALU PORT MAP(MREG(23 DOWNTO 14), MREG(13 DOWNTO 4), sig_1, sig_2, MREG(3 DOWNTO 0), res, clk,rst, f1,f2,f3,f4); 
 val1 : valores PORT MAP(addr1, As); 
 val2 : valores PORT MAP(addr2, Bs); 
 -- 
