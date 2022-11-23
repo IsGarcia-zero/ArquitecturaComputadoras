@@ -69,10 +69,10 @@ BEGIN
     s6 : fullAdder PORT MAP(Xop(6), Yop(6), Caux(5),Caux2(5), Caux(6), Saux(6), Caux2(6));
     s7 : fullAdder PORT MAP(Xop(7), Yop(7), Caux(6),Caux2(6), Caux(7), Saux(7), Caux2(7));
     s8 : fullAdder PORT MAP(Xop(8), Yop(8), Caux(7),Caux2(7), Caux(8), Saux(8), Caux2(8));
-    Si <= Caux(8)&Saux;
-    -- WITH Cin0 SELECT Siaux <=
-    --     Caux(8) & Saux WHEN '0',
-    --     NOT Caux(8) & Saux WHEN '1';
+    -- Si <= Caux(8)&Saux;
+    WITH Cin0 SELECT Siaux <=
+        Caux(8) & Saux WHEN '0',
+        NOT Caux(8) & Saux WHEN '1';
     -- --Si <= Caux(4) & Saux;
     Cfaux <= aS XOR bS XOR Caux(8);
     Zfaux <= NOT(Saux(0) OR Saux(1) OR Saux(2) OR Saux(3) OR Saux(4) OR Saux(5) OR Saux(6) OR Saux(7) OR Saux(8) OR Caux(8));
