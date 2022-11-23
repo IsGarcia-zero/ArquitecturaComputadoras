@@ -55,11 +55,7 @@ BEGIN
         resultLow <= STD_LOGIC_VECTOR(quotient);
         resultHigh <= STD_LOGIC_VECTOR(remainderr);
         sF <= aS XOR bS;
-        if (quotient = unsigned("00000000")) then
-            zF <= '1';
-        else
-            zF <= '0';
-        end if;
+        zF <= '0';
     END PROCESS Div;
     --compa1 : comparador4 PORT MAP(a, b, '0', '0', gttp, eqqp, lttp);
 
