@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/23/2022 08:36:10"
+-- Generated on "11/24/2022 11:55:07"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -34,178 +34,51 @@ END practica2_vhd_vec_tst;
 ARCHITECTURE practica2_arch OF practica2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL B : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL CF : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
-SIGNAL OVF : STD_LOGIC;
+SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL R : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
-SIGNAL s1 : STD_LOGIC;
-SIGNAL s2 : STD_LOGIC;
-SIGNAL sel : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL SF : STD_LOGIC;
-SIGNAL ZF : STD_LOGIC;
 COMPONENT practica2
 	PORT (
-	A : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	CF : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
-	OVF : OUT STD_LOGIC;
+	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	rst : IN STD_LOGIC;
-	s1 : IN STD_LOGIC;
-	s2 : IN STD_LOGIC;
-	sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SF : OUT STD_LOGIC;
-	ZF : OUT STD_LOGIC
+	rst : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : practica2
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
-	CF => CF,
 	clk => clk,
-	OVF => OVF,
+	ecuacion => ecuacion,
 	R => R,
-	rst => rst,
-	s1 => s1,
-	s2 => s2,
-	sel => sel,
-	SF => SF,
-	ZF => ZF
+	rst => rst
 	);
--- A[9]
-t_prcs_A_9: PROCESS
-BEGIN
-	A(9) <= '0';
-WAIT;
-END PROCESS t_prcs_A_9;
--- A[8]
-t_prcs_A_8: PROCESS
-BEGIN
-	A(8) <= '0';
-WAIT;
-END PROCESS t_prcs_A_8;
--- A[7]
-t_prcs_A_7: PROCESS
-BEGIN
-	A(7) <= '0';
-WAIT;
-END PROCESS t_prcs_A_7;
--- A[6]
-t_prcs_A_6: PROCESS
-BEGIN
-	A(6) <= '0';
-WAIT;
-END PROCESS t_prcs_A_6;
--- A[5]
-t_prcs_A_5: PROCESS
-BEGIN
-	A(5) <= '0';
-WAIT;
-END PROCESS t_prcs_A_5;
--- A[4]
-t_prcs_A_4: PROCESS
-BEGIN
-	A(4) <= '0';
-WAIT;
-END PROCESS t_prcs_A_4;
--- A[3]
-t_prcs_A_3: PROCESS
-BEGIN
-	A(3) <= '0';
-WAIT;
-END PROCESS t_prcs_A_3;
--- A[2]
-t_prcs_A_2: PROCESS
-BEGIN
-	A(2) <= '0';
-WAIT;
-END PROCESS t_prcs_A_2;
--- A[1]
-t_prcs_A_1: PROCESS
-BEGIN
-	A(1) <= '0';
-WAIT;
-END PROCESS t_prcs_A_1;
--- A[0]
-t_prcs_A_0: PROCESS
-BEGIN
-	A(0) <= '0';
-WAIT;
-END PROCESS t_prcs_A_0;
--- B[9]
-t_prcs_B_9: PROCESS
-BEGIN
-	B(9) <= '0';
-WAIT;
-END PROCESS t_prcs_B_9;
--- B[8]
-t_prcs_B_8: PROCESS
-BEGIN
-	B(8) <= '0';
-WAIT;
-END PROCESS t_prcs_B_8;
--- B[7]
-t_prcs_B_7: PROCESS
-BEGIN
-	B(7) <= '0';
-WAIT;
-END PROCESS t_prcs_B_7;
--- B[6]
-t_prcs_B_6: PROCESS
-BEGIN
-	B(6) <= '0';
-WAIT;
-END PROCESS t_prcs_B_6;
--- B[5]
-t_prcs_B_5: PROCESS
-BEGIN
-	B(5) <= '0';
-WAIT;
-END PROCESS t_prcs_B_5;
--- B[4]
-t_prcs_B_4: PROCESS
-BEGIN
-	B(4) <= '0';
-WAIT;
-END PROCESS t_prcs_B_4;
--- B[3]
-t_prcs_B_3: PROCESS
-BEGIN
-	B(3) <= '0';
-WAIT;
-END PROCESS t_prcs_B_3;
--- B[2]
-t_prcs_B_2: PROCESS
-BEGIN
-	B(2) <= '0';
-WAIT;
-END PROCESS t_prcs_B_2;
--- B[1]
-t_prcs_B_1: PROCESS
-BEGIN
-	B(1) <= '0';
-WAIT;
-END PROCESS t_prcs_B_1;
--- B[0]
-t_prcs_B_0: PROCESS
-BEGIN
-	B(0) <= '0';
-WAIT;
-END PROCESS t_prcs_B_0;
 
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 500 ps;
+	clk <= '1';
+	WAIT FOR 500 ps;
+	IF (NOW >= 20000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
+-- ecuacion[1]
+t_prcs_ecuacion_1: PROCESS
+BEGIN
+	ecuacion(1) <= '0';
+WAIT;
+END PROCESS t_prcs_ecuacion_1;
+-- ecuacion[0]
+t_prcs_ecuacion_0: PROCESS
+BEGIN
+	ecuacion(0) <= '0';
+WAIT;
+END PROCESS t_prcs_ecuacion_0;
 
 -- rst
 t_prcs_rst: PROCESS
@@ -213,42 +86,4 @@ BEGIN
 	rst <= '0';
 WAIT;
 END PROCESS t_prcs_rst;
-
--- s1
-t_prcs_s1: PROCESS
-BEGIN
-	s1 <= '0';
-WAIT;
-END PROCESS t_prcs_s1;
-
--- s2
-t_prcs_s2: PROCESS
-BEGIN
-	s2 <= '0';
-WAIT;
-END PROCESS t_prcs_s2;
--- sel[3]
-t_prcs_sel_3: PROCESS
-BEGIN
-	sel(3) <= '0';
-WAIT;
-END PROCESS t_prcs_sel_3;
--- sel[2]
-t_prcs_sel_2: PROCESS
-BEGIN
-	sel(2) <= '0';
-WAIT;
-END PROCESS t_prcs_sel_2;
--- sel[1]
-t_prcs_sel_1: PROCESS
-BEGIN
-	sel(1) <= '0';
-WAIT;
-END PROCESS t_prcs_sel_1;
--- sel[0]
-t_prcs_sel_0: PROCESS
-BEGIN
-	sel(0) <= '0';
-WAIT;
-END PROCESS t_prcs_sel_0;
 END practica2_arch;

@@ -24,10 +24,11 @@ ARCHITECTURE bhr OF datapath IS
 
 	TYPE data IS ARRAY (10 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
 	TYPE list IS ARRAY (10 DOWNTO 0) OF STD_LOGIC_VECTOR(11 DOWNTO 0);
-	TYPE reg IS ARRAY(10 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
+	TYPE reg IS ARRAY(0 DOWNTO 7) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
 	SIGNAL reggy, reggu : reg;
 	SIGNAL signo1, signo2, zflag, sflag, ovflag, cflag : STD_LOGIC;
-	SIGNAL OP : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL wrt, flag : STD_LOGIC:= '0';
+	SIGNAL OP, dir : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	
 	
 	CONSTANT values : data := (
@@ -46,28 +47,17 @@ ARCHITECTURE bhr OF datapath IS
 	
 	
 	CONSTANT INSTRUCTIONS : list := (
-		("1101"&"0000"&"0000"), -- LOAD R1 <- X
-		("1101"&"0001"&"0100"), -- LOAD R2 <- 13 
-		("1001"&"0000"&"0001"), -- MULT R1  R2
-		("1101"&"0011"&"0000"), -- LOAD R3 <- Y
-		("1101"&"0001"&"0101"), -- LOAD R2 <- 23 
-		("1001"&"0011"&"0001"), -- MULT R3  R2
-		("1101"&"0100"&"0011"), -- LOAD R4 <- W
-		("1101"&"0001"&"0110"), -- LOAD R2 <- 4 
-		("1010"&"0100"&"0001"), -- DIV R4  R2
-		("1010"&"0001"&"0011"), -- SUM R1  R3
-		("1010"&"0001"&"0100") -- RES R1  R4
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A),
---		("1110" & REG_A)
+		0 => ("1101"&"0000"&"0000"), -- LOAD R1 <- X
+		1 => ("1101"&"0001"&"0100"), -- LOAD R2 <- 13 
+		2 => ("1001"&"0000"&"0001"), -- MULT R1  R2
+		3 => ("1101"&"0010"&"0001"), -- LOAD R3 <- Y
+		4 => ("1101"&"0001"&"0101"), -- LOAD R2 <- 23 
+		5 => ("1001"&"0010"&"0001"), -- MULT R3  R2
+		6 => ("1101"&"0011"&"0011"), -- LOAD R4 <- W
+		7 => ("1101"&"0001"&"0110"), -- LOAD R2 <- 4 
+		8 => ("1010"&"0100"&"0001"), -- DIV R4  R2
+		9 => ("0111"&"0001"&"0010"), -- SUM R1  R3
+		10 => ("0111"&"0001"&"0100") -- RES R1  R4
 	);
 	
 	COMPONENT ALU IS 
@@ -80,19 +70,26 @@ ARCHITECTURE bhr OF datapath IS
 			z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
 		);
 	END COMPONENT ALU;
+	
+	COMPONENT registros IS
+		PORT(
+			address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			wrt, clk : IN STD_LOGIC;
+			data_in : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+			salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		);
+	END COMPONENT registros;
 BEGIN
 
 
 	PROCESS(clk) IS
 	BEGIN
-	IF (RISING_EDGE(clk)) THEN
 		IF (rst = '1') THEN
 			pr_state <= state0;
 			PC <= 0;
-		ELSE
+		ELSIF (RISING_EDGE(clk)) THEN
 			CASE pr_state IS
-				-- FETCH
-				WHEN state0 =>
+				WHEN state0 => -- FETCH
 					CASE ecuacion IS
 						WHEN "00" => 
 							MAR <= INSTRUCTIONS(PC);
@@ -106,28 +103,31 @@ BEGIN
 							IR <= "000000000000";
 							pr_state <= state1;
 					END CASE;
-					
-				-- DECODE
-				WHEN state1 =>
-					IF (MAR(11 DOWNTO 8) = "1011") THEN
-						reggy(to_integer (unsigned(MAR(7 DOWNTO 4)))) <= values(to_integer (unsigned(MAR(3 DOWNTO 0))));
-					--ELSE 
-					END IF;
-						OP <= MAR(11 DOWNTO 8);
+				WHEN state1 => -- DECODE
+					IF (MAR(11 DOWNTO 8) = "1101") THEN
+						reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= values(to_integer(unsigned(MAR(3 DOWNTO 0))));
+						pr_state <= state2;
+					ELSE
 						REG_A <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
 						REG_B <= values(to_integer(unsigned(MAR(3 DOWNTO 0))));
+						OP <= MAR(11 DOWNTO 8);
+						IF(flag = '1') THEN
+							pr_state <= state2;
+						END IF;
+						flag <= '1';
+					END IF;
+				WHEN state2 => -- EXECUTE
+					
+					--IF () THEN
 					--END IF;
-					pr_state <= state2;
-				-- EXECUTE
-				WHEN state2 =>
-					ACC <= ACC + MBR;
-					reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= MBR;
+					--reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= MBR;
+					flag <= '0';
 					pr_state <= state0;
 			END CASE;
+		salida <= MBR;
 		END IF;
-		salida <= reggy(PC);
-	END IF;
+		
 	END PROCESS;
-	--
 	alu1: ALU PORT MAP(REG_A, REG_B, signo1, signo2, OP, MBR, clk, rst, zflag, sflag, ovflag, cflag);
+	regs1 : registros PORT MAP(dir, wrt, clk, REG_D, REG_C);
 END ARCHITECTURE;
