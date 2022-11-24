@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/22/2022 22:37:33"
+-- Generated on "11/23/2022 17:57:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -34,69 +34,67 @@ END practica2_vhd_vec_tst;
 ARCHITECTURE practica2_arch OF practica2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL a : STD_LOGIC;
-SIGNAL b : STD_LOGIC;
-SIGNAL c : STD_LOGIC;
+SIGNAL A : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL CF : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
-SIGNAL d : STD_LOGIC;
-SIGNAL d1 : STD_LOGIC;
-SIGNAL d2 : STD_LOGIC;
-SIGNAL d3 : STD_LOGIC;
-SIGNAL d4 : STD_LOGIC;
-SIGNAL e : STD_LOGIC;
-SIGNAL ec : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL f : STD_LOGIC;
-SIGNAL g : STD_LOGIC;
-SIGNAL pin_name1 : STD_LOGIC;
+SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL OVF : STD_LOGIC;
+SIGNAL R : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL resultado : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
-SIGNAL rst_clk : STD_LOGIC;
-SIGNAL sal_prueb : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL s : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL sel : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL SF : STD_LOGIC;
+SIGNAL sig1 : STD_LOGIC;
+SIGNAL sig2 : STD_LOGIC;
+SIGNAL ZF : STD_LOGIC;
 COMPONENT practica2
 	PORT (
-	a : OUT STD_LOGIC;
-	b : OUT STD_LOGIC;
-	c : OUT STD_LOGIC;
+	A : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	CF : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
-	d : OUT STD_LOGIC;
-	d1 : OUT STD_LOGIC;
-	d2 : OUT STD_LOGIC;
-	d3 : OUT STD_LOGIC;
-	d4 : OUT STD_LOGIC;
-	e : OUT STD_LOGIC;
-	ec : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	f : OUT STD_LOGIC;
-	g : OUT STD_LOGIC;
-	pin_name1 : OUT STD_LOGIC;
+	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	OVF : OUT STD_LOGIC;
+	R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	resultado : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	rst : IN STD_LOGIC;
-	rst_clk : IN STD_LOGIC;
-	sal_prueb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SF : OUT STD_LOGIC;
+	sig1 : IN STD_LOGIC;
+	sig2 : IN STD_LOGIC;
+	ZF : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : practica2
 	PORT MAP (
 -- list connections between master ports and signals
-	a => a,
-	b => b,
-	c => c,
+	A => A,
+	B => B,
+	CF => CF,
 	clk => clk,
-	d => d,
-	d1 => d1,
-	d2 => d2,
-	d3 => d3,
-	d4 => d4,
-	e => e,
-	ec => ec,
-	f => f,
-	g => g,
-	pin_name1 => pin_name1,
+	ecuacion => ecuacion,
+	OVF => OVF,
+	R => R,
 	resultado => resultado,
 	rst => rst,
-	rst_clk => rst_clk,
-	sal_prueb => sal_prueb
+	s => s,
+	sel => sel,
+	SF => SF,
+	sig1 => sig1,
+	sig2 => sig2,
+	ZF => ZF
 	);
+
+-- rst
+t_prcs_rst: PROCESS
+BEGIN
+	rst <= '0';
+WAIT;
+END PROCESS t_prcs_rst;
 
 -- clk
 t_prcs_clk: PROCESS
@@ -109,30 +107,16 @@ LOOP
 	IF (NOW >= 30000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
--- ec[1]
-t_prcs_ec_1: PROCESS
+-- ecuacion[1]
+t_prcs_ecuacion_1: PROCESS
 BEGIN
-	ec(1) <= '0';
+	ecuacion(1) <= '0';
 WAIT;
-END PROCESS t_prcs_ec_1;
--- ec[0]
-t_prcs_ec_0: PROCESS
+END PROCESS t_prcs_ecuacion_1;
+-- ecuacion[0]
+t_prcs_ecuacion_0: PROCESS
 BEGIN
-	ec(0) <= '0';
+	ecuacion(0) <= '0';
 WAIT;
-END PROCESS t_prcs_ec_0;
-
--- rst
-t_prcs_rst: PROCESS
-BEGIN
-	rst <= '0';
-WAIT;
-END PROCESS t_prcs_rst;
-
--- rst_clk
-t_prcs_rst_clk: PROCESS
-BEGIN
-	rst_clk <= '0';
-WAIT;
-END PROCESS t_prcs_rst_clk;
+END PROCESS t_prcs_ecuacion_0;
 END practica2_arch;

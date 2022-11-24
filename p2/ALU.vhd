@@ -53,14 +53,11 @@ COMPONENT barrelShifters IS
     );
 END COMPONENT barrelShifters;
 
-
-
-
 BEGIN
 
 	PROCESS(sel, log_sal, ua_sal, bar_sal, sel_aux_2)
 	BEGIN
-		
+	IF (RISING_EDGE(clk)) THEN
 		CASE sel IS
 			WHEN "0000" => 
 				R <= "0000000000";
@@ -99,6 +96,7 @@ BEGIN
 				R <= "1111111111";
 				sel_aux <= "00";
 		END CASE;
+	END IF;
 	END PROCESS;
 
 

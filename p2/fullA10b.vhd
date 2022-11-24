@@ -70,15 +70,15 @@ BEGIN
     s7 : fullAdder PORT MAP(Xop(7), Yop(7), Caux(6),'0', Caux2(6), Caux(7), Saux(7), Caux2(7));
     s8 : fullAdder PORT MAP(Xop(8), Yop(8), Caux(7),'0', Caux2(7), Caux(8), Saux(8), Caux2(8));
     -- Si <= Caux(8)&Saux;
-    WITH (aS XOR bS XOR oP) SELECT Si <=
+    WITH (aS XOR bS XOR oP) SELECT Siaux <=
     Caux(8) & Saux WHEN '0',
     NOT Caux(8) & Saux WHEN '1';
     -- --Si <= Caux(4) & Saux;
     Cfaux <= aS XOR bS XOR Caux(8);
     Zfaux <= NOT(Saux(0) OR Saux(1) OR Saux(2) OR Saux(3) OR Saux(4) OR Saux(5) OR Saux(6) OR Saux(7) OR Saux(8) OR Caux(8));
     Ovfaux <= Caux(7) XOR Caux(8);
-    -- WITH Cin0 SELECT Sfaux <=
-    --     Caux(8) WHEN '0',
-    --     NOT Caux(8) WHEN '1';
-    -- negativo : negativoP PORT MAP(Siaux, Cfaux, Zfaux, Ovfaux, Sfaux, Cf, Zf, Ovf, Sf, Si(8 DOWNTO 0));
+    WITH Cin0 SELECT Sfaux <=
+        Caux(8) WHEN '0',
+        NOT Caux(8) WHEN '1';
+    negativo : negativoP PORT MAP(Siaux, Cfaux, Zfaux, Ovfaux, Sfaux, Cf, Zf, Ovf, Sf, Si(8 DOWNTO 0));
 END ARCHITECTURE fa10b;
