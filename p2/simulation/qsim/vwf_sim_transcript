@@ -26,10 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Nov 23 17:57:18 2022
+    Info: Processing started: Thu Nov 24 01:27:02 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica2 -c practica2 --vector_source="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Waveform.vwf" --testbench_file="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/Waveform.vwf.vht"
-
-201005): Ignoring output pin "s[3]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -54,12 +52,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Nov 23 17:57:19 2022
+    Info: Processing started: Thu Nov 24 01:27:03 2022
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/" practica2 -c practica2
 Info (204019): Generated file practica2.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Wed Nov 23 17:57:19 2022
+    Info: Peak virtual memory: 4644 megabytes
+    Info: Processing ended: Thu Nov 24 01:27:03 2022
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -87,8 +85,7 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 17:57:20 on Nov 23,2022
-
+# Start time: 01:27:04 on Nov 24,2022
 # vcom -work work practica2.vho 
 
 # -- Loading package STANDARD
@@ -117,13 +114,13 @@ Reading pref.tcl
 
 # -- Compiling architecture structure of practica2
 
-# End time: 17:57:20 on Nov 23,2022, Elapsed time: 0:00:00
+# End time: 01:27:04 on Nov 24,2022, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 17:57:20 on Nov 23,2022
+# Start time: 01:27:04 on Nov 24,2022
 # vcom -work work Waveform.vwf.vht 
 
 # -- Loading package STANDARD
@@ -136,12 +133,12 @@ Reading pref.tcl
 
 # -- Compiling architecture practica2_arch of practica2_vhd_vec_tst
 
-# End time: 17:57:21 on Nov 23,2022, Elapsed time: 0:00:01
+# End time: 01:27:04 on Nov 24,2022, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.practica2_vhd_vec_tst 
-# Start time: 17:57:21 on Nov 23,2022
+# Start time: 01:27:04 on Nov 24,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -157,16 +154,19 @@ Reading pref.tcl
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
-# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
 # Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 122629 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 36981 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 
 # after#35
 
-# End time: 17:57:21 on Nov 23,2022, Elapsed time: 0:00:00
+# End time: 01:27:05 on Nov 24,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -179,7 +179,7 @@ Reading C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura d
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221123175721.sim.vwf
+Writing the resulting VWF to C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim/practica2_20221124012705.sim.vwf
 
 Finished VCD to VWF conversion.
 

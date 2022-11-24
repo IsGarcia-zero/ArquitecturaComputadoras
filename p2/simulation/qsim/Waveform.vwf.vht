@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/23/2022 17:57:19"
+-- Generated on "11/24/2022 01:27:03"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -34,76 +34,36 @@ END practica2_vhd_vec_tst;
 ARCHITECTURE practica2_arch OF practica2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL B : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL CF : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
 SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL OVF : STD_LOGIC;
 SIGNAL R : STD_LOGIC_VECTOR(9 DOWNTO 0);
-SIGNAL resultado : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
-SIGNAL s : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL sel : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL SF : STD_LOGIC;
-SIGNAL sig1 : STD_LOGIC;
-SIGNAL sig2 : STD_LOGIC;
-SIGNAL ZF : STD_LOGIC;
 COMPONENT practica2
 	PORT (
-	A : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	CF : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
 	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	OVF : OUT STD_LOGIC;
 	R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	resultado : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	rst : IN STD_LOGIC;
-	s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SF : OUT STD_LOGIC;
-	sig1 : IN STD_LOGIC;
-	sig2 : IN STD_LOGIC;
-	ZF : OUT STD_LOGIC
+	rst : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : practica2
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
-	CF => CF,
 	clk => clk,
 	ecuacion => ecuacion,
-	OVF => OVF,
 	R => R,
-	resultado => resultado,
-	rst => rst,
-	s => s,
-	sel => sel,
-	SF => SF,
-	sig1 => sig1,
-	sig2 => sig2,
-	ZF => ZF
+	rst => rst
 	);
-
--- rst
-t_prcs_rst: PROCESS
-BEGIN
-	rst <= '0';
-WAIT;
-END PROCESS t_prcs_rst;
 
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 1000 ps;
+	WAIT FOR 200 ps;
 	clk <= '1';
-	WAIT FOR 1000 ps;
+	WAIT FOR 200 ps;
 	IF (NOW >= 30000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
@@ -119,4 +79,11 @@ BEGIN
 	ecuacion(0) <= '0';
 WAIT;
 END PROCESS t_prcs_ecuacion_0;
+
+-- rst
+t_prcs_rst: PROCESS
+BEGIN
+	rst <= '0';
+WAIT;
+END PROCESS t_prcs_rst;
 END practica2_arch;

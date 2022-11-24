@@ -4,22 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ZF",
-					"strict" : false
-				},
-				{
-					"name" : "SF",
-					"strict" : false
-				},
-				{
-					"name" : "OVF",
-					"strict" : false
-				},
-				{
-					"name" : "CF",
-					"strict" : false
-				},
-				{
 					"name" : "R[9]",
 					"strict" : false
 				},
@@ -60,179 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "resultado[9]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[8]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[7]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[6]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[5]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[4]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[3]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[2]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[1]",
-					"strict" : false
-				},
-				{
-					"name" : "resultado[0]",
-					"strict" : false
-				},
-				{
-					"name" : "s[12]",
-					"strict" : false
-				},
-				{
-					"name" : "s[11]",
-					"strict" : false
-				},
-				{
-					"name" : "s[10]",
-					"strict" : false
-				},
-				{
-					"name" : "s[9]",
-					"strict" : false
-				},
-				{
-					"name" : "s[8]",
-					"strict" : false
-				},
-				{
-					"name" : "s[7]",
-					"strict" : false
-				},
-				{
-					"name" : "s[6]",
-					"strict" : false
-				},
-				{
-					"name" : "s[5]",
-					"strict" : false
-				},
-				{
-					"name" : "s[4]",
-					"strict" : false
-				},
-				{
-					"name" : "s[3]",
-					"strict" : false
-				},
-				{
-					"name" : "s[2]",
-					"strict" : false
-				},
-				{
-					"name" : "s[1]",
-					"strict" : false
-				},
-				{
-					"name" : "s[0]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "sig2",
-					"strict" : false
-				},
-				{
-					"name" : "sig1",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "B[5]",
-					"strict" : false
-				},
-				{
-					"name" : "B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[2]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
@@ -240,27 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sel[3]",
+					"name" : "ecuacion[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[9]",
-					"strict" : false
-				},
-				{
-					"name" : "A[9]",
-					"strict" : false
-				},
-				{
-					"name" : "B[8]",
-					"strict" : false
-				},
-				{
-					"name" : "A[8]",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
+					"name" : "ecuacion[0]",
 					"strict" : false
 				}
 			]

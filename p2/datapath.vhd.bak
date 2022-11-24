@@ -1,0 +1,33 @@
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY datapath IS
+	PORT(
+		ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		
+	);
+END ENTITY datapath;
+
+ARCHITECTURE bhr OF datapath IS
+	TYPE list IS ARRAY (15 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
+	
+	CONSTANT codigos : list := (
+	0 => "0000000001", -- A x
+	1 => "0000000001", -- B y
+	2 => "0000000001", -- C z
+	3 => "0000000100", -- D w
+	4 => "0000001101", -- 13
+	5 => "0000010111", -- 23
+	6 => "1111111100", -- -4
+	7 => "0000000101", -- 5
+	8 => "0000011110", -- 30
+	9 => "0000000010", -- 2
+	10 => "0000000111", -- 7
+	11 => "0000000101", -- 5
+	12 => "0000000101", -- 5
+	13 => "0000000000", -- REG_A
+	14 => "0000000000", -- REG_D
+	15 => "0000000000" -- REG_C
+	);
+BEGIN

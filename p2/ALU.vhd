@@ -55,7 +55,7 @@ END COMPONENT barrelShifters;
 
 BEGIN
 
-	PROCESS(sel, log_sal, ua_sal, bar_sal, sel_aux_2)
+	PROCESS(sel, log_sal, ua_sal, bar_sal, sel_aux_2,clk)
 	BEGIN
 	IF (RISING_EDGE(clk)) THEN
 		CASE sel IS

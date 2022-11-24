@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practica2
-Wed Nov 23 17:56:43 2022
+Thu Nov 24 01:26:21 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -13,34 +13,40 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |practica2|FinalSelection:inst|pr_state
-  9. State Machine - |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |practica2|datapath:inst|pr_state
  10. Registers Removed During Synthesis
  11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1"
- 15. Port Connectivity Checks: "ALU:inst1|barrelShifters:barrel_shifters"
- 16. Port Connectivity Checks: "ALU:inst1|Logicas:unidad_logica"
- 17. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi"
- 18. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
- 19. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
- 20. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
- 21. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
- 22. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta"
- 23. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo"
- 24. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"
- 25. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7"
- 26. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6"
- 27. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5"
- 28. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4"
- 29. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3"
- 30. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2"
- 31. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1"
- 32. Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated
+ 16. Source assignments for datapath:inst|altsyncram:reggy_rtl_1|altsyncram_urg1:auto_generated
+ 17. Parameter Settings for Inferred Entity Instance: datapath:inst|altsyncram:reggy_rtl_0
+ 18. Parameter Settings for Inferred Entity Instance: datapath:inst|altsyncram:reggy_rtl_1
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters"
+ 21. Port Connectivity Checks: "datapath:inst|ALU:alu1|Logicas:unidad_logica"
+ 22. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi"
+ 23. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
+ 24. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
+ 25. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
+ 26. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
+ 27. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta"
+ 28. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo"
+ 29. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"
+ 30. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7"
+ 31. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6"
+ 32. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5"
+ 33. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4"
+ 34. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3"
+ 35. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2"
+ 36. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1"
+ 37. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma"
+ 38. Port Connectivity Checks: "datapath:inst|ALU:alu1"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -67,18 +73,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 23 17:56:43 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 24 01:26:21 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; practica2                                   ;
 ; Top-level Entity Name              ; practica2                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 869                                         ;
-;     Total combinational functions  ; 792                                         ;
-;     Dedicated logic registers      ; 190                                         ;
-; Total registers                    ; 190                                         ;
-; Total pins                         ; 70                                          ;
+; Total logic elements               ; 261                                         ;
+;     Total combinational functions  ; 258                                         ;
+;     Dedicated logic registers      ; 45                                          ;
+; Total registers                    ; 45                                          ;
+; Total pins                         ; 14                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 174                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -93,6 +99,8 @@ https://fpgasoftware.intel.com/eula.
 ; Top-level entity name                                            ; practica2          ; practica2          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -101,7 +109,6 @@ https://fpgasoftware.intel.com/eula.
 ; Preserve fewer node names                                        ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                         ; Auto               ; Auto               ;
 ; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
@@ -188,26 +195,34 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; FinalSelection.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd ;         ;
-; convertidor.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/convertidor.vhd    ;         ;
-; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd          ;         ;
-; negativoP.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/negativoP.vhd      ;         ;
-; Logicas.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Logicas.vhd        ;         ;
-; multP.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd          ;         ;
-; fullAdder.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullAdder.vhd      ;         ;
-; fullA10b.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd       ;         ;
-; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd    ;         ;
-; barrelShifters.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd ;         ;
-; valores.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd        ;         ;
-; practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/practica2.bdf      ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd            ;         ;
-; ecuaciones.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd              ;         ;
+; negativoP.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/negativoP.vhd          ;         ;
+; Logicas.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Logicas.vhd            ;         ;
+; multP.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd              ;         ;
+; fullAdder.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullAdder.vhd          ;         ;
+; fullA10b.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd           ;         ;
+; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd        ;         ;
+; barrelShifters.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd     ;         ;
+; practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/practica2.bdf          ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd                ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                               ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                      ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                                          ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; e:/software/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                                        ;         ;
+; db/altsyncram_kod1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_kod1.tdf ;         ;
+; db/altsyncram_urg1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_urg1.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -215,224 +230,170 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 869       ;
+; Estimated Total logic elements              ; 261       ;
 ;                                             ;           ;
-; Total combinational functions               ; 792       ;
+; Total combinational functions               ; 258       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 363       ;
-;     -- 3 input functions                    ; 308       ;
-;     -- <=2 input functions                  ; 121       ;
+;     -- 4 input functions                    ; 110       ;
+;     -- 3 input functions                    ; 82        ;
+;     -- <=2 input functions                  ; 66        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 594       ;
-;     -- arithmetic mode                      ; 198       ;
+;     -- normal mode                          ; 203       ;
+;     -- arithmetic mode                      ; 55        ;
 ;                                             ;           ;
-; Total registers                             ; 190       ;
-;     -- Dedicated logic registers            ; 190       ;
+; Total registers                             ; 45        ;
+;     -- Dedicated logic registers            ; 45        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 70        ;
+; I/O pins                                    ; 14        ;
+; Total memory bits                           ; 174       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 190       ;
-; Total fan-out                               ; 3208      ;
-; Average fan-out                             ; 2.86      ;
+; Maximum fan-out                             ; 63        ;
+; Total fan-out                               ; 1135      ;
+; Average fan-out                             ; 3.25      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                    ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name    ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |practica2                                   ; 792 (0)             ; 190 (0)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |practica2                                                                                                                   ; practica2      ; work         ;
-;    |ALU:inst1|                               ; 389 (47)            ; 50 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1                                                                                                         ; ALU            ; work         ;
-;       |Logicas:unidad_logica|                ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|Logicas:unidad_logica                                                                                   ; Logicas        ; work         ;
-;       |barrelShifters:barrel_shifters|       ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|barrelShifters:barrel_shifters                                                                          ; barrelShifters ; work         ;
-;       |uapro:unidad_aritmetica|              ; 304 (26)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica                                                                                 ; uapro          ; work         ;
-;          |Divisorsito:divi|                  ; 157 (157)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi                                                                ; Divisorsito    ; work         ;
-;          |fullA10b:resta|                    ; 25 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta                                                                  ; fullA10b       ; work         ;
-;             |fullAdder:s0|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s1|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s2|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s3|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s4|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s5|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s6|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6                                                     ; fullAdder      ; work         ;
-;             |fullAdder:s7|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7                                                     ; fullAdder      ; work         ;
-;          |fullA10b:suma|                     ; 48 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma                                                                   ; fullA10b       ; work         ;
-;             |fullAdder:s0|                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s1|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s2|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s3|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s4|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s5|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s6|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s7|                   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7                                                      ; fullAdder      ; work         ;
-;             |fullAdder:s8|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8                                                      ; fullAdder      ; work         ;
-;          |multP:mult|                        ; 48 (9)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult                                                                      ; multP          ; work         ;
-;             |fullA10b:multi1|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1                                                      ; fullA10b       ; work         ;
-;                |fullAdder:s1|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1                                         ; fullAdder      ; work         ;
-;                |fullAdder:s2|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2                                         ; fullAdder      ; work         ;
-;                |fullAdder:s3|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3                                         ; fullAdder      ; work         ;
-;                |fullAdder:s4|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4                                         ; fullAdder      ; work         ;
-;                |fullAdder:s5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5                                         ; fullAdder      ; work         ;
-;             |fullA10b:multi2|                ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2                                                      ; fullA10b       ; work         ;
-;                |fullAdder:s2|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2                                         ; fullAdder      ; work         ;
-;                |fullAdder:s3|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3                                         ; fullAdder      ; work         ;
-;                |fullAdder:s4|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4                                         ; fullAdder      ; work         ;
-;                |fullAdder:s5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5                                         ; fullAdder      ; work         ;
-;                |fullAdder:s6|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6                                         ; fullAdder      ; work         ;
-;             |fullA10b:multi3|                ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3                                                      ; fullA10b       ; work         ;
-;                |fullAdder:s3|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3                                         ; fullAdder      ; work         ;
-;                |fullAdder:s4|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4                                         ; fullAdder      ; work         ;
-;                |fullAdder:s5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5                                         ; fullAdder      ; work         ;
-;                |fullAdder:s6|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6                                         ; fullAdder      ; work         ;
-;                |fullAdder:s7|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7                                         ; fullAdder      ; work         ;
-;             |fullA10b:multi4|                ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4                                                      ; fullA10b       ; work         ;
-;                |fullAdder:s4|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4                                         ; fullAdder      ; work         ;
-;                |fullAdder:s5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5                                         ; fullAdder      ; work         ;
-;                |fullAdder:s6|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6                                         ; fullAdder      ; work         ;
-;                |fullAdder:s7|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7                                         ; fullAdder      ; work         ;
-;                |fullAdder:s8|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8                                         ; fullAdder      ; work         ;
-;    |FinalSelection:inst|                     ; 403 (0)             ; 140 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst                                                                                               ; FinalSelection ; work         ;
-;       |convertidor:conv1|                    ; 47 (47)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|convertidor:conv1                                                                             ; convertidor    ; work         ;
-;       |ecuaciones:ecuacion1|                 ; 356 (44)            ; 127 (77)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1                                                                          ; ecuaciones     ; work         ;
-;          |ALU:alu1|                          ; 312 (56)            ; 50 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1                                                                 ; ALU            ; work         ;
-;             |Logicas:unidad_logica|          ; 41 (41)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica                                           ; Logicas        ; work         ;
-;             |barrelShifters:barrel_shifters| ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters                                  ; barrelShifters ; work         ;
-;             |uapro:unidad_aritmetica|        ; 215 (4)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica                                         ; uapro          ; work         ;
-;                |Divisorsito:divi|            ; 157 (157)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                        ; Divisorsito    ; work         ;
-;                |fullA10b:resta|              ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                          ; fullA10b       ; work         ;
-;                   |fullAdder:s1|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s1             ; fullAdder      ; work         ;
-;                   |fullAdder:s2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s2             ; fullAdder      ; work         ;
-;                   |fullAdder:s3|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s3             ; fullAdder      ; work         ;
-;                   |fullAdder:s4|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s4             ; fullAdder      ; work         ;
-;                   |fullAdder:s5|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s5             ; fullAdder      ; work         ;
-;                   |fullAdder:s6|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6             ; fullAdder      ; work         ;
-;                |fullA10b:suma|               ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                           ; fullA10b       ; work         ;
-;                   |fullAdder:s1|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1              ; fullAdder      ; work         ;
-;                   |fullAdder:s2|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2              ; fullAdder      ; work         ;
-;                   |fullAdder:s3|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3              ; fullAdder      ; work         ;
-;                   |fullAdder:s4|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4              ; fullAdder      ; work         ;
-;                   |fullAdder:s5|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5              ; fullAdder      ; work         ;
-;                   |fullAdder:s6|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6              ; fullAdder      ; work         ;
-;                |multP:mult|                  ; 40 (5)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult                              ; multP          ; work         ;
-;                   |fullA10b:multi1|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1              ; fullA10b       ; work         ;
-;                      |fullAdder:s1|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1 ; fullAdder      ; work         ;
-;                      |fullAdder:s2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2 ; fullAdder      ; work         ;
-;                      |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3 ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4 ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5 ; fullAdder      ; work         ;
-;                   |fullA10b:multi2|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2              ; fullA10b       ; work         ;
-;                      |fullAdder:s2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2 ; fullAdder      ; work         ;
-;                      |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3 ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4 ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5 ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6 ; fullAdder      ; work         ;
-;                   |fullA10b:multi3|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3              ; fullA10b       ; work         ;
-;                      |fullAdder:s3|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3 ; fullAdder      ; work         ;
-;                      |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4 ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5 ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6 ; fullAdder      ; work         ;
-;                      |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7 ; fullAdder      ; work         ;
-;                   |fullA10b:multi4|          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4              ; fullA10b       ; work         ;
-;                      |fullAdder:s4|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4 ; fullAdder      ; work         ;
-;                      |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5 ; fullAdder      ; work         ;
-;                      |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6 ; fullAdder      ; work         ;
-;                      |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7 ; fullAdder      ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |practica2                                ; 258 (1)             ; 45 (0)                    ; 174         ; 0            ; 0       ; 0         ; 14   ; 0            ; |practica2                                                                                        ; practica2       ; work         ;
+;    |datapath:inst|                        ; 257 (54)            ; 45 (33)                   ; 174         ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst                                                                          ; datapath        ; work         ;
+;       |ALU:alu1|                          ; 203 (33)            ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1                                                                 ; ALU             ; work         ;
+;          |uapro:unidad_aritmetica|        ; 170 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                         ; uapro           ; work         ;
+;             |Divisorsito:divi|            ; 131 (131)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                        ; Divisorsito     ; work         ;
+;             |multP:mult|                  ; 39 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                              ; multP           ; work         ;
+;                |fullA10b:multi1|          ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1              ; fullA10b        ; work         ;
+;                   |fullAdder:s1|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s1 ; fullAdder       ; work         ;
+;                   |fullAdder:s2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s2 ; fullAdder       ; work         ;
+;                   |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s3 ; fullAdder       ; work         ;
+;                   |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s4 ; fullAdder       ; work         ;
+;                   |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:s5 ; fullAdder       ; work         ;
+;                |fullA10b:multi2|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2              ; fullA10b        ; work         ;
+;                   |fullAdder:s2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s2 ; fullAdder       ; work         ;
+;                   |fullAdder:s3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s3 ; fullAdder       ; work         ;
+;                   |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s4 ; fullAdder       ; work         ;
+;                   |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s5 ; fullAdder       ; work         ;
+;                   |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2|fullAdder:s6 ; fullAdder       ; work         ;
+;                |fullA10b:multi3|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3              ; fullA10b        ; work         ;
+;                   |fullAdder:s3|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s3 ; fullAdder       ; work         ;
+;                   |fullAdder:s4|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s4 ; fullAdder       ; work         ;
+;                   |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s5 ; fullAdder       ; work         ;
+;                   |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s6 ; fullAdder       ; work         ;
+;                   |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3|fullAdder:s7 ; fullAdder       ; work         ;
+;                |fullA10b:multi4|          ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4              ; fullA10b        ; work         ;
+;                   |fullAdder:s4|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s4 ; fullAdder       ; work         ;
+;                   |fullAdder:s5|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s5 ; fullAdder       ; work         ;
+;                   |fullAdder:s6|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s6 ; fullAdder       ; work         ;
+;                   |fullAdder:s7|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s7 ; fullAdder       ; work         ;
+;                   |fullAdder:s8|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|fullAdder:s8 ; fullAdder       ; work         ;
+;       |altsyncram:reggy_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|altsyncram:reggy_rtl_0                                                   ; altsyncram      ; work         ;
+;          |altsyncram_kod1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64          ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated                    ; altsyncram_kod1 ; work         ;
+;       |altsyncram:reggy_rtl_1|            ; 0 (0)               ; 0 (0)                     ; 110         ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|altsyncram:reggy_rtl_1                                                   ; altsyncram      ; work         ;
+;          |altsyncram_urg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 110         ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|altsyncram:reggy_rtl_1|altsyncram_urg1:auto_generated                    ; altsyncram_urg1 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |practica2|FinalSelection:inst|pr_state                                                                                                                                                                                    ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name             ; pr_state.state11 ; pr_state.state10 ; pr_state.state9 ; pr_state.state8 ; pr_state.state7 ; pr_state.state6 ; pr_state.state5 ; pr_state.state4 ; pr_state.state3 ; pr_state.state2 ; pr_state.state1 ; pr_state.state0 ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; pr_state.state0  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; pr_state.state1  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
-; pr_state.state2  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
-; pr_state.state3  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
-; pr_state.state4  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state5  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state6  ; 0                ; 0                ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state7  ; 0                ; 0                ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state8  ; 0                ; 0                ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state9  ; 0                ; 0                ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state10 ; 0                ; 1                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state11 ; 1                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                   ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 11           ; 10           ; 11           ; 10           ; 110  ; None ;
+; datapath:inst|altsyncram:reggy_rtl_1|altsyncram_urg1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 11           ; 10           ; 11           ; 10           ; 110  ; None ;
++--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state                                                                                                                                                               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; Name             ; pr_state.state11 ; pr_state.state10 ; pr_state.state9 ; pr_state.state8 ; pr_state.state7 ; pr_state.state6 ; pr_state.state5 ; pr_state.state4 ; pr_state.state3 ; pr_state.state2 ; pr_state.state1 ; pr_state.state0 ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-; pr_state.state0  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ;
-; pr_state.state1  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 1               ;
-; pr_state.state2  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 1               ;
-; pr_state.state3  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 1               ;
-; pr_state.state4  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state5  ; 0                ; 0                ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state6  ; 0                ; 0                ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state7  ; 0                ; 0                ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state8  ; 0                ; 0                ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state9  ; 0                ; 0                ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state10 ; 0                ; 1                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-; pr_state.state11 ; 1                ; 0                ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ;
-+------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
++-----------------------------------------------------------------------+
+; State Machine - |practica2|datapath:inst|pr_state                     ;
++-----------------+-----------------+-----------------+-----------------+
+; Name            ; pr_state.state2 ; pr_state.state1 ; pr_state.state0 ;
++-----------------+-----------------+-----------------+-----------------+
+; pr_state.state0 ; 0               ; 0               ; 0               ;
+; pr_state.state1 ; 0               ; 1               ; 1               ;
+; pr_state.state2 ; 1               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                              ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; Register name                                                                                   ; Reason for Removal                                            ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; FinalSelection:inst|convertidor:conv1|s[13..15]                                                 ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ; Stuck at GND due to stuck port data_in                        ;
-; ALU:inst1|barrelShifters:barrel_shifters|aux[0]                                                 ; Stuck at GND due to stuck port data_in                        ;
-; ALU:inst1|barrelShifters:barrel_shifters|salShifters[0]                                         ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[2]                                               ; Stuck at VCC due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[3]                                               ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr1[2,3]                                             ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|ecuaciones:ecuacion1|addr2[1]                                               ; Merged with FinalSelection:inst|ecuaciones:ecuacion1|addr1[1] ;
-; FinalSelection:inst|ecuaciones:ecuacion1|pr_state.state11                                       ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state11                                                            ; Stuck at GND due to stuck port data_in                        ;
-; FinalSelection:inst|pr_state.state0                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state1                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state2                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state3                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state4                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state5                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state6                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state7                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state8                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state9                                                             ; Lost fanout                                                   ;
-; FinalSelection:inst|pr_state.state10                                                            ; Lost fanout                                                   ;
-; FinalSelection:inst|ecuaciones:ecuacion1|pr_state.state10                                       ; Stuck at GND due to stuck port data_in                        ;
-; Total Number of Removed Registers = 26                                                          ;                                                               ;
-+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++----------------------------------------------------------------------+----------------------------------------+
+; Register name                                                        ; Reason for Removal                     ;
++----------------------------------------------------------------------+----------------------------------------+
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND due to stuck port data_in ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ; Stuck at GND due to stuck port data_in ;
+; datapath:inst|REG_B[5..9]                                            ; Stuck at GND due to stuck port data_in ;
+; datapath:inst|MAR[7]                                                 ; Merged with datapath:inst|MAR[3]       ;
+; datapath:inst|MAR[3]                                                 ; Stuck at GND due to stuck port data_in ;
+; datapath:inst|MAR[11]                                                ; Stuck at VCC due to stuck port data_in ;
+; datapath:inst|OP[3]                                                  ; Stuck at VCC due to stuck port data_in ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[1] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[1]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[2] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[2]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[3] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[3]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[4] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[4]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[5] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[5]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[6] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[6]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[7] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[7]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[8] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[8]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[9] ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[9]         ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[0..9]            ; Lost fanout                            ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[0..9]               ; Lost fanout                            ;
+; datapath:inst|REG_B[4]                                               ; Merged with datapath:inst|REG_B[1]     ;
+; Total Number of Removed Registers = 50                               ;                                        ;
++----------------------------------------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                           ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
-; Register name                                                                           ; Reason for Removal        ; Registers Removed due to This Register                                                          ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
-; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|aux[0] ; Stuck at GND              ; FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ;
-;                                                                                         ; due to stuck port data_in ;                                                                                                 ;
-; ALU:inst1|barrelShifters:barrel_shifters|aux[0]                                         ; Stuck at GND              ; ALU:inst1|barrelShifters:barrel_shifters|salShifters[0]                                         ;
-;                                                                                         ; due to stuck port data_in ;                                                                                                 ;
-; FinalSelection:inst|pr_state.state11                                                    ; Stuck at GND              ; FinalSelection:inst|pr_state.state9                                                             ;
-;                                                                                         ; due to stuck port data_in ;                                                                                                 ;
-+-----------------------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
++----------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------+
+; Register name                                                        ; Reason for Removal        ; Registers Removed due to This Register                               ;
++----------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------+
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|REG_B[9]                                               ; Stuck at GND              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[9]                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|REG_B[8]                                               ; Stuck at GND              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[8]                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|REG_B[7]                                               ; Stuck at GND              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[7]                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|REG_B[6]                                               ; Stuck at GND              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[6]                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|REG_B[5]                                               ; Stuck at GND              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[5]                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|MAR[11]                                                ; Stuck at VCC              ; datapath:inst|OP[3]                                                  ;
+;                                                                      ; due to stuck port data_in ;                                                                      ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[1] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[1]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[2] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[2]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[3] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[3]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[4] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[4]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[5] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[5]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[6] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[6]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[7] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[7]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[8] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[8]         ;
+; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[9] ; Lost Fanouts              ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[9]         ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[0]               ; Lost Fanouts              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[0]                  ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[1]               ; Lost Fanouts              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[1]                  ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[2]               ; Lost Fanouts              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[2]                  ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[3]               ; Lost Fanouts              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[3]                  ;
+; datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[4]               ; Lost Fanouts              ; datapath:inst|ALU:alu1|Logicas:unidad_logica|aux[4]                  ;
++----------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -440,48 +401,210 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 190   ;
-; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 11    ;
+; Total registers                              ; 45    ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 2     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 85    ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|ALU:inst1|Logicas:unidad_logica|salida[5]                                         ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|Logicas:unidad_logica|salida[1] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|MREG[20]                                 ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|MREG[13]                                 ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |practica2|ALU:inst1|R[2]                                                                    ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1|R[4]                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |practica2|FinalSelection:inst|ecuaciones:ecuacion1|pr_state                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |practica2|ALU:inst1|uapro:unidad_aritmetica|Mux11                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                  ;
++----------------------------+---------------------------+------+
+; Register Name              ; Megafunction              ; Type ;
++----------------------------+---------------------------+------+
+; datapath:inst|REG_A[0..9]  ; datapath:inst|reggy_rtl_0 ; RAM  ;
+; datapath:inst|salida[0..9] ; datapath:inst|reggy_rtl_1 ; RAM  ;
++----------------------------+---------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |practica2|datapath:inst|PC[0]         ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 56 LEs               ; 8 LEs                  ; Yes        ; |practica2|datapath:inst|MAR[6]        ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |practica2|datapath:inst|ALU:alu1|R[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for datapath:inst|altsyncram:reggy_rtl_1|altsyncram_urg1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: datapath:inst|altsyncram:reggy_rtl_0 ;
++------------------------------------+----------------------+---------------------------+
+; Parameter Name                     ; Value                ; Type                      ;
++------------------------------------+----------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                   ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                   ;
+; WIDTH_A                            ; 10                   ; Untyped                   ;
+; WIDTHAD_A                          ; 4                    ; Untyped                   ;
+; NUMWORDS_A                         ; 11                   ; Untyped                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WIDTH_B                            ; 10                   ; Untyped                   ;
+; WIDTHAD_B                          ; 4                    ; Untyped                   ;
+; NUMWORDS_B                         ; 11                   ; Untyped                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; INIT_FILE                          ; UNUSED               ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                   ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_kod1      ; Untyped                   ;
++------------------------------------+----------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: datapath:inst|altsyncram:reggy_rtl_1 ;
++------------------------------------+----------------------+---------------------------+
+; Parameter Name                     ; Value                ; Type                      ;
++------------------------------------+----------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                   ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                   ;
+; WIDTH_A                            ; 10                   ; Untyped                   ;
+; WIDTHAD_A                          ; 4                    ; Untyped                   ;
+; NUMWORDS_A                         ; 11                   ; Untyped                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WIDTH_B                            ; 10                   ; Untyped                   ;
+; WIDTHAD_B                          ; 4                    ; Untyped                   ;
+; NUMWORDS_B                         ; 11                   ; Untyped                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; INIT_FILE                          ; UNUSED               ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                   ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_urg1      ; Untyped                   ;
++------------------------------------+----------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                 ;
++-------------------------------------------+--------------------------------------+
+; Name                                      ; Value                                ;
++-------------------------------------------+--------------------------------------+
+; Number of entity instances                ; 2                                    ;
+; Entity Instance                           ; datapath:inst|altsyncram:reggy_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                            ;
+;     -- WIDTH_A                            ; 10                                   ;
+;     -- NUMWORDS_A                         ; 11                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 10                                   ;
+;     -- NUMWORDS_B                         ; 11                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                            ;
+; Entity Instance                           ; datapath:inst|altsyncram:reggy_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                            ;
+;     -- WIDTH_A                            ; 10                                   ;
+;     -- NUMWORDS_A                         ; 11                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 10                                   ;
+;     -- NUMWORDS_B                         ; 11                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                             ;
++-------------------------------------------+--------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FinalSelection:inst|ecuaciones:ecuacion1|ALU:alu1"                                     ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; s1      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; s2      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; z_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; s_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ov_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|barrelShifters:barrel_shifters"                                              ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters"                                 ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -492,7 +615,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|Logicas:unidad_logica"                                                    ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|Logicas:unidad_logica"                                       ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -502,7 +625,7 @@ Encoding Type:  One-Hot
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi"                                       ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi"                          ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -511,7 +634,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"                           ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"              ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -524,7 +647,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"                           ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"              ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -542,7 +665,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"                           ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"              ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -560,7 +683,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"                           ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"              ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -578,28 +701,28 @@ Encoding Type:  One-Hot
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:resta" ;
-+-------+-------+----------+---------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                           ;
-+-------+-------+----------+---------------------------------------------------+
-; xi[8] ; Input ; Info     ; Stuck at GND                                      ;
-; yi[8] ; Input ; Info     ; Stuck at GND                                      ;
-; op    ; Input ; Info     ; Stuck at VCC                                      ;
-+-------+-------+----------+---------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta" ;
++-------+-------+----------+----------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                        ;
++-------+-------+----------+----------------------------------------------------------------+
+; xi[8] ; Input ; Info     ; Stuck at GND                                                   ;
+; yi[8] ; Input ; Info     ; Stuck at GND                                                   ;
+; op    ; Input ; Info     ; Stuck at VCC                                                   ;
++-------+-------+----------+----------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" ;
-+------+-------+----------+----------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                              ;
-+------+-------+----------+----------------------------------------------------------------------+
-; sff  ; Input ; Info     ; Stuck at GND                                                         ;
-+------+-------+----------+----------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" ;
++------+-------+----------+-----------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                           ;
++------+-------+----------+-----------------------------------------------------------------------------------+
+; sff  ; Input ; Info     ; Stuck at GND                                                                      ;
++------+-------+----------+-----------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"                        ;
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8"           ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port  ; Type   ; Severity ; Details                                                                             ;
 +-------+--------+----------+-------------------------------------------------------------------------------------+
@@ -608,78 +731,90 @@ Encoding Type:  One-Hot
 +-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1" ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                     ;
++------+-------+----------+-----------------------------------------------------------------------------+
+; cin2 ; Input ; Info     ; Stuck at GND                                                                ;
++------+-------+----------+-----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" ;
++-------+-------+----------+---------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                       ;
++-------+-------+----------+---------------------------------------------------------------+
+; xi[8] ; Input ; Info     ; Stuck at GND                                                  ;
+; yi[8] ; Input ; Info     ; Stuck at GND                                                  ;
+; op    ; Input ; Info     ; Stuck at GND                                                  ;
++-------+-------+----------+---------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1" ;
-+------+-------+----------+----------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                        ;
-+------+-------+----------+----------------------------------------------------------------+
-; cin2 ; Input ; Info     ; Stuck at GND                                                   ;
-+------+-------+----------+----------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma" ;
-+-------+-------+----------+--------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                          ;
-+-------+-------+----------+--------------------------------------------------+
-; xi[8] ; Input ; Info     ; Stuck at GND                                     ;
-; yi[8] ; Input ; Info     ; Stuck at GND                                     ;
-; op    ; Input ; Info     ; Stuck at GND                                     ;
-+-------+-------+----------+--------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:inst|ALU:alu1"                                                                ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; z_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ov_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -687,25 +822,27 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 70                          ;
-; cycloneiii_ff         ; 190                         ;
-;     ENA               ; 74                          ;
-;     ENA SLD           ; 11                          ;
-;     SCLR              ; 1                           ;
-;     plain             ; 104                         ;
-; cycloneiii_lcell_comb ; 793                         ;
-;     arith             ; 198                         ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 174                         ;
-;     normal            ; 595                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 92                          ;
-;         3 data inputs ; 134                         ;
-;         4 data inputs ; 363                         ;
+; boundary_port         ; 14                          ;
+; cycloneiii_ff         ; 45                          ;
+;     ENA               ; 14                          ;
+;     ENA SCLR          ; 14                          ;
+;     ENA SLD           ; 2                           ;
+;     plain             ; 15                          ;
+; cycloneiii_lcell_comb ; 258                         ;
+;     arith             ; 55                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 32                          ;
+;     normal            ; 203                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 50                          ;
+;         4 data inputs ; 110                         ;
+; cycloneiii_ram_block  ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 22.20                       ;
-; Average LUT depth     ; 12.15                       ;
+; Max LUT depth         ; 28.50                       ;
+; Average LUT depth     ; 15.32                       ;
 +-----------------------+-----------------------------+
 
 
@@ -724,12 +861,9 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Wed Nov 23 17:56:35 2022
+    Info: Processing started: Thu Nov 24 01:26:14 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica2 -c practica2
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file finalselection.vhd
-    Info (12022): Found design unit 1: FinalSelection-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 17
-    Info (12023): Found entity 1: FinalSelection File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
     Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/divisor.vhd Line: 13
     Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/divisor.vhd Line: 4
@@ -773,73 +907,133 @@ Info (12021): Found 2 design units, including 1 entities, in source file compara
 Info (12021): Found 2 design units, including 1 entities, in source file barrelshifters.vhd
     Info (12022): Found design unit 1: barrelShifters-shifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 14
     Info (12023): Found entity 1: barrelShifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/barrelShifters.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file valores.vhd
-    Info (12022): Found design unit 1: valores-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd Line: 16
-    Info (12023): Found entity 1: valores File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/valores.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file practica2.bdf
     Info (12023): Found entity 1: practica2
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 16
     Info (12023): Found entity 1: ALU File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ecuaciones.vhd
-    Info (12022): Found design unit 1: ecuaciones-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 16
-    Info (12023): Found entity 1: ecuaciones File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file registros.vhd
-    Info (12022): Found design unit 1: registros-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/registros.vhd Line: 15
-    Info (12023): Found entity 1: registros File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/registros.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 15
+    Info (12023): Found entity 1: datapath File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 7
 Info (12127): Elaborating entity "practica2" for the top level hierarchy
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst1"
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:inst"
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(22): object "IR" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(29): used implicit default value for signal "signo1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(29): used implicit default value for signal "signo2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(29): object "zflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(29): object "sflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(29): object "ovflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(29): object "cflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 29
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/datapath.vhd Line: 132
 Warning (10540): VHDL Signal Declaration warning at ALU.vhd(19): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 19
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "b_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 22
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "d_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 22
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(23): object "a_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at ALU.vhd(60): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 60
-Info (12128): Elaborating entity "uapro" for hierarchy "ALU:inst1|uapro:unidad_aritmetica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 103
+Info (12128): Elaborating entity "uapro" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 103
 Warning (10540): VHDL Signal Declaration warning at uapro.vhd(31): used explicit default value for signal "auxC4" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 31
 Warning (10036): Verilog HDL or VHDL warning at uapro.vhd(35): object "auxx" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 35
-Info (12128): Elaborating entity "fullA10b" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 63
+Info (12128): Elaborating entity "fullA10b" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 63
 Warning (10541): VHDL Signal Declaration warning at fullA10b.vhd(24): used implicit default value for signal "Cin0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 24
 Warning (10873): Using initial value X (don't care) for net "Si[9]" at fullA10b.vhd(9) File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 9
 Warning (10873): Using initial value X (don't care) for net "Sfaux" at fullA10b.vhd(23) File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 23
-Info (12128): Elaborating entity "fullAdder" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 63
-Info (12128): Elaborating entity "negativoP" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 83
-Info (12128): Elaborating entity "multP" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|multP:mult" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 65
+Info (12128): Elaborating entity "fullAdder" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 63
+Info (12128): Elaborating entity "negativoP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/fullA10b.vhd Line: 83
+Info (12128): Elaborating entity "multP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 65
 Warning (10036): Verilog HDL or VHDL warning at multP.vhd(19): object "Sfmm" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/multP.vhd Line: 19
-Info (12128): Elaborating entity "Divisorsito" for hierarchy "ALU:inst1|uapro:unidad_aritmetica|Divisorsito:divi" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 66
+Info (12128): Elaborating entity "Divisorsito" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/uapro.vhd Line: 66
 Warning (10620): VHDL warning at Divisorsito.vhd(40): comparison between unequal length operands always returns FALSE File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 40
 Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "aS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 57
 Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "bS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/Divisorsito.vhd Line: 57
-Info (12128): Elaborating entity "Logicas" for hierarchy "ALU:inst1|Logicas:unidad_logica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 104
-Info (12128): Elaborating entity "barrelShifters" for hierarchy "ALU:inst1|barrelShifters:barrel_shifters" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 105
-Info (12128): Elaborating entity "FinalSelection" for hierarchy "FinalSelection:inst"
-Info (12128): Elaborating entity "ecuaciones" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 86
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f1" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f2" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f3" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at ecuaciones.vhd(25): object "f4" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at ecuaciones.vhd(26): used explicit default value for signal "sig_1" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at ecuaciones.vhd(26): used explicit default value for signal "sig_2" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 26
-Info (12128): Elaborating entity "valores" for hierarchy "FinalSelection:inst|ecuaciones:ecuacion1|valores:val1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ecuaciones.vhd Line: 129
-Info (12128): Elaborating entity "convertidor" for hierarchy "FinalSelection:inst|convertidor:conv1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/FinalSelection.vhd Line: 87
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "s[15]" is stuck at GND
-    Warning (13410): Pin "s[14]" is stuck at GND
-    Warning (13410): Pin "s[13]" is stuck at GND
+Info (12128): Elaborating entity "Logicas" for hierarchy "datapath:inst|ALU:alu1|Logicas:unidad_logica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 104
+Info (12128): Elaborating entity "barrelShifters" for hierarchy "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/ALU.vhd Line: 105
+Warning (276027): Inferred dual-clock RAM node "datapath:inst|reggy_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "datapath:inst|reggy_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 11
+        Info (286033): Parameter WIDTH_B set to 10
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 11
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "datapath:inst|reggy_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 11
+        Info (286033): Parameter WIDTH_B set to 10
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 11
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "datapath:inst|altsyncram:reggy_rtl_0"
+Info (12133): Instantiated megafunction "datapath:inst|altsyncram:reggy_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "10"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "11"
+    Info (12134): Parameter "WIDTH_B" = "10"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "11"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kod1.tdf
+    Info (12023): Found entity 1: altsyncram_kod1 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_kod1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "datapath:inst|altsyncram:reggy_rtl_1"
+Info (12133): Instantiated megafunction "datapath:inst|altsyncram:reggy_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "10"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "11"
+    Info (12134): Parameter "WIDTH_B" = "10"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "11"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_urg1.tdf
+    Info (12023): Found entity 1: altsyncram_urg1 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_urg1.tdf Line: 28
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated|ram_block1a8" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_kod1.tdf Line: 280
+        Warning (14320): Synthesized away node "datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated|ram_block1a9" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_kod1.tdf Line: 310
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (17049): 38 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "datapath:inst|altsyncram:reggy_rtl_0|altsyncram_kod1:auto_generated|ALTSYNCRAM" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/db/altsyncram_kod1.tdf Line: 160
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ecuacion[1]"
-    Warning (15610): No output dependent on input pin "ecuacion[0]"
-Info (21057): Implemented 943 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 30 input pins
-    Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 873 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Wed Nov 23 17:56:43 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+Info (21057): Implemented 300 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 268 logic cells
+    Info (21064): Implemented 18 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Thu Nov 24 01:26:21 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:14
 
 
