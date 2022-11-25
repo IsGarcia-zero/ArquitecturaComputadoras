@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name TOP_LEVEL_ENTITY practica2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:14:40  NOVEMBER 14, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -84,4 +84,19 @@ set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE registros.vhd
+set_location_assignment PIN_30 -to a
+set_location_assignment PIN_31 -to b
+set_location_assignment PIN_32 -to c
+set_location_assignment PIN_33 -to d
+set_location_assignment PIN_44 -to e
+set_location_assignment PIN_46 -to f
+set_location_assignment PIN_49 -to g
+set_location_assignment PIN_91 -to clk
+set_location_assignment PIN_38 -to d1
+set_location_assignment PIN_39 -to d2
+set_location_assignment PIN_42 -to d3
+set_location_assignment PIN_43 -to d4
+set_location_assignment PIN_74 -to rst
+set_location_assignment PIN_51 -to ecuacion[0]
+set_location_assignment PIN_52 -to ecuacion[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

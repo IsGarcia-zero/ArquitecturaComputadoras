@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/24/2022 01:27:03"
+-- Generated on "11/24/2022 23:28:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -34,26 +34,62 @@ END practica2_vhd_vec_tst;
 ARCHITECTURE practica2_arch OF practica2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL a : STD_LOGIC;
+SIGNAL b : STD_LOGIC;
+SIGNAL c : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL d : STD_LOGIC;
+SIGNAL d1 : STD_LOGIC;
+SIGNAL d2 : STD_LOGIC;
+SIGNAL d3 : STD_LOGIC;
+SIGNAL d4 : STD_LOGIC;
+SIGNAL e : STD_LOGIC;
 SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL R : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL f : STD_LOGIC;
+SIGNAL g : STD_LOGIC;
+SIGNAL R : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
+SIGNAL sign_flag : STD_LOGIC;
 COMPONENT practica2
 	PORT (
+	a : OUT STD_LOGIC;
+	b : OUT STD_LOGIC;
+	c : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
+	d : OUT STD_LOGIC;
+	d1 : OUT STD_LOGIC;
+	d2 : OUT STD_LOGIC;
+	d3 : OUT STD_LOGIC;
+	d4 : OUT STD_LOGIC;
+	e : OUT STD_LOGIC;
 	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-	rst : IN STD_LOGIC
+	f : OUT STD_LOGIC;
+	g : OUT STD_LOGIC;
+	R : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	rst : IN STD_LOGIC;
+	sign_flag : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : practica2
 	PORT MAP (
 -- list connections between master ports and signals
+	a => a,
+	b => b,
+	c => c,
 	clk => clk,
+	d => d,
+	d1 => d1,
+	d2 => d2,
+	d3 => d3,
+	d4 => d4,
+	e => e,
 	ecuacion => ecuacion,
+	f => f,
+	g => g,
 	R => R,
-	rst => rst
+	rst => rst,
+	sign_flag => sign_flag
 	);
 
 -- clk
@@ -61,16 +97,16 @@ t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 200 ps;
+	WAIT FOR 100 ps;
 	clk <= '1';
-	WAIT FOR 200 ps;
+	WAIT FOR 100 ps;
 	IF (NOW >= 30000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 -- ecuacion[1]
 t_prcs_ecuacion_1: PROCESS
 BEGIN
-	ecuacion(1) <= '0';
+	ecuacion(1) <= '1';
 WAIT;
 END PROCESS t_prcs_ecuacion_1;
 -- ecuacion[0]

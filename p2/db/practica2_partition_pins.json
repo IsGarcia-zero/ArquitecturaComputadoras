@@ -4,6 +4,22 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "sign_flag",
+					"strict" : false
+				},
+				{
+					"name" : "R[12]",
+					"strict" : false
+				},
+				{
+					"name" : "R[11]",
+					"strict" : false
+				},
+				{
+					"name" : "R[10]",
+					"strict" : false
+				},
+				{
 					"name" : "R[9]",
 					"strict" : false
 				},
@@ -44,11 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "clk",
 					"strict" : false
 				},
 				{

@@ -12,14 +12,14 @@ ENTITY convertidor IS
 END ENTITY;
 
 ARCHITECTURE bhr OF convertidor IS
-	
+	SIGNAL FINAL : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	--VARIABLE contador, aux : INTEGER RANGE 0 TO 9:= 0;
 BEGIN
 	PROCESS(en,clk)
 	
 	VARIABLE digitos : STD_LOGIC_VECTOR(15 DOWNTO 0):="0000000000000000";
 	BEGIN
-	IF (RISING_EDGE(clk)) THEN
+	--IF (RISING_EDGE(clk)) THEN
 		FOR j IN 0 TO 15 LOOP
 			digitos(j) := '0';
 		END LOOP;
@@ -40,8 +40,8 @@ BEGIN
 			digitos := digitos(14 downto 0) & en(6 - i);
 		END LOOP;
 		--digitos := "0001001000110100";
-		s <= digitos;
-		END IF;
-		
-	END PROCESS;	
+		FINAL <= digitos;
+		-- END IF;
+	END PROCESS;
+	s <= FINAL;
 END ARCHITECTURE;

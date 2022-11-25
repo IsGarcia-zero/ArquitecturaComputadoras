@@ -5,7 +5,6 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY ALU IS 
 	PORT(
 		A,B : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-		s1,s2 : IN STD_LOGIC;
 		sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		R : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 		clk, rst : IN STD_LOGIC; -- No puse in XDDDD
@@ -54,10 +53,9 @@ COMPONENT barrelShifters IS
 END COMPONENT barrelShifters;
 
 BEGIN
-
+	
 	PROCESS(sel, log_sal, ua_sal, bar_sal, sel_aux_2,clk)
 	BEGIN
-	IF (RISING_EDGE(clk)) THEN
 		CASE sel IS
 			WHEN "0000" => 
 				R <= "0000000000";
@@ -96,11 +94,10 @@ BEGIN
 				R <= "1111111111";
 				sel_aux <= "00";
 		END CASE;
-	END IF;
 	END PROCESS;
+	
 
-
-unidad_aritmetica: uapro PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),sel_aux, clk,rst,s1,s2,ua_sal,c_flag,z_flag,ov_flag,s_flag);
+unidad_aritmetica: uapro PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),sel_aux, clk,rst,A(9),B(9),ua_sal,c_flag,z_flag,ov_flag,s_flag);
 unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk, log_sal,a_aux,b_aux);
 barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal, d_aux);
 
