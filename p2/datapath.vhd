@@ -43,14 +43,14 @@ ARCHITECTURE bhr OF datapath IS
 	CONSTANT values : data := (
 		0 => "0000000001", -- X
 		1 => "0000000001", -- Y
-		2 => "0000000001", -- Z
+		2 => "0000010000", -- Z
 		3 => "0000011111", -- W
 		4 => "0000001101", -- 13
 		5 => "0000010111", -- 23
 		6 => "1000000100", -- -4
 		7 => "1000000101", -- -5
 		8 => "0000011110", -- 30
-		9 => "1000000010", -- -2
+		9 => "0000000010", -- -2
 		10 => "1000000111", -- -7
 		11 => "0000000101" -- 5
 	);
@@ -68,7 +68,7 @@ ARCHITECTURE bhr OF datapath IS
 		7 => ("1101"&"0001"&"0110"), -- LOAD R2 <- -4 
 		8 => ("1010"&"0011"&"0001"), -- DIV R4  R2
 		9 => ("0111"&"0000"&"0010"), -- SUM R1  R3
-		10 => ("0111"&"0000"&"0011"), -- RES R1  R4
+		10 => ("1000"&"0000"&"0011"), -- RES R1  R4
 		11 => ("1111"&"0000"&"0000"), -- NOT OP
 		-- ECUACION 2
 		12 => ("1101"&"0000"&"0000"), -- LOAD R1 <- X
@@ -83,7 +83,7 @@ ARCHITECTURE bhr OF datapath IS
 		21 => ("1101"&"0001"&"1001"), -- LOAD R2 <- -2
 		22 => ("1010"&"0011"&"0001"), -- DIV R4  R2
 		23 => ("0111"&"0000"&"0010"), -- SUM R1  R3
-		24 => ("0111"&"0000"&"0011"), -- RES R1  R4
+		24 => ("1000"&"0000"&"0011"), -- RES R1  R4
 		25 => ("1111"&"0000"&"0000"), -- NOT OP
 		-- ECUACION 3
 		26 => ("1101"&"0000"&"0000"), -- LOAD R1 <- X
@@ -98,7 +98,7 @@ ARCHITECTURE bhr OF datapath IS
 		35 => ("1101"&"0001"&"1011"), -- LOAD R2 <- 5
 		36 => ("1010"&"0011"&"0001"), -- DIV R4  R2
 		37 => ("0111"&"0000"&"0010"), -- SUM R1  R3
-		38 => ("0111"&"0000"&"0011"), -- RES R1  R4
+		38 => ("1000"&"0000"&"0011"), -- RES R1  R4
 		39 => ("1111"&"0000"&"0000") -- NOT OP
 	);
 	
@@ -161,7 +161,7 @@ BEGIN
 							END IF;
 							MAR <= INSTRUCTIONS(PC);	
 						WHEN OTHERS => 
-							IR <= "000000000000";
+							salida <= "0000000000";
 							pr_state <= state1;
 					END CASE;
 				WHEN state1 => -- DECODE
@@ -180,18 +180,18 @@ BEGIN
 					IF (MAR(11 DOWNTO 8) = "1101") THEN
 						reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= REG_D;
 					ELSE
-						IF (flag = '1') THEN
-							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= '1' & MBR(8 DOWNTO 0);
-						ELSE
+--						IF (flag = '1') THEN
+--							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= '1' & MBR(8 DOWNTO 0);
+--						ELSE
 							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= MBR;
-						END IF;
-						salida <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
+						--END IF;
+						-- salida <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
 					END IF;
 					pr_state <= state0;
 			END CASE;
 		END IF;
 		-- ins <= MAR;
 	END PROCESS;
-	sign_f <= flag;
+	sign_f <= sflag;
 	alu1: ALU PORT MAP(REG_A, REG_B, OP, MBR, clk, rst, zflag, sflag, ovflag, cflag);
 END ARCHITECTURE;
