@@ -117,7 +117,7 @@ BEGIN
 
 	PROCESS(clk, rst, REG_A, REG_B, REG_C, REG_D) IS
 	BEGIN
-		IF (rst = '1') THEN
+		IF (rst = '0') THEN
 			pr_state <= state0;
 			PC <= 0;
 		ELSIF (RISING_EDGE(clk)) THEN
