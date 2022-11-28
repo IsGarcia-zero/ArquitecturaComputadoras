@@ -41,8 +41,8 @@ ARCHITECTURE bhr OF datapath IS
 	SIGNAL signo1, signo2 : STD_LOGIC :='0';
 	
 	CONSTANT values : data := (
-		0 => "0000000001", -- X
-		1 => "0000000001", -- Y
+		0 => "0000000010", -- X
+		1 => "0000000010", -- Y
 		2 => "0000010000", -- Z
 		3 => "0000011111", -- W
 		4 => "0000001101", -- 13
