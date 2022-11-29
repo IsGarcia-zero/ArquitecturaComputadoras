@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Nov 28 10:03:18 2022
+Fitter Status : Successful - Mon Nov 28 19:52:41 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : practica2
 Top-level Entity Name : practica2
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 789 / 6,272 ( 13 % )
-    Total combinational functions : 758 / 6,272 ( 12 % )
-    Dedicated logic registers : 272 / 6,272 ( 4 % )
-Total registers : 272
-Total pins : 32 / 92 ( 35 % )
+Total logic elements : 824 / 6,272 ( 13 % )
+    Total combinational functions : 782 / 6,272 ( 12 % )
+    Dedicated logic registers : 293 / 6,272 ( 5 % )
+Total registers : 293
+Total pins : 64 / 92 ( 70 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practica2
-Mon Nov 28 10:03:02 2022
+Mon Nov 28 19:52:24 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -67,16 +67,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 28 10:03:02 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 28 19:52:24 2022       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; practica2                                   ;
 ; Top-level Entity Name              ; practica2                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 867                                         ;
-;     Total combinational functions  ; 758                                         ;
-;     Dedicated logic registers      ; 272                                         ;
-; Total registers                    ; 272                                         ;
-; Total pins                         ; 32                                          ;
+; Total logic elements               ; 911                                         ;
+;     Total combinational functions  ; 782                                         ;
+;     Dedicated logic registers      ; 293                                         ;
+; Total registers                    ; 293                                         ;
+; Total pins                         ; 64                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -216,30 +216,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 867                         ;
+; Estimated Total logic elements              ; 911                         ;
 ;                                             ;                             ;
-; Total combinational functions               ; 758                         ;
+; Total combinational functions               ; 782                         ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 392                         ;
-;     -- 3 input functions                    ; 237                         ;
-;     -- <=2 input functions                  ; 129                         ;
+;     -- 4 input functions                    ; 424                         ;
+;     -- 3 input functions                    ; 213                         ;
+;     -- <=2 input functions                  ; 145                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 613                         ;
+;     -- normal mode                          ; 637                         ;
 ;     -- arithmetic mode                      ; 145                         ;
 ;                                             ;                             ;
-; Total registers                             ; 272                         ;
-;     -- Dedicated logic registers            ; 272                         ;
+; Total registers                             ; 293                         ;
+;     -- Dedicated logic registers            ; 293                         ;
 ;     -- I/O registers                        ; 0                           ;
 ;                                             ;                             ;
-; I/O pins                                    ; 32                          ;
+; I/O pins                                    ; 64                          ;
 ;                                             ;                             ;
 ; Embedded Multiplier 9-bit elements          ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; frecuencia_5Hz:inst3|salida ;
-; Maximum fan-out                             ; 246                         ;
-; Total fan-out                               ; 3415                        ;
-; Average fan-out                             ; 3.12                        ;
+; Maximum fan-out                             ; 267                         ;
+; Total fan-out                               ; 3629                        ;
+; Average fan-out                             ; 3.02                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -248,13 +248,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name    ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |practica2                                ; 758 (0)             ; 272 (0)                   ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |practica2                                                                                              ; practica2      ; work         ;
+; |practica2                                ; 782 (0)             ; 293 (0)                   ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |practica2                                                                                              ; practica2      ; work         ;
 ;    |convertidor:inst1|                    ; 55 (55)             ; 49 (49)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|convertidor:inst1                                                                            ; convertidor    ; work         ;
-;    |datapath:inst|                        ; 641 (284)           ; 186 (148)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst                                                                                ; datapath       ; work         ;
-;       |ALU:alu1|                          ; 357 (3)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1                                                                       ; ALU            ; work         ;
-;          |Logicas:unidad_logica|          ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                 ; Logicas        ; work         ;
+;    |datapath:inst|                        ; 665 (304)           ; 207 (169)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst                                                                                ; datapath       ; work         ;
+;       |ALU:alu1|                          ; 361 (9)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1                                                                       ; ALU            ; work         ;
+;          |Logicas:unidad_logica|          ; 39 (39)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                 ; Logicas        ; work         ;
 ;          |barrelShifters:barrel_shifters| ; 0 (0)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|barrelShifters:barrel_shifters                                        ; barrelShifters ; work         ;
-;          |uapro:unidad_aritmetica|        ; 316 (11)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                               ; uapro          ; work         ;
+;          |uapro:unidad_aritmetica|        ; 313 (10)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                               ; uapro          ; work         ;
 ;             |Divisorsito:divi|            ; 157 (157)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                              ; Divisorsito    ; work         ;
 ;             |fullA10b:resta|              ; 25 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                                ; fullA10b       ; work         ;
 ;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0                   ; fullAdder      ; work         ;
@@ -266,14 +266,14 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:s6|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s6                   ; fullAdder      ; work         ;
 ;                |fullAdder:s7|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s7                   ; fullAdder      ; work         ;
 ;                |fullAdder:s8|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s8                   ; fullAdder      ; work         ;
-;             |fullA10b:suma|               ; 51 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                 ; fullA10b       ; work         ;
-;                |fullAdder:s0|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                    ; fullAdder      ; work         ;
+;             |fullA10b:suma|               ; 49 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                 ; fullA10b       ; work         ;
+;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                    ; fullAdder      ; work         ;
 ;                |fullAdder:s1|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s1                    ; fullAdder      ; work         ;
 ;                |fullAdder:s2|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s2                    ; fullAdder      ; work         ;
 ;                |fullAdder:s3|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s3                    ; fullAdder      ; work         ;
 ;                |fullAdder:s4|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s4                    ; fullAdder      ; work         ;
 ;                |fullAdder:s5|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s5                    ; fullAdder      ; work         ;
-;                |fullAdder:s6|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6                    ; fullAdder      ; work         ;
+;                |fullAdder:s6|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s6                    ; fullAdder      ; work         ;
 ;                |fullAdder:s7|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s7                    ; fullAdder      ; work         ;
 ;                |fullAdder:s8|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s8                    ; fullAdder      ; work         ;
 ;             |multP:mult|                  ; 72 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                    ; multP          ; work         ;
@@ -340,7 +340,8 @@ Encoding Type:  One-Hot
 ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|aux[0]         ; Stuck at GND due to stuck port data_in ;
 ; datapath:inst|ALU:alu1|barrelShifters:barrel_shifters|salShifters[0] ; Stuck at GND due to stuck port data_in ;
 ; datapath:inst|REG_D[5..8]                                            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 6                                ;                                        ;
+; datapath:inst|MAR[7]                                                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7                                ;                                        ;
 +----------------------------------------------------------------------+----------------------------------------+
 
 
@@ -359,12 +360,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 272   ;
+; Total registers                              ; 293   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 93    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 171   ;
+; Number of registers using Clock Enable       ; 192   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -374,14 +375,12 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |practica2|display:inst2|tmp[0]                                                                              ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[0]                                            ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |practica2|datapath:inst|REG_A[2]                                                                            ;
-; 8:1                ; 10 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |practica2|datapath:inst|REG_B[7]                                                                            ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |practica2|convertidor:inst1|binary[9]                                                                       ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |practica2|datapath:inst|salida[0]                                                                           ;
-; 41:1               ; 10 bits   ; 270 LEs       ; 260 LEs              ; 10 LEs                 ; Yes        ; |practica2|datapath:inst|MAR[2]                                                                              ;
-; 9:1                ; 14 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |practica2|datapath:inst|PC[0]                                                                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |practica2|display:inst2|tmp[3]                                                                              ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |practica2|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[3]                                            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |practica2|convertidor:inst1|binary[5]                                                                       ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |practica2|datapath:inst|salida[8]                                                                           ;
+; 41:1               ; 10 bits   ; 270 LEs       ; 260 LEs              ; 10 LEs                 ; Yes        ; |practica2|datapath:inst|MAR[0]                                                                              ;
+; 9:1                ; 14 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |practica2|datapath:inst|PC[5]                                                                               ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |practica2|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4|negativoP:negativo|Add0 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |practica2|convertidor:inst1|bcds_next                                                                       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |practica2|convertidor:inst1|bcds_next                                                                       ;
@@ -611,27 +610,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 32                          ;
-; cycloneiii_ff         ; 272                         ;
+; boundary_port         ; 64                          ;
+; cycloneiii_ff         ; 293                         ;
 ;     CLR               ; 61                          ;
 ;     CLR SLD           ; 1                           ;
-;     ENA               ; 132                         ;
+;     ENA               ; 153                         ;
 ;     ENA CLR           ; 31                          ;
 ;     ENA SCLR          ; 1                           ;
 ;     ENA SLD           ; 7                           ;
 ;     plain             ; 39                          ;
-; cycloneiii_lcell_comb ; 759                         ;
+; cycloneiii_lcell_comb ; 784                         ;
 ;     arith             ; 145                         ;
 ;         2 data inputs ; 57                          ;
 ;         3 data inputs ; 88                          ;
-;     normal            ; 614                         ;
+;     normal            ; 639                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 149                         ;
-;         4 data inputs ; 392                         ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 125                         ;
+;         4 data inputs ; 424                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 24.00                       ;
-; Average LUT depth     ; 9.14                        ;
+; Max LUT depth         ; 23.00                       ;
+; Average LUT depth     ; 9.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -650,7 +650,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon Nov 28 10:02:40 2022
+    Info: Processing started: Mon Nov 28 19:52:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practica2 -c practica2
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
@@ -712,8 +712,8 @@ Info (12128): Elaborating entity "datapath" for hierarchy "datapath:inst"
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(36): object "zflag" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 36
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(36): object "ovflag" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 36
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(36): object "cflag" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 36
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(37): object "flag" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 37
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 196
+Warning (10492): VHDL Process Statement warning at datapath.vhd(209): signal "MAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 209
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 212
 Warning (10540): VHDL Signal Declaration warning at ALU.vhd(18): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 18
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "b_aux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 21
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "d_aux" assigned a value but never read File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/ALU.vhd Line: 21
@@ -736,16 +736,20 @@ Info (12128): Elaborating entity "barrelShifters" for hierarchy "datapath:inst|A
 Info (12128): Elaborating entity "frecuencia_5Hz" for hierarchy "frecuencia_5Hz:inst3"
 Info (12128): Elaborating entity "display" for hierarchy "display:inst2"
 Info (12128): Elaborating entity "convertidor" for hierarchy "convertidor:inst1"
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "datapath:inst|reggy" is uninferred due to inappropriate RAM size File: /home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/datapath.vhd Line: 35
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "mar[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 909 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 996 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 877 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 436 megabytes
-    Info: Processing ended: Mon Nov 28 10:03:02 2022
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 932 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 434 megabytes
+    Info: Processing ended: Mon Nov 28 19:52:24 2022
     Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:45
 

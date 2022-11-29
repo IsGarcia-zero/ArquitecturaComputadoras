@@ -8,9 +8,9 @@ ENTITY datapath IS
 	PORT(
 		ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		clk, rst : IN STD_LOGIC;
-		-- salida, s_p1, s_p2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		-- ins : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+		salida, s_p1, s_p2 : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		--salida : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		ins : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 		sign_f : out STD_LOGIC
 	);
 END ENTITY datapath;
@@ -42,13 +42,13 @@ ARCHITECTURE bhr OF datapath IS
 	
 	CONSTANT values : data := (
 		0 => "0000000010", -- X
-		1 => "0000000010", -- Y
+		1 => "0000000001", -- Y
 		2 => "0000010000", -- Z
 		3 => "0000011111", -- W
 		4 => "0000001101", -- 13
 		5 => "0000010111", -- 23
-		6 => "1000000100", -- -4
-		7 => "1000000101", -- -5
+		6 => "0000000100", -- -4
+		7 => "0000000101", -- -5
 		8 => "0000011110", -- 30
 		9 => "0000000010", -- -2
 		10 => "1000000111", -- -7
@@ -92,13 +92,13 @@ ARCHITECTURE bhr OF datapath IS
 		29 => ("1101"&"0100"&"1010"), -- LOAD R5  -7
 		30 => ("1001"&"0000"&"0100"), -- MUL R1  R5
 		31 => ("1101"&"0010"&"0010"), -- LOAD R3 <- z
-		32 => ("1101"&"0001"&"0111"), -- LOAD R2 <- -5
+		32 => ("1101"&"0001"&"0111"), -- LOAD R2 <- 5
 		33 => ("1001"&"0010"&"0001"), -- MULT R3  R2
 		34 => ("1101"&"0011"&"0011"), -- LOAD R4 <- w
 		35 => ("1101"&"0001"&"1011"), -- LOAD R2 <- 5
 		36 => ("1010"&"0011"&"0001"), -- DIV R4  R2
-		37 => ("0111"&"0000"&"0010"), -- SUM R1  R3
-		38 => ("1000"&"0000"&"0011"), -- RES R1  R4
+		37 => ("1000"&"0000"&"0010"), -- SUM R1  R3
+		38 => ("0111"&"0000"&"0011"), -- RES R1  R4
 		39 => ("1111"&"0000"&"0000") -- NOT OP
 	);
 	
@@ -129,7 +129,13 @@ BEGIN
 								PC <= PC + 1;
 								pr_state <= state1;
 							ELSE
-								salida <= reggy(0);
+								IF (reggy(0)(9) = '1') THEN
+									salida <= '0' & reggy(0)(8 DOWNTO 0);
+									sign_f <= '1';
+								ELSE
+									salida <= reggy(0);
+									sign_f <= '0';
+								END IF;
 								pr_state <= state0;
 							END IF;
 							MAR <= INSTRUCTIONS(PC);	
@@ -142,7 +148,13 @@ BEGIN
 									PC <= PC + 1;
 									pr_state <= state1;
 								ELSE
-									salida <= reggy(0);
+									IF (reggy(0)(9) = '1') THEN
+										salida <= '0' & reggy(0)(8 DOWNTO 0);
+										sign_f <= '1';
+									ELSE
+										salida <= reggy(0);
+										sign_f <= '0';
+									END IF;
 									pr_state <= state0;
 								END IF;
 							END IF;
@@ -155,7 +167,13 @@ BEGIN
 									PC <= PC + 1;
 									pr_state <= state1;
 								ELSE
-									salida <= reggy(0);
+									IF (reggy(0)(9) = '1') THEN
+										salida <= '0' & reggy(0)(8 DOWNTO 0);
+										sign_f <= '1';
+									ELSE
+										salida <= reggy(0);
+										sign_f <= '0';
+									END IF;
 									pr_state <= state0;
 								END IF;
 							END IF;
@@ -170,28 +188,26 @@ BEGIN
 					ELSE
 						OP <= MAR(11 DOWNTO 8);
 						REG_A <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
-						-- s_p1 <= REG_A;
+						s_p1 <= REG_A;
 						REG_B <= reggy(to_integer(unsigned(MAR(3 DOWNTO 0))));
-						-- s_p2 <= REG_B;
+						s_p2 <= REG_B;
 					END IF;
 					pr_state <= state2;
 				WHEN state2 => -- EXECUTE
-					flag <= sflag;
 					IF (MAR(11 DOWNTO 8) = "1101") THEN
 						reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= REG_D;
 					ELSE
---						IF (flag = '1') THEN
---							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= '1' & MBR(8 DOWNTO 0);
---						ELSE
+						IF (sflag = '1') THEN
+							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= '1' & MBR(8 DOWNTO 0);
+						ELSE
 							reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= MBR;
-						--END IF;
-						-- salida <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
+						END IF;
 					END IF;
 					pr_state <= state0;
 			END CASE;
 		END IF;
-		-- ins <= MAR;
+		ins <= MAR;
 	END PROCESS;
-	sign_f <= sflag;
+	-- sign_f <= flag;
 	alu1: ALU PORT MAP(REG_A, REG_B, OP, MBR, clk, rst, zflag, sflag, ovflag, cflag);
 END ARCHITECTURE;

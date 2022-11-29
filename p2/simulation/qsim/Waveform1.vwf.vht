@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/28/2022 09:08:17"
+-- Generated on "11/28/2022 18:04:22"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica2
 -- 
@@ -35,7 +35,9 @@ ARCHITECTURE practica2_arch OF practica2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL a : STD_LOGIC;
+SIGNAL a_dato : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL b : STD_LOGIC;
+SIGNAL b_dato : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL c : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
 SIGNAL d : STD_LOGIC;
@@ -47,13 +49,16 @@ SIGNAL e : STD_LOGIC;
 SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL f : STD_LOGIC;
 SIGNAL g : STD_LOGIC;
+SIGNAL mar : STD_LOGIC_VECTOR(11 DOWNTO 0);
 SIGNAL R : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
 SIGNAL sign_flag : STD_LOGIC;
 COMPONENT practica2
 	PORT (
 	a : OUT STD_LOGIC;
+	a_dato : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	b : OUT STD_LOGIC;
+	b_dato : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
 	c : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
 	d : OUT STD_LOGIC;
@@ -65,6 +70,7 @@ COMPONENT practica2
 	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	f : OUT STD_LOGIC;
 	g : OUT STD_LOGIC;
+	mar : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	R : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	rst : IN STD_LOGIC;
 	sign_flag : OUT STD_LOGIC
@@ -75,7 +81,9 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	a => a,
+	a_dato => a_dato,
 	b => b,
+	b_dato => b_dato,
 	c => c,
 	clk => clk,
 	d => d,
@@ -87,6 +95,7 @@ BEGIN
 	ecuacion => ecuacion,
 	f => f,
 	g => g,
+	mar => mar,
 	R => R,
 	rst => rst,
 	sign_flag => sign_flag
@@ -100,7 +109,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	clk <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 -- ecuacion[1]

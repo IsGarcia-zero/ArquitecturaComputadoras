@@ -52,6 +52,130 @@
 					"strict" : false
 				},
 				{
+					"name" : "a_dato[9]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[8]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[7]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[6]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[5]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[4]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a_dato[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[9]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[8]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b_dato[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[11]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[10]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[9]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[8]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mar[0]",
+					"strict" : false
+				},
+				{
 					"name" : "R[15]",
 					"strict" : false
 				},
@@ -116,7 +240,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "ecuacion[0]",
 					"strict" : false
 				},
 				{
@@ -124,7 +248,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "ecuacion[0]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
