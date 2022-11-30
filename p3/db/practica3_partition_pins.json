@@ -20,211 +20,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "R[15]",
+					"name" : "d1",
 					"strict" : false
 				},
 				{
-					"name" : "R[14]",
+					"name" : "d2",
 					"strict" : false
 				},
 				{
-					"name" : "R[13]",
+					"name" : "d3",
 					"strict" : false
 				},
 				{
-					"name" : "R[12]",
+					"name" : "d4",
 					"strict" : false
 				},
 				{
-					"name" : "R[11]",
+					"name" : "a",
 					"strict" : false
 				},
 				{
-					"name" : "R[10]",
+					"name" : "b",
 					"strict" : false
 				},
 				{
-					"name" : "R[9]",
+					"name" : "c",
 					"strict" : false
 				},
 				{
-					"name" : "R[8]",
+					"name" : "d",
 					"strict" : false
 				},
 				{
-					"name" : "R[7]",
+					"name" : "e",
 					"strict" : false
 				},
 				{
-					"name" : "R[6]",
+					"name" : "f",
 					"strict" : false
 				},
 				{
-					"name" : "R[5]",
+					"name" : "g",
 					"strict" : false
 				},
 				{
-					"name" : "R[4]",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "R[3]",
+					"name" : "ecuacion[1]",
 					"strict" : false
 				},
 				{
-					"name" : "R[2]",
-					"strict" : false
-				},
-				{
-					"name" : "R[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[15]",
-					"strict" : false
-				},
-				{
-					"name" : "A[12]",
-					"strict" : false
-				},
-				{
-					"name" : "A[11]",
-					"strict" : false
-				},
-				{
-					"name" : "A[10]",
-					"strict" : false
-				},
-				{
-					"name" : "A[9]",
-					"strict" : false
-				},
-				{
-					"name" : "A[8]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[15]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[4]",
-					"strict" : false
-				},
-				{
-					"name" : "B[5]",
-					"strict" : false
-				},
-				{
-					"name" : "B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "B[7]",
-					"strict" : false
-				},
-				{
-					"name" : "B[8]",
-					"strict" : false
-				},
-				{
-					"name" : "B[9]",
-					"strict" : false
-				},
-				{
-					"name" : "B[10]",
-					"strict" : false
-				},
-				{
-					"name" : "B[11]",
-					"strict" : false
-				},
-				{
-					"name" : "B[12]",
-					"strict" : false
-				},
-				{
-					"name" : "A[13]",
-					"strict" : false
-				},
-				{
-					"name" : "B[13]",
-					"strict" : false
-				},
-				{
-					"name" : "B[14]",
-					"strict" : false
-				},
-				{
-					"name" : "A[14]",
-					"strict" : false
-				},
-				{
-					"name" : "sel[3]",
+					"name" : "ecuacion[0]",
 					"strict" : false
 				},
 				{
