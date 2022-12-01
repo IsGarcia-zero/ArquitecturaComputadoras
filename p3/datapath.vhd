@@ -29,7 +29,7 @@ ARCHITECTURE bhr OF datapath IS
 	SIGNAL buff1: STD_LOGIC_VECTOR(7 DOWNTO 0):= "00001011";
 	SIGNAL buff2: STD_LOGIC_VECTOR(7 DOWNTO 0);
 
-	TYPE data IS ARRAY (11 DOWNTO 0) OF STD_LOGIC_VECTOR(9 DOWNTO 0);
+	TYPE data IS ARRAY (11 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	TYPE cmp IS ARRAY (10 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	TYPE list IS ARRAY (39 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	TYPE reg IS ARRAY(0 TO 7) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -43,18 +43,18 @@ ARCHITECTURE bhr OF datapath IS
 	
 	CONSTANT values : data := (
 	-- Datos precargados en la "ROM" para usar despues en ecuacines
-		0 => "0000000110", -- X (6)
-		1 => "0000001001", -- Y (9)
-		2 => "0000000111", -- Z (7)
-		3 => "0000001010", -- W (10)
-		4 => "0000010001", -- 17
-		5 => "0000011001", -- 25
-		6 => "0000000100", -- -4
-		7 => "0000001010", -- 10
-		8 => "0000011110", -- 30
-		9 => "0000000010", -- -2
-		10 => "1000000111", -- -7
-		11 => "0000000000"
+		0 => "0000000000000110", -- X (6)
+		1 => "0000000000001001", -- Y (9)
+		2 => "0000000000000111", -- Z (7)
+		3 => "0000000000001010", -- W (10)
+		4 => "0000000000010001", -- 17
+		5 => "0000000000011001", -- 25
+		6 => "0000000000000100", -- -4
+		7 => "0000000000001010", -- 10
+		8 => "0000000000011110", -- 30
+		9 => "0000000000000010", -- -2
+		10 => "0000001000000111", -- -7
+		11 => "0000000000000000"
 	);
 	
 	CONSTANT cmprs : cmp := (
@@ -151,7 +151,7 @@ BEGIN
 								pr_state <= state1;
 							ELSE
 								IF (reggy(0)(9) = '1') THEN
-									salida <= "000000" & '0' & reggy(0)(8 DOWNTO 0);
+									salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
 									z_flag <= zflag;
 									s_flag <= sflag;
 									ov_flag <= ovflag;
@@ -176,7 +176,7 @@ BEGIN
 									pr_state <= state1;
 								ELSE
 									IF (reggy(0)(9) = '1') THEN
-										salida <= "000000" & '0' & reggy(0)(8 DOWNTO 0);
+										salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
 										z_flag <= zflag;
 										s_flag <= sflag;
 										ov_flag <= ovflag;
@@ -201,7 +201,7 @@ BEGIN
 									pr_state <= state1;
 								ELSE
 									IF (reggy(0)(9) = '1') THEN
-										salida <= "000000" & '0' & reggy(0)(8 DOWNTO 0);
+										salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
 										z_flag <= zflag;
 										s_flag <= sflag;
 										ov_flag <= ovflag;
@@ -223,7 +223,7 @@ BEGIN
 					END CASE;
 				WHEN state1 => -- DECODE
 					IF (MAR(11 DOWNTO 8) = "1101") THEN --En caso que la instruccion sea load
-						REG_D <= "000000"&values(to_integer(unsigned(MAR(3 DOWNTO 0))));
+						REG_D <= values(to_integer(unsigned(MAR(3 DOWNTO 0))));
 					
 					ELSIF (MAR(15 DOWNTO 12) = "1110") THEN --En caso que la instruccion sea un salto
 						--Aqui vamos a tener que hacer varias comparaciones
