@@ -1,7 +1,8 @@
 |practica3
 z_flag <= datapath:inst5.z_flag
-clk => frecuencia_5Hz:inst.reloj
-rst => frecuencia_5Hz:inst.reset
+clk => datapath:inst5.clk
+clk => display:inst3.clk
+clk => convertidor:inst4.clk
 rst => datapath:inst5.rst
 ecuacion[0] => datapath:inst5.ecuacion[0]
 ecuacion[1] => datapath:inst5.ecuacion[1]
@@ -19,6 +20,54 @@ d <= display:inst3.d
 e <= display:inst3.e
 f <= display:inst3.f
 g <= display:inst3.g
+s_p1[0] <= datapath:inst5.s_p1[0]
+s_p1[1] <= datapath:inst5.s_p1[1]
+s_p1[2] <= datapath:inst5.s_p1[2]
+s_p1[3] <= datapath:inst5.s_p1[3]
+s_p1[4] <= datapath:inst5.s_p1[4]
+s_p1[5] <= datapath:inst5.s_p1[5]
+s_p1[6] <= datapath:inst5.s_p1[6]
+s_p1[7] <= datapath:inst5.s_p1[7]
+s_p1[8] <= datapath:inst5.s_p1[8]
+s_p1[9] <= datapath:inst5.s_p1[9]
+s_p1[10] <= datapath:inst5.s_p1[10]
+s_p1[11] <= datapath:inst5.s_p1[11]
+s_p1[12] <= datapath:inst5.s_p1[12]
+s_p1[13] <= datapath:inst5.s_p1[13]
+s_p1[14] <= datapath:inst5.s_p1[14]
+s_p1[15] <= datapath:inst5.s_p1[15]
+s_p2[0] <= datapath:inst5.s_p2[0]
+s_p2[1] <= datapath:inst5.s_p2[1]
+s_p2[2] <= datapath:inst5.s_p2[2]
+s_p2[3] <= datapath:inst5.s_p2[3]
+s_p2[4] <= datapath:inst5.s_p2[4]
+s_p2[5] <= datapath:inst5.s_p2[5]
+s_p2[6] <= datapath:inst5.s_p2[6]
+s_p2[7] <= datapath:inst5.s_p2[7]
+s_p2[8] <= datapath:inst5.s_p2[8]
+s_p2[9] <= datapath:inst5.s_p2[9]
+s_p2[10] <= datapath:inst5.s_p2[10]
+s_p2[11] <= datapath:inst5.s_p2[11]
+s_p2[12] <= datapath:inst5.s_p2[12]
+s_p2[13] <= datapath:inst5.s_p2[13]
+s_p2[14] <= datapath:inst5.s_p2[14]
+s_p2[15] <= datapath:inst5.s_p2[15]
+sal[0] <= datapath:inst5.salida[0]
+sal[1] <= datapath:inst5.salida[1]
+sal[2] <= datapath:inst5.salida[2]
+sal[3] <= datapath:inst5.salida[3]
+sal[4] <= datapath:inst5.salida[4]
+sal[5] <= datapath:inst5.salida[5]
+sal[6] <= datapath:inst5.salida[6]
+sal[7] <= datapath:inst5.salida[7]
+sal[8] <= datapath:inst5.salida[8]
+sal[9] <= datapath:inst5.salida[9]
+sal[10] <= datapath:inst5.salida[10]
+sal[11] <= datapath:inst5.salida[11]
+sal[12] <= datapath:inst5.salida[12]
+sal[13] <= datapath:inst5.salida[13]
+sal[14] <= datapath:inst5.salida[14]
+sal[15] <= datapath:inst5.salida[15]
 
 
 |practica3|datapath:inst5
@@ -71,6 +120,10 @@ ecuacion[0] => Mux56.IN4
 ecuacion[0] => Mux57.IN4
 ecuacion[0] => Mux58.IN4
 ecuacion[0] => Mux59.IN4
+ecuacion[0] => Mux60.IN4
+ecuacion[0] => Mux61.IN4
+ecuacion[0] => Mux62.IN4
+ecuacion[0] => Mux63.IN4
 ecuacion[1] => Mux11.IN3
 ecuacion[1] => Mux12.IN3
 ecuacion[1] => Mux13.IN3
@@ -120,6 +173,10 @@ ecuacion[1] => Mux56.IN3
 ecuacion[1] => Mux57.IN3
 ecuacion[1] => Mux58.IN3
 ecuacion[1] => Mux59.IN3
+ecuacion[1] => Mux60.IN3
+ecuacion[1] => Mux61.IN3
+ecuacion[1] => Mux62.IN3
+ecuacion[1] => Mux63.IN3
 clk => ALU:alu1.clk
 clk => reggy~19.CLK
 clk => reggy~0.CLK
@@ -245,6 +302,10 @@ clk => MAR[8].CLK
 clk => MAR[9].CLK
 clk => MAR[10].CLK
 clk => MAR[11].CLK
+clk => MAR[12].CLK
+clk => MAR[13].CLK
+clk => MAR[14].CLK
+clk => MAR[15].CLK
 clk => c_flag~reg0.CLK
 clk => ov_flag~reg0.CLK
 clk => s_flag~reg0.CLK
@@ -318,6 +379,10 @@ rst => z_flag~reg0.ENA
 rst => s_flag~reg0.ENA
 rst => ov_flag~reg0.ENA
 rst => c_flag~reg0.ENA
+rst => MAR[15].ENA
+rst => MAR[14].ENA
+rst => MAR[13].ENA
+rst => MAR[12].ENA
 rst => MAR[11].ENA
 rst => MAR[10].ENA
 rst => MAR[9].ENA
@@ -482,6 +547,10 @@ ins[8] <= MAR[8].DB_MAX_OUTPUT_PORT_TYPE
 ins[9] <= MAR[9].DB_MAX_OUTPUT_PORT_TYPE
 ins[10] <= MAR[10].DB_MAX_OUTPUT_PORT_TYPE
 ins[11] <= MAR[11].DB_MAX_OUTPUT_PORT_TYPE
+ins[12] <= MAR[12].DB_MAX_OUTPUT_PORT_TYPE
+ins[13] <= MAR[13].DB_MAX_OUTPUT_PORT_TYPE
+ins[14] <= MAR[14].DB_MAX_OUTPUT_PORT_TYPE
+ins[15] <= MAR[15].DB_MAX_OUTPUT_PORT_TYPE
 z_flag <= z_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 s_flag <= s_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ov_flag <= ov_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -492,99 +561,115 @@ c_flag <= c_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => uapro:unidad_aritmetica.Xi[0]
 A[0] => Logicas:unidad_logica.a[0]
 A[0] => barrelShifters:barrel_shifters.a[0]
-A[0] => comparador8:comparador.x[0]
+A[0] => comparador16:comparador.x[0]
 A[1] => uapro:unidad_aritmetica.Xi[1]
 A[1] => Logicas:unidad_logica.a[1]
 A[1] => barrelShifters:barrel_shifters.a[1]
-A[1] => comparador8:comparador.x[1]
+A[1] => comparador16:comparador.x[1]
 A[2] => uapro:unidad_aritmetica.Xi[2]
 A[2] => Logicas:unidad_logica.a[2]
 A[2] => barrelShifters:barrel_shifters.a[2]
-A[2] => comparador8:comparador.x[2]
+A[2] => comparador16:comparador.x[2]
 A[3] => uapro:unidad_aritmetica.Xi[3]
 A[3] => Logicas:unidad_logica.a[3]
 A[3] => barrelShifters:barrel_shifters.a[3]
-A[3] => comparador8:comparador.x[3]
+A[3] => comparador16:comparador.x[3]
 A[4] => uapro:unidad_aritmetica.Xi[4]
 A[4] => Logicas:unidad_logica.a[4]
 A[4] => barrelShifters:barrel_shifters.a[4]
-A[4] => comparador8:comparador.x[4]
+A[4] => comparador16:comparador.x[4]
 A[5] => uapro:unidad_aritmetica.Xi[5]
 A[5] => Logicas:unidad_logica.a[5]
 A[5] => barrelShifters:barrel_shifters.a[5]
-A[5] => comparador8:comparador.x[5]
+A[5] => comparador16:comparador.x[5]
 A[6] => uapro:unidad_aritmetica.Xi[6]
 A[6] => Logicas:unidad_logica.a[6]
 A[6] => barrelShifters:barrel_shifters.a[6]
-A[6] => comparador8:comparador.x[6]
+A[6] => comparador16:comparador.x[6]
 A[7] => uapro:unidad_aritmetica.Xi[7]
 A[7] => Logicas:unidad_logica.a[7]
 A[7] => barrelShifters:barrel_shifters.a[7]
-A[7] => comparador8:comparador.x[7]
+A[7] => comparador16:comparador.x[7]
 A[8] => uapro:unidad_aritmetica.Xi[8]
 A[8] => Logicas:unidad_logica.a[8]
 A[8] => barrelShifters:barrel_shifters.a[8]
+A[8] => comparador16:comparador.x[8]
 A[9] => uapro:unidad_aritmetica.Xi[9]
 A[9] => Logicas:unidad_logica.a[9]
 A[9] => barrelShifters:barrel_shifters.a[9]
+A[9] => comparador16:comparador.x[9]
 A[10] => uapro:unidad_aritmetica.Xi[10]
 A[10] => Logicas:unidad_logica.a[10]
 A[10] => barrelShifters:barrel_shifters.a[10]
+A[10] => comparador16:comparador.x[10]
 A[11] => uapro:unidad_aritmetica.Xi[11]
 A[11] => Logicas:unidad_logica.a[11]
 A[11] => barrelShifters:barrel_shifters.a[11]
+A[11] => comparador16:comparador.x[11]
 A[12] => uapro:unidad_aritmetica.Xi[12]
 A[12] => Logicas:unidad_logica.a[12]
 A[12] => barrelShifters:barrel_shifters.a[12]
+A[12] => comparador16:comparador.x[12]
 A[13] => uapro:unidad_aritmetica.Xi[13]
 A[13] => Logicas:unidad_logica.a[13]
 A[13] => barrelShifters:barrel_shifters.a[13]
+A[13] => comparador16:comparador.x[13]
 A[14] => uapro:unidad_aritmetica.Xi[14]
 A[14] => Logicas:unidad_logica.a[14]
 A[14] => barrelShifters:barrel_shifters.a[14]
+A[14] => comparador16:comparador.x[14]
 A[15] => uapro:unidad_aritmetica.aS
 A[15] => Logicas:unidad_logica.a[15]
 A[15] => barrelShifters:barrel_shifters.a[15]
+A[15] => comparador16:comparador.x[15]
 B[0] => uapro:unidad_aritmetica.Yi[0]
 B[0] => Logicas:unidad_logica.b[0]
-B[0] => comparador8:comparador.y[0]
+B[0] => comparador16:comparador.y[0]
 B[1] => uapro:unidad_aritmetica.Yi[1]
 B[1] => Logicas:unidad_logica.b[1]
-B[1] => comparador8:comparador.y[1]
+B[1] => comparador16:comparador.y[1]
 B[2] => uapro:unidad_aritmetica.Yi[2]
 B[2] => Logicas:unidad_logica.b[2]
-B[2] => comparador8:comparador.y[2]
+B[2] => comparador16:comparador.y[2]
 B[3] => uapro:unidad_aritmetica.Yi[3]
 B[3] => Logicas:unidad_logica.b[3]
-B[3] => comparador8:comparador.y[3]
+B[3] => comparador16:comparador.y[3]
 B[4] => uapro:unidad_aritmetica.Yi[4]
 B[4] => Logicas:unidad_logica.b[4]
-B[4] => comparador8:comparador.y[4]
+B[4] => comparador16:comparador.y[4]
 B[5] => uapro:unidad_aritmetica.Yi[5]
 B[5] => Logicas:unidad_logica.b[5]
-B[5] => comparador8:comparador.y[5]
+B[5] => comparador16:comparador.y[5]
 B[6] => uapro:unidad_aritmetica.Yi[6]
 B[6] => Logicas:unidad_logica.b[6]
-B[6] => comparador8:comparador.y[6]
+B[6] => comparador16:comparador.y[6]
 B[7] => uapro:unidad_aritmetica.Yi[7]
 B[7] => Logicas:unidad_logica.b[7]
-B[7] => comparador8:comparador.y[7]
+B[7] => comparador16:comparador.y[7]
 B[8] => uapro:unidad_aritmetica.Yi[8]
 B[8] => Logicas:unidad_logica.b[8]
+B[8] => comparador16:comparador.y[8]
 B[9] => uapro:unidad_aritmetica.Yi[9]
 B[9] => Logicas:unidad_logica.b[9]
+B[9] => comparador16:comparador.y[9]
 B[10] => uapro:unidad_aritmetica.Yi[10]
 B[10] => Logicas:unidad_logica.b[10]
+B[10] => comparador16:comparador.y[10]
 B[11] => uapro:unidad_aritmetica.Yi[11]
 B[11] => Logicas:unidad_logica.b[11]
+B[11] => comparador16:comparador.y[11]
 B[12] => uapro:unidad_aritmetica.Yi[12]
 B[12] => Logicas:unidad_logica.b[12]
+B[12] => comparador16:comparador.y[12]
 B[13] => uapro:unidad_aritmetica.Yi[13]
 B[13] => Logicas:unidad_logica.b[13]
+B[13] => comparador16:comparador.y[13]
 B[14] => uapro:unidad_aritmetica.Yi[14]
 B[14] => Logicas:unidad_logica.b[14]
+B[14] => comparador16:comparador.y[14]
 B[15] => uapro:unidad_aritmetica.bS
 B[15] => Logicas:unidad_logica.b[15]
+B[15] => comparador16:comparador.y[15]
 sel[0] => Mux0.IN9
 sel[0] => Mux1.IN9
 sel[0] => Mux2.IN9
@@ -594,10 +679,10 @@ sel[0] => Mux5.IN9
 sel[0] => Mux6.IN9
 sel[0] => Mux7.IN9
 sel[0] => Mux8.IN9
-sel[0] => Mux9.IN9
-sel[0] => Mux10.IN9
-sel[0] => Mux11.IN9
-sel[0] => Mux12.IN9
+sel[0] => Mux9.IN8
+sel[0] => Mux10.IN8
+sel[0] => Mux11.IN8
+sel[0] => Mux12.IN8
 sel[0] => Mux13.IN8
 sel[0] => Mux14.IN8
 sel[0] => Mux15.IN8
@@ -612,10 +697,10 @@ sel[1] => Mux5.IN8
 sel[1] => Mux6.IN8
 sel[1] => Mux7.IN8
 sel[1] => Mux8.IN8
-sel[1] => Mux9.IN8
-sel[1] => Mux10.IN8
-sel[1] => Mux11.IN8
-sel[1] => Mux12.IN8
+sel[1] => Mux9.IN7
+sel[1] => Mux10.IN7
+sel[1] => Mux11.IN7
+sel[1] => Mux12.IN7
 sel[1] => Mux13.IN7
 sel[1] => Mux14.IN7
 sel[1] => Mux15.IN7
@@ -630,10 +715,10 @@ sel[2] => Mux5.IN7
 sel[2] => Mux6.IN7
 sel[2] => Mux7.IN7
 sel[2] => Mux8.IN7
-sel[2] => Mux9.IN7
-sel[2] => Mux10.IN7
-sel[2] => Mux11.IN7
-sel[2] => Mux12.IN7
+sel[2] => Mux9.IN6
+sel[2] => Mux10.IN6
+sel[2] => Mux11.IN6
+sel[2] => Mux12.IN6
 sel[2] => Mux13.IN6
 sel[2] => Mux14.IN6
 sel[2] => Mux15.IN6
@@ -648,10 +733,10 @@ sel[3] => Mux5.IN6
 sel[3] => Mux6.IN6
 sel[3] => Mux7.IN6
 sel[3] => Mux8.IN6
-sel[3] => Mux9.IN6
-sel[3] => Mux10.IN6
-sel[3] => Mux11.IN6
-sel[3] => Mux12.IN6
+sel[3] => Mux9.IN5
+sel[3] => Mux10.IN5
+sel[3] => Mux11.IN5
+sel[3] => Mux12.IN5
 sel[3] => Mux13.IN5
 sel[3] => Mux14.IN5
 sel[3] => Mux15.IN5
@@ -8484,7 +8569,47 @@ salShifters[15] <= salShifters[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 salPrub <= clk.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador
+x[0] => comparador8:comp0.x[0]
+x[1] => comparador8:comp0.x[1]
+x[2] => comparador8:comp0.x[2]
+x[3] => comparador8:comp0.x[3]
+x[4] => comparador8:comp0.x[4]
+x[5] => comparador8:comp0.x[5]
+x[6] => comparador8:comp0.x[6]
+x[7] => comparador8:comp0.x[7]
+x[8] => comparador8:comp1.x[0]
+x[9] => comparador8:comp1.x[1]
+x[10] => comparador8:comp1.x[2]
+x[11] => comparador8:comp1.x[3]
+x[12] => comparador8:comp1.x[4]
+x[13] => comparador8:comp1.x[5]
+x[14] => comparador8:comp1.x[6]
+x[15] => comparador8:comp1.x[7]
+y[0] => comparador8:comp0.y[0]
+y[1] => comparador8:comp0.y[1]
+y[2] => comparador8:comp0.y[2]
+y[3] => comparador8:comp0.y[3]
+y[4] => comparador8:comp0.y[4]
+y[5] => comparador8:comp0.y[5]
+y[6] => comparador8:comp0.y[6]
+y[7] => comparador8:comp0.y[7]
+y[8] => comparador8:comp1.y[0]
+y[9] => comparador8:comp1.y[1]
+y[10] => comparador8:comp1.y[2]
+y[11] => comparador8:comp1.y[3]
+y[12] => comparador8:comp1.y[4]
+y[13] => comparador8:comp1.y[5]
+y[14] => comparador8:comp1.y[6]
+y[15] => comparador8:comp1.y[7]
+g0 => comparador8:comp0.g0
+l0 => comparador8:comp0.l0
+gtt <= comparador8:comp1.gtt
+eqq <= comparador8:comp1.eqq
+ltt <= comparador8:comp1.ltt
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0
 x[0] => comparador4:comp0.x4[0]
 x[1] => comparador4:comp0.x4[1]
 x[2] => comparador4:comp0.x4[2]
@@ -8508,7 +8633,7 @@ eqq <= comparador4:comp1.eqq
 ltt <= comparador4:comp1.ltt
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp0
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp0
 x4[0] => compara1:comp0.x
 x4[1] => compara1:comp1.x
 x4[2] => compara1:comp2.x
@@ -8524,7 +8649,7 @@ eqq <= compara1:comp3.eout
 ltt <= compara1:comp3.lout
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp0|compara1:comp0
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp0|compara1:comp0
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8548,7 +8673,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp0|compara1:comp1
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp0|compara1:comp1
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8572,7 +8697,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp0|compara1:comp2
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp0|compara1:comp2
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8596,7 +8721,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp0|compara1:comp3
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp0|compara1:comp3
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8620,7 +8745,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp1
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp1
 x4[0] => compara1:comp0.x
 x4[1] => compara1:comp1.x
 x4[2] => compara1:comp2.x
@@ -8636,7 +8761,7 @@ eqq <= compara1:comp3.eout
 ltt <= compara1:comp3.lout
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp1|compara1:comp0
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp1|compara1:comp0
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8660,7 +8785,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp1|compara1:comp1
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp1|compara1:comp1
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8684,7 +8809,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp1|compara1:comp2
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp1|compara1:comp2
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8708,7 +8833,7 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|datapath:inst5|ALU:alu1|comparador8:comparador|comparador4:comp1|compara1:comp3
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp0|comparador4:comp1|compara1:comp3
 x => gout.IN0
 x => gout.IN0
 x => eout.IN0
@@ -8732,117 +8857,252 @@ lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
 eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|practica3|frecuencia_5Hz:inst
-reloj => salida2.CLK
-reloj => cuenta2[0].CLK
-reloj => cuenta2[1].CLK
-reloj => cuenta2[2].CLK
-reloj => cuenta2[3].CLK
-reloj => cuenta2[4].CLK
-reloj => cuenta2[5].CLK
-reloj => cuenta2[6].CLK
-reloj => cuenta2[7].CLK
-reloj => cuenta2[8].CLK
-reloj => cuenta2[9].CLK
-reloj => cuenta2[10].CLK
-reloj => cuenta2[11].CLK
-reloj => cuenta2[12].CLK
-reloj => cuenta2[13].CLK
-reloj => cuenta2[14].CLK
-reloj => cuenta2[15].CLK
-reloj => cuenta2[16].CLK
-reloj => cuenta2[17].CLK
-reloj => cuenta2[18].CLK
-reloj => cuenta2[19].CLK
-reloj => cuenta2[20].CLK
-reloj => cuenta2[21].CLK
-reloj => cuenta2[22].CLK
-reloj => cuenta2[23].CLK
-reloj => cuenta2[24].CLK
-reloj => cuenta2[25].CLK
-reloj => cuenta[0].CLK
-reloj => cuenta[1].CLK
-reloj => cuenta[2].CLK
-reloj => cuenta[3].CLK
-reloj => cuenta[4].CLK
-reloj => cuenta[5].CLK
-reloj => cuenta[6].CLK
-reloj => cuenta[7].CLK
-reloj => cuenta[8].CLK
-reloj => cuenta[9].CLK
-reloj => cuenta[10].CLK
-reloj => cuenta[11].CLK
-reloj => cuenta[12].CLK
-reloj => cuenta[13].CLK
-reloj => cuenta[14].CLK
-reloj => cuenta[15].CLK
-reloj => cuenta[16].CLK
-reloj => cuenta[17].CLK
-reloj => cuenta[18].CLK
-reloj => cuenta[19].CLK
-reloj => cuenta[20].CLK
-reloj => cuenta[21].CLK
-reloj => cuenta[22].CLK
-reloj => cuenta[23].CLK
-reloj => cuenta[24].CLK
-reloj => cuenta[25].CLK
-reloj => salida.CLK
-reset => cuenta[0].ACLR
-reset => cuenta[1].ACLR
-reset => cuenta[2].ACLR
-reset => cuenta[3].ACLR
-reset => cuenta[4].ACLR
-reset => cuenta[5].ACLR
-reset => cuenta[6].ACLR
-reset => cuenta[7].ACLR
-reset => cuenta[8].ACLR
-reset => cuenta[9].ACLR
-reset => cuenta[10].ACLR
-reset => cuenta[11].ACLR
-reset => cuenta[12].ACLR
-reset => cuenta[13].ACLR
-reset => cuenta[14].ACLR
-reset => cuenta[15].ACLR
-reset => cuenta[16].ACLR
-reset => cuenta[17].ACLR
-reset => cuenta[18].ACLR
-reset => cuenta[19].ACLR
-reset => cuenta[20].ACLR
-reset => cuenta[21].ACLR
-reset => cuenta[22].ACLR
-reset => cuenta[23].ACLR
-reset => cuenta[24].ACLR
-reset => cuenta[25].ACLR
-reset => salida.ACLR
-reset => salida2.ENA
-reset => cuenta2[25].ENA
-reset => cuenta2[24].ENA
-reset => cuenta2[23].ENA
-reset => cuenta2[22].ENA
-reset => cuenta2[21].ENA
-reset => cuenta2[20].ENA
-reset => cuenta2[19].ENA
-reset => cuenta2[18].ENA
-reset => cuenta2[17].ENA
-reset => cuenta2[16].ENA
-reset => cuenta2[15].ENA
-reset => cuenta2[14].ENA
-reset => cuenta2[13].ENA
-reset => cuenta2[12].ENA
-reset => cuenta2[11].ENA
-reset => cuenta2[10].ENA
-reset => cuenta2[9].ENA
-reset => cuenta2[8].ENA
-reset => cuenta2[7].ENA
-reset => cuenta2[6].ENA
-reset => cuenta2[5].ENA
-reset => cuenta2[4].ENA
-reset => cuenta2[3].ENA
-reset => cuenta2[2].ENA
-reset => cuenta2[1].ENA
-reset => cuenta2[0].ENA
-sal <= salida.DB_MAX_OUTPUT_PORT_TYPE
-sal2 <= salida2.DB_MAX_OUTPUT_PORT_TYPE
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1
+x[0] => comparador4:comp0.x4[0]
+x[1] => comparador4:comp0.x4[1]
+x[2] => comparador4:comp0.x4[2]
+x[3] => comparador4:comp0.x4[3]
+x[4] => comparador4:comp1.x4[0]
+x[5] => comparador4:comp1.x4[1]
+x[6] => comparador4:comp1.x4[2]
+x[7] => comparador4:comp1.x4[3]
+y[0] => comparador4:comp0.y4[0]
+y[1] => comparador4:comp0.y4[1]
+y[2] => comparador4:comp0.y4[2]
+y[3] => comparador4:comp0.y4[3]
+y[4] => comparador4:comp1.y4[0]
+y[5] => comparador4:comp1.y4[1]
+y[6] => comparador4:comp1.y4[2]
+y[7] => comparador4:comp1.y4[3]
+g0 => comparador4:comp0.g0
+l0 => comparador4:comp0.l0
+gtt <= comparador4:comp1.gtt
+eqq <= comparador4:comp1.eqq
+ltt <= comparador4:comp1.ltt
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp0
+x4[0] => compara1:comp0.x
+x4[1] => compara1:comp1.x
+x4[2] => compara1:comp2.x
+x4[3] => compara1:comp3.x
+y4[0] => compara1:comp0.y
+y4[1] => compara1:comp1.y
+y4[2] => compara1:comp2.y
+y4[3] => compara1:comp3.y
+g0 => compara1:comp0.Gin
+l0 => compara1:comp0.Lin
+gtt <= compara1:comp3.gout
+eqq <= compara1:comp3.eout
+ltt <= compara1:comp3.lout
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp0|compara1:comp0
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp0|compara1:comp1
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp0|compara1:comp2
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp0|compara1:comp3
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1
+x4[0] => compara1:comp0.x
+x4[1] => compara1:comp1.x
+x4[2] => compara1:comp2.x
+x4[3] => compara1:comp3.x
+y4[0] => compara1:comp0.y
+y4[1] => compara1:comp1.y
+y4[2] => compara1:comp2.y
+y4[3] => compara1:comp3.y
+g0 => compara1:comp0.Gin
+l0 => compara1:comp0.Lin
+gtt <= compara1:comp3.gout
+eqq <= compara1:comp3.eout
+ltt <= compara1:comp3.lout
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp0
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp1
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp2
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica3|datapath:inst5|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp3
+x => gout.IN0
+x => gout.IN0
+x => eout.IN0
+x => lout.IN0
+x => lout.IN0
+x => eout.IN0
+y => eout.IN1
+y => lout.IN1
+y => lout.IN0
+y => gout.IN1
+y => gout.IN0
+y => eout.IN1
+Gin => gout.IN1
+Gin => gout.IN1
+Gin => eout.IN0
+Lin => lout.IN1
+Lin => lout.IN1
+Lin => eout.IN1
+gout <= gout.DB_MAX_OUTPUT_PORT_TYPE
+lout <= lout.DB_MAX_OUTPUT_PORT_TYPE
+eout <= eout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |practica3|display:inst3
