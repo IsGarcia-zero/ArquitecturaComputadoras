@@ -8,8 +8,9 @@ ENTITY datapath IS
 	PORT(
 		ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		clk, rst : IN STD_LOGIC;
-		salida, s_p1, s_p2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-		ins : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		--salida, s1,s2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		salida: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		--ins : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 		z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
 	);
 END ENTITY datapath;
@@ -31,7 +32,7 @@ ARCHITECTURE bhr OF datapath IS
 
 	TYPE data IS ARRAY (11 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	TYPE cmp IS ARRAY (10 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
-	TYPE list IS ARRAY (39 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
+	TYPE list IS ARRAY (41 DOWNTO 0) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	TYPE reg IS ARRAY(0 TO 7) OF STD_LOGIC_VECTOR(15 DOWNTO 0);
 	SIGNAL reggy, reggu : reg;
 	SIGNAL zflag, sflag, ovflag, cflag : STD_LOGIC;
@@ -49,12 +50,12 @@ ARCHITECTURE bhr OF datapath IS
 		3 => "0000000000001010", -- W (10)
 		4 => "0000000000010001", -- 17
 		5 => "0000000000011001", -- 25
-		6 => "0000000000000100", -- -4
+		6 => "0000000000000100", -- 4
 		7 => "0000000000001010", -- 10
 		8 => "0000000000011110", -- 30
-		9 => "0000000000000010", -- -2
-		10 => "0000001000000111", -- -7
-		11 => "0000000000000000"
+		9 => "0000000000000010", -- 2
+		10 => "1000000000000001", -- -1
+		11 => "0000000000000111" -- 7
 	);
 	
 	CONSTANT cmprs : cmp := (
@@ -112,15 +113,17 @@ ARCHITECTURE bhr OF datapath IS
 		28 => ("0000"&"1001"&"0000"&"0001"), -- MULT R1  R2
 		29 => ("0000"&"1101"&"0001"&"0000"), -- LOAD R2 <- X
 		30 => ("0000"&"1001"&"0000"&"0001"), -- MULT R1  R2
-		31 => ("0000"&"1101"&"0010"&"0010"), -- LOAD R3 <- z
-		32 => ("0000"&"1101"&"0001"&"1010"), -- LOAD R2 <- -7
-		33 => ("0000"&"1001"&"0010"&"0001"), -- MULT R3  R2
-		34 => ("0000"&"1101"&"0011"&"0011"), -- LOAD R4 <- w
-		35 => ("0000"&"1101"&"0001"&"0111"), -- LOAD R2 <- 10
-		36 => ("0000"&"1010"&"0011"&"0001"), -- DIV R4  R2
-		37 => ("0000"&"1000"&"0000"&"0010"), -- SUM R1  R3
-		38 => ("0000"&"0111"&"0000"&"0011"), -- RES R1  R4
-		39 => ("0000"&"1111"&"0000"&"0000") -- NOT OP
+		31 => ("0000"&"1101"&"0001"&"1010"), -- LOAD R2 <- -1
+		32 => ("0000"&"1001"&"0000"&"0001"), -- MULT R1  R2
+		33 => ("0000"&"1101"&"0010"&"0010"), -- LOAD R3 <- z
+		34 => ("0000"&"1101"&"0001"&"1011"), -- LOAD R2 <- 7
+		35 => ("0000"&"1001"&"0010"&"0001"), -- MULT R3  R2
+		36 => ("0000"&"1101"&"0011"&"0011"), -- LOAD R4 <- w
+		37 => ("0000"&"1101"&"0001"&"0111"), -- LOAD R2 <- 10
+		38 => ("0000"&"1010"&"0011"&"0001"), -- DIV R4  R2
+		39 => ("0000"&"1000"&"0000"&"0010"), -- RES R1  R3
+		40 => ("0000"&"0111"&"0000"&"0011"), -- SUMA R1  R4
+		41 => ("0000"&"1111"&"0000"&"0000") -- NOT OP
 	);
 	
 	COMPONENT ALU IS 
@@ -150,10 +153,10 @@ BEGIN
 								PC <= PC + 1;
 								pr_state <= state1;
 							ELSE
-								IF (reggy(0)(9) = '1') THEN
-									salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
+								IF (reggy(0)(15) = '1') THEN
+									salida <= '0' & reggy(0)(14 DOWNTO 0);
 									z_flag <= zflag;
-									s_flag <= sflag;
+									s_flag <= '1';
 									ov_flag <= ovflag;
 									c_flag <= cflag;
 								ELSE
@@ -175,10 +178,10 @@ BEGIN
 									PC <= PC + 1;
 									pr_state <= state1;
 								ELSE
-									IF (reggy(0)(9) = '1') THEN
-										salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
+									IF (reggy(0)(15) = '1') THEN
+										salida <= '0' & reggy(0)(14 DOWNTO 0);
 										z_flag <= zflag;
-										s_flag <= sflag;
+										s_flag <= '1';
 										ov_flag <= ovflag;
 										c_flag <= cflag;
 									ELSE
@@ -196,14 +199,14 @@ BEGIN
 							IF (PC < 25) THEN
 								PC <= 26;
 							ELSE
-								IF (PC < 39) THEN
+								IF (PC < 41) THEN
 									PC <= PC + 1;
 									pr_state <= state1;
 								ELSE
-									IF (reggy(0)(9) = '1') THEN
-										salida <= sflag & "000000" & reggy(0)(8 DOWNTO 0);
+									IF (reggy(0)(15) = '1') THEN
+										salida <= '0' & reggy(0)(14 DOWNTO 0);
 										z_flag <= zflag;
-										s_flag <= sflag;
+										s_flag <= '1';
 										ov_flag <= ovflag;
 										c_flag <= cflag;
 									ELSE
@@ -219,6 +222,7 @@ BEGIN
 							MAR <= INSTRUCTIONS(PC);	
 						WHEN OTHERS => 
 							salida <= "0000000000000000";
+							z_flag <= '1';
 							pr_state <= state1;
 					END CASE;
 				WHEN state1 => -- DECODE
@@ -243,15 +247,15 @@ BEGIN
 						-- El resto de operaciones son controladas por la ALU
 						OP <= MAR(11 DOWNTO 8);
 						REG_A <= reggy(to_integer(unsigned(MAR(7 DOWNTO 4))));
-						s_p1 <= REG_A;
+						--s1 <= REG_A;
 						REG_B <= reggy(to_integer(unsigned(MAR(3 DOWNTO 0))));
-						s_p2 <= REG_B;
+						--s2 <= REG_B;
 					END IF;
 					pr_state <= state2;
 				WHEN state2 => -- EXECUTE
 				
 					IF (MAR(11 DOWNTO 8) = "1101") THEN
-						reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= "000000" & REG_D(9 downto 0);
+						reggy(to_integer(unsigned(MAR(7 DOWNTO 4)))) <= REG_D;
 						
 					ELSIF(MAR(15 DOWNTO 12) = "1110") THEN
 						PC <= PC_AUX; -- El salto se hace indicando el numero de instruccion
@@ -269,7 +273,7 @@ BEGIN
 					pr_state <= state0;
 			END CASE;
 		END IF;
-		ins <= MAR;
+		--ins <= MAR;
 	END PROCESS;
 	alu1: ALU PORT MAP(REG_A, REG_B, OP, MBR, clk, rst, zflag, sflag, ovflag, cflag);
 END ARCHITECTURE;
