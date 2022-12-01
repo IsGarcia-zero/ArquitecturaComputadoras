@@ -20,7 +20,9 @@ ARCHITECTURE bhr OF ALU IS
 	SIGNAL rlj_aux : STD_LOGIC;
 	SIGNAL b_aux, c_aux, d_aux : STD_LOGIC;
 	SIGNAL a_aux : STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SIGNAL z_aux, s_aux, ov_aux, cf_aux : STD_LOGIC;
 	SIGNAL gtt_aux,eqq_aux,ltt_aux : STD_LOGIC;
+	
 -- Llamamos a todos los componentes
 COMPONENT uapro IS
     PORT (
@@ -31,6 +33,7 @@ COMPONENT uapro IS
         Si : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
         C, Z, Ov, S : OUT STD_LOGIC
     );
+	 
 END COMPONENT uapro;
 
 COMPONENT Logicas IS
@@ -53,13 +56,13 @@ COMPONENT barrelShifters IS
     );
 END COMPONENT barrelShifters;
 
-COMPONENT comparador8 IS
+COMPONENT comparador16 IS
     PORT (
-        x, y: in std_logic_vector(7 downto 0);
+        x, y: in std_logic_vector(15 downto 0);
         g0, l0: in std_logic;
         gtt, eqq, ltt: out std_logic
     );
-END COMPONENT comparador8;
+END COMPONENT comparador16;
 
 BEGIN
 	
@@ -101,7 +104,7 @@ BEGIN
 				R <= ua_sal;
 			WHEN "1011" => --Comparacion
 				sel_aux <= "00";
-				R <= "0000000000000" & gtt_aux & eqq_aux & ltt_aux;
+				R <= "000000000" & cf_aux & z_aux & ov_aux & s_aux & gtt_aux & eqq_aux & ltt_aux;
 			WHEN OTHERS => 
 				R <= "1111111111111111";
 				sel_aux <= "00";
@@ -109,10 +112,10 @@ BEGIN
 	END PROCESS;
 	
 
-unidad_aritmetica: uapro PORT MAP(A(14 DOWNTO 0),B(14 DOWNTO 0),sel_aux, clk,rst,A(15),B(15),ua_sal,c_flag,z_flag,ov_flag,s_flag);
+unidad_aritmetica: uapro PORT MAP(A(14 DOWNTO 0),B(14 DOWNTO 0),sel_aux, clk,rst,A(15),B(15),ua_sal,c_flag, z_flag,ov_flag, s_flag  );
 unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk, log_sal,a_aux,b_aux);
 barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal, d_aux);
-comparador: comparador8 PORT MAP(A(7 DOWNTO 0),B(7 DOWNTO 0),'0','0',gtt_aux,eqq_aux,ltt_aux);
+comparador: comparador16 PORT MAP(A,B,'0','0',gtt_aux,eqq_aux,ltt_aux);
 
 
 END ARCHITECTURE;

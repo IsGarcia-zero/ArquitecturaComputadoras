@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/30/2022 08:44:11"
+-- Generated on "11/30/2022 22:14:52"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica3
 -- 
@@ -34,29 +34,49 @@ END practica3_vhd_vec_tst;
 ARCHITECTURE practica3_arch OF practica3_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL a : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL b : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL a : STD_LOGIC;
+SIGNAL b : STD_LOGIC;
+SIGNAL c : STD_LOGIC;
 SIGNAL c_flag : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL d : STD_LOGIC;
+SIGNAL d1 : STD_LOGIC;
+SIGNAL d2 : STD_LOGIC;
+SIGNAL d3 : STD_LOGIC;
+SIGNAL d4 : STD_LOGIC;
+SIGNAL e : STD_LOGIC;
 SIGNAL ecuacion : STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL ins : STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL f : STD_LOGIC;
+SIGNAL g : STD_LOGIC;
 SIGNAL ov_flag : STD_LOGIC;
 SIGNAL rst : STD_LOGIC;
-SIGNAL s : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL sig_flag : STD_LOGIC;
+SIGNAL s_flag : STD_LOGIC;
+SIGNAL s_p1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL s_p2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL sal : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL z_flag : STD_LOGIC;
 COMPONENT practica3
 	PORT (
-	a : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	b : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	a : OUT STD_LOGIC;
+	b : OUT STD_LOGIC;
+	c : OUT STD_LOGIC;
 	c_flag : OUT STD_LOGIC;
 	clk : IN STD_LOGIC;
+	d : OUT STD_LOGIC;
+	d1 : OUT STD_LOGIC;
+	d2 : OUT STD_LOGIC;
+	d3 : OUT STD_LOGIC;
+	d4 : OUT STD_LOGIC;
+	e : OUT STD_LOGIC;
 	ecuacion : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	ins : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	f : OUT STD_LOGIC;
+	g : OUT STD_LOGIC;
 	ov_flag : OUT STD_LOGIC;
 	rst : IN STD_LOGIC;
-	s : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	sig_flag : OUT STD_LOGIC;
+	s_flag : OUT STD_LOGIC;
+	s_p1 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	s_p2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	sal : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	z_flag : OUT STD_LOGIC
 	);
 END COMPONENT;
@@ -66,14 +86,24 @@ BEGIN
 -- list connections between master ports and signals
 	a => a,
 	b => b,
+	c => c,
 	c_flag => c_flag,
 	clk => clk,
+	d => d,
+	d1 => d1,
+	d2 => d2,
+	d3 => d3,
+	d4 => d4,
+	e => e,
 	ecuacion => ecuacion,
-	ins => ins,
+	f => f,
+	g => g,
 	ov_flag => ov_flag,
 	rst => rst,
-	s => s,
-	sig_flag => sig_flag,
+	s_flag => s_flag,
+	s_p1 => s_p1,
+	s_p2 => s_p2,
+	sal => sal,
 	z_flag => z_flag
 	);
 -- ecuacion[1]
@@ -85,7 +115,7 @@ END PROCESS t_prcs_ecuacion_1;
 -- ecuacion[0]
 t_prcs_ecuacion_0: PROCESS
 BEGIN
-	ecuacion(0) <= '1';
+	ecuacion(0) <= '0';
 WAIT;
 END PROCESS t_prcs_ecuacion_0;
 

@@ -2,7 +2,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
-# Start time: 08:44:15 on Nov 30,2022
+# Start time: 22:14:55 on Nov 30,2022
 # vcom -work work practica3.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -17,20 +17,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity practica3
 # -- Compiling architecture structure of practica3
-# End time: 08:44:15 on Nov 30,2022, Elapsed time: 0:00:00
+# End time: 22:14:55 on Nov 30,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
-# Start time: 08:44:15 on Nov 30,2022
+# Start time: 22:14:55 on Nov 30,2022
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity practica3_vhd_vec_tst
 # -- Compiling architecture practica3_arch of practica3_vhd_vec_tst
-# End time: 08:44:15 on Nov 30,2022, Elapsed time: 0:00:00
+# End time: 22:14:55 on Nov 30,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.practica3_vhd_vec_tst 
-# Start time: 08:44:15 on Nov 30,2022
+# Start time: 22:14:55 on Nov 30,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -50,9 +50,8 @@
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 254491 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 261537 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# Simulation time: 4600 ps
-# End time: 08:44:19 on Nov 30,2022, Elapsed time: 0:00:04
+# End time: 22:14:58 on Nov 30,2022, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 1

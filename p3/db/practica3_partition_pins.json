@@ -64,6 +64,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "ecuacion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ecuacion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+<<<<<<< HEAD
+				},
+				{
 					"name" : "rst",
 					"strict" : false
 				},
@@ -74,10 +91,8 @@
 				{
 					"name" : "ecuacion[0]",
 					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
+=======
+>>>>>>> CambiosBeta
 				}
 			]
 		}
