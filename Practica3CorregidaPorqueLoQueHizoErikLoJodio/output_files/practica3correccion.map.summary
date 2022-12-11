@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 11 17:44:41 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : practica3correccion
+Top-level Entity Name : practica3correccion
+Family : Cyclone IV E
+Total logic elements : 1,452
+    Total combinational functions : 1,257
+    Dedicated logic registers : 402
+Total registers : 402
+Total pins : 60
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
