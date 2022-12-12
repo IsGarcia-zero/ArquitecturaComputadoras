@@ -2,11 +2,8 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1000mV 85C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -32.313
-TNS   : -4090.673
-
 Type  : Slow 1000mV 85C Model Setup 'clk'
+<<<<<<< HEAD
 <<<<<<< HEAD
 Slack : -32.164
 TNS   : -4174.978
@@ -24,21 +21,21 @@ TNS   : 0.000
 Type  : Slow 1000mV 85C Model Hold 'clk'
 Slack : 0.546
 >>>>>>> CambiosBeta
+=======
+Slack : -30.646
+TNS   : -4177.033
+
+Type  : Slow 1000mV 85C Model Hold 'clk'
+Slack : 0.532
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 TNS   : 0.000
 
 Type  : Slow 1000mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -50.601
-
-Type  : Slow 1000mV 85C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
-Slack : -1.763
-TNS   : -609.998
-
-Type  : Slow 1000mV 0C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -30.865
-TNS   : -3913.737
+TNS   : -570.686
 
 Type  : Slow 1000mV 0C Model Setup 'clk'
+<<<<<<< HEAD
 <<<<<<< HEAD
 Slack : -30.628
 TNS   : -3988.261
@@ -56,21 +53,21 @@ TNS   : 0.000
 Type  : Slow 1000mV 0C Model Hold 'clk'
 Slack : 0.524
 >>>>>>> CambiosBeta
+=======
+Slack : -29.194
+TNS   : -3996.812
+
+Type  : Slow 1000mV 0C Model Hold 'clk'
+Slack : 0.514
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 TNS   : 0.000
 
 Type  : Slow 1000mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -50.601
-
-Type  : Slow 1000mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
-Slack : -1.763
-TNS   : -609.998
-
-Type  : Fast 1000mV 0C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -17.809
-TNS   : -2207.860
+TNS   : -570.686
 
 Type  : Fast 1000mV 0C Model Setup 'clk'
+<<<<<<< HEAD
 <<<<<<< HEAD
 Slack : -17.624
 TNS   : -2270.142
@@ -88,14 +85,17 @@ TNS   : 0.000
 Type  : Fast 1000mV 0C Model Hold 'clk'
 Slack : 0.297
 >>>>>>> CambiosBeta
+=======
+Slack : -16.774
+TNS   : -2269.532
+
+Type  : Fast 1000mV 0C Model Hold 'clk'
+Slack : 0.285
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 TNS   : 0.000
 
 Type  : Fast 1000mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -50.601
-
-Type  : Fast 1000mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
-Slack : -1.763
-TNS   : -609.998
+TNS   : -570.686
 
 ------------------------------------------------------------

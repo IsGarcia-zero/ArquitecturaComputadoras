@@ -1,9 +1,13 @@
 Flow report for practica3
 <<<<<<< HEAD
+<<<<<<< HEAD
 Wed Nov 30 23:28:46 2022
 =======
 Thu Dec  1 00:04:56 2022
 >>>>>>> CambiosBeta
+=======
+Wed Nov 30 22:14:53 2022
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -46,16 +50,21 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; Flow Status                        ; Successful - Wed Nov 30 23:28:46 2022       ;
 =======
 ; Flow Status                        ; Successful - Thu Dec  1 00:04:56 2022       ;
 >>>>>>> CambiosBeta
+=======
+; Flow Status                        ; Successful - Wed Nov 30 22:14:53 2022       ;
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; practica3                                   ;
 ; Top-level Entity Name              ; practica3                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8L                                ;
 ; Timing Models                      ; Final                                       ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ; Total logic elements               ; 1,259 / 6,272 ( 20 % )                      ;
 ;     Total combinational functions  ; 1,221 / 6,272 ( 19 % )                      ;
@@ -69,6 +78,13 @@ https://fpgasoftware.intel.com/eula.
 ; Total registers                    ; 373                                         ;
 ; Total pins                         ; 19 / 92 ( 21 % )                            ;
 >>>>>>> CambiosBeta
+=======
+; Total logic elements               ; 1,255 / 6,272 ( 20 % )                      ;
+;     Total combinational functions  ; 1,217 / 6,272 ( 19 % )                      ;
+;     Dedicated logic registers      ; 322 / 6,272 ( 5 % )                         ;
+; Total registers                    ; 322                                         ;
+; Total pins                         ; 67 / 92 ( 73 % )                            ;
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -82,10 +98,14 @@ https://fpgasoftware.intel.com/eula.
 ; Option            ; Setting             ;
 +-------------------+---------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; Start date & time ; 11/30/2022 23:27:24 ;
 =======
 ; Start date & time ; 12/01/2022 00:04:36 ;
 >>>>>>> CambiosBeta
+=======
+; Start date & time ; 11/30/2022 22:13:47 ;
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 ; Main task         ; Compilation         ;
 ; Revision Name     ; practica3           ;
 +-------------------+---------------------+
@@ -97,10 +117,14 @@ https://fpgasoftware.intel.com/eula.
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID               ; 101957947507475.166987244355346        ; --            ; --          ; --                                ;
 =======
 ; COMPILER_SIGNATURE_ID               ; 49410878475401.166987467610756         ; --            ; --          ; --                                ;
 >>>>>>> CambiosBeta
+=======
+; COMPILER_SIGNATURE_ID               ; 101957947507475.166986802751547        ; --            ; --          ; --                                ;
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -125,6 +149,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 <<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 482 MB              ; 00:00:56                           ;
 ; Fitter               ; 00:00:34     ; 1.3                     ; 1310 MB             ; 00:00:37                           ;
@@ -168,6 +193,32 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 >>>>>>> CambiosBeta
+=======
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 483 MB              ; 00:00:46                           ;
+; Fitter               ; 00:00:17     ; 1.5                     ; 1309 MB             ; 00:00:30                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 366 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 2.4                     ; 545 MB              ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 614 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 608 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 616 MB              ; 00:00:01                           ;
+; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:25                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+--------------+--------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name      ; OS Version   ; Processor type ;
++----------------------+------------------+--------------+--------------+----------------+
+; Analysis & Synthesis ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; Fitter               ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; Assembler            ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; Timing Analyzer      ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; EDA Netlist Writer   ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; EDA Netlist Writer   ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
+; EDA Netlist Writer   ; valhalla         ; Archcraft \r ; Archcraft \r ; x86_64         ;
++----------------------+------------------+--------------+--------------+----------------+
+>>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 
 
 ------------
@@ -178,6 +229,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off practica3 -c pr
 quartus_asm --read_settings_files=off --write_settings_files=off practica3 -c practica3
 quartus_sta practica3 -c practica3
 quartus_eda --read_settings_files=off --write_settings_files=off practica3 -c practica3
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off practica3 -c practica3 --vector_source=/home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/p3/Waveform.vwf --testbench_file=/home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/p3/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/vehelmir/Vault/VHDL/ArquitecturaComputadoras/p3/simulation/qsim/ practica3 -c practica3
 
 
 

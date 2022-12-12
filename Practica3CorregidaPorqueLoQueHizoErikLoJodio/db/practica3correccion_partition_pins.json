@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "sign_f",
-					"strict" : false
-				},
-				{
 					"name" : "d1",
 					"strict" : false
 				},
@@ -52,179 +48,87 @@
 					"strict" : false
 				},
 				{
-					"name" : "ins[11]",
+					"name" : "z_flag",
 					"strict" : false
 				},
 				{
-					"name" : "ins[10]",
+					"name" : "s_flag",
 					"strict" : false
 				},
 				{
-					"name" : "ins[9]",
+					"name" : "ov_flag",
 					"strict" : false
 				},
 				{
-					"name" : "ins[8]",
+					"name" : "c_flag",
 					"strict" : false
 				},
 				{
-					"name" : "ins[6]",
+					"name" : "R[15]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[5]",
+					"name" : "R[14]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[4]",
+					"name" : "R[13]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[3]",
+					"name" : "R[12]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[2]",
+					"name" : "R[11]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[1]",
+					"name" : "R[10]",
 					"strict" : false
 				},
 				{
-					"name" : "ins[0]",
+					"name" : "R[9]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[15]",
+					"name" : "R[8]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[14]",
+					"name" : "R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[13]",
+					"name" : "R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[12]",
+					"name" : "R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[11]",
+					"name" : "R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[10]",
+					"name" : "R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[9]",
+					"name" : "R[2]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[8]",
+					"name" : "R[1]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[7]",
+					"name" : "R[0]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[15]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[14]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[13]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[12]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[11]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[10]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[9]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[8]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[7]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "s_p2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ecuacion[0]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -232,11 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "ecuacion[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "rst",
 					"strict" : false
 				}
 			]
