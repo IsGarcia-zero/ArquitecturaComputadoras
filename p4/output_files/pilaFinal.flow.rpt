@@ -1,5 +1,5 @@
 Flow report for pilaFinal
-Mon Dec 19 00:16:35 2022
+Mon Dec 19 10:51:10 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 19 00:16:35 2022       ;
+; Flow Status                        ; Successful - Mon Dec 19 10:51:10 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; pilaFinal                                   ;
 ; Top-level Entity Name              ; pilaFinal                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,189 / 6,272 ( 19 % )                      ;
+; Total logic elements               ; 1,190 / 6,272 ( 19 % )                      ;
 ;     Total combinational functions  ; 1,153 / 6,272 ( 18 % )                      ;
 ;     Dedicated logic registers      ; 292 / 6,272 ( 5 % )                         ;
 ; Total registers                    ; 292                                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/19/2022 00:16:15 ;
+; Start date & time ; 12/19/2022 10:50:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pilaFinal           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 49410878475401.167143057504128         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 268582423057279.167146864302282        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -87,6 +87,7 @@ https://fpgasoftware.intel.com/eula.
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -101,26 +102,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4886 MB             ; 00:00:08                           ;
-; Fitter               ; 00:00:07     ; 1.2                     ; 6531 MB             ; 00:00:03                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4701 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 4921 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4650 MB             ; 00:00:00                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 458 MB              ; 00:00:22                           ;
+; Fitter               ; 00:00:08     ; 1.1                     ; 1025 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 376 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.2                     ; 498 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 623 MB              ; 00:00:00                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-DOV1EMS  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; angel            ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
+; Fitter               ; angel            ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
+; Assembler            ; angel            ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
+; Timing Analyzer      ; angel            ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; angel            ; Ubuntu 22.04.1 ; 22         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

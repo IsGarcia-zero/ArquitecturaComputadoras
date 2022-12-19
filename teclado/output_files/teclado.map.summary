@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Dec 18 23:11:47 2022
+Analysis & Synthesis Status : Successful - Mon Dec 19 11:37:51 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : teclado
 Top-level Entity Name : teclado
 Family : Cyclone IV E
-Total logic elements : 878
-    Total combinational functions : 842
-    Dedicated logic registers : 525
-Total registers : 525
+Total logic elements : 920
+    Total combinational functions : 884
+    Dedicated logic registers : 530
+Total registers : 530
 Total pins : 23
 Total virtual pins : 0
 Total memory bits : 0

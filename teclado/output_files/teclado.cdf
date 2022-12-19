@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/output_files/") File("teclado.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("/home/angel/Documentos/ESCOM/5to/Arqui/ArquitecturaComputadoras/teclado/output_files/") File("teclado.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
