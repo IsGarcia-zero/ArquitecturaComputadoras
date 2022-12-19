@@ -64,230 +64,252 @@
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[15]",
+					"name" : "Asal[15]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[14]",
+					"name" : "Asal[14]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[13]",
+					"name" : "Asal[13]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[12]",
+					"name" : "Asal[12]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[11]",
+					"name" : "Asal[11]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[10]",
+					"name" : "Asal[10]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[9]",
+					"name" : "Asal[9]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[8]",
+					"name" : "Asal[8]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[7]",
+					"name" : "Asal[7]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[6]",
+					"name" : "Asal[6]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[5]",
+					"name" : "Asal[5]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[4]",
+					"name" : "Asal[4]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[3]",
+					"name" : "Asal[3]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[2]",
+					"name" : "Asal[2]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[1]",
+					"name" : "Asal[1]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p1[0]",
+					"name" : "Asal[0]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[15]",
+					"name" : "Bsal[15]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[14]",
+					"name" : "Bsal[14]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[13]",
+					"name" : "Bsal[13]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[12]",
+					"name" : "Bsal[12]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[11]",
+					"name" : "Bsal[11]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[10]",
+					"name" : "Bsal[10]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[9]",
+					"name" : "Bsal[9]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[8]",
+					"name" : "Bsal[8]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[7]",
+					"name" : "Bsal[7]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[6]",
+					"name" : "Bsal[6]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[5]",
+					"name" : "Bsal[5]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[4]",
+					"name" : "Bsal[4]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[3]",
+					"name" : "Bsal[3]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[2]",
+					"name" : "Bsal[2]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[1]",
+					"name" : "Bsal[1]",
 					"strict" : false
 				},
 				{
-					"name" : "s_p2[0]",
+					"name" : "Bsal[0]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[15]",
+					"name" : "instruccion[11]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[14]",
+					"name" : "instruccion[10]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[13]",
+					"name" : "instruccion[9]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[12]",
+					"name" : "instruccion[8]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[11]",
+					"name" : "instruccion[6]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[10]",
+					"name" : "instruccion[5]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[9]",
+					"name" : "instruccion[4]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[8]",
+					"name" : "instruccion[3]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[7]",
+					"name" : "instruccion[2]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[6]",
+					"name" : "instruccion[1]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[5]",
+					"name" : "instruccion[0]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[4]",
+					"name" : "resu[14]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[3]",
+					"name" : "resu[13]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[2]",
+					"name" : "resu[12]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[1]",
+					"name" : "resu[11]",
 					"strict" : false
 				},
 				{
-					"name" : "sal[0]",
+					"name" : "resu[10]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[9]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[8]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[7]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[6]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[5]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[4]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[3]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[2]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[1]",
+					"strict" : false
+				},
+				{
+					"name" : "resu[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "ecuacion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ecuacion[0]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
 					"strict" : false
-<<<<<<< HEAD
-<<<<<<< HEAD
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "ecuacion[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ecuacion[0]",
-					"strict" : false
-=======
->>>>>>> CambiosBeta
-=======
-				},
-				{
-					"name" : "ecuacion[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ecuacion[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
->>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
 				}
 			]
 		}

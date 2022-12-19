@@ -1,37 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-Analysis & Synthesis Status : Successful - Wed Nov 30 23:27:53 2022
-=======
-Analysis & Synthesis Status : Successful - Thu Dec  1 00:04:44 2022
->>>>>>> CambiosBeta
-=======
-Analysis & Synthesis Status : Successful - Wed Nov 30 22:14:09 2022
->>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
+Analysis & Synthesis Status : Successful - Sun Dec 18 19:22:34 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : practica3
 Top-level Entity Name : practica3
 Family : Cyclone IV E
-<<<<<<< HEAD
-<<<<<<< HEAD
-Total logic elements : 1,400
-    Total combinational functions : 1,221
-    Dedicated logic registers : 322
-Total registers : 322
-Total pins : 67
-=======
-Total logic elements : 1,435
-    Total combinational functions : 1,272
-    Dedicated logic registers : 373
-Total registers : 373
-Total pins : 19
->>>>>>> CambiosBeta
-=======
-Total logic elements : 1,396
-    Total combinational functions : 1,217
-    Dedicated logic registers : 322
-Total registers : 322
-Total pins : 67
->>>>>>> parent of 41da183 (Ya sirve, gracias a mi :v)
+Total logic elements : 1,451
+    Total combinational functions : 1,263
+    Dedicated logic registers : 379
+Total registers : 379
+Total pins : 79
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

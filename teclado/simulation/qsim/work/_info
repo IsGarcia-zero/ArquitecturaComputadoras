@@ -1,0 +1,239 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+Z0 dC:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/simulation/qsim
+Ehard_block
+Z1 w1670824325
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 2
+R0
+Z8 8teclado.vho
+Z9 Fteclado.vho
+=======
+dC:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/practicas/ArquitecturaComputadoras/p2/simulation/qsim
+Ehard_block
+Z0 w1669680264
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z6 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 774
+Z7 d/home/anshii/Documentos/Arquitectura_VHDL/ArquitecturaComputadoras/p2/simulation/qsim
+Z8 8practica2.vho
+Z9 Fpractica2.vho
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+l0
+L35 1
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+Z10 OV;C;2020.1;71
+32
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+Z11 !s110 1670824326
+!i10b 1
+Z12 !s108 1670824326.000000
+Z13 !s90 -work|work|teclado.vho|
+Z14 !s107 teclado.vho|
+=======
+Z11 !s110 1669680265
+!i10b 1
+Z12 !s108 1669680265.000000
+Z13 !s90 -work|work|practica2.vho|
+Z14 !s107 practica2.vho|
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+!i122 2
+=======
+!i122 774
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+l65
+L51 20
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+Epila
+R1
+R3
+R7
+=======
+Epractica2
+R0
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+R2
+R6
+R1
+Z17 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+R3
+R4
+R5
+Z18 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+!i122 2
+R0
+=======
+!i122 774
+R7
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+R8
+R9
+l0
+L80 1
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+VKf[BOdXeVBmz6i=4KR6Wm1
+!s100 UChGkC4>WU8[U8BG?d_Hz3
+=======
+VklQZ3lY1]SgzajJl>OKP71
+!s100 a[7TQ@e@G@J4>WiH3LL=z1
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R6
+R1
+R17
+R3
+R4
+R5
+R18
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+DEx4 work 4 pila 0 22 Kf[BOdXeVBmz6i=4KR6Wm1
+!i122 2
+l4912
+L121 81381
+V=_@1NImBCCIg_hmeodd8Q3
+!s100 h4fP;hBlO6dcVl:LG:LI23
+=======
+DEx4 work 9 practica2 0 22 klQZ3lY1]SgzajJl>OKP71
+!i122 774
+l1183
+L171 18658
+Vi=U6]O^[Y_CPbgbP]ZERT0
+!s100 >cBb<5k7fJE0A_6MkK;h_2
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+Epila_vhd_vec_tst
+Z19 w1670824324
+R5
+R6
+!i122 3
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+=======
+Epractica2_vhd_vec_tst
+Z19 w1669680262
+R4
+R5
+!i122 775
+R7
+Z20 8Waveform1.vwf.vht
+Z21 FWaveform1.vwf.vht
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+l0
+L32 1
+VXERKWZVHeT5]Y6R8d[@z:3
+!s100 ?7]ZK2?U?C49l<V>m:dPH1
+R10
+32
+<<<<<<< HEAD:teclado/simulation/qsim/work/_info
+Z22 !s110 1670824327
+!i10b 1
+Z23 !s108 1670824327.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Apila_arch
+R5
+R6
+Z26 DEx4 work 16 pila_vhd_vec_tst 0 22 XERKWZVHeT5]Y6R8d[@z:3
+!i122 3
+l55
+Z27 L34 154
+Z28 Vb1jHkiUCOO?LI^==^8OQ^1
+Z29 !s100 6k63T<D;hcaTXFELj:Ee^0
+=======
+Z22 !s110 1669680266
+!i10b 1
+Z23 !s108 1669680266.000000
+Z24 !s90 -work|work|Waveform1.vwf.vht|
+Z25 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Apractica2_arch
+R4
+R5
+Z26 DEx4 work 21 practica2_vhd_vec_tst 0 22 hf:Q:aQT[Ga`N=;7^cb[Y3
+!i122 775
+l79
+Z27 L34 101
+Z28 V51LQ24dAga^L7eXhm4NI@2
+Z29 !s100 Wjz1C4<BaFHkC]g;=^Flg3
+>>>>>>> ac2945a8f61efa8137abcaa29c944ed29ab74499:p2/simulation/qsim/work/_info
+R10
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R15
+R16

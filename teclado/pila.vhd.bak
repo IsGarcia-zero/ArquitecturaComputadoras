@@ -1,0 +1,95 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity pila is
+    generic(
+        LARGO : natural := 16; --Que tan largo es el dato de entrada
+        TAMANO : natural := 128 --Cuantos datos puede guardar
+    );
+    port(
+        ENTRADA  : in  std_logic_vector(3 downto 0); --Entrada
+        SALIDA : out std_logic_vector(LARGO - 1 downto 0); --Salida
+        I_LC_ES : in  std_logic; --Selector, 1 para lectura 0 para escritura
+        S_LLENO  : out std_logic; --Indica si esta lleno (1).
+        S_VACIO : out std_logic; --Indica si esta vacio (1).
+        enter     : in  std_logic;
+        rst     : in  std_logic
+    );
+end entity pila;
+
+architecture RTL of pila is
+
+    function to_std_logic(B : boolean) return std_logic is
+
+    begin
+        if B = false then
+            return '0';
+        else
+            return '1';
+        end if;
+    end function to_std_logic;
+
+    type memory_type is array (0 to TAMANO - 1) of std_logic_vector(LARGO - 1 downto 0);
+    signal memory : memory_type;
+	 signal in_aux, out_aux : std_logic_vector (3 downto 0); 
+	 signal counter : natural := 0;
+	 type componentes is array (0 to 3) of std_logic_vector(3 downto 0);
+	 signal comp : componentes;
+	 signal instruccion : std_logic_vector (LARGO - 1 downto 0);
+	 
+begin
+    main : process(enter, rst) is
+        variable puntero_pila : integer range 0 to TAMANO := 0;
+        variable VACIO, LLENO  : boolean                   := false;
+    begin
+	 
+        if rst = '1' then
+            memory   <= (others => (others => '0'));
+            VACIO := true;
+            LLENO  := false;
+            puntero_pila := 0;
+				
+        elsif rising_edge(enter) then       
+				if (counter < 4) then
+					comp (counter) <= ENTRADA;
+					counter <= counter + 1;
+				
+				else
+					counter <= 0;
+					if (I_LC_ES = '1') then
+						-- Lectura
+						if not VACIO then
+                    SALIDA       <= memory(puntero_pila);
+                    puntero_pila := puntero_pila - 1;
+						end if;
+					else
+						-- Escritura
+						instruccion <= comp(0) & comp(1) & comp(2) & comp(3);
+						
+						if puntero_pila < TAMANO then
+                    puntero_pila          := puntero_pila + 1;
+                    memory(puntero_pila - 1) <= instruccion;
+						end if;
+					
+					end if;
+
+					-- Esta vacio?
+					if puntero_pila = 0 then
+						VACIO := true;
+					else
+						VACIO := false;
+					end if;
+
+					-- Esta lleno?
+					if puntero_pila = TAMANO then
+						LLENO := true;
+					else
+						LLENO := false;
+					end if;
+				end if;
+        end if;
+        S_LLENO  <= to_std_logic(LLENO);
+        S_VACIO <= to_std_logic(VACIO);
+    end process main;
+end architecture RTL;

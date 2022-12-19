@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Dec 18 14:55:24 2022
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : teclado
+Top-level Entity Name : teclado
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 847 / 6,272 ( 14 % )
+    Total combinational functions : 811 / 6,272 ( 13 % )
+    Dedicated logic registers : 508 / 6,272 ( 8 % )
+Total registers : 508
+Total pins : 23 / 92 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

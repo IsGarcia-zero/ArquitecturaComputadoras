@@ -1,6 +1,13 @@
 
+State Machine - |practica3|convertidor:inst|state
+Name state.done state.shift state.start 
+state.start 0 0 0 
+state.shift 0 1 1 
+state.done 1 0 1 
+
 State Machine - |practica3|datapath:inst5|pr_state
-Name pr_state.state2 pr_state.state1 pr_state.state0 
-pr_state.state0 0 0 0 
-pr_state.state1 0 1 1 
-pr_state.state2 1 0 1 
+Name pr_state.state3 pr_state.state2 pr_state.state1 pr_state.state0 
+pr_state.state0 0 0 0 0 
+pr_state.state1 0 0 1 1 
+pr_state.state2 0 1 0 1 
+pr_state.state3 1 0 0 1 
