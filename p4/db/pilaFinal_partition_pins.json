@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "d1",
+					"strict" : false
+				},
+				{
+					"name" : "d2",
+					"strict" : false
+				},
+				{
+					"name" : "d3",
+					"strict" : false
+				},
+				{
+					"name" : "d4",
+					"strict" : false
+				},
+				{
+					"name" : "a",
+					"strict" : false
+				},
+				{
+					"name" : "b",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				},
+				{
+					"name" : "d",
+					"strict" : false
+				},
+				{
+					"name" : "e",
+					"strict" : false
+				},
+				{
+					"name" : "f",
+					"strict" : false
+				},
+				{
+					"name" : "g",
+					"strict" : false
+				},
+				{
+					"name" : "zero_flag",
+					"strict" : false
+				},
+				{
+					"name" : "sign_flag",
+					"strict" : false
+				},
+				{
+					"name" : "overflow_flag",
+					"strict" : false
+				},
+				{
+					"name" : "carry_flag",
+					"strict" : false
+				},
+				{
+					"name" : "columns[1]",
+					"strict" : false
+				},
+				{
+					"name" : "columns[2]",
+					"strict" : false
+				},
+				{
+					"name" : "columns[3]",
+					"strict" : false
+				},
+				{
+					"name" : "columns[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

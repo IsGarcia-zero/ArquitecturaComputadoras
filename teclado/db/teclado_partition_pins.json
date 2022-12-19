@@ -72,7 +72,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "rows[2]",
+					"name" : "pop_stack",
+					"strict" : false
+				},
+				{
+					"name" : "push_stack",
+					"strict" : false
+				},
+				{
+					"name" : "rows[4]",
 					"strict" : false
 				},
 				{
@@ -80,7 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rows[4]",
+					"name" : "rows[2]",
 					"strict" : false
 				},
 				{

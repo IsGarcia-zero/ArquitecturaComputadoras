@@ -1,5 +1,5 @@
 Analysis & Synthesis report for teclado
-Sun Dec 18 20:06:08 2022
+Sun Dec 18 23:11:47 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -13,29 +13,30 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: pmod_keypad:inst
- 12. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys
- 13. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys
- 14. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys
- 15. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys
- 16. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys
- 17. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys
- 18. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys
- 19. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys
- 20. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys
- 21. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys
- 22. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys
- 23. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys
- 24. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys
- 25. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys
- 26. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys
- 27. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: pmod_keypad:inst
+ 13. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys
+ 14. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys
+ 15. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys
+ 16. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys
+ 17. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys
+ 18. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys
+ 19. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys
+ 20. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys
+ 21. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys
+ 22. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys
+ 23. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys
+ 24. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys
+ 25. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys
+ 26. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys
+ 27. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys
+ 28. Parameter Settings for User Entity Instance: pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -62,15 +63,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 18 20:06:08 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 18 23:11:47 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; teclado                                     ;
 ; Top-level Entity Name              ; teclado                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 847                                         ;
-;     Total combinational functions  ; 811                                         ;
-;     Dedicated logic registers      ; 508                                         ;
-; Total registers                    ; 508                                         ;
+; Total logic elements               ; 878                                         ;
+;     Total combinational functions  ; 842                                         ;
+;     Dedicated logic registers      ; 525                                         ;
+; Total registers                    ; 525                                         ;
 ; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -179,14 +180,15 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-16       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -201,6 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ; debounce.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/debounce.vhd    ;         ;
 ; teclado.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/teclado.bdf     ;         ;
 ; pila.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd        ;         ;
+; stack.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd       ;         ;
+; join.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/join.vhd        ;         ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -209,20 +213,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 847       ;
+; Estimated Total logic elements              ; 878       ;
 ;                                             ;           ;
-; Total combinational functions               ; 811       ;
+; Total combinational functions               ; 842       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 268       ;
-;     -- 3 input functions                    ; 60        ;
-;     -- <=2 input functions                  ; 483       ;
+;     -- 4 input functions                    ; 278       ;
+;     -- 3 input functions                    ; 72        ;
+;     -- <=2 input functions                  ; 492       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 446       ;
-;     -- arithmetic mode                      ; 365       ;
+;     -- normal mode                          ; 461       ;
+;     -- arithmetic mode                      ; 381       ;
 ;                                             ;           ;
-; Total registers                             ; 508       ;
-;     -- Dedicated logic registers            ; 508       ;
+; Total registers                             ; 525       ;
+;     -- Dedicated logic registers            ; 525       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 23        ;
@@ -231,7 +235,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 439       ;
-; Total fan-out                               ; 4047      ;
+; Total fan-out                               ; 4177      ;
 ; Average fan-out                             ; 2.96      ;
 +---------------------------------------------+-----------+
 
@@ -241,11 +245,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name    ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+----------------+--------------+
-; |teclado                                        ; 811 (0)             ; 508 (0)                   ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |teclado                                                          ; teclado        ; work         ;
+; |teclado                                        ; 842 (0)             ; 525 (0)                   ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |teclado                                                          ; teclado        ; work         ;
 ;    |display:inst1|                              ; 21 (21)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|display:inst1                                            ; display        ; work         ;
 ;    |frecuencia_5Hz:inst4|                       ; 42 (42)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|frecuencia_5Hz:inst4                                     ; frecuencia_5Hz ; work         ;
-;    |pila:inst2|                                 ; 85 (85)             ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pila:inst2                                               ; pila           ; work         ;
-;    |pmod_keypad:inst|                           ; 663 (231)           ; 412 (60)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst                                         ; pmod_keypad    ; work         ;
+;    |pila:inst2|                                 ; 75 (75)             ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pila:inst2                                               ; pila           ; work         ;
+;    |pmod_keypad:inst|                           ; 666 (234)           ; 412 (60)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst                                         ; pmod_keypad    ; work         ;
 ;       |debounce:\row_debounce:0:debounce_keys|  ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:10:debounce_keys| ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys ; debounce       ; work         ;
 ;       |debounce:\row_debounce:11:debounce_keys| ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys ; debounce       ; work         ;
@@ -262,8 +266,19 @@ https://fpgasoftware.intel.com/eula.
 ;       |debounce:\row_debounce:7:debounce_keys|  ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:8:debounce_keys|  ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:9:debounce_keys|  ; 27 (27)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys  ; debounce       ; work         ;
+;    |stack:inst5|                                ; 38 (38)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |teclado|stack:inst5                                              ; stack          ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; pila:inst2|cont[2]                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -271,12 +286,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 508   ;
+; Total registers                              ; 525   ;
 ; Number of registers using Synchronous Clear  ; 318   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 111   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 373   ;
+; Number of registers using Clock Enable       ; 376   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -286,47 +301,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; pmod_keypad:inst|columns[1]            ; 30      ;
+; pmod_keypad:inst|columns[1]            ; 31      ;
 ; pmod_keypad:inst|columns[2]            ; 26      ;
-; pmod_keypad:inst|columns[3]            ; 37      ;
-; pmod_keypad:inst|columns[4]            ; 29      ;
+; pmod_keypad:inst|columns[3]            ; 38      ;
+; pmod_keypad:inst|columns[4]            ; 30      ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |teclado|display:inst1|tmp[0]                                               ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |teclado|pila:inst2|deb[7]                                                  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[18]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[12]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[11]  ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[18] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[11] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[11] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[11] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[11] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[11] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_stored[7]                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[12]                                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[8]                                                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[6]                                                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[0]                                                  ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[13]                                      ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[0]                                       ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[15]                                      ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[14]                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |teclado|display:inst1|tmp[0]                                              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |teclado|stack:inst5|deb[1]                                                ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |teclado|pila:inst2|deb[4]                                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[8]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[17] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[6]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[8]  ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[6] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[6] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[6] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[6] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[6] ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[6] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_stored[5]                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[8]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[6]                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|aux[0]                                                 ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[12]                                     ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[1]                                      ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[8]                                      ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |teclado|pmod_keypad:inst|keys_int[6]                                      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |teclado|pila:inst2|cont[1]                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -522,25 +538,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 23                          ;
-; cycloneiii_ff         ; 508                         ;
+; cycloneiii_ff         ; 525                         ;
 ;     CLR               ; 91                          ;
-;     ENA               ; 35                          ;
+;     ENA               ; 38                          ;
 ;     ENA CLR           ; 20                          ;
 ;     ENA SCLR          ; 318                         ;
-;     plain             ; 44                          ;
-; cycloneiii_lcell_comb ; 816                         ;
-;     arith             ; 365                         ;
-;         2 data inputs ; 355                         ;
-;         3 data inputs ; 10                          ;
-;     normal            ; 451                         ;
+;     plain             ; 58                          ;
+; cycloneiii_lcell_comb ; 847                         ;
+;     arith             ; 381                         ;
+;         2 data inputs ; 364                         ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 466                         ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 104                         ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 268                         ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 103                         ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 278                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.42                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -559,7 +575,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Dec 18 20:06:02 2022
+    Info: Processing started: Sun Dec 18 23:11:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teclado -c teclado
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
@@ -577,34 +593,36 @@ Info (12021): Found 2 design units, including 1 entities, in source file debounc
 Info (12021): Found 1 design units, including 1 entities, in source file teclado.bdf
     Info (12023): Found entity 1: teclado
 Info (12021): Found 2 design units, including 1 entities, in source file pila.vhd
-    Info (12022): Found design unit 1: pila-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 16
+    Info (12022): Found design unit 1: pila-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 14
     Info (12023): Found entity 1: pila File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file stack.vhd
     Info (12022): Found design unit 1: stack-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd Line: 16
     Info (12023): Found entity 1: stack File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file join.vhd
+    Info (12022): Found design unit 1: join-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/join.vhd Line: 13
+    Info (12023): Found entity 1: join File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/join.vhd Line: 5
 Info (12127): Elaborating entity "teclado" for the top level hierarchy
 Info (12128): Elaborating entity "display" for hierarchy "display:inst1"
 Info (12128): Elaborating entity "frecuencia_5Hz" for hierarchy "frecuencia_5Hz:inst4"
+Info (12128): Elaborating entity "join" for hierarchy "join:inst3"
 Info (12128): Elaborating entity "pila" for hierarchy "pila:inst2"
-Warning (10492): VHDL Process Statement warning at pila.vhd(55): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 55
 Info (12128): Elaborating entity "pmod_keypad" for hierarchy "pmod_keypad:inst"
 Info (12128): Elaborating entity "debounce" for hierarchy "pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 265
+Info (12128): Elaborating entity "stack" for hierarchy "stack:inst5"
+Warning (10036): Verilog HDL or VHDL warning at stack.vhd(22): object "ram" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd Line: 22
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 72
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rw"
-    Warning (15610): No output dependent on input pin "pop"
-Info (21057): Implemented 874 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 905 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 851 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Sun Dec 18 20:06:08 2022
-    Info: Elapsed time: 00:00:06
+    Info (21061): Implemented 882 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4880 megabytes
+    Info: Processing ended: Sun Dec 18 23:11:47 2022
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
 
