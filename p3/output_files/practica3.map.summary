@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Dec 18 19:22:34 2022
+Analysis & Synthesis Status : Successful - Sun Dec 18 19:58:16 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : practica3
 Top-level Entity Name : practica3
 Family : Cyclone IV E
-Total logic elements : 1,451
-    Total combinational functions : 1,263
+Total logic elements : 1,450
+    Total combinational functions : 1,262
     Dedicated logic registers : 379
 Total registers : 379
 Total pins : 79

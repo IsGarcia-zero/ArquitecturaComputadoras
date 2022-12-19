@@ -1,5 +1,5 @@
 Analysis & Synthesis report for teclado
-Sun Dec 18 14:55:18 2022
+Sun Dec 18 20:06:08 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 18 14:55:18 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 18 20:06:08 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; teclado                                     ;
 ; Top-level Entity Name              ; teclado                                     ;
@@ -190,18 +190,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; divisor.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/divisor.vhd     ;         ;
-; display.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/display.vhd     ;         ;
-; pmod_keypad.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pmod_keypad.vhd ;         ;
-; debounce.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/debounce.vhd    ;         ;
-; teclado.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/teclado.bdf     ;         ;
-; pila.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pila.vhd        ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; divisor.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/divisor.vhd     ;         ;
+; display.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/display.vhd     ;         ;
+; pmod_keypad.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd ;         ;
+; debounce.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/debounce.vhd    ;         ;
+; teclado.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/teclado.bdf     ;         ;
+; pila.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -559,34 +559,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Sun Dec 18 14:55:11 2022
+    Info: Processing started: Sun Dec 18 20:06:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off teclado -c teclado
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
-    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/divisor.vhd Line: 13
-    Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/divisor.vhd Line: 4
+    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/divisor.vhd Line: 13
+    Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/divisor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/display.vhd Line: 15
-    Info (12023): Found entity 1: display File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/display.vhd Line: 6
+    Info (12022): Found design unit 1: display-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/display.vhd Line: 15
+    Info (12023): Found entity 1: display File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/display.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pmod_keypad.vhd
-    Info (12022): Found design unit 1: pmod_keypad-logic File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 39
-    Info (12023): Found entity 1: pmod_keypad File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 26
+    Info (12022): Found design unit 1: pmod_keypad-logic File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 39
+    Info (12023): Found entity 1: pmod_keypad File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 26
 Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
-    Info (12022): Found design unit 1: debounce-logic File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/debounce.vhd Line: 40
-    Info (12023): Found entity 1: debounce File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/debounce.vhd Line: 29
+    Info (12022): Found design unit 1: debounce-logic File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/debounce.vhd Line: 40
+    Info (12023): Found entity 1: debounce File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/debounce.vhd Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file teclado.bdf
     Info (12023): Found entity 1: teclado
 Info (12021): Found 2 design units, including 1 entities, in source file pila.vhd
-    Info (12022): Found design unit 1: pila-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pila.vhd Line: 16
-    Info (12023): Found entity 1: pila File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pila.vhd Line: 6
+    Info (12022): Found design unit 1: pila-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 16
+    Info (12023): Found entity 1: pila File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stack.vhd
+    Info (12022): Found design unit 1: stack-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd Line: 16
+    Info (12023): Found entity 1: stack File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/stack.vhd Line: 7
 Info (12127): Elaborating entity "teclado" for the top level hierarchy
 Info (12128): Elaborating entity "display" for hierarchy "display:inst1"
 Info (12128): Elaborating entity "frecuencia_5Hz" for hierarchy "frecuencia_5Hz:inst4"
 Info (12128): Elaborating entity "pila" for hierarchy "pila:inst2"
-Warning (10492): VHDL Process Statement warning at pila.vhd(55): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pila.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at pila.vhd(55): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pila.vhd Line: 55
 Info (12128): Elaborating entity "pmod_keypad" for hierarchy "pmod_keypad:inst"
-Info (12128): Elaborating entity "debounce" for hierarchy "pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 265
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 72
+Info (12128): Elaborating entity "debounce" for hierarchy "pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 265
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/teclado/pmod_keypad.vhd Line: 72
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -599,9 +602,9 @@ Info (21057): Implemented 874 device resources after synthesis - the final resou
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 851 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Sun Dec 18 14:55:18 2022
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Sun Dec 18 20:06:08 2022
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

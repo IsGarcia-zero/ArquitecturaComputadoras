@@ -1,5 +1,5 @@
 EDA Netlist Writer report for practica3
-Sun Dec 18 19:22:58 2022
+Sun Dec 18 20:00:21 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Dec 18 19:22:58 2022 ;
+; EDA Netlist Writer Status ; Successful - Sun Dec 18 20:00:21 2022 ;
 ; Revision Name             ; practica3                             ;
 ; Top-level Entity Name     ; practica3                             ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                        ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                   ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/p3/simulation/qsim//practica3.vho ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p3/simulation/qsim//practica3.vho ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,12 +95,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Dec 18 19:22:57 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/p3/simulation/qsim/" practica3 -c practica3
-Info (204019): Generated file practica3.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/p3/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Sun Dec 18 20:00:20 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p3/simulation/qsim/" practica3 -c practica3
+Info (204019): Generated file practica3.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Sun Dec 18 19:22:58 2022
+    Info: Processing ended: Sun Dec 18 20:00:21 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

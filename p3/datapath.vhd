@@ -190,13 +190,13 @@ BEGIN
 						ELSIF (MAR(11 DOWNTO 8) = "1110") THEN -- jump directo
 							OFFSET <= to_integer(unsigned(jumps(to_integer(unsigned(MAR(3 DOWNTO 0))))));
 						ELSIF (MAR(11 DOWNTO 8) = "1100") THEN -- branch con banderas
-							IF (z_flag = '1') THEN -- zflag, sflag, ovflag, cflag
+							IF (zflag = '1') THEN -- zflag, sflag, ovflag, cflag
 								OFFSET <= 0;
 							ELSIF (sflag = '1') THEN
 								OFFSET <= 0;
 							ELSIF (ovflag = '1') THEN
 								OFFSET <= 0;
-							ELSE (Cflag = '1') THEN
+							ELSE
 								OFFSET <= 0;
 							END IF;
 						ELSE
