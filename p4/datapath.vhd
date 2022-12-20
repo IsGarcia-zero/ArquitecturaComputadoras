@@ -10,7 +10,7 @@ ENTITY datapath IS
 		clk, rst, push, pop, en : IN STD_LOGIC;
 		sal_cpu : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 		n_ins : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		sal_real : OUT STD_LOGIC;
+		sal_real : OUT STD_LOGIC; 
 		z_flag, s_flag, ov_flag, c_flag : OUT STD_LOGIC
 	);
 END ENTITY datapath;

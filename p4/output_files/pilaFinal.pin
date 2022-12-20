@@ -118,7 +118,7 @@ f                            : 46        : output : 2.5 V             :         
 VCCIO3                       : 47        : power  :                   : 2.5V    : 3         :                
 GND                          : 48        : gnd    :                   :         :           :                
 g                            : 49        : output : 2.5 V             :         : 3         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 50        :        :                   :         : 3         :                
+punto                        : 50        : output : 2.5 V             :         : 3         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 51        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 53        :        :                   :         : 3         :                
@@ -126,7 +126,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 4         :                
 VCCIO4                       : 56        : power  :                   : 2.5V    : 4         :                
 GND                          : 57        : gnd    :                   :         :           :                
-zero_flag                    : 58        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 58        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 59        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 60        :        :                   :         : 4         :                
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
@@ -155,7 +155,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
+zero_flag                    : 87        : output : 2.5 V             :         : 5         : N              
 GND+                         : 88        :        :                   :         : 5         :                
 GND+                         : 89        :        :                   :         : 5         :                
 GND+                         : 90        :        :                   :         : 6         :                

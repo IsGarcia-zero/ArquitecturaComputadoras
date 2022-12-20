@@ -55,34 +55,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VHDL_FILE valores.vhd
-set_global_assignment -name VHDL_FILE uapro.vhd
-set_global_assignment -name VHDL_FILE stack.vhd
-set_global_assignment -name VHDL_FILE pmod_keypad.vhd
-set_global_assignment -name VHDL_FILE pila.vhd
-set_global_assignment -name VHDL_FILE negativoP.vhd
-set_global_assignment -name VHDL_FILE multP.vhd
-set_global_assignment -name VHDL_FILE Logicas.vhd
-set_global_assignment -name VHDL_FILE join.vhd
-set_global_assignment -name VHDL_FILE intermedio.vhd
-set_global_assignment -name VHDL_FILE fullAdder.vhd
-set_global_assignment -name VHDL_FILE fullA10b.vhd
-set_global_assignment -name VHDL_FILE ecuaciones.vhd
-set_global_assignment -name VHDL_FILE Divisorsito.vhd
-set_global_assignment -name VHDL_FILE divisor.vhd
-set_global_assignment -name VHDL_FILE display.vhd
-set_global_assignment -name VHDL_FILE debounce.vhd
-set_global_assignment -name VHDL_FILE datapath.vhd
-set_global_assignment -name VHDL_FILE convertidor.vhd
-set_global_assignment -name VHDL_FILE comparador16.vhd
-set_global_assignment -name VHDL_FILE comparador8.vhd
-set_global_assignment -name VHDL_FILE comparador4.vhd
-set_global_assignment -name VHDL_FILE compara1.vhd
-set_global_assignment -name VHDL_FILE barrelShifters.vhd
-set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE pilaFinal.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -114,4 +88,33 @@ set_location_assignment PIN_105 -to carry_flag
 set_location_assignment PIN_104 -to overflow_flag
 set_location_assignment PIN_103 -to sign_flag
 set_location_assignment PIN_76 -to enable
+set_global_assignment -name VHDL_FILE texto.vhd
+set_global_assignment -name VHDL_FILE letras.vhd
+set_global_assignment -name VHDL_FILE valores.vhd
+set_global_assignment -name VHDL_FILE uapro.vhd
+set_global_assignment -name VHDL_FILE stack.vhd
+set_global_assignment -name VHDL_FILE pmod_keypad.vhd
+set_global_assignment -name VHDL_FILE pila.vhd
+set_global_assignment -name VHDL_FILE negativoP.vhd
+set_global_assignment -name VHDL_FILE multP.vhd
+set_global_assignment -name VHDL_FILE Logicas.vhd
+set_global_assignment -name VHDL_FILE join.vhd
+set_global_assignment -name VHDL_FILE intermedio.vhd
+set_global_assignment -name VHDL_FILE fullAdder.vhd
+set_global_assignment -name VHDL_FILE fullA10b.vhd
+set_global_assignment -name VHDL_FILE ecuaciones.vhd
+set_global_assignment -name VHDL_FILE Divisorsito.vhd
+set_global_assignment -name VHDL_FILE divisor.vhd
+set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name VHDL_FILE debounce.vhd
+set_global_assignment -name VHDL_FILE datapath.vhd
+set_global_assignment -name VHDL_FILE convertidor.vhd
+set_global_assignment -name VHDL_FILE comparador16.vhd
+set_global_assignment -name VHDL_FILE comparador8.vhd
+set_global_assignment -name VHDL_FILE comparador4.vhd
+set_global_assignment -name VHDL_FILE compara1.vhd
+set_global_assignment -name VHDL_FILE barrelShifters.vhd
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name BDF_FILE pilaFinal.bdf
+set_location_assignment PIN_50 -to punto
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

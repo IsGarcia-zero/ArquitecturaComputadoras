@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pilaFinal
-Mon Dec 19 22:20:19 2022
+Mon Dec 19 23:44:54 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -70,9 +70,10 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  62. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:2:sP"
  63. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:1:sP"
  64. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma"
- 65. Post-Synthesis Netlist Statistics for Top Partition
- 66. Elapsed Time Per Partition
- 67. Analysis & Synthesis Messages
+ 65. Port Connectivity Checks: "display:inst4|texto:mensaje"
+ 66. Post-Synthesis Netlist Statistics for Top Partition
+ 67. Elapsed Time Per Partition
+ 68. Analysis & Synthesis Messages
 
 
 
@@ -99,16 +100,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 19 22:20:19 2022       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 19 23:44:53 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; pilaFinal                                   ;
 ; Top-level Entity Name              ; pilaFinal                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,357                                       ;
-;     Total combinational functions  ; 4,146                                       ;
-;     Dedicated logic registers      ; 1,976                                       ;
-; Total registers                    ; 1976                                        ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 4,512                                       ;
+;     Total combinational functions  ; 4,301                                       ;
+;     Dedicated logic registers      ; 2,107                                       ;
+; Total registers                    ; 2107                                        ;
+; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -232,6 +233,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                  ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; texto.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/texto.vhd          ;         ;
+; letras.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/letras.vhd         ;         ;
 ; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/uapro.vhd          ;         ;
 ; pmod_keypad.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/pmod_keypad.vhd    ;         ;
 ; pila.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/pila.vhd           ;         ;
@@ -262,29 +265,29 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 4,357                       ;
+; Estimated Total logic elements              ; 4,512                       ;
 ;                                             ;                             ;
-; Total combinational functions               ; 4146                        ;
+; Total combinational functions               ; 4301                        ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 2878                        ;
-;     -- 3 input functions                    ; 585                         ;
-;     -- <=2 input functions                  ; 683                         ;
+;     -- 4 input functions                    ; 2982                        ;
+;     -- 3 input functions                    ; 611                         ;
+;     -- <=2 input functions                  ; 708                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 3538                        ;
-;     -- arithmetic mode                      ; 608                         ;
+;     -- normal mode                          ; 3663                        ;
+;     -- arithmetic mode                      ; 638                         ;
 ;                                             ;                             ;
-; Total registers                             ; 1976                        ;
-;     -- Dedicated logic registers            ; 1976                        ;
+; Total registers                             ; 2107                        ;
+;     -- Dedicated logic registers            ; 2107                        ;
 ;     -- I/O registers                        ; 0                           ;
 ;                                             ;                             ;
-; I/O pins                                    ; 28                          ;
+; I/O pins                                    ; 29                          ;
 ;                                             ;                             ;
 ; Embedded Multiplier 9-bit elements          ; 0                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; frecuencia_5Hz:inst5|salida ;
-; Maximum fan-out                             ; 1538                        ;
-; Total fan-out                               ; 19727                       ;
+; Maximum fan-out                             ; 1669                        ;
+; Total fan-out                               ; 20639                       ;
 ; Average fan-out                             ; 3.19                        ;
 +---------------------------------------------+-----------------------------+
 
@@ -294,9 +297,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name    ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |pilaFinal                                      ; 4146 (1)            ; 1976 (0)                  ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |pilaFinal                                                                                                   ; pilaFinal      ; work         ;
-;    |datapath:inst|                              ; 3211 (2423)         ; 1401 (1339)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst                                                                                     ; datapath       ; work         ;
-;       |ALU:alu1|                                ; 788 (57)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1                                                                            ; ALU            ; work         ;
+; |pilaFinal                                      ; 4301 (1)            ; 2107 (0)                  ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |pilaFinal                                                                                                   ; pilaFinal      ; work         ;
+;    |datapath:inst|                              ; 3207 (2409)         ; 1401 (1339)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst                                                                                     ; datapath       ; work         ;
+;       |ALU:alu1|                                ; 798 (60)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1                                                                            ; ALU            ; work         ;
 ;          |Logicas:unidad_logica|                ; 63 (63)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                      ; Logicas        ; work         ;
 ;          |barrelShifters:barrel_shifters|       ; 0 (0)               ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|barrelShifters:barrel_shifters                                             ; barrelShifters ; work         ;
 ;          |comparador16:comparador|              ; 27 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|comparador16:comparador                                                    ; comparador16   ; work         ;
@@ -322,7 +325,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |compara1:comp1|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp1 ; compara1       ; work         ;
 ;                   |compara1:comp2|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp2 ; compara1       ; work         ;
 ;                   |compara1:comp3|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|comparador16:comparador|comparador8:comp1|comparador4:comp1|compara1:comp3 ; compara1       ; work         ;
-;          |uapro:unidad_aritmetica|              ; 641 (32)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                    ; uapro          ; work         ;
+;          |uapro:unidad_aritmetica|              ; 648 (35)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                    ; uapro          ; work         ;
 ;             |Divisorsito:divi|                  ; 306 (306)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                                   ; Divisorsito    ; work         ;
 ;             |fullA10b:resta|                    ; 45 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                                     ; fullA10b       ; work         ;
 ;                |fullAdder:\sR:10:sP|            ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:10:sP                 ; fullAdder      ; work         ;
@@ -340,23 +343,23 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:\sR:8:sP|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:8:sP                  ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:9:sP                  ; fullAdder      ; work         ;
 ;                |fullAdder:s0|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0                        ; fullAdder      ; work         ;
-;             |fullA10b:suma|                     ; 93 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                      ; fullA10b       ; work         ;
-;                |fullAdder:\sR:10:sP|            ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP                  ; fullAdder      ; work         ;
-;                |fullAdder:\sR:11:sP|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP                  ; fullAdder      ; work         ;
-;                |fullAdder:\sR:12:sP|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP                  ; fullAdder      ; work         ;
-;                |fullAdder:\sR:13:sP|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:13:sP                  ; fullAdder      ; work         ;
+;             |fullA10b:suma|                     ; 96 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                      ; fullA10b       ; work         ;
+;                |fullAdder:\sR:10:sP|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP                  ; fullAdder      ; work         ;
+;                |fullAdder:\sR:11:sP|            ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP                  ; fullAdder      ; work         ;
+;                |fullAdder:\sR:12:sP|            ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP                  ; fullAdder      ; work         ;
+;                |fullAdder:\sR:13:sP|            ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:13:sP                  ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:14:sP|            ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:14:sP                  ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:1:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:1:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:2:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:2:sP                   ; fullAdder      ; work         ;
-;                |fullAdder:\sR:3:sP|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:3:sP                   ; fullAdder      ; work         ;
-;                |fullAdder:\sR:4:sP|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:4:sP                   ; fullAdder      ; work         ;
-;                |fullAdder:\sR:5:sP|             ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:5:sP                   ; fullAdder      ; work         ;
+;                |fullAdder:\sR:3:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:3:sP                   ; fullAdder      ; work         ;
+;                |fullAdder:\sR:4:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:4:sP                   ; fullAdder      ; work         ;
+;                |fullAdder:\sR:5:sP|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:5:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:6:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:6:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:7:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:7:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:8:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:8:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:9:sP                   ; fullAdder      ; work         ;
 ;                |fullAdder:s0|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                         ; fullAdder      ; work         ;
-;             |multP:mult|                        ; 165 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                         ; multP          ; work         ;
+;             |multP:mult|                        ; 166 (8)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                         ; multP          ; work         ;
 ;                |fullA10b:multi1|                ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1                         ; fullA10b       ; work         ;
 ;                   |fullAdder:\sR:1:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:1:sP      ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:2:sP|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:2:sP      ; fullAdder      ; work         ;
@@ -411,7 +414,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |fullAdder:\sR:7:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi6|fullAdder:\sR:7:sP      ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:8:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi6|fullAdder:\sR:8:sP      ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:9:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi6|fullAdder:\sR:9:sP      ; fullAdder      ; work         ;
-;                |fullA10b:multi7|                ; 62 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7                         ; fullA10b       ; work         ;
+;                |fullA10b:multi7|                ; 63 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7                         ; fullA10b       ; work         ;
 ;                   |fullAdder:\sR:10:sP|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:10:sP     ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:11:sP|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:11:sP     ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:12:sP|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:12:sP     ; fullAdder      ; work         ;
@@ -420,13 +423,14 @@ https://fpgasoftware.intel.com/eula.
 ;                   |fullAdder:\sR:7:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:7:sP      ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:8:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:8:sP      ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:9:sP|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|fullAdder:\sR:9:sP      ; fullAdder      ; work         ;
-;                   |negativoP:negativo|          ; 46 (46)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|negativoP:negativo      ; negativoP      ; work         ;
-;    |display:inst4|                              ; 21 (21)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|display:inst4                                                                                     ; display        ; work         ;
+;                   |negativoP:negativo|          ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|negativoP:negativo      ; negativoP      ; work         ;
+;    |display:inst4|                              ; 178 (160)           ; 141 (141)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|display:inst4                                                                                     ; display        ; work         ;
+;       |letras:letra|                            ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|display:inst4|letras:letra                                                                        ; letras         ; work         ;
 ;    |frecuencia_5Hz:inst5|                       ; 42 (42)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|frecuencia_5Hz:inst5                                                                              ; frecuencia_5Hz ; work         ;
 ;    |join:inst1|                                 ; 82 (16)             ; 72 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|join:inst1                                                                                        ; join           ; work         ;
 ;       |convertidor:conv1|                       ; 66 (66)             ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|join:inst1|convertidor:conv1                                                                      ; convertidor    ; work         ;
-;    |pila:inst3|                                 ; 101 (101)           ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pila:inst3                                                                                        ; pila           ; work         ;
-;    |pmod_keypad:inst2|                          ; 688 (240)           ; 412 (60)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pmod_keypad:inst2                                                                                 ; pmod_keypad    ; work         ;
+;    |pila:inst3|                                 ; 102 (102)           ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pila:inst3                                                                                        ; pila           ; work         ;
+;    |pmod_keypad:inst2|                          ; 689 (241)           ; 412 (60)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pmod_keypad:inst2                                                                                 ; pmod_keypad    ; work         ;
 ;       |debounce:\row_debounce:0:debounce_keys|  ; 28 (28)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:0:debounce_keys                                          ; debounce       ; work         ;
 ;       |debounce:\row_debounce:10:debounce_keys| ; 28 (28)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:10:debounce_keys                                         ; debounce       ; work         ;
 ;       |debounce:\row_debounce:11:debounce_keys| ; 28 (28)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:11:debounce_keys                                         ; debounce       ; work         ;
@@ -483,10 +487,12 @@ Encoding Type:  One-Hot
 ; datapath:inst|sal_cpu[15]                                            ; Stuck at GND due to stuck port data_in ;
 ; datapath:inst|OFFSET[2,4..13]                                        ; Merged with datapath:inst|OFFSET[0]    ;
 ; datapath:inst|OFFSET[3]                                              ; Merged with datapath:inst|OFFSET[1]    ;
+; display:inst4|var[0]                                                 ; Merged with display:inst4|seg[0]       ;
+; display:inst4|contador[0]                                            ; Merged with display:inst4|sel[0]       ;
 ; datapath:inst|OFFSET[0]                                              ; Stuck at GND due to stuck port data_in ;
 ; pila:inst3|cont[2]                                                   ; Stuck at GND due to stuck port data_in ;
 ; datapath:inst|PC[7..13]                                              ; Lost fanout                            ;
-; Total Number of Removed Registers = 34                               ;                                        ;
+; Total Number of Removed Registers = 36                               ;                                        ;
 +----------------------------------------------------------------------+----------------------------------------+
 
 
@@ -505,12 +511,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1976  ;
+; Total registers                              ; 2107  ;
 ; Number of registers using Synchronous Clear  ; 318   ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 178   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 620   ;
+; Number of registers using Clock Enable       ; 727   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -533,167 +539,168 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pilaFinal|display:inst4|tmp[0]                                                                              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|c_flag                                                                              ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[99][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[98][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[97][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[96][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[95][5]                                                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pilaFinal|display:inst4|aux[0]                                                                              ;
+; 3:1                ; 80 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; Yes        ; |pilaFinal|display:inst4|message[67]                                                                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|ov_flag                                                                             ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[99][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[98][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[97][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[96][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[95][6]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[94][9]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[93][10]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[92][2]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[91][10]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[90][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[93][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[92][3]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[91][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[90][10]                                                                    ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[89][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[88][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[88][1]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[87][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[86][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[85][2]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[84][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[83][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[82][9]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[81][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[80][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[79][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[78][3]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[77][3]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[76][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[86][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[85][6]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[84][3]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[83][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[82][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[81][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[80][3]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[79][6]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[78][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[77][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[76][4]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[75][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[74][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[73][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[72][10]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[71][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[70][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[69][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[68][9]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[67][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[66][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[65][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[64][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[63][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[62][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[61][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[60][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[59][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[58][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[57][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[56][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[55][2]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[54][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[53][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[52][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[51][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[50][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[49][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[74][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[73][5]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[72][8]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[71][8]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[70][8]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[69][5]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[68][6]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[67][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[66][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[65][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[64][8]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[63][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[62][9]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[61][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[60][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[59][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[58][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[57][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[56][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[55][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[54][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[53][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[52][8]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[51][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[50][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[49][1]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[48][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[47][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[46][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[45][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[44][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[43][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[42][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[41][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[40][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[39][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[38][6]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[47][9]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[46][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[45][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[44][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[43][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[42][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[41][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[40][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[39][3]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[38][0]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[37][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[36][5]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[35][9]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[34][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[33][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[32][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[31][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[30][4]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[29][1]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[28][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[27][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[36][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[35][4]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[34][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[33][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[32][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[31][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[30][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[29][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[28][5]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[27][6]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[26][9]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[25][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[24][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[23][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[22][1]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[21][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[20][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[25][0]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[24][5]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[23][5]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[22][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[21][6]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[20][9]                                                                     ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[19][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[18][6]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[17][1]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[16][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[15][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[14][8]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[13][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[12][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[11][0]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[10][11]                                                                    ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[9][9]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[8][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[7][11]                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[6][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[5][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[4][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[3][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[2][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[1][1]                                                                      ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[0][11]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[18][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[17][9]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[16][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[15][1]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[14][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[13][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[12][2]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[11][11]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[10][10]                                                                    ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[9][5]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[8][10]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[7][10]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[6][3]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[5][11]                                                                     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[4][3]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[3][0]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[2][4]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[1][6]                                                                      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ram_pila[0][1]                                                                      ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |pilaFinal|datapath:inst|deb[2]                                                                              ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pilaFinal|pila:inst3|deb[2]                                                                                 ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:0:debounce_keys|count[16]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:1:debounce_keys|count[3]                                 ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:2:debounce_keys|count[18]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:3:debounce_keys|count[18]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:4:debounce_keys|count[4]                                 ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:5:debounce_keys|count[9]                                 ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:6:debounce_keys|count[11]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:7:debounce_keys|count[14]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:8:debounce_keys|count[0]                                 ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:9:debounce_keys|count[10]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:10:debounce_keys|count[7]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:11:debounce_keys|count[7]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:12:debounce_keys|count[9]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:13:debounce_keys|count[3]                                ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:14:debounce_keys|count[16]                               ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:15:debounce_keys|count[17]                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |pilaFinal|datapath:inst|tot[3]                                                                              ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |pilaFinal|pila:inst3|tot[9]                                                                                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_stored[0]                                                                  ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[2]                                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|REG_A[2]                                                                            ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pilaFinal|pila:inst3|deb[4]                                                                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:0:debounce_keys|count[6]                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:1:debounce_keys|count[11]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:2:debounce_keys|count[2]                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:3:debounce_keys|count[13]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:4:debounce_keys|count[13]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:5:debounce_keys|count[15]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:6:debounce_keys|count[9]                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:7:debounce_keys|count[9]                                 ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:8:debounce_keys|count[12]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:9:debounce_keys|count[11]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:10:debounce_keys|count[4]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:11:debounce_keys|count[17]                               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:12:debounce_keys|count[11]                               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:13:debounce_keys|count[9]                                ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:14:debounce_keys|count[12]                               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|debounce:\row_debounce:15:debounce_keys|count[16]                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |pilaFinal|datapath:inst|tot[5]                                                                              ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |pilaFinal|pila:inst3|tot[17]                                                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_stored[8]                                                                  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |pilaFinal|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[14]                                           ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|REG_A[7]                                                                            ;
 ; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|REG_B[1]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|aux[9]                                                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|aux[8]                                                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|aux[3]                                                                                 ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|aux[7]                                                                                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|aux[0]                                                                                 ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_int[11]                                                                    ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pilaFinal|join:inst1|convertidor:conv1|binary[1]                                                            ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_int[12]                                                                    ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pilaFinal|join:inst1|convertidor:conv1|binary[7]                                                            ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[6][5]                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[6][3]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[5][7]                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[5][3]                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[6][0]                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[5][9]                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[5][0]                                                                         ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[4][9]                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[4][3]                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[4][4]                                                                         ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[3][9]                                                                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[3][2]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[2][8]                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[3][1]                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[2][11]                                                                        ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[2][3]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[1][13]                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[1][0]                                                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[0][11]                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[0][4]                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[1][14]                                                                        ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[1][3]                                                                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[0][5]                                                                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pilaFinal|datapath:inst|reggy[0][2]                                                                         ;
 ; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pilaFinal|datapath:inst|PC[11]                                                                              ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_int[0]                                                                     ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_int[15]                                                                    ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |pilaFinal|pmod_keypad:inst2|keys_int[14]                                                                    ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |pilaFinal|pila:inst3|cont[1]                                                                                ;
 ; 100:1              ; 11 bits   ; 726 LEs       ; 726 LEs              ; 0 LEs                  ; Yes        ; |pilaFinal|datapath:inst|MAR[8]                                                                              ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[7][11]                                                                        ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[7][1]                                                                         ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[7][9]                                                                         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |pilaFinal|datapath:inst|reggy[7][4]                                                                         ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |pilaFinal|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|negativoP:negativo|Add0 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |pilaFinal|join:inst1|convertidor:conv1|bcds_next                                                            ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux1                                                                       ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux9                                                                       ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux13                                                                      ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux3                                                                       ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux12                                                                      ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |pilaFinal|datapath:inst|ALU:alu1|Mux14                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
 
 
@@ -1246,33 +1253,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------------------+
 
 
++---------------------------------------------------------+
+; Port Connectivity Checks: "display:inst4|texto:mensaje" ;
++---------+-------+----------+----------------------------+
+; Port    ; Type  ; Severity ; Details                    ;
++---------+-------+----------+----------------------------+
+; address ; Input ; Info     ; Stuck at GND               ;
++---------+-------+----------+----------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 1976                        ;
+; boundary_port         ; 29                          ;
+; cycloneiii_ff         ; 2107                        ;
 ;     CLR               ; 117                         ;
 ;     CLR SLD           ; 1                           ;
-;     ENA               ; 242                         ;
+;     ENA               ; 349                         ;
 ;     ENA CLR           ; 53                          ;
 ;     ENA CLR SLD       ; 7                           ;
 ;     ENA SCLR          ; 318                         ;
-;     plain             ; 1238                        ;
-; cycloneiii_lcell_comb ; 4151                        ;
-;     arith             ; 608                         ;
-;         2 data inputs ; 412                         ;
-;         3 data inputs ; 196                         ;
-;     normal            ; 3543                        ;
+;     plain             ; 1262                        ;
+; cycloneiii_lcell_comb ; 4305                        ;
+;     arith             ; 638                         ;
+;         2 data inputs ; 439                         ;
+;         3 data inputs ; 199                         ;
+;     normal            ; 3667                        ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 34                          ;
-;         2 data inputs ; 238                         ;
-;         3 data inputs ; 389                         ;
-;         4 data inputs ; 2878                        ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 233                         ;
+;         3 data inputs ; 412                         ;
+;         4 data inputs ; 2982                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 33.00                       ;
-; Average LUT depth     ; 7.41                        ;
+; Max LUT depth         ; 35.00                       ;
+; Average LUT depth     ; 7.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1291,9 +1307,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Dec 19 22:20:07 2022
+    Info: Processing started: Mon Dec 19 23:44:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pilaFinal -c pilaFinal
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file texto.vhd
+    Info (12022): Found design unit 1: texto-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/texto.vhd Line: 12
+    Info (12023): Found entity 1: texto File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/texto.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file letras.vhd
+    Info (12022): Found design unit 1: letras-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/letras.vhd Line: 11
+    Info (12023): Found entity 1: letras File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/letras.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file valores.vhd
     Info (12022): Found design unit 1: valores-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/valores.vhd Line: 16
     Info (12023): Found entity 1: valores File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/valores.vhd Line: 7
@@ -1340,8 +1362,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file divisor
     Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/divisor.vhd Line: 13
     Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/divisor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
-    Info (12022): Found design unit 1: display-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 15
-    Info (12023): Found entity 1: display File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 6
+    Info (12022): Found design unit 1: display-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 16
+    Info (12023): Found entity 1: display File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
     Info (12022): Found design unit 1: debounce-logic File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/debounce.vhd Line: 40
     Info (12023): Found entity 1: debounce File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/debounce.vhd Line: 29
@@ -1374,6 +1396,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file pilafin
 Info (12127): Elaborating entity "pilaFinal" for the top level hierarchy
 Warning (275011): Block or symbol "pila" of instance "inst3" overlaps another block or symbol
 Info (12128): Elaborating entity "display" for hierarchy "display:inst4"
+Warning (10540): VHDL Signal Declaration warning at display.vhd(28): used explicit default value for signal "op" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at display.vhd(29): object "op_real" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at display.vhd(98): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at display.vhd(99): signal "ledsito" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at display.vhd(100): signal "letter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at display.vhd(102): signal "letrita" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 102
+Info (12128): Elaborating entity "texto" for hierarchy "display:inst4|texto:mensaje" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 137
+Info (12128): Elaborating entity "letras" for hierarchy "display:inst4|letras:letra" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/display.vhd Line: 138
 Info (12128): Elaborating entity "frecuencia_5Hz" for hierarchy "frecuencia_5Hz:inst5"
 Info (12128): Elaborating entity "join" for hierarchy "join:inst1"
 Info (12128): Elaborating entity "convertidor" for hierarchy "join:inst1|convertidor:conv1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/join.vhd Line: 39
@@ -1425,14 +1455,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4402 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4558 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 4374 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4908 megabytes
-    Info: Processing ended: Mon Dec 19 22:20:19 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:12
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 4529 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Mon Dec 19 23:44:54 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
 
 

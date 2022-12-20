@@ -115,6 +115,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "g" (rect 119 187 123 199)(font "Arial" ))
 		(line (pt 144 192)(pt 128 192)(line_width 1))
 	)
+	(port
+		(pt 144 208)
+		(output)
+		(text "p" (rect 0 0 4 12)(font "Arial" ))
+		(text "p" (rect 119 203 123 215)(font "Arial" ))
+		(line (pt 144 208)(pt 128 208)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 128 224)(line_width 1))
 	)

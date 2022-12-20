@@ -64,6 +64,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "punto",
+					"strict" : false
+				},
+				{
 					"name" : "columns[1]",
 					"strict" : false
 				},
@@ -92,11 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "push",
+					"name" : "pop",
 					"strict" : false
 				},
 				{
-					"name" : "pop",
+					"name" : "push",
 					"strict" : false
 				},
 				{
