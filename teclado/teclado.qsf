@@ -92,4 +92,5 @@ set_global_assignment -name VHDL_FILE stack.vhd
 set_location_assignment PIN_74 -to push_stack
 set_location_assignment PIN_75 -to pop_stack
 set_global_assignment -name VHDL_FILE join.vhd
+set_location_assignment PIN_76 -to enable
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

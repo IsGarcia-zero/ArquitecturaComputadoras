@@ -1,5 +1,5 @@
 Fitter report for teclado
-Mon Dec 19 11:37:59 2022
+Mon Dec 19 20:48:44 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -68,18 +68,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Dec 19 11:37:59 2022       ;
+; Fitter Status                      ; Successful - Mon Dec 19 20:48:44 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; teclado                                     ;
 ; Top-level Entity Name              ; teclado                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 921 / 6,272 ( 15 % )                        ;
-;     Total combinational functions  ; 884 / 6,272 ( 14 % )                        ;
-;     Dedicated logic registers      ; 530 / 6,272 ( 8 % )                         ;
-; Total registers                    ; 530                                         ;
-; Total pins                         ; 23 / 92 ( 25 % )                            ;
+; Total logic elements               ; 3,752 / 6,272 ( 60 % )                      ;
+;     Total combinational functions  ; 3,714 / 6,272 ( 59 % )                      ;
+;     Dedicated logic registers      ; 2,161 / 6,272 ( 34 % )                      ;
+; Total registers                    ; 2161                                        ;
+; Total pins                         ; 24 / 92 ( 26 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -156,14 +156,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.11        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.4%      ;
-;     Processor 3            ;   2.3%      ;
-;     Processor 4            ;   2.2%      ;
+;     Processor 2            ;   3.8%      ;
+;     Processor 3            ;   3.6%      ;
+;     Processor 4            ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -173,8 +173,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1473 ) ; 0.00 % ( 0 / 1473 )        ; 0.00 % ( 0 / 1473 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1473 ) ; 0.00 % ( 0 / 1473 )        ; 0.00 % ( 0 / 1473 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 5936 ) ; 0.00 % ( 0 / 5936 )        ; 0.00 % ( 0 / 5936 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 5936 ) ; 0.00 % ( 0 / 5936 )        ; 0.00 % ( 0 / 5936 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -197,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1463 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 5926 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -208,127 +208,127 @@ https://fpgasoftware.intel.com/eula.
 The pin-out file can be found in /home/angel/Documentos/ESCOM/5to/Arqui/ArquitecturaComputadoras/teclado/output_files/teclado.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 921 / 6,272 ( 15 % ) ;
-;     -- Combinational with no register       ; 391                  ;
-;     -- Register only                        ; 37                   ;
-;     -- Combinational with a register        ; 493                  ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 326                  ;
-;     -- 3 input functions                    ; 76                   ;
-;     -- <=2 input functions                  ; 482                  ;
-;     -- Register only                        ; 37                   ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 503                  ;
-;     -- arithmetic mode                      ; 381                  ;
-;                                             ;                      ;
-; Total registers*                            ; 530 / 6,684 ( 8 % )  ;
-;     -- Dedicated logic registers            ; 530 / 6,272 ( 8 % )  ;
-;     -- I/O registers                        ; 0 / 412 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 82 / 392 ( 21 % )    ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 23 / 92 ( 25 % )     ;
-;     -- Clock pins                           ; 1 / 3 ( 33 % )       ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
-;                                             ;                      ;
-; M9Ks                                        ; 0 / 30 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 276,480 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 276,480 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 30 ( 0 % )       ;
-; PLLs                                        ; 0 / 2 ( 0 % )        ;
-; Global signals                              ; 2                    ;
-;     -- Global clocks                        ; 2 / 10 ( 20 % )      ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 1.3% / 1.2% / 1.4%   ;
-; Peak interconnect usage (total/H/V)         ; 3.5% / 2.9% / 4.3%   ;
-; Maximum fan-out                             ; 439                  ;
-; Highest non-global fan-out                  ; 132                  ;
-; Total fan-out                               ; 4413                 ;
-; Average fan-out                             ; 2.93                 ;
-+---------------------------------------------+----------------------+
++----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                        ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Total logic elements                        ; 3,752 / 6,272 ( 60 % ) ;
+;     -- Combinational with no register       ; 1591                   ;
+;     -- Register only                        ; 38                     ;
+;     -- Combinational with a register        ; 2123                   ;
+;                                             ;                        ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 2422                   ;
+;     -- 3 input functions                    ; 719                    ;
+;     -- <=2 input functions                  ; 573                    ;
+;     -- Register only                        ; 38                     ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 3319                   ;
+;     -- arithmetic mode                      ; 395                    ;
+;                                             ;                        ;
+; Total registers*                            ; 2,161 / 6,684 ( 32 % ) ;
+;     -- Dedicated logic registers            ; 2,161 / 6,272 ( 34 % ) ;
+;     -- I/O registers                        ; 0 / 412 ( 0 % )        ;
+;                                             ;                        ;
+; Total LABs:  partially or completely used   ; 281 / 392 ( 72 % )     ;
+; Virtual pins                                ; 0                      ;
+; I/O pins                                    ; 24 / 92 ( 26 % )       ;
+;     -- Clock pins                           ; 1 / 3 ( 33 % )         ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )          ;
+;                                             ;                        ;
+; M9Ks                                        ; 0 / 30 ( 0 % )         ;
+; Total block memory bits                     ; 0 / 276,480 ( 0 % )    ;
+; Total block memory implementation bits      ; 0 / 276,480 ( 0 % )    ;
+; Embedded Multiplier 9-bit elements          ; 0 / 30 ( 0 % )         ;
+; PLLs                                        ; 0 / 2 ( 0 % )          ;
+; Global signals                              ; 2                      ;
+;     -- Global clocks                        ; 2 / 10 ( 20 % )        ;
+; JTAGs                                       ; 0 / 1 ( 0 % )          ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
+; Average interconnect usage (total/H/V)      ; 12.8% / 11.9% / 14.0%  ;
+; Peak interconnect usage (total/H/V)         ; 34.0% / 32.6% / 35.9%  ;
+; Maximum fan-out                             ; 1722                   ;
+; Highest non-global fan-out                  ; 427                    ;
+; Total fan-out                               ; 19816                  ;
+; Average fan-out                             ; 3.32                   ;
++---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 921 / 6272 ( 15 % ) ; 0 / 6272 ( 0 % )               ;
-;     -- Combinational with no register       ; 391                 ; 0                              ;
-;     -- Register only                        ; 37                  ; 0                              ;
-;     -- Combinational with a register        ; 493                 ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 326                 ; 0                              ;
-;     -- 3 input functions                    ; 76                  ; 0                              ;
-;     -- <=2 input functions                  ; 482                 ; 0                              ;
-;     -- Register only                        ; 37                  ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 503                 ; 0                              ;
-;     -- arithmetic mode                      ; 381                 ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 530                 ; 0                              ;
-;     -- Dedicated logic registers            ; 530 / 6272 ( 8 % )  ; 0 / 6272 ( 0 % )               ;
-;     -- I/O registers                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 82 / 392 ( 21 % )   ; 0 / 392 ( 0 % )                ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 23                  ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 30 ( 0 % )      ; 0 / 30 ( 0 % )                 ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 2 / 12 ( 16 % )     ; 0 / 12 ( 0 % )                 ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 4408                ; 5                              ;
-;     -- Registered Connections               ; 1366                ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 8                   ; 0                              ;
-;     -- Output Ports                         ; 15                  ; 0                              ;
-;     -- Bidir Ports                          ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 3752 / 6272 ( 60 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- Combinational with no register       ; 1591                 ; 0                              ;
+;     -- Register only                        ; 38                   ; 0                              ;
+;     -- Combinational with a register        ; 2123                 ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 2422                 ; 0                              ;
+;     -- 3 input functions                    ; 719                  ; 0                              ;
+;     -- <=2 input functions                  ; 573                  ; 0                              ;
+;     -- Register only                        ; 38                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 3319                 ; 0                              ;
+;     -- arithmetic mode                      ; 395                  ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 2161                 ; 0                              ;
+;     -- Dedicated logic registers            ; 2161 / 6272 ( 34 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- I/O registers                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 281 / 392 ( 72 % )   ; 0 / 392 ( 0 % )                ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 24                   ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 30 ( 0 % )       ; 0 / 30 ( 0 % )                 ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 2 / 12 ( 16 % )      ; 0 / 12 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 19811                ; 5                              ;
+;     -- Registered Connections               ; 7145                 ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 9                    ; 0                              ;
+;     -- Output Ports                         ; 15                   ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -337,8 +337,9 @@ The pin-out file can be found in /home/angel/Documentos/ESCOM/5to/Arqui/Arquitec
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; clk        ; 91    ; 6        ; 34           ; 12           ; 0            ; 439                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; pop_stack  ; 75    ; 5        ; 34           ; 3            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; push_stack ; 74    ; 5        ; 34           ; 2            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; enable     ; 76    ; 5        ; 34           ; 4            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; pop_stack  ; 75    ; 5        ; 34           ; 3            ; 21           ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; push_stack ; 74    ; 5        ; 34           ; 2            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; rows[1]    ; 110   ; 7        ; 30           ; 24           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; rows[2]    ; 111   ; 7        ; 30           ; 24           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; rows[3]    ; 112   ; 7        ; 28           ; 24           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
@@ -400,7 +401,7 @@ The pin-out file can be found in /home/angel/Documentos/ESCOM/5to/Arqui/Arquitec
 ; 2        ; 4 / 8 ( 50 % )  ; 2.5V          ; --           ;
 ; 3        ; 7 / 11 ( 64 % ) ; 2.5V          ; --           ;
 ; 4        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ;
-; 5        ; 3 / 13 ( 23 % ) ; 2.5V          ; --           ;
+; 5        ; 4 / 13 ( 31 % ) ; 2.5V          ; --           ;
 ; 6        ; 2 / 10 ( 20 % ) ; 2.5V          ; --           ;
 ; 7        ; 8 / 13 ( 62 % ) ; 2.5V          ; --           ;
 ; 8        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ;
@@ -487,7 +488,7 @@ The pin-out file can be found in /home/angel/Documentos/ESCOM/5to/Arqui/Arquitec
 ; 73       ; 102        ; 5        ; rst                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 74       ; 103        ; 5        ; push_stack                                                ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 75       ; 104        ; 5        ; pop_stack                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; 76       ; 106        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; 76       ; 106        ; 5        ; enable                                                    ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 77       ; 107        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; 78       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 79       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -584,11 +585,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; columns[4] ; Incomplete set of assignments ;
 ; clk        ; Incomplete set of assignments ;
 ; rst        ; Incomplete set of assignments ;
-; pop_stack  ; Incomplete set of assignments ;
+; enable     ; Incomplete set of assignments ;
 ; push_stack ; Incomplete set of assignments ;
-; rows[4]    ; Incomplete set of assignments ;
-; rows[1]    ; Incomplete set of assignments ;
+; pop_stack  ; Incomplete set of assignments ;
 ; rows[2]    ; Incomplete set of assignments ;
+; rows[1]    ; Incomplete set of assignments ;
+; rows[4]    ; Incomplete set of assignments ;
 ; rows[3]    ; Incomplete set of assignments ;
 +------------+-------------------------------+
 
@@ -598,28 +600,28 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                               ; Entity Name    ; Library Name ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+----------------+--------------+
-; |teclado                                        ; 921 (0)     ; 530 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 23   ; 0            ; 391 (0)      ; 37 (0)            ; 493 (0)          ; |teclado                                                          ; teclado        ; work         ;
-;    |display:inst1|                              ; 21 (21)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 10 (10)          ; |teclado|display:inst1                                            ; display        ; work         ;
+; |teclado                                        ; 3752 (0)    ; 2161 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 1591 (0)     ; 38 (0)            ; 2123 (0)         ; |teclado                                                          ; teclado        ; work         ;
+;    |display:inst1|                              ; 33 (33)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 12 (12)          ; |teclado|display:inst1                                            ; display        ; work         ;
 ;    |frecuencia_5Hz:inst4|                       ; 43 (43)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 1 (1)             ; 26 (26)          ; |teclado|frecuencia_5Hz:inst4                                     ; frecuencia_5Hz ; work         ;
-;    |pila:inst2|                                 ; 116 (116)   ; 59 (59)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 57 (57)      ; 4 (4)             ; 55 (55)          ; |teclado|pila:inst2                                               ; pila           ; work         ;
-;    |pmod_keypad:inst|                           ; 703 (230)   ; 412 (60)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 291 (168)    ; 32 (2)            ; 380 (71)         ; |teclado|pmod_keypad:inst                                         ; pmod_keypad    ; work         ;
-;       |debounce:\row_debounce:0:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys  ; debounce       ; work         ;
-;       |debounce:\row_debounce:10:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys ; debounce       ; work         ;
-;       |debounce:\row_debounce:11:debounce_keys| ; 29 (29)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys ; debounce       ; work         ;
+;    |pila:inst2|                                 ; 125 (125)   ; 63 (63)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 62 (62)      ; 0 (0)             ; 63 (63)          ; |teclado|pila:inst2                                               ; pila           ; work         ;
+;    |pmod_keypad:inst|                           ; 717 (233)   ; 412 (60)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 305 (172)    ; 32 (1)            ; 380 (67)         ; |teclado|pmod_keypad:inst                                         ; pmod_keypad    ; work         ;
+;       |debounce:\row_debounce:0:debounce_keys|  ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys  ; debounce       ; work         ;
+;       |debounce:\row_debounce:10:debounce_keys| ; 29 (29)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys ; debounce       ; work         ;
+;       |debounce:\row_debounce:11:debounce_keys| ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 3 (3)             ; 19 (19)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys ; debounce       ; work         ;
 ;       |debounce:\row_debounce:12:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys ; debounce       ; work         ;
-;       |debounce:\row_debounce:13:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys ; debounce       ; work         ;
-;       |debounce:\row_debounce:14:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 21 (21)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys ; debounce       ; work         ;
-;       |debounce:\row_debounce:15:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys ; debounce       ; work         ;
-;       |debounce:\row_debounce:1:debounce_keys|  ; 29 (29)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 1 (1)             ; 21 (21)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys  ; debounce       ; work         ;
+;       |debounce:\row_debounce:13:debounce_keys| ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 1 (1)             ; 21 (21)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys ; debounce       ; work         ;
+;       |debounce:\row_debounce:14:debounce_keys| ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys ; debounce       ; work         ;
+;       |debounce:\row_debounce:15:debounce_keys| ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys ; debounce       ; work         ;
+;       |debounce:\row_debounce:1:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:2:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:3:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:4:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys  ; debounce       ; work         ;
-;       |debounce:\row_debounce:5:debounce_keys|  ; 29 (29)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys  ; debounce       ; work         ;
-;       |debounce:\row_debounce:6:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys  ; debounce       ; work         ;
+;       |debounce:\row_debounce:5:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys  ; debounce       ; work         ;
+;       |debounce:\row_debounce:6:debounce_keys|  ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys  ; debounce       ; work         ;
 ;       |debounce:\row_debounce:7:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys  ; debounce       ; work         ;
-;       |debounce:\row_debounce:8:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys  ; debounce       ; work         ;
-;       |debounce:\row_debounce:9:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 1 (1)             ; 22 (22)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys  ; debounce       ; work         ;
-;    |stack:inst5|                                ; 38 (38)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 22 (22)          ; |teclado|stack:inst5                                              ; stack          ; work         ;
+;       |debounce:\row_debounce:8:debounce_keys|  ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 20 (20)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys  ; debounce       ; work         ;
+;       |debounce:\row_debounce:9:debounce_keys|  ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 1 (1)             ; 21 (21)          ; |teclado|pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys  ; debounce       ; work         ;
+;    |stack:inst5|                                ; 2836 (2836) ; 1649 (1649)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1187 (1187)  ; 5 (5)             ; 1644 (1644)      ; |teclado|stack:inst5                                              ; stack          ; work         ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -645,13 +647,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; columns[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; columns[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; rst        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; rst        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; enable     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; push_stack ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; pop_stack  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; push_stack ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; rows[4]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; rows[1]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; rows[2]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; rows[3]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; rows[1]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; rows[4]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; rows[3]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -662,150 +665,164 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+-------------------+---------+
 ; clk                                                                          ;                   ;         ;
 ; rst                                                                          ;                   ;         ;
-;      - frecuencia_5Hz:inst4|salida                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|columns[1]                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|columns[2]                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|columns[3]                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|columns[4]                                           ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[25]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[24]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[23]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[22]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[21]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[20]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[19]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[18]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[16]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[17]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[15]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[14]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[13]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[12]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[11]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[10]                                       ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[7]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[9]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[8]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[6]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[5]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[4]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[3]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[2]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[1]                                        ; 1                 ; 6       ;
-;      - frecuencia_5Hz:inst4|cuenta[0]                                        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|result       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|result        ; 1                 ; 6       ;
-;      - pmod_keypad:inst|count[3]~0                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|count[2]~2                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|count[1]~3                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|count[0]~4                                           ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|flipflops[1] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|flipflops[0] ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|flipflops[1]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|flipflops[0]  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[18]~31 ; 1                 ; 6       ;
-;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[18]~31  ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[14]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[14]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[2]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[2]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[1]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[0]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[0]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[1]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[3]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[3]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[4]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[4]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[13]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[13]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[5]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[5]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[6]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[6]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[7]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[7]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[8]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[8]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[9]                                          ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[9]                                       ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[10]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[10]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[11]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[11]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[12]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[12]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_int[15]                                         ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_double[15]                                      ; 1                 ; 6       ;
-;      - pmod_keypad:inst|keys_stored[0]~0                                     ; 1                 ; 6       ;
-; pop_stack                                                                    ;                   ;         ;
-;      - stack:inst5|process_0~2                                               ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|salida                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|columns[1]                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|columns[2]                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|columns[3]                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|columns[4]                                           ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[25]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[24]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[23]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[22]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[21]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[20]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[19]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[18]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[16]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[17]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[15]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[14]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[13]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[12]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[11]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[10]                                       ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[7]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[9]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[8]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[6]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[5]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[4]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[3]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[2]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[1]                                        ; 0                 ; 6       ;
+;      - frecuencia_5Hz:inst4|cuenta[0]                                        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|result       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|result        ; 0                 ; 6       ;
+;      - pmod_keypad:inst|count[3]~0                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|count[2]~2                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|count[1]~3                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|count[0]~4                                           ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|flipflops[1] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|flipflops[0] ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|flipflops[1]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|flipflops[0]  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[18]~32 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[18]~31  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[18]~32 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[18]~31 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[18]~32 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[18]~32 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[18]~32 ; 0                 ; 6       ;
+;      - pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[18]~32  ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[6]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[6]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[2]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[2]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[1]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[0]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[0]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[1]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[3]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[3]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[4]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[4]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[13]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[14]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[14]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[13]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[5]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[5]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[7]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[7]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[8]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[8]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[9]                                          ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[9]                                       ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[10]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[10]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[11]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[11]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[12]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[12]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_int[15]                                         ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_double[15]                                      ; 0                 ; 6       ;
+;      - pmod_keypad:inst|keys_stored[0]~0                                     ; 0                 ; 6       ;
+; enable                                                                       ;                   ;         ;
+;      - stack:inst5|ver~0                                                     ; 0                 ; 6       ;
 ; push_stack                                                                   ;                   ;         ;
-;      - stack:inst5|iB[3]~3                                                   ; 1                 ; 6       ;
-; rows[4]                                                                      ;                   ;         ;
-;      - pmod_keypad:inst|rows_int[4]                                          ; 1                 ; 6       ;
-; rows[1]                                                                      ;                   ;         ;
-;      - pmod_keypad:inst|rows_int[1]                                          ; 1                 ; 6       ;
+;      - stack:inst5|iB[0]~3                                                   ; 0                 ; 6       ;
+;      - stack:inst5|iB[3]~8                                                   ; 0                 ; 6       ;
+;      - stack:inst5|ram[89][15]~6                                             ; 0                 ; 6       ;
+;      - stack:inst5|ram[38][15]~57                                            ; 0                 ; 6       ;
+;      - stack:inst5|ram[36][15]~70                                            ; 0                 ; 6       ;
+;      - stack:inst5|ram[39][15]~79                                            ; 0                 ; 6       ;
+;      - stack:inst5|ram[0][15]~137                                            ; 0                 ; 6       ;
+;      - stack:inst5|deb[1]~4                                                  ; 0                 ; 6       ;
+; pop_stack                                                                    ;                   ;         ;
+;      - stack:inst5|process_0~1                                               ; 0                 ; 6       ;
+;      - stack:inst5|ram~3                                                     ; 0                 ; 6       ;
+;      - stack:inst5|ram~14                                                    ; 0                 ; 6       ;
+;      - stack:inst5|ram~33                                                    ; 0                 ; 6       ;
+;      - stack:inst5|ram~43                                                    ; 0                 ; 6       ;
+;      - stack:inst5|ram~76                                                    ; 0                 ; 6       ;
 ; rows[2]                                                                      ;                   ;         ;
-;      - pmod_keypad:inst|rows_int[2]                                          ; 1                 ; 6       ;
+;      - pmod_keypad:inst|rows_int[2]~feeder                                   ; 1                 ; 6       ;
+; rows[1]                                                                      ;                   ;         ;
+;      - pmod_keypad:inst|rows_int[1]                                          ; 0                 ; 6       ;
+; rows[4]                                                                      ;                   ;         ;
+;      - pmod_keypad:inst|rows_int[4]                                          ; 0                 ; 6       ;
 ; rows[3]                                                                      ;                   ;         ;
-;      - pmod_keypad:inst|rows_int[3]                                          ; 1                 ; 6       ;
+;      - pmod_keypad:inst|rows_int[3]                                          ; 0                 ; 6       ;
 +------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -815,52 +832,156 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                  ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                                                                   ; PIN_91             ; 439     ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; frecuencia_5Hz:inst4|salida                                           ; FF_X1_Y10_N13      ; 91      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; pila:inst2|aux[11]~3                                                  ; LCCOMB_X14_Y6_N18  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pila:inst2|aux[3]~5                                                   ; LCCOMB_X13_Y6_N18  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pila:inst2|aux[7]~1                                                   ; LCCOMB_X14_Y6_N26  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pila:inst2|deb[2]~51                                                  ; LCCOMB_X12_Y6_N2   ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pila:inst2|deb~26                                                     ; LCCOMB_X12_Y6_N0   ; 14      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|LessThan0~0                                          ; LCCOMB_X28_Y7_N12  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[18]~31  ; LCCOMB_X21_Y4_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|counter_set   ; LCCOMB_X21_Y4_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[18]~31 ; LCCOMB_X22_Y2_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|counter_set  ; LCCOMB_X22_Y2_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[18]~31 ; LCCOMB_X22_Y4_N24  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|counter_set  ; LCCOMB_X22_Y5_N10  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[18]~31 ; LCCOMB_X19_Y4_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|counter_set  ; LCCOMB_X18_Y4_N10  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[18]~31 ; LCCOMB_X17_Y2_N0   ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|counter_set  ; LCCOMB_X17_Y2_N6   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[18]~31 ; LCCOMB_X26_Y6_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|counter_set  ; LCCOMB_X26_Y6_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[18]~31 ; LCCOMB_X24_Y4_N20  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|counter_set  ; LCCOMB_X22_Y6_N26  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[18]~31  ; LCCOMB_X19_Y2_N22  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|counter_set   ; LCCOMB_X19_Y2_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[18]~31  ; LCCOMB_X23_Y3_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|counter_set   ; LCCOMB_X23_Y3_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[18]~31  ; LCCOMB_X21_Y8_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|counter_set   ; LCCOMB_X21_Y8_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[18]~31  ; LCCOMB_X24_Y6_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|counter_set   ; LCCOMB_X24_Y6_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[18]~31  ; LCCOMB_X22_Y7_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|counter_set   ; LCCOMB_X22_Y7_N28  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[18]~31  ; LCCOMB_X16_Y3_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|counter_set   ; LCCOMB_X16_Y3_N24  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[18]~31  ; LCCOMB_X19_Y9_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|counter_set   ; LCCOMB_X19_Y9_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[18]~31  ; LCCOMB_X25_Y3_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|counter_set   ; LCCOMB_X25_Y3_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[18]~31  ; LCCOMB_X18_Y7_N22  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|counter_set   ; LCCOMB_X18_Y7_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|keys_int[0]~2                                        ; LCCOMB_X28_Y7_N4   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|keys_int[11]~3                                       ; LCCOMB_X29_Y10_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|keys_int[8]~1                                        ; LCCOMB_X29_Y7_N4   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|keys_int[9]~0                                        ; LCCOMB_X28_Y8_N24  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; pmod_keypad:inst|keys_stored[0]~1                                     ; LCCOMB_X29_Y10_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; frecuencia_5Hz:inst4|salida                                           ; FF_X33_Y4_N19      ; 1722    ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; pila:inst2|aux[11]~7                                                  ; LCCOMB_X23_Y14_N10 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pila:inst2|aux[15]~15                                                 ; LCCOMB_X23_Y14_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pila:inst2|aux[3]~2                                                   ; LCCOMB_X26_Y14_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pila:inst2|aux[7]~5                                                   ; LCCOMB_X26_Y14_N2  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pila:inst2|deb[12]~53                                                 ; LCCOMB_X25_Y14_N22 ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pila:inst2|deb~28                                                     ; LCCOMB_X25_Y14_N30 ; 14      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|LessThan0~0                                          ; LCCOMB_X30_Y4_N16  ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|count[18]~32  ; LCCOMB_X26_Y12_N30 ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:0:debounce_keys|counter_set   ; LCCOMB_X26_Y10_N24 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|count[18]~31 ; LCCOMB_X26_Y3_N22  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:10:debounce_keys|counter_set  ; LCCOMB_X26_Y3_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|count[18]~32 ; LCCOMB_X31_Y9_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:11:debounce_keys|counter_set  ; LCCOMB_X31_Y11_N0  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|count[18]~32 ; LCCOMB_X25_Y5_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:12:debounce_keys|counter_set  ; LCCOMB_X25_Y7_N30  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|count[18]~32 ; LCCOMB_X30_Y9_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:13:debounce_keys|counter_set  ; LCCOMB_X30_Y11_N0  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|count[18]~32 ; LCCOMB_X26_Y5_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|counter_set  ; LCCOMB_X26_Y9_N6   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|count[18]~32 ; LCCOMB_X24_Y5_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:15:debounce_keys|counter_set  ; LCCOMB_X25_Y9_N20  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|count[18]~31  ; LCCOMB_X23_Y9_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:1:debounce_keys|counter_set   ; LCCOMB_X23_Y9_N24  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|count[18]~32  ; LCCOMB_X29_Y9_N22  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:2:debounce_keys|counter_set   ; LCCOMB_X25_Y8_N2   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|count[18]~32  ; LCCOMB_X24_Y12_N30 ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:3:debounce_keys|counter_set   ; LCCOMB_X24_Y12_N26 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|count[18]~32  ; LCCOMB_X24_Y9_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:4:debounce_keys|counter_set   ; LCCOMB_X28_Y10_N20 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|count[18]~32  ; LCCOMB_X23_Y4_N26  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:5:debounce_keys|counter_set   ; LCCOMB_X23_Y7_N0   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|count[18]~32  ; LCCOMB_X33_Y10_N26 ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:6:debounce_keys|counter_set   ; LCCOMB_X33_Y11_N10 ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|count[18]~32  ; LCCOMB_X28_Y8_N24  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:7:debounce_keys|counter_set   ; LCCOMB_X24_Y8_N0   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|count[18]~32  ; LCCOMB_X32_Y10_N24 ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:8:debounce_keys|counter_set   ; LCCOMB_X31_Y10_N0  ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|count[18]~32  ; LCCOMB_X28_Y4_N30  ; 19      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|debounce:\row_debounce:9:debounce_keys|counter_set   ; LCCOMB_X25_Y8_N4   ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|keys_int[0]~2                                        ; LCCOMB_X29_Y8_N0   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|keys_int[11]~3                                       ; LCCOMB_X28_Y6_N16  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|keys_int[8]~1                                        ; LCCOMB_X30_Y5_N0   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|keys_int[9]~0                                        ; LCCOMB_X29_Y8_N30  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; pmod_keypad:inst|keys_stored[0]~1                                     ; LCCOMB_X29_Y8_N24  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; rst                                                                   ; PIN_73             ; 132     ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; stack:inst5|iB[3]~3                                                   ; LCCOMB_X29_Y2_N6   ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|iB[3]~8                                                   ; LCCOMB_X13_Y12_N24 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[0][15]~137                                            ; LCCOMB_X14_Y12_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[10][15]~60                                            ; LCCOMB_X23_Y16_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[11][15]~82                                            ; LCCOMB_X13_Y15_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[12][15]~169                                           ; LCCOMB_X17_Y15_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[13][15]~167                                           ; LCCOMB_X12_Y12_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[14][15]~165                                           ; LCCOMB_X23_Y21_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[15][15]~171                                           ; LCCOMB_X13_Y18_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[16][15]~130                                           ; LCCOMB_X17_Y21_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[17][15]~128                                           ; LCCOMB_X12_Y14_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[18][15]~126                                           ; LCCOMB_X21_Y16_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[19][15]~132                                           ; LCCOMB_X10_Y18_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[1][15]~136                                            ; LCCOMB_X11_Y16_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[20][15]~98                                            ; LCCOMB_X18_Y18_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[21][15]~96                                            ; LCCOMB_X19_Y21_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[22][15]~94                                            ; LCCOMB_X13_Y20_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[23][15]~100                                           ; LCCOMB_X8_Y18_N18  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[24][15]~67                                            ; LCCOMB_X19_Y17_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[25][15]~48                                            ; LCCOMB_X9_Y17_N20  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[26][15]~54                                            ; LCCOMB_X26_Y16_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[27][15]~75                                            ; LCCOMB_X8_Y19_N12  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[28][15]~161                                           ; LCCOMB_X19_Y20_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[29][15]~157                                           ; LCCOMB_X11_Y18_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[2][15]~134                                            ; LCCOMB_X16_Y14_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[30][15]~159                                           ; LCCOMB_X21_Y17_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[31][15]~163                                           ; LCCOMB_X11_Y19_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[32][15]~122                                           ; LCCOMB_X17_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[33][15]~120                                           ; LCCOMB_X10_Y12_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[34][15]~118                                           ; LCCOMB_X21_Y16_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[35][15]~124                                           ; LCCOMB_X13_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[36][15]~90                                            ; LCCOMB_X14_Y15_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[37][15]~86                                            ; LCCOMB_X10_Y20_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[38][15]~88                                            ; LCCOMB_X23_Y20_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[39][15]~92                                            ; LCCOMB_X14_Y18_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[3][15]~139                                            ; LCCOMB_X13_Y15_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[40][15]~65                                            ; LCCOMB_X17_Y15_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[41][15]~46                                            ; LCCOMB_X11_Y12_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[42][15]~58                                            ; LCCOMB_X19_Y15_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[43][15]~80                                            ; LCCOMB_X13_Y15_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[44][15]~153                                           ; LCCOMB_X17_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[45][15]~151                                           ; LCCOMB_X13_Y20_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[46][15]~149                                           ; LCCOMB_X23_Y21_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[47][15]~155                                           ; LCCOMB_X13_Y15_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[48][15]~145                                           ; LCCOMB_X19_Y12_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[49][15]~143                                           ; LCCOMB_X11_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[4][15]~106                                            ; LCCOMB_X14_Y15_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[50][15]~141                                           ; LCCOMB_X22_Y20_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[51][15]~147                                           ; LCCOMB_X10_Y14_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[52][15]~114                                           ; LCCOMB_X21_Y14_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[53][15]~112                                           ; LCCOMB_X14_Y21_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[54][15]~110                                           ; LCCOMB_X21_Y18_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[55][15]~116                                           ; LCCOMB_X11_Y20_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[56][15]~73                                            ; LCCOMB_X22_Y18_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[57][15]~52                                            ; LCCOMB_X9_Y18_N2   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[58][15]~62                                            ; LCCOMB_X25_Y18_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[59][15]~84                                            ; LCCOMB_X13_Y12_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[5][15]~104                                            ; LCCOMB_X13_Y17_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[60][15]~177                                           ; LCCOMB_X22_Y16_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[61][15]~173                                           ; LCCOMB_X14_Y20_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[62][15]~175                                           ; LCCOMB_X21_Y21_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[63][15]~179                                           ; LCCOMB_X12_Y20_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[64][15]~201                                           ; LCCOMB_X14_Y15_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[65][15]~197                                           ; LCCOMB_X12_Y12_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[66][15]~199                                           ; LCCOMB_X12_Y9_N10  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[67][15]~203                                           ; LCCOMB_X13_Y15_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[68][15]~185                                           ; LCCOMB_X13_Y11_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[69][15]~183                                           ; LCCOMB_X16_Y7_N10  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[6][15]~102                                            ; LCCOMB_X26_Y18_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[70][15]~181                                           ; LCCOMB_X16_Y10_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[71][15]~187                                           ; LCCOMB_X13_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[72][15]~193                                           ; LCCOMB_X14_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[73][15]~189                                           ; LCCOMB_X12_Y10_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[74][15]~191                                           ; LCCOMB_X9_Y10_N6   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[75][15]~195                                           ; LCCOMB_X13_Y15_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[76][15]~209                                           ; LCCOMB_X14_Y15_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[77][15]~207                                           ; LCCOMB_X12_Y11_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[78][15]~205                                           ; LCCOMB_X12_Y7_N2   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[79][15]~211                                           ; LCCOMB_X14_Y7_N6   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[7][15]~108                                            ; LCCOMB_X12_Y17_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[80][15]~30                                            ; LCCOMB_X19_Y9_N24  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[81][15]~11                                            ; LCCOMB_X22_Y11_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[82][15]~21                                            ; LCCOMB_X21_Y12_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[83][15]~40                                            ; LCCOMB_X18_Y11_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[84][15]~28                                            ; LCCOMB_X17_Y9_N14  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[85][15]~9                                             ; LCCOMB_X19_Y10_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[86][15]~17                                            ; LCCOMB_X17_Y7_N28  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[87][15]~36                                            ; LCCOMB_X18_Y12_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[88][15]~26                                            ; LCCOMB_X22_Y9_N26  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[89][15]~7                                             ; LCCOMB_X22_Y8_N14  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[8][15]~71                                             ; LCCOMB_X14_Y17_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[90][15]~19                                            ; LCCOMB_X21_Y10_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[91][15]~38                                            ; LCCOMB_X17_Y8_N2   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[92][15]~32                                            ; LCCOMB_X22_Y12_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[93][15]~13                                            ; LCCOMB_X16_Y12_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[94][15]~23                                            ; LCCOMB_X18_Y7_N18  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[95][15]~42                                            ; LCCOMB_X18_Y9_N10  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[96][15]~217                                           ; LCCOMB_X14_Y15_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[97][15]~215                                           ; LCCOMB_X11_Y7_N10  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[98][15]~213                                           ; LCCOMB_X9_Y8_N10   ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[99][15]~219                                           ; LCCOMB_X13_Y15_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|ram[9][15]~50                                             ; LCCOMB_X9_Y19_N10  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|sal_ins[15]~2                                             ; LCCOMB_X14_Y13_N0  ; 23      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|tot[4]~17                                                 ; LCCOMB_X14_Y13_N28 ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; stack:inst5|tot[4]~18                                                 ; LCCOMB_X11_Y13_N2  ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -869,173 +990,177 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                        ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                         ; PIN_91        ; 439     ; 21                                   ; Global Clock         ; GCLK9            ; --                        ;
-; frecuencia_5Hz:inst4|salida ; FF_X1_Y10_N13 ; 91      ; 11                                   ; Global Clock         ; GCLK2            ; --                        ;
+; clk                         ; PIN_91        ; 439     ; 16                                   ; Global Clock         ; GCLK9            ; --                        ;
+; frecuencia_5Hz:inst4|salida ; FF_X33_Y4_N19 ; 1722    ; 169                                  ; Global Clock         ; GCLK6            ; --                        ;
 +-----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------+
-; Routing Usage Summary                          ;
-+-----------------------+------------------------+
-; Routing Resource Type ; Usage                  ;
-+-----------------------+------------------------+
-; Block interconnects   ; 751 / 32,401 ( 2 % )   ;
-; C16 interconnects     ; 6 / 1,326 ( < 1 % )    ;
-; C4 interconnects      ; 317 / 21,816 ( 1 % )   ;
-; Direct links          ; 209 / 32,401 ( < 1 % ) ;
-; Global clocks         ; 2 / 10 ( 20 % )        ;
-; Local interconnects   ; 706 / 10,320 ( 7 % )   ;
-; R24 interconnects     ; 7 / 1,289 ( < 1 % )    ;
-; R4 interconnects      ; 340 / 28,186 ( 1 % )   ;
-+-----------------------+------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.23) ; Number of LABs  (Total = 82) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 2                            ;
-; 2                                           ; 6                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 4                            ;
-; 6                                           ; 5                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 13                           ;
-; 11                                          ; 3                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 5                            ;
-; 16                                          ; 31                           ;
-+---------------------------------------------+------------------------------+
-
-
-+-------------------------------------------------------------------+
-; LAB-wide Signals                                                  ;
-+------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.83) ; Number of LABs  (Total = 82) ;
-+------------------------------------+------------------------------+
-; 1 Async. clear                     ; 27                           ;
-; 1 Clock                            ; 77                           ;
-; 1 Clock enable                     ; 26                           ;
-; 1 Sync. clear                      ; 19                           ;
-; 2 Clock enables                    ; 1                            ;
-+------------------------------------+------------------------------+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 5,616 / 32,401 ( 17 % ) ;
+; C16 interconnects     ; 65 / 1,326 ( 5 % )      ;
+; C4 interconnects      ; 2,982 / 21,816 ( 14 % ) ;
+; Direct links          ; 392 / 32,401 ( 1 % )    ;
+; Global clocks         ; 2 / 10 ( 20 % )         ;
+; Local interconnects   ; 1,815 / 10,320 ( 18 % ) ;
+; R24 interconnects     ; 84 / 1,289 ( 7 % )      ;
+; R4 interconnects      ; 3,212 / 28,186 ( 11 % ) ;
++-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.66) ; Number of LABs  (Total = 82) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 4                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 3                            ;
-; 19                                           ; 17                           ;
-; 20                                           ; 4                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 4                            ;
-; 24                                           ; 4                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 11                           ;
-; 27                                           ; 1                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 13.35) ; Number of LABs  (Total = 281) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 5                             ;
+; 2                                           ; 5                             ;
+; 3                                           ; 7                             ;
+; 4                                           ; 4                             ;
+; 5                                           ; 6                             ;
+; 6                                           ; 6                             ;
+; 7                                           ; 4                             ;
+; 8                                           ; 2                             ;
+; 9                                           ; 1                             ;
+; 10                                          ; 19                            ;
+; 11                                          ; 12                            ;
+; 12                                          ; 5                             ;
+; 13                                          ; 7                             ;
+; 14                                          ; 14                            ;
+; 15                                          ; 32                            ;
+; 16                                          ; 152                           ;
++---------------------------------------------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.24) ; Number of LABs  (Total = 82) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 15                           ;
-; 2                                               ; 12                           ;
-; 3                                               ; 15                           ;
-; 4                                               ; 4                            ;
-; 5                                               ; 7                            ;
-; 6                                               ; 7                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 6                            ;
-; 11                                              ; 0                            ;
-; 12                                              ; 1                            ;
-; 13                                              ; 5                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 0                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 0                            ;
-; 21                                              ; 0                            ;
-; 22                                              ; 0                            ;
-; 23                                              ; 0                            ;
-; 24                                              ; 0                            ;
-; 25                                              ; 1                            ;
-+-------------------------------------------------+------------------------------+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 1.93) ; Number of LABs  (Total = 281) ;
++------------------------------------+-------------------------------+
+; 1 Async. clear                     ; 33                            ;
+; 1 Clock                            ; 273                           ;
+; 1 Clock enable                     ; 96                            ;
+; 1 Sync. clear                      ; 30                            ;
+; 2 Clock enables                    ; 108                           ;
+; 2 Clocks                           ; 2                             ;
++------------------------------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.93) ; Number of LABs  (Total = 82) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 2                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 18                           ;
-; 4                                           ; 6                            ;
-; 5                                           ; 6                            ;
-; 6                                           ; 16                           ;
-; 7                                           ; 6                            ;
-; 8                                           ; 3                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 3                            ;
-; 16                                          ; 0                            ;
-; 17                                          ; 3                            ;
-; 18                                          ; 1                            ;
-; 19                                          ; 2                            ;
-; 20                                          ; 1                            ;
-; 21                                          ; 1                            ;
-; 22                                          ; 0                            ;
-; 23                                          ; 2                            ;
-; 24                                          ; 3                            ;
-; 25                                          ; 2                            ;
-; 26                                          ; 0                            ;
-; 27                                          ; 0                            ;
-; 28                                          ; 0                            ;
-; 29                                          ; 1                            ;
-+---------------------------------------------+------------------------------+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 21.00) ; Number of LABs  (Total = 281) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 2                             ;
+; 2                                            ; 3                             ;
+; 3                                            ; 2                             ;
+; 4                                            ; 7                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 0                             ;
+; 8                                            ; 7                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 1                             ;
+; 13                                           ; 4                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 5                             ;
+; 16                                           ; 8                             ;
+; 17                                           ; 17                            ;
+; 18                                           ; 21                            ;
+; 19                                           ; 30                            ;
+; 20                                           ; 18                            ;
+; 21                                           ; 9                             ;
+; 22                                           ; 5                             ;
+; 23                                           ; 8                             ;
+; 24                                           ; 11                            ;
+; 25                                           ; 6                             ;
+; 26                                           ; 20                            ;
+; 27                                           ; 8                             ;
+; 28                                           ; 13                            ;
+; 29                                           ; 13                            ;
+; 30                                           ; 6                             ;
+; 31                                           ; 26                            ;
+; 32                                           ; 13                            ;
++----------------------------------------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 7.93) ; Number of LABs  (Total = 281) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 26                            ;
+; 2                                               ; 32                            ;
+; 3                                               ; 33                            ;
+; 4                                               ; 21                            ;
+; 5                                               ; 14                            ;
+; 6                                               ; 11                            ;
+; 7                                               ; 14                            ;
+; 8                                               ; 11                            ;
+; 9                                               ; 4                             ;
+; 10                                              ; 11                            ;
+; 11                                              ; 16                            ;
+; 12                                              ; 7                             ;
+; 13                                              ; 12                            ;
+; 14                                              ; 15                            ;
+; 15                                              ; 9                             ;
+; 16                                              ; 39                            ;
+; 17                                              ; 5                             ;
+; 18                                              ; 1                             ;
++-------------------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 19.67) ; Number of LABs  (Total = 281) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 0                             ;
+; 2                                            ; 3                             ;
+; 3                                            ; 18                            ;
+; 4                                            ; 5                             ;
+; 5                                            ; 7                             ;
+; 6                                            ; 9                             ;
+; 7                                            ; 16                            ;
+; 8                                            ; 2                             ;
+; 9                                            ; 3                             ;
+; 10                                           ; 0                             ;
+; 11                                           ; 2                             ;
+; 12                                           ; 6                             ;
+; 13                                           ; 6                             ;
+; 14                                           ; 7                             ;
+; 15                                           ; 2                             ;
+; 16                                           ; 8                             ;
+; 17                                           ; 5                             ;
+; 18                                           ; 13                            ;
+; 19                                           ; 16                            ;
+; 20                                           ; 15                            ;
+; 21                                           ; 13                            ;
+; 22                                           ; 11                            ;
+; 23                                           ; 10                            ;
+; 24                                           ; 12                            ;
+; 25                                           ; 9                             ;
+; 26                                           ; 9                             ;
+; 27                                           ; 7                             ;
+; 28                                           ; 7                             ;
+; 29                                           ; 8                             ;
+; 30                                           ; 4                             ;
+; 31                                           ; 8                             ;
+; 32                                           ; 8                             ;
+; 33                                           ; 6                             ;
+; 34                                           ; 9                             ;
+; 35                                           ; 5                             ;
+; 36                                           ; 5                             ;
+; 37                                           ; 7                             ;
++----------------------------------------------+-------------------------------+
 
 
 +------------------------------------------+
@@ -1095,9 +1220,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 23        ; 23        ; 0            ; 0            ; 23        ; 23        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 8            ; 15           ; 0            ; 8            ; 0            ; 0            ; 15           ; 0            ; 23        ; 23        ; 23        ; 0            ; 0            ;
+; Total Pass         ; 0            ; 24        ; 24        ; 0            ; 0            ; 24        ; 24        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 9            ; 15           ; 0            ; 9            ; 0            ; 0            ; 15           ; 0            ; 24        ; 24        ; 24        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 23           ; 0         ; 0         ; 23           ; 23           ; 0         ; 0         ; 23           ; 23           ; 23           ; 23           ; 23           ; 23           ; 8            ; 23           ; 23           ; 23           ; 15           ; 8            ; 23           ; 15           ; 23           ; 23           ; 8            ; 23           ; 0         ; 0         ; 0         ; 23           ; 23           ;
+; Total Inapplicable ; 24           ; 0         ; 0         ; 24           ; 24           ; 0         ; 0         ; 24           ; 24           ; 24           ; 24           ; 24           ; 24           ; 9            ; 24           ; 24           ; 24           ; 15           ; 9            ; 24           ; 15           ; 24           ; 24           ; 9            ; 24           ; 0         ; 0         ; 0         ; 24           ; 24           ;
 ; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
 ; d1                 ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; d2                 ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1116,11 +1241,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; columns[4]         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; rst                ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; pop_stack          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; enable             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; push_stack         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; rows[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; rows[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; pop_stack          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; rows[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; rows[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; rows[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; rows[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
 
@@ -1161,51 +1287,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; clk             ; clk                  ; 3.5               ;
-+-----------------+----------------------+-------------------+
++-------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                     ;
++-----------------+-----------------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s)        ; Delay Added in ns ;
++-----------------+-----------------------------+-------------------+
+; clk             ; clk                         ; 3.5               ;
+; clk             ; frecuencia_5Hz:inst4|salida ; 1.5               ;
++-----------------+-----------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                      ;
-+---------------------------------+------------------------------+-------------------+
-; Source Register                 ; Destination Register         ; Delay Added in ns ;
-+---------------------------------+------------------------------+-------------------+
-; frecuencia_5Hz:inst4|salida     ; frecuencia_5Hz:inst4|salida  ; 3.494             ;
-; frecuencia_5Hz:inst4|cuenta[25] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[24] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[23] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[22] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[21] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[20] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[19] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[18] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[16] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[17] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[15] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[14] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[13] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[12] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[11] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[10] ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[9]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[7]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[8]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[6]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[5]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[4]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[3]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[2]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[1]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; frecuencia_5Hz:inst4|cuenta[0]  ; frecuencia_5Hz:inst4|salida  ; 1.747             ;
-; pmod_keypad:inst|rows_int[2]    ; pmod_keypad:inst|keys_int[6] ; 0.046             ;
-+---------------------------------+------------------------------+-------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                     ;
++-----------------------------------------------------------------+-----------------------------+-------------------+
+; Source Register                                                 ; Destination Register        ; Delay Added in ns ;
++-----------------------------------------------------------------+-----------------------------+-------------------+
+; frecuencia_5Hz:inst4|salida                                     ; frecuencia_5Hz:inst4|salida ; 3.472             ;
+; frecuencia_5Hz:inst4|cuenta[25]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[24]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[23]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[22]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[21]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[20]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[19]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[18]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[16]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[17]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[15]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[14]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[13]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[12]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[11]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[10]                                 ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[9]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[7]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[8]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[6]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[5]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[4]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[3]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[2]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[1]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; frecuencia_5Hz:inst4|cuenta[0]                                  ; frecuencia_5Hz:inst4|salida ; 1.736             ;
+; pmod_keypad:inst|debounce:\row_debounce:14:debounce_keys|result ; pila:inst2|aux[11]          ; 0.213             ;
++-----------------------------------------------------------------+-----------------------------+-------------------+
 Note: This table only shows the top 28 path(s) that have the largest delay added for hold.
 
 
@@ -1243,31 +1370,31 @@ Info (176353): Automatically promoted node frecuencia_5Hz:inst4|salida  File: /h
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:11
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X23_Y0 to location X34_Y11
+Info (170195): Router estimated average interconnect usage is 11% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 30% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.51 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:18
+Info (11888): Total time spent on timing analysis during the Fitter is 5.01 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file /home/angel/Documentos/ESCOM/5to/Arqui/ArquitecturaComputadoras/teclado/output_files/teclado.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 997 megabytes
-    Info: Processing ended: Mon Dec 19 11:37:59 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 1045 megabytes
+    Info: Processing ended: Mon Dec 19 20:48:46 2022
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:01:14
 
 
 +----------------------------+

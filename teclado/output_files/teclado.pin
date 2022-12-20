@@ -144,7 +144,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :      
 rst                          : 73        : input  : 2.5 V             :         : 5         : Y              
 push_stack                   : 74        : input  : 2.5 V             :         : 5         : Y              
 pop_stack                    : 75        : input  : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :         : 5         :                
+enable                       : 76        : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 77        :        :                   :         : 5         :                
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
 GND                          : 79        : gnd    :                   :         :           :                

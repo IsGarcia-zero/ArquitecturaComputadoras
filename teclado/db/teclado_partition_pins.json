@@ -72,7 +72,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pop_stack",
+					"name" : "enable",
 					"strict" : false
 				},
 				{
@@ -80,7 +80,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "rows[4]",
+					"name" : "pop_stack",
+					"strict" : false
+				},
+				{
+					"name" : "rows[2]",
 					"strict" : false
 				},
 				{
@@ -88,7 +92,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rows[2]",
+					"name" : "rows[4]",
 					"strict" : false
 				},
 				{
