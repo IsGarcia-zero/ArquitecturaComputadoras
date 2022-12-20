@@ -21,6 +21,7 @@ BEGIN
 	PROCESS(clk, n, aux)
 	BEGIN
 		IF (RISING_EDGE(clk)) THEN
+			tot <= tot + 1; -- Contador para los ciclos
 			IF(n /= "00000" AND deb = 0) THEN -- Si se introdujo dato en el teclado...
 				IF (n = "10000") THEN -- Si es 16, es pop a la pantalla
 					CASE cont IS
@@ -40,9 +41,6 @@ BEGIN
 				deb <= deb + 1;
 			END IF;
 			-- Debounce
-			IF (deb > 0) THEN
-				tot <= tot + 1; -- Contador para los ciclos
-			END IF;
 			IF (tot = 150) THEN
 				tot <= 0;
 				IF(deb = 1) THEN

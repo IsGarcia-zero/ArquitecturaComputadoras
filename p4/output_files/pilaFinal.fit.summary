@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Dec 19 10:51:03 2022
+Fitter Status : Successful - Mon Dec 19 21:56:51 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : pilaFinal
 Top-level Entity Name : pilaFinal
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 1,190 / 6,272 ( 19 % )
-    Total combinational functions : 1,153 / 6,272 ( 18 % )
-    Dedicated logic registers : 292 / 6,272 ( 5 % )
-Total registers : 292
-Total pins : 27 / 92 ( 29 % )
+Total logic elements : 4,146 / 6,272 ( 66 % )
+    Total combinational functions : 4,080 / 6,272 ( 65 % )
+    Dedicated logic registers : 1,904 / 6,272 ( 30 % )
+Total registers : 1904
+Total pins : 28 / 92 ( 30 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
