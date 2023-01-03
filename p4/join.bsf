@@ -21,9 +21,9 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 184 160)
+	(rect 16 16 208 224)
 	(text "join" (rect 5 0 16 12)(font "Arial" ))
-	(text "inst" (rect 8 128 20 140)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -62,18 +62,39 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 112)
 		(input)
-		(text "ins[15..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "ins[15..0]" (rect 21 107 55 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
+		(text "mode" (rect 0 0 22 12)(font "Arial" ))
+		(text "mode" (rect 21 107 43 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
-		(pt 168 32)
+		(pt 0 128)
+		(input)
+		(text "sm" (rect 0 0 12 12)(font "Arial" ))
+		(text "sm" (rect 21 123 33 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "ins[15..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "ins[15..0]" (rect 21 139 55 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "msg_sal[15..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "msg_sal[15..0]" (rect 21 155 78 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 192 32)
 		(output)
 		(text "sal[15..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "sal[15..0]" (rect 113 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
+		(text "sal[15..0]" (rect 137 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 128)(line_width 1))
+		(rectangle (rect 16 16 176 192)(line_width 1))
 	)
 )

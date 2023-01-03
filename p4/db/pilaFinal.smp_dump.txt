@@ -1,13 +1,19 @@
 
-State Machine - |pilaFinal|datapath:inst|pr_state
-Name pr_state.state3 pr_state.state2 pr_state.state1 pr_state.state0 
-pr_state.state0 0 0 0 0 
-pr_state.state1 0 0 1 1 
-pr_state.state2 0 1 0 1 
-pr_state.state3 1 0 0 1 
+State Machine - |pilaFinal|join:inst1|convertidor:conv2|state
+Name state.done state.shift state.start 
+state.start 0 0 0 
+state.shift 0 1 1 
+state.done 1 0 1 
 
 State Machine - |pilaFinal|join:inst1|convertidor:conv1|state
 Name state.done state.shift state.start 
 state.start 0 0 0 
 state.shift 0 1 1 
 state.done 1 0 1 
+
+State Machine - |pilaFinal|datapath:inst|pr_state
+Name pr_state.state3 pr_state.state2 pr_state.state1 pr_state.state0 
+pr_state.state0 0 0 0 0 
+pr_state.state1 0 0 1 1 
+pr_state.state2 0 1 0 1 
+pr_state.state3 1 0 0 1 

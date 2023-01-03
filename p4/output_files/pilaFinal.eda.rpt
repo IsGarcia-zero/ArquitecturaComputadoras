@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pilaFinal
-Mon Dec 19 23:45:14 2022
+Tue Jan  3 03:33:40 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Dec 19 23:45:14 2022 ;
+; EDA Netlist Writer Status ; Successful - Tue Jan  3 03:33:40 2023 ;
 ; Revision Name             ; pilaFinal                             ;
 ; Top-level Entity Name     ; pilaFinal                             ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                                    ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                               ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/simulation/activehdl/pilaFinal.vho ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/p4/simulation/activehdl/pilaFinal.vho ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Mon Dec 19 23:45:14 2022
+    Info: Processing started: Tue Jan  3 03:33:39 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pilaFinal -c pilaFinal
-Info (204019): Generated file pilaFinal.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/miparte/ArquitecturaComputadoras/p4/simulation/activehdl/" for EDA simulation tool
+Info (204019): Generated file pilaFinal.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/p4/simulation/activehdl/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4668 megabytes
-    Info: Processing ended: Mon Dec 19 23:45:14 2022
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Tue Jan  3 03:33:40 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

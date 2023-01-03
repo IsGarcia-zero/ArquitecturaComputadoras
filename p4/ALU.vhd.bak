@@ -33,7 +33,7 @@ COMPONENT uapro IS
         Si : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
         C, Z, Ov, S : OUT STD_LOGIC
     );
-	 
+
 END COMPONENT uapro;
 
 COMPONENT Logicas IS
@@ -49,7 +49,7 @@ END COMPONENT Logicas;
 
 COMPONENT barrelShifters IS
     PORT (
-        a : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        a, b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
         cntrl, clk, iniciar : IN STD_LOGIC;
         salShifters : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
         salPrub : OUT STD_LOGIC
@@ -114,7 +114,7 @@ BEGIN
 
 unidad_aritmetica: uapro PORT MAP(A(14 DOWNTO 0),B(14 DOWNTO 0),sel_aux, clk,rst,A(15),B(15),ua_sal,c_flag, z_flag,ov_flag, s_flag  );
 unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk, log_sal,a_aux,b_aux);
-barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal, d_aux);
+barrel_shifters: barrelShifters PORT MAP(A,B,sel_aux_2,clk, '1', bar_sal, d_aux);
 comparador: comparador16 PORT MAP(A,B,'0','0',gtt_aux,eqq_aux,ltt_aux);
 
 

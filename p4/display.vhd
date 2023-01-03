@@ -1,32 +1,28 @@
 LIBRARY IEEE;
 
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_UNSIGNED;
-USE IEEE.NUMERIC_STD;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY display IS 
 	PORT(
 		en : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-		clk : IN STD_LOGIC;
-		d1,d2,d3,d4 : OUT STD_LOGIC;
-		a,b,c,d,e,f,g, p : OUT STD_LOGIC
+		clk, modo, sm: IN STD_LOGIC;
+		d1, d2, d3, d4 : OUT STD_LOGIC;
+		a, b, c, d, e, f, g, punto : OUT STD_LOGIC
 	);
 END ENTITY;
 
 ARCHITECTURE bhr OF display IS
-	SIGNAL sel : INTEGER RANGE 0 TO 3 := 0;
-	SIGNAL var : INTEGER RANGE 0 TO 9999999 := 0;
-	SIGNAL seg : INTEGER RANGE 0 TO 30 := 0;
-	SIGNAL contador : INTEGER RANGE 0 TO 100 := 0;
-	SIGNAL aux : STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL selector : STD_lOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL msg, message : STD_lOGIC_VECTOR(79 DOWNTO 0);
-	SIGNAL disp, letter : STD_lOGIC_VECTOR(7 DOWNTO 0) := "00000000";
-	SIGNAL ledsito : STD_lOGIC := '0';
-	SIGNAL letrita : STD_lOGIC_VECTOR(3 DOWNTO 0) := "0000";
-	SIGNAL l1,l2,l3,l4 : STD_lOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL op : STD_LOGIC_VECTOR(3 DOWNTO 0):= "0000";
-	SIGNAL op_real : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL contador : INTEGER RANGE 0 TO 3 := 0;
+	SIGNAL seg : INTEGER RANGE 0 TO 5 := 0;
+	SIGNAL ctG : INTEGER RANGE 0 TO 49999999 := 0;
+	SIGNAL arreglo : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL aux : STD_LOGIC_VECTOR(7 DOWNTO 0):="00000000";
+	SIGNAL tmp : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL msj : STD_LOGIC := '0';
+	SIGNAL address : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL letra : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL op : STD_LOGIC_VECTOR(11 DOWNTO 0) := "000000000001";
 	
 	COMPONENT letras IS
 		PORT(
@@ -35,107 +31,81 @@ ARCHITECTURE bhr OF display IS
 		);
 	END COMPONENT;
 	
-	COMPONENT texto IS
-		PORT(
-			address : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			palabra : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)
-		);
-	END COMPONENT;
 BEGIN
 	
-	desplegar: PROCESS(clk)
+	NUMEROS: PROCESS(tmp, clk) --GFEDCBA
 	BEGIN
-		IF(RISING_EDGE(clk)) THEN
-				-- Asignar 1 sola vez el valor de la letra
-				IF var = 0 THEN
-					message <= msg;
-					op_real <= op;
-					IF ledsito = '1' THEN
-						ledsito <= '0';
-					END IF;
-				END IF;
-				-- Comprobar si el mensaje cambio
---				IF op /= op_real THEN
---					var <= 0;
---					seg <= 0;
---				END IF;
-
-				
-				IF seg < 30 THEN
-					-- Ventana deslizante operacion
-					l1 <= message(7 DOWNTO 4);
-					l2 <= message(11 DOWNTO 8);
-					l3 <= message(15 DOWNTO 12);
-					l4 <= message(19 DOWNTO 16);
-					IF (contador = 100) THEN
-						contador <= 0;
-						message <= message(75 DOWNTO 0) & message(79 DOWNTO 76);
-						var <= var + 1;
-						seg <= seg + 1;
-					END IF;
-					IF sel = 3 THEN
-						sel <= 0;
-					END IF;
-				ELSE
-					-- Salida numerica y obtener la entrada de la UA
-					ledsito <= '1';
-					l4 <= en(15 DOWNTO 12);
-					l3 <= en(11 DOWNTO 8);
-					l2 <= en(7 DOWNTO 4);
-					l1 <= en(3 DOWNTO 0);
-				END IF;
-				-- Colocar digito en el display correspondiente
-				CASE sel IS
-					WHEN 0 => selector <= "0001";aux <= l4;
-					WHEN 1 => selector <= "0010";aux <= l3;
-					WHEN 2 => selector <= "0100";aux <= l2;
-					WHEN 3 => selector <= "1000";aux <= l1;
-				END CASE;
-				-- Aumentar contadores
-				sel <= sel + 1;
-				contador <= contador + 1;
-		END IF;
-		letrita <= aux;
-		IF ledsito = '0' THEN
-			disp <= letter;
-		ELSE
-			CASE letrita IS
-				WHEN "0000" => disp <= "11000000";
-				WHEN "0001" => disp <= "11111001";
-				WHEN "0010" => disp <= "10100100";
-				WHEN "0011" => disp <= "10110000";
-				WHEN "0100" => disp <= "10011001";
-				WHEN "0101" => disp <= "10010010";
-				WHEN "0110" => disp <= "10000010";
-				WHEN "0111" => disp <= "11111000";
-				WHEN "1000" => disp <= "10000000";
-				WHEN "1001" => disp <= "10010000";
-				WHEN "1010" => disp <= "10001000";
-				WHEN "1011" => disp <= "10000011";
-				WHEN "1100" => disp <= "11000110";
-				WHEN "1101" => disp <= "10100001";
-				WHEN "1110" => disp <= "10000110";
-				WHEN "1111" => disp <= "10001110";
-				WHEN OTHERS => disp <= "10111111";
+		IF (RISING_EDGE(clk)) THEN
+			CASE contador IS
+				WHEN 0 => 
+					arreglo <= "0001";
+					tmp <= en(15 DOWNTO 12);
+				WHEN 1 =>
+					arreglo <= "0010";
+					tmp <= en(11 DOWNTO 8);
+				WHEN 2 => 
+					arreglo <= "0100";
+					tmp <= en(7 DOWNTO 4);
+				WHEN 3 => 
+					arreglo <= "1000";
+					tmp <= en(3 DOWNTO 0);
 			END CASE;
+			contador <= contador + 1;
+			IF (contador = 4) THEN
+				contador <= 0;
+			END IF;
 		END IF;
-	END PROCESS desplegar;
+		IF(modo = '1') THEN
+			CASE tmp IS
+				WHEN "0000" => aux <= "11000000";
+				WHEN "0001" => aux <= "11111001";
+				WHEN "0010" => aux <= "10100100";
+				WHEN "0011" => aux <= "10110000";
+				WHEN "0100" => aux <= "10011001";
+				WHEN "0101" => aux <= "10010010";
+				WHEN "0110" => aux <= "10000010";
+				WHEN "0111" => aux <= "11111000";
+				WHEN "1000" => aux <= "10000000";
+				WHEN "1001" => aux <= "10010000";
+				WHEN "1111" => aux <= "11111111";
+				WHEN OTHERS => aux <= "10111111";
+			END CASE;
+		ELSE
+			IF (sm = '1') THEN
+				CASE tmp IS
+					WHEN "0000" => aux <= "11000000";
+					WHEN "0001" => aux <= "11111001";
+					WHEN "0010" => aux <= "10100100";
+					WHEN "0011" => aux <= "10110000";
+					WHEN "0100" => aux <= "10011001";
+					WHEN "0101" => aux <= "10010010";
+					WHEN "0110" => aux <= "10000010";
+					WHEN "0111" => aux <= "11111000";
+					WHEN "1000" => aux <= "10000000";
+					WHEN "1001" => aux <= "10010000";
+					WHEN "1111" => aux <= "11111111";
+					WHEN OTHERS => aux <= "10111111";
+				END CASE;
+			ELSE
+				aux <= letra;
+			END IF;
+		END IF;
+	END PROCESS NUMEROS;
+	-- Asignacion
+	a <= aux(0);
+	b <= aux(1);
+	c <= aux(2);
+	d <= aux(3);
+	e <= aux(4);
+	f <= aux(5);
+	g <= aux(6);
+	punto <= aux(7);
 	
-	d4 <= selector(3);
-	d3 <= selector(2);
-	d2 <= selector(1);
-	d1 <= selector(0);
-	a <= disp(0);
-	b <= disp(1);
-	c <= disp(2);
-	d <= disp(3);
-	e <= disp(4);
-	f <= disp(5);
-	g <= disp(6);
-	p <= disp(7);
+	d1 <= arreglo(0);
+	d2 <= arreglo(1);
+	d3 <= arreglo(2);
+	d4 <= arreglo(3);
 	
-	mensaje: texto PORT MAP(op, msg);
-	letra: letras PORT MAP(letrita, letter);
+let1 : letras PORT MAP(tmp, letra);
+	
 END ARCHITECTURE;
-
-

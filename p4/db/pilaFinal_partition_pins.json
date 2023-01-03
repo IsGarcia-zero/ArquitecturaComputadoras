@@ -84,6 +84,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "write",
+					"strict" : false
+				},
+				{
 					"name" : "rst",
 					"strict" : false
 				},
