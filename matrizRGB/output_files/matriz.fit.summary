@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jan  8 23:38:56 2023
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : matriz
+Top-level Entity Name : matriz
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 89 / 6,272 ( 1 % )
+    Total combinational functions : 87 / 6,272 ( 1 % )
+    Dedicated logic registers : 59 / 6,272 ( < 1 % )
+Total registers : 59
+Total pins : 38 / 92 ( 41 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

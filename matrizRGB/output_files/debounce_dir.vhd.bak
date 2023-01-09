@@ -1,0 +1,10 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY debounce_dir IS
+	PORT(
+		a,b,c,d,e : IN STD_LOGIC;
+		clk : IN STD_LOGIC;
+		s1,s2,s3,s4,s5 : OUT STD_LOGIC
+	);
+END ENTITY;
