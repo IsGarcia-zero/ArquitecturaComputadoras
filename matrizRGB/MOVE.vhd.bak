@@ -1,0 +1,135 @@
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY MOVE IS
+	PORT(
+		clk : STD_LOGIC;
+		entrada : STD_LOGIC_VECTOR(8 DOWNTO 0);
+		fila : STD_LOGIC_VECTOR(7 DOWNTO 0);
+		R : STD_LOGIC_VECTOR(7 DOWNTO 0);
+		G : STD_LOGIC_VECTOR(7 DOWNTO 0);
+		B : STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END ENTITY MOVE;
+
+ARCHITECTURE bhr OF MOVE IS 
+	SIGNAL camb : STD_LOGIC := '0';
+BEGIN
+	PROCESS(clk)
+	BEGIN
+		IF (RISING_EDGE(clk)) THEN
+			CASE entrada IS
+				WHEN "000000001" => 
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "000000010" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "000000100" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "000001000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "000010000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "000100000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "001000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "010000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN "100000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					ELSE
+						fila <= "00000000";
+						R <= "00000000";
+						G <= "00000000";
+						B <= "00000000";
+					END IF;
+				WHEN OTHERS 
+			END CASE;
+		END IF;
+	END PROCESS;
+END ARCHITECTURE;
