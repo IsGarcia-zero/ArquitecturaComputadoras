@@ -6,7 +6,10 @@ USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY matrizRGB IS
 	PORT(
-		up, down, izq, der, put, clk : IN STD_LOGIC;
+		put, clk : IN STD_LOGIC;
+		movimiento : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+		pos_player1: IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+		pos_player2: IN STD_LOGIC_VECTOR(8 DOWNTO 0);
 		filas : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		R: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		G: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -15,14 +18,27 @@ ENTITY matrizRGB IS
 END ENTITY;
 
 ARCHITECTURE bhr OF matrizRGB IS 
-	SIGNAL R_aux,G_aux,B_aux, aux_RGB : STD_LOGIC_VECTOR(7 DOWNTO 0):= "11111110";
-	SIGNAL f_aux : STD_LOGIC_VECTOR(7 DOWNTO 0):= "00000001";
-	SIGNAL cam, camb_player : STD_LOGIC := '0';
-	SIGNAL cont : INTEGER RANGE 0 TO 8 := 0;
-	SIGNAL player1 : STD_LOGIC_VECTOR(8 DOWNTO 0) := "100000000";
-	SIGNAL player2 : STD_LOGIC_VECTOR(8 DOWNTO 0):= "000000001";
-	SIGNAL f1,f2,f3, col1,col2,col3 : STD_LOGIC_VECTOR(2 DOWNTO 0);
-	SIGNAL upD, downD, izqD, derD, putD : STD_LOGIC;
+	-- SIGNALS para el componente de cursor
+	SIGNAL R_aux,G_aux,B_aux, aux_RGB, f_aux : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	
+	-- Signal para la salida final
+	SIGNAL R_aux_final, G_aux_final, B_aux_final, f_aux_final : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	
+	-- SIGNALs para el tablero
+	SIGNAL  aux_RGB_tab, R_aux_tab,G_aux_tab,B_aux_tab : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	
+	-- SRD_LOGIC switchers para dibujo
+	SIGNAL aux_tab: STD_LOGIC;
+	SIGNAL switcher : STD_LOGIC_VECTOR(4 DOWNTO 0);
+	
+	-- Auxiliares para los componentes de posiciones
+	SIGNAL R_aux1,G_aux1,B_aux1, f_aux1 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL R_aux2,G_aux2,B_aux2, f_aux2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+	
+	SIGNAL turno : STD_LOGIC := '0'; -- Turno del player
+	
+	-- Aqui guardaremos las posiciones de los jugadores
+	SIGNAL posComp1, posComp2 : STD_LOGIC_VECTOR(8 DOWNTO 0);
 	
 	-- COMPONENTES
 	COMPONENT debounce_dir IS
@@ -35,7 +51,7 @@ ARCHITECTURE bhr OF matrizRGB IS
 	
 	COMPONENT MOVE IS
 	PORT(
-		clk : IN STD_LOGIC;
+		clk, player : IN STD_LOGIC;
 		entrada : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
 		fila : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		R : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -44,29 +60,130 @@ ARCHITECTURE bhr OF matrizRGB IS
 	);
 	END COMPONENT MOVE;
 	
+	COMPONENT tablero IS
+		PORT(
+			clk : IN STD_LOGIC;
+			f: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+			R: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+			G: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+			B: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+	END COMPONENT;
+	
 	
 BEGIN
-	PROCESS(clk, R_aux,G_aux,B_aux, f_aux, aux_RGB)
+	PROCESS(clk, R_aux,G_aux,B_aux, f_aux, aux_RGB, R_aux_final, G_aux_final, B_aux_final, f_aux_final)
 	BEGIN
 		
 		IF (RISING_EDGE(clk)) THEN
-		-- Direcciones
-			IF (izqD = '1') THEN
-				player1 <= player1(7 DOWNTO 0) & player1(8);
-			ELSIF (derD = '1') THEN
-				player1 <= player1(0) & player1(8 DOWNTO 1);
-			ELSIF (upD = '1') THEN
-				player1 <= player1(5 DOWNTO 0) & player1(8 DOWNTO 6);
-			ELSIF (downD = '1') THEN
-				player1 <= player1(2 DOWNTO 0) & player1(8 DOWNTO 3);
+			-- Turno
+			IF (put = '1') THEN
+				IF (turno = '0') THEN
+					turno <= '1';
+				ELSE
+					turno <= '0';
+				END IF;
+			END IF;
+			CASE switcher IS
+				WHEN "00000" =>
+					f_aux_final <= aux_RGB_tab;
+					R_aux_final <= R_aux_tab;
+					G_aux_final <= G_aux_tab;
+					B_aux_final <= B_aux_tab;
+				WHEN "00001" =>
+					f_aux_final <= aux_RGB_tab;
+					R_aux_final <= R_aux_tab;
+					G_aux_final <= G_aux_tab;
+					B_aux_final <= B_aux_tab;
+				WHEN "00010" =>
+					IF (pos_player1(0) = '1') THEN -- casilla 9
+						posComp1 <= "000000001";
+						f_aux_final <= f_aux1;
+						R_aux_final <= R_aux1;
+						G_aux_final <= G_aux1;
+						B_aux_final <= B_aux1;
+					ELSIF(pos_player2(0) = '1') THEN
+						posComp2 <= "000000001";
+						f_aux_final <= f_aux2;
+						R_aux_final <= R_aux2;
+						G_aux_final <= G_aux2;
+						B_aux_final <= B_aux2;
+					END IF;
+				WHEN "00011" =>
+					IF (pos_player1(0) = '1') THEN
+						posComp1 <= "000000001";
+						f_aux_final <= f_aux1;
+						R_aux_final <= R_aux1;
+						G_aux_final <= G_aux1;
+						B_aux_final <= B_aux1;
+					ELSIF(pos_player2(0) = '1') THEN
+						posComp2 <= "000000001";
+						f_aux_final <= f_aux2;
+						R_aux_final <= R_aux2;
+						G_aux_final <= G_aux2;
+						B_aux_final <= B_aux2;
+					END IF;
+				WHEN "00100" =>
+					IF (pos_player1(1) = '1') THEN -- casilla 8
+						posComp1 <= "000000010";
+						f_aux_final <= f_aux1;
+						R_aux_final <= R_aux1;
+						G_aux_final <= G_aux1;
+						B_aux_final <= B_aux1;
+					ELSIF(pos_player2(1) = '1') THEN
+						posComp2 <= "000000010";
+						f_aux_final <= f_aux2;
+						R_aux_final <= R_aux2;
+						G_aux_final <= G_aux2;
+						B_aux_final <= B_aux2;
+					END IF;
+				WHEN "00101" =>
+					IF (pos_player1(1) = '1') THEN
+						posComp1 <= "000000010";
+						f_aux_final <= f_aux1;
+						R_aux_final <= R_aux1;
+						G_aux_final <= G_aux1;
+						B_aux_final <= B_aux1;
+					ELSIF(pos_player2(1) = '1') THEN
+						posComp1 <= "000000010";
+						f_aux_final <= f_aux2;
+						R_aux_final <= R_aux2;
+						G_aux_final <= G_aux2;
+						B_aux_final <= B_aux2;
+					END IF;
+					
+				WHEN "00110" =>
+				WHEN "00111" =>
+				WHEN "01000" =>
+				WHEN "01001" =>
+				WHEN "01010" =>
+				WHEN "01011" =>
+				WHEN "01100" =>
+				WHEN "01101" =>
+				WHEN "01110" =>
+				WHEN "01111" =>
+				WHEN OTHERS =>
+					f_aux_final <= f_aux;
+					R_aux_final <= R_aux;
+					G_aux_final <= G_aux;
+					B_aux_final <= B_aux;
+			END CASE;
+			switcher <= switcher + 1;
+			IF switcher = "11111" THEN
+				switcher <= "00000";
 			END IF;
 		END IF;
 		-- Sacamos el valor
-		filas <= f_aux;
-		R <= R_aux;
-		G <= G_aux;
-		B <= B_aux;
+		filas <= f_aux_final;
+		R <= R_aux_final;
+		G <= G_aux_final;
+		B <= B_aux_final;
 	END PROCESS;
-deb1 : debounce_dir PORT MAP(up, down, izq, der, put, clk, upD, downD, izqD, derD, putD);
-sal: MOVE PORT MAP(clk, player1, f_aux, R_aux, G_aux, B_aux);
+
+sal: MOVE PORT MAP(clk, turno, movimiento, f_aux, R_aux, G_aux, B_aux);
+-- Llamamos 2 veces para almacenar las posiciones de ambos jugadores
+pos1: MOVE PORT MAP(clk, '0', posComp1, f_aux1, R_aux1, G_aux1, B_aux1);
+pos2: MOVE PORT MAP(clk, '1', posComp2, f_aux2, R_aux2, G_aux2, B_aux2);
+
+tablero1 : tablero PORT MAP(clk, aux_RGB_tab, R_aux_tab,G_aux_tab,B_aux_tab);
 END ARCHITECTURE;

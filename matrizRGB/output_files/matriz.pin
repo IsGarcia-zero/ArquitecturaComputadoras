@@ -132,7 +132,7 @@ right                        : 60        : input  : 2.5 V             :         
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
 VCCIO4                       : 62        : power  :                   : 2.5V    : 4         :                
 GND                          : 63        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 4         :                
+put                          : 64        : input  : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 66        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 67        :        :                   :         : 4         :                

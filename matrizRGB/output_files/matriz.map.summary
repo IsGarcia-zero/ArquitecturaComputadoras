@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Jan 10 15:51:05 2023
+Analysis & Synthesis Status : Successful - Mon Jan 16 21:59:38 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : matriz
 Top-level Entity Name : matriz
 Family : Cyclone IV E
-Total logic elements : 115
-    Total combinational functions : 115
-    Dedicated logic registers : 61
-Total registers : 61
-Total pins : 38
+Total logic elements : 159
+    Total combinational functions : 159
+    Dedicated logic registers : 93
+Total registers : 93
+Total pins : 39
 Total virtual pins : 0
-Total memory bits : 3,072
+Total memory bits : 1,536
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

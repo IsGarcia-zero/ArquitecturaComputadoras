@@ -1,0 +1,32 @@
+LIBRARY IEEE;
+
+USE STD_LOGIC_1164.ALL;
+
+ENTITY controlador IS
+	PORT(
+		up, down, izq, der, put, clk : IN STD_LOGIC;
+		sal : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+	);
+END ENTITY controlador;
+
+ARCHITECTURE bhr OF controlador IS
+	SIGNAL upD, downD, izqD, derD, putD : STD_LOGIC;
+
+	COMPONENT debounce_dir IS
+		PORT(
+			a,b,c,d,e : IN STD_LOGIC;
+			clk : IN STD_LOGIC;
+			s1,s2,s3,s4,s5 : OUT STD_LOGIC
+		);
+	END COMPONENT;
+
+BEGIN
+	PROCESS(clk)
+	BEGIN
+	
+	
+	
+	END PROCESS;
+
+debouncer1: debounce_dir PORT MAP(up, down, izq, der, put, clk, upD, downD, izqD, derD, putD);
+END ARCHITECTURE;
