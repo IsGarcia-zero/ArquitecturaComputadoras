@@ -3,67 +3,67 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -4.171
-TNS   : -120.026
+Slack : -4.289
+TNS   : -170.568
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.164
-TNS   : -58.934
+Slack : -4.237
+TNS   : -59.416
 
 Type  : Slow 1200mV 85C Model Hold 'frecuencia_5Hz:inst1|salida'
 Slack : 0.453
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.492
+Slack : 0.509
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
 Slack : -3.201
-TNS   : -101.343
+TNS   : -140.005
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -43.149
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.892
-TNS   : -50.752
+Slack : -3.957
+TNS   : -51.478
 
 Type  : Slow 1200mV 0C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -3.747
-TNS   : -106.401
+Slack : -3.850
+TNS   : -150.706
 
 Type  : Slow 1200mV 0C Model Hold 'frecuencia_5Hz:inst1|salida'
-Slack : 0.401
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.455
+Slack : 0.470
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
 Slack : -3.201
-TNS   : -101.343
+TNS   : -140.005
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -43.149
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.223
-TNS   : -10.742
+Slack : -1.239
+TNS   : -10.741
 
 Type  : Fast 1200mV 0C Model Setup 'frecuencia_5Hz:inst1|salida'
-Slack : -1.050
-TNS   : -17.701
+Slack : -1.075
+TNS   : -27.730
 
 Type  : Fast 1200mV 0C Model Hold 'frecuencia_5Hz:inst1|salida'
-Slack : 0.186
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.198
+Slack : 0.205
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -72,6 +72,6 @@ TNS   : -31.755
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst1|salida'
 Slack : -1.000
-TNS   : -67.000
+TNS   : -93.000
 
 ------------------------------------------------------------

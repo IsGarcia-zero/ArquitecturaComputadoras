@@ -42,8 +42,8 @@ BEGIN
 	sal <= player;
 	put_sal <= putD;
 	--PRUEBAS
-	salP1 <= "000000000";
-	salP2 <= "000000011";
+	salP1 <= "010101010";
+	salP2 <= "001010101";
 	
 	
 debouncer1: debounce_dir PORT MAP(up, down, izq, der, put, clk, upD, downD, izqD, derD, putD);
