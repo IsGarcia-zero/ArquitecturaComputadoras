@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final
-Wed Jan 18 10:24:00 2023
+Wed Jan 18 11:35:51 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -17,53 +17,54 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:14:comp"
- 14. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:13:comp"
- 15. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:12:comp"
- 16. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:11:comp"
- 17. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:10:comp"
- 18. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:9:comp"
- 19. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:8:comp"
- 20. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:7:comp"
- 21. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:6:comp"
- 22. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:5:comp"
- 23. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:4:comp"
- 24. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:3:comp"
- 25. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:2:comp"
- 26. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:1:comp"
- 27. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0"
- 28. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador"
- 29. Port Connectivity Checks: "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters"
- 30. Port Connectivity Checks: "datapath:inst|ALU:alu1|Logicas:unidad_logica"
- 31. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi"
- 32. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7"
- 33. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi6"
- 34. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi5"
- 35. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
- 36. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
- 37. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
- 38. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
- 39. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta"
- 40. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:14:sP"
- 41. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:13:sP"
- 42. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP"
- 43. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP"
- 44. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP"
- 45. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:9:sP"
- 46. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:8:sP"
- 47. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:7:sP"
- 48. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:6:sP"
- 49. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:5:sP"
- 50. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:4:sP"
- 51. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:3:sP"
- 52. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:2:sP"
- 53. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:1:sP"
- 54. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma"
- 55. Port Connectivity Checks: "datapath:inst|ALU:alu1"
- 56. Post-Synthesis Netlist Statistics for Top Partition
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:14:comp"
+ 15. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:13:comp"
+ 16. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:12:comp"
+ 17. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:11:comp"
+ 18. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:10:comp"
+ 19. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:9:comp"
+ 20. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:8:comp"
+ 21. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:7:comp"
+ 22. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:6:comp"
+ 23. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:5:comp"
+ 24. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:4:comp"
+ 25. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:3:comp"
+ 26. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:2:comp"
+ 27. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:1:comp"
+ 28. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0"
+ 29. Port Connectivity Checks: "datapath:inst|ALU:alu1|comparador16:comparador"
+ 30. Port Connectivity Checks: "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters"
+ 31. Port Connectivity Checks: "datapath:inst|ALU:alu1|Logicas:unidad_logica"
+ 32. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi"
+ 33. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7"
+ 34. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi6"
+ 35. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi5"
+ 36. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi4"
+ 37. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi3"
+ 38. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi2"
+ 39. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1"
+ 40. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta"
+ 41. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:14:sP"
+ 42. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:13:sP"
+ 43. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP"
+ 44. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP"
+ 45. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP"
+ 46. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:9:sP"
+ 47. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:8:sP"
+ 48. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:7:sP"
+ 49. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:6:sP"
+ 50. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:5:sP"
+ 51. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:4:sP"
+ 52. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:3:sP"
+ 53. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:2:sP"
+ 54. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:1:sP"
+ 55. Port Connectivity Checks: "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma"
+ 56. Port Connectivity Checks: "datapath:inst|ALU:alu1"
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
 
 
 
@@ -90,15 +91,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 18 10:24:00 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 18 11:35:51 2023       ;
 ; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,052                                       ;
-;     Total combinational functions  ; 960                                         ;
-;     Dedicated logic registers      ; 203                                         ;
-; Total registers                    ; 203                                         ;
+; Total logic elements               ; 1,185                                       ;
+;     Total combinational functions  ; 1,048                                       ;
+;     Dedicated logic registers      ; 283                                         ;
+; Total registers                    ; 283                                         ;
 ; Total pins                         ; 70                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -212,8 +213,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
+;     Processors 7-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -245,20 +245,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,052     ;
+; Estimated Total logic elements              ; 1,185     ;
 ;                                             ;           ;
-; Total combinational functions               ; 960       ;
+; Total combinational functions               ; 1048      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 477       ;
-;     -- 3 input functions                    ; 334       ;
-;     -- <=2 input functions                  ; 149       ;
+;     -- 4 input functions                    ; 536       ;
+;     -- 3 input functions                    ; 336       ;
+;     -- <=2 input functions                  ; 176       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 740       ;
-;     -- arithmetic mode                      ; 220       ;
+;     -- normal mode                          ; 816       ;
+;     -- arithmetic mode                      ; 232       ;
 ;                                             ;           ;
-; Total registers                             ; 203       ;
-;     -- Dedicated logic registers            ; 203       ;
+; Total registers                             ; 283       ;
+;     -- Dedicated logic registers            ; 283       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 70        ;
@@ -266,9 +266,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 203       ;
-; Total fan-out                               ; 3875      ;
-; Average fan-out                             ; 2.97      ;
+; Maximum fan-out                             ; 283       ;
+; Total fan-out                               ; 4407      ;
+; Average fan-out                             ; 3.00      ;
 +---------------------------------------------+-----------+
 
 
@@ -277,9 +277,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name    ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |final                                    ; 960 (0)             ; 203 (0)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |final                                                                                               ; final          ; work         ;
-;    |datapath:inst|                        ; 960 (190)           ; 203 (141)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst                                                                                 ; datapath       ; work         ;
-;       |ALU:alu1|                          ; 770 (70)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1                                                                        ; ALU            ; work         ;
+; |final                                    ; 1048 (0)            ; 283 (0)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |final                                                                                               ; final          ; work         ;
+;    |controlador:inst1|                    ; 54 (23)             ; 27 (9)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|controlador:inst1                                                                             ; controlador    ; work         ;
+;       |debounce_dir:debouncer1|           ; 31 (31)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|controlador:inst1|debounce_dir:debouncer1                                                     ; debounce_dir   ; work         ;
+;    |datapath:inst|                        ; 994 (222)           ; 256 (194)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst                                                                                 ; datapath       ; work         ;
+;       |ALU:alu1|                          ; 772 (71)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1                                                                        ; ALU            ; work         ;
 ;          |Logicas:unidad_logica|          ; 59 (59)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                  ; Logicas        ; work         ;
 ;          |barrelShifters:barrel_shifters| ; 0 (0)               ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|barrelShifters:barrel_shifters                                         ; barrelShifters ; work         ;
 ;          |comparador16:comparador|        ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador                                                ; comparador16   ; work         ;
@@ -299,7 +301,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |compara1:\comparaP:9:comp|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:9:comp                      ; compara1       ; work         ;
 ;             |compara1:comp0|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0                                 ; compara1       ; work         ;
 ;             |compara1:comp3|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp3                                 ; compara1       ; work         ;
-;          |uapro:unidad_aritmetica|        ; 610 (6)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                ; uapro          ; work         ;
+;          |uapro:unidad_aritmetica|        ; 611 (6)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                ; uapro          ; work         ;
 ;             |Divisorsito:divi|            ; 306 (306)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                               ; Divisorsito    ; work         ;
 ;             |fullA10b:resta|              ; 44 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                                 ; fullA10b       ; work         ;
 ;                |fullAdder:\sR:10:sP|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:10:sP             ; fullAdder      ; work         ;
@@ -317,7 +319,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:\sR:8:sP|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:8:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:9:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0                    ; fullAdder      ; work         ;
-;             |fullA10b:suma|               ; 87 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                  ; fullA10b       ; work         ;
+;             |fullA10b:suma|               ; 87 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                  ; fullA10b       ; work         ;
 ;                |fullAdder:\sR:10:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:11:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:12:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP              ; fullAdder      ; work         ;
@@ -332,8 +334,8 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:\sR:7:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:7:sP               ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:8:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:8:sP               ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:9:sP               ; fullAdder      ; work         ;
-;                |fullAdder:s0|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                     ; fullAdder      ; work         ;
-;             |multP:mult|                  ; 167 (11)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                     ; multP          ; work         ;
+;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                     ; fullAdder      ; work         ;
+;             |multP:mult|                  ; 168 (12)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                     ; multP          ; work         ;
 ;                |fullA10b:multi1|          ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1                     ; fullA10b       ; work         ;
 ;                   |fullAdder:\sR:1:sP|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:1:sP  ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:2:sP|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:2:sP  ; fullAdder      ; work         ;
@@ -552,15 +554,6 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[4][2]                                           ; Lost fanout                                 ;
 ; datapath:inst|values[4][1]                                           ; Lost fanout                                 ;
 ; datapath:inst|values[4][0]                                           ; Lost fanout                                 ;
-; datapath:inst|values[9][8]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][7]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][6]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][5]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][4]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][3]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][2]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][1]                                           ; Stuck at GND due to stuck port clock_enable ;
-; datapath:inst|values[9][0]                                           ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][15]                                          ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][14]                                          ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][13]                                          ; Stuck at GND due to stuck port clock_enable ;
@@ -648,7 +641,6 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[9][15]                                          ; Merged with datapath:inst|values[9][10]     ;
 ; datapath:inst|values[9][9]                                           ; Merged with datapath:inst|values[9][10]     ;
 ; datapath:inst|REG_D[9,11..15]                                        ; Merged with datapath:inst|REG_D[10]         ;
-; datapath:inst|REG_D[3..8]                                            ; Merged with datapath:inst|REG_D[2]          ;
 ; datapath:inst|values[11][10]                                         ; Merged with datapath:inst|values[11][0]     ;
 ; datapath:inst|values[11][11]                                         ; Merged with datapath:inst|values[11][0]     ;
 ; datapath:inst|values[11][12]                                         ; Merged with datapath:inst|values[11][0]     ;
@@ -701,41 +693,12 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[0][14]                                          ; Merged with datapath:inst|values[0][10]     ;
 ; datapath:inst|values[0][15]                                          ; Merged with datapath:inst|values[0][10]     ;
 ; datapath:inst|values[0][9]                                           ; Merged with datapath:inst|values[0][10]     ;
-; datapath:inst|values[3][3]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[3][4]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[3][5]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[3][6]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[3][7]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[3][8]                                           ; Merged with datapath:inst|values[3][2]      ;
-; datapath:inst|values[2][3]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[2][4]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[2][5]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[2][6]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[2][7]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[2][8]                                           ; Merged with datapath:inst|values[2][2]      ;
-; datapath:inst|values[1][3]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[1][4]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[1][5]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[1][6]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[1][7]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[1][8]                                           ; Merged with datapath:inst|values[1][2]      ;
-; datapath:inst|values[0][3]                                           ; Merged with datapath:inst|values[0][2]      ;
-; datapath:inst|values[0][4]                                           ; Merged with datapath:inst|values[0][2]      ;
-; datapath:inst|values[0][5]                                           ; Merged with datapath:inst|values[0][2]      ;
-; datapath:inst|values[0][6]                                           ; Merged with datapath:inst|values[0][2]      ;
-; datapath:inst|values[0][7]                                           ; Merged with datapath:inst|values[0][2]      ;
-; datapath:inst|values[0][8]                                           ; Merged with datapath:inst|values[0][2]      ;
 ; datapath:inst|values[11][0]                                          ; Stuck at GND due to stuck port data_in      ;
 ; datapath:inst|values[10][10]                                         ; Stuck at GND due to stuck port data_in      ;
 ; datapath:inst|values[9][10]                                          ; Stuck at GND due to stuck port data_in      ;
-; datapath:inst|REG_D[2]                                               ; Merged with datapath:inst|REG_D[10]         ;
-; datapath:inst|values[0][2]                                           ; Merged with datapath:inst|values[0][10]     ;
-; datapath:inst|values[1][2]                                           ; Merged with datapath:inst|values[1][10]     ;
-; datapath:inst|values[2][2]                                           ; Merged with datapath:inst|values[2][10]     ;
-; datapath:inst|values[3][2]                                           ; Merged with datapath:inst|values[3][10]     ;
 ; datapath:inst|OFFSET[4..13]                                          ; Lost fanout                                 ;
 ; datapath:inst|PC[4..13]                                              ; Lost fanout                                 ;
-; Total Number of Removed Registers = 345                              ;                                             ;
+; Total Number of Removed Registers = 301                              ;                                             ;
 +----------------------------------------------------------------------+---------------------------------------------+
 
 
@@ -791,11 +754,8 @@ Encoding Type:  One-Hot
 ;                                                              ;                           ; datapath:inst|reggy[5][7], datapath:inst|reggy[5][6], datapath:inst|reggy[5][5],       ;
 ;                                                              ;                           ; datapath:inst|reggy[5][4], datapath:inst|reggy[5][3], datapath:inst|reggy[5][2],       ;
 ;                                                              ;                           ; datapath:inst|reggy[5][1], datapath:inst|reggy[5][0]                                   ;
-; datapath:inst|MAR[7]                                         ; Stuck at GND              ; datapath:inst|reggu[0][2], datapath:inst|values[9][8], datapath:inst|values[9][7],     ;
-;                                                              ; due to stuck port data_in ; datapath:inst|values[9][6], datapath:inst|values[9][5], datapath:inst|values[9][4],    ;
-;                                                              ;                           ; datapath:inst|values[9][3], datapath:inst|values[9][2], datapath:inst|values[9][1],    ;
-;                                                              ;                           ; datapath:inst|values[9][0], datapath:inst|values[8][15], datapath:inst|values[8][14],  ;
-;                                                              ;                           ; datapath:inst|values[8][13], datapath:inst|values[8][12],                              ;
+; datapath:inst|MAR[7]                                         ; Stuck at GND              ; datapath:inst|reggu[0][2], datapath:inst|values[8][15], datapath:inst|values[8][14],   ;
+;                                                              ; due to stuck port data_in ; datapath:inst|values[8][13], datapath:inst|values[8][12],                              ;
 ;                                                              ;                           ; datapath:inst|values[8][11], datapath:inst|values[8][10], datapath:inst|values[8][9],  ;
 ;                                                              ;                           ; datapath:inst|values[8][8], datapath:inst|values[8][7], datapath:inst|values[8][6],    ;
 ;                                                              ;                           ; datapath:inst|values[8][5], datapath:inst|values[8][4], datapath:inst|values[8][3],    ;
@@ -810,14 +770,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 203   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 5     ;
+; Total registers                              ; 283   ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 150   ;
+; Number of registers using Clock Enable       ; 210   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; controlador:inst1|player[0]            ; 7       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -825,19 +795,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_A[5]                                                                            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_B[10]                                                                           ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[11]                                           ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |final|datapath:inst|REG_D[10]                                                                           ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[0][9]                                                                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[1][13]                                                                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[2][6]                                                                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[3][13]                                                                        ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|PC[4]                                                                               ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[10]                                                                          ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[1]                                                                           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_A[10]                                                                           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_B[6]                                                                            ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |final|datapath:inst|values[9][8]                                                                        ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[3]                                            ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|REG_D[7]                                                                            ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[0][4]                                                                         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[1][3]                                                                         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[2][12]                                                                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[3][2]                                                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |final|controlador:inst1|player[1]                                                                       ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|PC[10]                                                                              ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[9]                                                                           ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[0]                                                                           ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|negativoP:negativo|Add0 ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux3                                                                       ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux2                                                                       ;
 ; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux11                                                                      ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux14                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
@@ -1302,26 +1274,25 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 70                          ;
-; cycloneiii_ff         ; 203                         ;
-;     ENA               ; 137                         ;
+; cycloneiii_ff         ; 283                         ;
+;     ENA               ; 197                         ;
 ;     ENA CLR           ; 4                           ;
 ;     ENA CLR SCLR SLD  ; 4                           ;
-;     ENA SCLR          ; 4                           ;
-;     ENA SLD           ; 1                           ;
-;     plain             ; 53                          ;
-; cycloneiii_lcell_comb ; 961                         ;
-;     arith             ; 220                         ;
-;         2 data inputs ; 41                          ;
+;     ENA SCLR          ; 5                           ;
+;     plain             ; 73                          ;
+; cycloneiii_lcell_comb ; 1049                        ;
+;     arith             ; 232                         ;
+;         2 data inputs ; 53                          ;
 ;         3 data inputs ; 179                         ;
-;     normal            ; 741                         ;
+;     normal            ; 817                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 103                         ;
-;         3 data inputs ; 155                         ;
-;         4 data inputs ; 477                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 116                         ;
+;         3 data inputs ; 157                         ;
+;         4 data inputs ; 536                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 17.82                       ;
+; Average LUT depth     ; 15.96                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1330,7 +1301,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1340,7 +1311,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Jan 18 10:23:45 2023
+    Info: Processing started: Wed Jan 18 11:35:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file divisorsito.vhd
@@ -1406,10 +1377,9 @@ Warning (10541): VHDL Signal Declaration warning at datapath.vhd(11): used impli
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "zflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "ovflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "cflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(37): used implicit default value for signal "cursor_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 37
 Warning (10540): VHDL Signal Declaration warning at datapath.vhd(38): used explicit default value for signal "posPlayer1" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 38
 Warning (10540): VHDL Signal Declaration warning at datapath.vhd(39): used explicit default value for signal "posPlayer2" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 39
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 216
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 217
 Warning (10540): VHDL Signal Declaration warning at ALU.vhd(18): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 18
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "b_aux" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
 Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "d_aux" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
@@ -1449,27 +1419,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "A[11]" is stuck at GND
     Warning (13410): Pin "A[10]" is stuck at GND
     Warning (13410): Pin "A[9]" is stuck at GND
-    Warning (13410): Pin "A[8]" is stuck at GND
-    Warning (13410): Pin "A[7]" is stuck at GND
-    Warning (13410): Pin "A[6]" is stuck at GND
-    Warning (13410): Pin "A[5]" is stuck at GND
-    Warning (13410): Pin "A[4]" is stuck at GND
-    Warning (13410): Pin "A[3]" is stuck at GND
-    Warning (13410): Pin "A[2]" is stuck at GND
-    Warning (13410): Pin "A[1]" is stuck at GND
-    Warning (13410): Pin "A[0]" is stuck at GND
     Warning (13410): Pin "instrucciones[7]" is stuck at GND
     Warning (13410): Pin "instrucciones[6]" is stuck at GND
     Warning (13410): Pin "instrucciones[2]" is stuck at GND
-    Warning (13410): Pin "mov[8]" is stuck at GND
-    Warning (13410): Pin "mov[7]" is stuck at GND
-    Warning (13410): Pin "mov[6]" is stuck at GND
-    Warning (13410): Pin "mov[5]" is stuck at GND
-    Warning (13410): Pin "mov[4]" is stuck at GND
-    Warning (13410): Pin "mov[3]" is stuck at GND
-    Warning (13410): Pin "mov[2]" is stuck at GND
-    Warning (13410): Pin "mov[1]" is stuck at GND
-    Warning (13410): Pin "mov[0]" is stuck at GND
     Warning (13410): Pin "p1[8]" is stuck at GND
     Warning (13410): Pin "p1[7]" is stuck at GND
     Warning (13410): Pin "p1[6]" is stuck at GND
@@ -1492,20 +1444,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 213 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "up"
-    Warning (15610): No output dependent on input pin "down"
-    Warning (15610): No output dependent on input pin "izq"
-    Warning (15610): No output dependent on input pin "der"
-    Warning (15610): No output dependent on input pin "put"
-Info (21057): Implemented 1139 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1272 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 63 output pins
-    Info (21061): Implemented 1069 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Wed Jan 18 10:24:00 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 1202 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Wed Jan 18 11:35:51 2023
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:42
 
 
