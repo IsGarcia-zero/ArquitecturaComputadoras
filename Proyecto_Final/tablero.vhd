@@ -1,0 +1,36 @@
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY tablero IS
+	PORT(
+		clk : IN STD_LOGIC;
+		f: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		R: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		G: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		B: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END ENTITY;
+
+ARCHITECTURE bhr OF tablero IS
+	SIGNAL camb : STD_LOGIC := '0';
+BEGIN
+	PROCESS(clk, camb)
+	BEGIN
+		IF (RISING_EDGE(clk)) THEN
+			IF(camb = '1') THEN
+				f <= "11111111";
+				R <= "11011011";
+				G <= "11111111";
+				B <= "11111111";
+				camb <= '0';
+			ELSE
+				f <= "00100100";
+				R <= "00000000";
+				G <= "11111111";
+				B <= "11111111";
+				camb <= '1';
+			END IF;
+		END IF;
+	END PROCESS;
+END ARCHITECTURE;

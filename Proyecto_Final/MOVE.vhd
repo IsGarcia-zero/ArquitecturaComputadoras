@@ -1,0 +1,252 @@
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY MOVE IS
+	PORT(
+		clk, player : IN STD_LOGIC;
+		entrada : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+		fila : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		R : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		G : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		B : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	);
+END ENTITY MOVE;
+
+ARCHITECTURE bhr OF MOVE IS 
+	SIGNAL cam : STD_LOGIC := '0';
+BEGIN
+	PROCESS(clk)
+	BEGIN
+		IF (RISING_EDGE(clk)) THEN
+			CASE entrada IS
+				WHEN "000000001" => 
+					IF (cam = '0') THEN
+						fila <= "11000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "01111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					ELSE
+						fila <= "10000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "00111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					END IF;
+				WHEN "000000010" =>
+					IF (cam = '0') THEN
+						fila <= "11000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11101111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					ELSE
+						fila <= "10000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11100111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					END IF;
+				WHEN "000000100" =>
+					IF (cam = '0') THEN
+						fila <= "11000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111101";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					ELSE
+						fila <= "10000000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111100";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					END IF;
+				WHEN "000001000" =>
+					IF (cam = '0') THEN
+						fila <= "00011000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "01111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					ELSE
+						fila <= "00010000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "00111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					END IF;
+				WHEN "000010000" =>
+					IF (cam = '0') THEN
+						fila <= "00011000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11101111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					ELSE
+						fila <= "00010000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11100111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					END IF;
+				WHEN "000100000" =>
+					IF (cam = '0') THEN
+						fila <= "00011000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111101";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					ELSE
+						fila <= "00010000";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111100";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					END IF;
+				WHEN "001000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000010";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "00111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					ELSE
+						fila <= "00000011";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "01111111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "00111111";
+						END IF;
+					END IF;
+				WHEN "010000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000010";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11100111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					ELSE
+						fila <= "00000011";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11101111";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11100111";
+						END IF;
+					END IF;
+				WHEN "100000000" =>
+					IF (cam = '0') THEN
+						fila <= "00000010";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111100";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					ELSE
+						fila <= "00000011";
+						IF player = '0' THEN
+							R <= "11111111";
+							G <= "11111101";
+							B <= "11111111";
+						ELSE
+							R <= "11111111";
+							G <= "11111111";
+							B <= "11111100";
+						END IF;
+					END IF;
+				WHEN OTHERS =>
+					fila <= "00000000";
+					R <= "11111111";
+					G <= "11111111";
+					B <= "11111111";
+			END CASE;
+			IF (cam = '0') THEN
+				cam <= '1';
+			ELSE
+				cam <= '0';
+			END IF;
+		END IF;
+	END PROCESS;
+END ARCHITECTURE;
