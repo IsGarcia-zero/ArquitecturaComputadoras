@@ -1,7 +1,7 @@
 # do final.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 04:10:25 on Jan 18,2023
+# Start time: 10:24:29 on Jan 18,2023
 # vcom -work work final.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity final
 # -- Compiling architecture structure of final
-# End time: 04:10:25 on Jan 18,2023, Elapsed time: 0:00:00
+# End time: 10:24:30 on Jan 18,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 04:10:25 on Jan 18,2023
-# vcom -work work Waveform.vwf.vht 
+# Start time: 10:24:30 on Jan 18,2023
+# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity final_vhd_vec_tst
 # -- Compiling architecture final_arch of final_vhd_vec_tst
-# End time: 04:10:25 on Jan 18,2023, Elapsed time: 0:00:00
+# End time: 10:24:30 on Jan 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.final_vhd_vec_tst 
-# Start time: 04:10:25 on Jan 18,2023
+# Start time: 10:24:30 on Jan 18,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -49,8 +49,8 @@
 # Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 154087 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 141468 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#35
-# End time: 04:10:27 on Jan 18,2023, Elapsed time: 0:00:02
+# End time: 10:24:31 on Jan 18,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1

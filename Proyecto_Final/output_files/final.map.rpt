@@ -1,6 +1,6 @@
 Analysis & Synthesis report for final
-Wed Jan 18 04:01:51 2023
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Wed Jan 18 10:24:00 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -70,7 +70,7 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -90,16 +90,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 18 04:01:51 2023       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 18 10:24:00 2023       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                      ; final                                       ;
 ; Top-level Entity Name              ; final                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,126                                       ;
-;     Total combinational functions  ; 987                                         ;
-;     Dedicated logic registers      ; 255                                         ;
-; Total registers                    ; 255                                         ;
-; Total pins                         ; 74                                          ;
+; Total logic elements               ; 1,052                                       ;
+;     Total combinational functions  ; 960                                         ;
+;     Dedicated logic registers      ; 203                                         ;
+; Total registers                    ; 203                                         ;
+; Total pins                         ; 70                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -199,11 +199,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -214,29 +214,30 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd    ;         ;
-; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd          ;         ;
-; negativoP.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd      ;         ;
-; multP.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/multP.vhd          ;         ;
-; Logicas.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd        ;         ;
-; fullAdder.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd      ;         ;
-; fullA10b.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd       ;         ;
-; datapath.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd       ;         ;
-; comparador16.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd   ;         ;
-; compara1.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd       ;         ;
-; barrelShifters.vhd               ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd            ;         ;
-; final.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/final.bdf          ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; Divisorsito.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd    ;         ;
+; uapro.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd          ;         ;
+; negativoP.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd      ;         ;
+; multP.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/multP.vhd          ;         ;
+; Logicas.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd        ;         ;
+; fullAdder.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd      ;         ;
+; fullA10b.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd       ;         ;
+; debounce_dir.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/debounce_dir.vhd   ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd       ;         ;
+; controlador.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd    ;         ;
+; comparador16.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd   ;         ;
+; compara1.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd       ;         ;
+; barrelShifters.vhd               ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd            ;         ;
+; final.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/final.bdf          ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -244,30 +245,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 1,126     ;
+; Estimated Total logic elements              ; 1,052     ;
 ;                                             ;           ;
-; Total combinational functions               ; 987       ;
+; Total combinational functions               ; 960       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 505       ;
-;     -- 3 input functions                    ; 332       ;
-;     -- <=2 input functions                  ; 150       ;
+;     -- 4 input functions                    ; 477       ;
+;     -- 3 input functions                    ; 334       ;
+;     -- <=2 input functions                  ; 149       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 767       ;
+;     -- normal mode                          ; 740       ;
 ;     -- arithmetic mode                      ; 220       ;
 ;                                             ;           ;
-; Total registers                             ; 255       ;
-;     -- Dedicated logic registers            ; 255       ;
+; Total registers                             ; 203       ;
+;     -- Dedicated logic registers            ; 203       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 74        ;
+; I/O pins                                    ; 70        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 255       ;
-; Total fan-out                               ; 4163      ;
-; Average fan-out                             ; 2.99      ;
+; Maximum fan-out                             ; 203       ;
+; Total fan-out                               ; 3875      ;
+; Average fan-out                             ; 2.97      ;
 +---------------------------------------------+-----------+
 
 
@@ -276,10 +277,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name    ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |final                                    ; 987 (0)             ; 255 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |final                                                                                               ; final          ; work         ;
-;    |datapath:inst|                        ; 987 (215)           ; 255 (193)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst                                                                                 ; datapath       ; work         ;
-;       |ALU:alu1|                          ; 772 (71)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1                                                                        ; ALU            ; work         ;
-;          |Logicas:unidad_logica|          ; 58 (58)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                  ; Logicas        ; work         ;
+; |final                                    ; 960 (0)             ; 203 (0)                   ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |final                                                                                               ; final          ; work         ;
+;    |datapath:inst|                        ; 960 (190)           ; 203 (141)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst                                                                                 ; datapath       ; work         ;
+;       |ALU:alu1|                          ; 770 (70)            ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1                                                                        ; ALU            ; work         ;
+;          |Logicas:unidad_logica|          ; 59 (59)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica                                                  ; Logicas        ; work         ;
 ;          |barrelShifters:barrel_shifters| ; 0 (0)               ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|barrelShifters:barrel_shifters                                         ; barrelShifters ; work         ;
 ;          |comparador16:comparador|        ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador                                                ; comparador16   ; work         ;
 ;             |compara1:\comparaP:10:comp|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:10:comp                     ; compara1       ; work         ;
@@ -298,7 +299,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |compara1:\comparaP:9:comp|   ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:\comparaP:9:comp                      ; compara1       ; work         ;
 ;             |compara1:comp0|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0                                 ; compara1       ; work         ;
 ;             |compara1:comp3|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp3                                 ; compara1       ; work         ;
-;          |uapro:unidad_aritmetica|        ; 612 (6)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                ; uapro          ; work         ;
+;          |uapro:unidad_aritmetica|        ; 610 (6)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica                                                ; uapro          ; work         ;
 ;             |Divisorsito:divi|            ; 306 (306)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi                               ; Divisorsito    ; work         ;
 ;             |fullA10b:resta|              ; 44 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta                                 ; fullA10b       ; work         ;
 ;                |fullAdder:\sR:10:sP|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:10:sP             ; fullAdder      ; work         ;
@@ -316,7 +317,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:\sR:8:sP|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:8:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:\sR:9:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:resta|fullAdder:s0                    ; fullAdder      ; work         ;
-;             |fullA10b:suma|               ; 87 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                  ; fullA10b       ; work         ;
+;             |fullA10b:suma|               ; 87 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma                                  ; fullA10b       ; work         ;
 ;                |fullAdder:\sR:10:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:10:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:11:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:11:sP              ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:12:sP|      ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:12:sP              ; fullAdder      ; work         ;
@@ -331,8 +332,8 @@ https://fpgasoftware.intel.com/eula.
 ;                |fullAdder:\sR:7:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:7:sP               ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:8:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:8:sP               ; fullAdder      ; work         ;
 ;                |fullAdder:\sR:9:sP|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:\sR:9:sP               ; fullAdder      ; work         ;
-;                |fullAdder:s0|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                     ; fullAdder      ; work         ;
-;             |multP:mult|                  ; 169 (13)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                     ; multP          ; work         ;
+;                |fullAdder:s0|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0                     ; fullAdder      ; work         ;
+;             |multP:mult|                  ; 167 (11)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult                                     ; multP          ; work         ;
 ;                |fullA10b:multi1|          ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1                     ; fullA10b       ; work         ;
 ;                   |fullAdder:\sR:1:sP|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:1:sP  ; fullAdder      ; work         ;
 ;                   |fullAdder:\sR:2:sP|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi1|fullAdder:\sR:2:sP  ; fullAdder      ; work         ;
@@ -551,6 +552,15 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[4][2]                                           ; Lost fanout                                 ;
 ; datapath:inst|values[4][1]                                           ; Lost fanout                                 ;
 ; datapath:inst|values[4][0]                                           ; Lost fanout                                 ;
+; datapath:inst|values[9][8]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][7]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][6]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][5]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][4]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][3]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][2]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][1]                                           ; Stuck at GND due to stuck port clock_enable ;
+; datapath:inst|values[9][0]                                           ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][15]                                          ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][14]                                          ; Stuck at GND due to stuck port clock_enable ;
 ; datapath:inst|values[8][13]                                          ; Stuck at GND due to stuck port clock_enable ;
@@ -631,7 +641,28 @@ Encoding Type:  One-Hot
 ; datapath:inst|reggy[7][2]                                            ; Lost fanout                                 ;
 ; datapath:inst|reggy[7][1]                                            ; Lost fanout                                 ;
 ; datapath:inst|reggy[7][0]                                            ; Lost fanout                                 ;
+; datapath:inst|values[9][11]                                          ; Merged with datapath:inst|values[9][10]     ;
+; datapath:inst|values[9][12]                                          ; Merged with datapath:inst|values[9][10]     ;
+; datapath:inst|values[9][13]                                          ; Merged with datapath:inst|values[9][10]     ;
+; datapath:inst|values[9][14]                                          ; Merged with datapath:inst|values[9][10]     ;
+; datapath:inst|values[9][15]                                          ; Merged with datapath:inst|values[9][10]     ;
+; datapath:inst|values[9][9]                                           ; Merged with datapath:inst|values[9][10]     ;
 ; datapath:inst|REG_D[9,11..15]                                        ; Merged with datapath:inst|REG_D[10]         ;
+; datapath:inst|REG_D[3..8]                                            ; Merged with datapath:inst|REG_D[2]          ;
+; datapath:inst|values[11][10]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][11]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][12]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][13]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][14]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][15]                                         ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][2]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][3]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][4]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][5]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][6]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][7]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][8]                                          ; Merged with datapath:inst|values[11][0]     ;
+; datapath:inst|values[11][9]                                          ; Merged with datapath:inst|values[11][0]     ;
 ; datapath:inst|values[10][11]                                         ; Merged with datapath:inst|values[10][10]    ;
 ; datapath:inst|values[10][12]                                         ; Merged with datapath:inst|values[10][10]    ;
 ; datapath:inst|values[10][13]                                         ; Merged with datapath:inst|values[10][10]    ;
@@ -646,28 +677,6 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[10][7]                                          ; Merged with datapath:inst|values[10][10]    ;
 ; datapath:inst|values[10][8]                                          ; Merged with datapath:inst|values[10][10]    ;
 ; datapath:inst|values[10][9]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][0]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][10]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][11]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][12]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][13]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][14]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][15]                                         ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][2]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][3]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][4]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][5]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][6]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][7]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][8]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[11][9]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][10]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][11]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][12]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][13]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][14]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][15]                                          ; Merged with datapath:inst|values[10][10]    ;
-; datapath:inst|values[9][9]                                           ; Merged with datapath:inst|values[10][10]    ;
 ; datapath:inst|values[3][11]                                          ; Merged with datapath:inst|values[3][10]     ;
 ; datapath:inst|values[3][12]                                          ; Merged with datapath:inst|values[3][10]     ;
 ; datapath:inst|values[3][13]                                          ; Merged with datapath:inst|values[3][10]     ;
@@ -692,11 +701,41 @@ Encoding Type:  One-Hot
 ; datapath:inst|values[0][14]                                          ; Merged with datapath:inst|values[0][10]     ;
 ; datapath:inst|values[0][15]                                          ; Merged with datapath:inst|values[0][10]     ;
 ; datapath:inst|values[0][9]                                           ; Merged with datapath:inst|values[0][10]     ;
-; datapath:inst|values[11][1]                                          ; Merged with datapath:inst|values[10][0]     ;
+; datapath:inst|values[3][3]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[3][4]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[3][5]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[3][6]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[3][7]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[3][8]                                           ; Merged with datapath:inst|values[3][2]      ;
+; datapath:inst|values[2][3]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[2][4]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[2][5]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[2][6]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[2][7]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[2][8]                                           ; Merged with datapath:inst|values[2][2]      ;
+; datapath:inst|values[1][3]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[1][4]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[1][5]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[1][6]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[1][7]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[1][8]                                           ; Merged with datapath:inst|values[1][2]      ;
+; datapath:inst|values[0][3]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[0][4]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[0][5]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[0][6]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[0][7]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[0][8]                                           ; Merged with datapath:inst|values[0][2]      ;
+; datapath:inst|values[11][0]                                          ; Stuck at GND due to stuck port data_in      ;
 ; datapath:inst|values[10][10]                                         ; Stuck at GND due to stuck port data_in      ;
+; datapath:inst|values[9][10]                                          ; Stuck at GND due to stuck port data_in      ;
+; datapath:inst|REG_D[2]                                               ; Merged with datapath:inst|REG_D[10]         ;
+; datapath:inst|values[0][2]                                           ; Merged with datapath:inst|values[0][10]     ;
+; datapath:inst|values[1][2]                                           ; Merged with datapath:inst|values[1][10]     ;
+; datapath:inst|values[2][2]                                           ; Merged with datapath:inst|values[2][10]     ;
+; datapath:inst|values[3][2]                                           ; Merged with datapath:inst|values[3][10]     ;
 ; datapath:inst|OFFSET[4..13]                                          ; Lost fanout                                 ;
 ; datapath:inst|PC[4..13]                                              ; Lost fanout                                 ;
-; Total Number of Removed Registers = 302                              ;                                             ;
+; Total Number of Removed Registers = 345                              ;                                             ;
 +----------------------------------------------------------------------+---------------------------------------------+
 
 
@@ -736,10 +775,11 @@ Encoding Type:  One-Hot
 ;                                                              ;                           ; datapath:inst|values[12][7], datapath:inst|values[12][6],                              ;
 ;                                                              ;                           ; datapath:inst|values[12][5], datapath:inst|values[12][4],                              ;
 ;                                                              ;                           ; datapath:inst|values[12][3], datapath:inst|values[12][2],                              ;
-;                                                              ;                           ; datapath:inst|values[12][1], datapath:inst|values[12][0], datapath:inst|PC[4],         ;
-;                                                              ;                           ; datapath:inst|PC[5], datapath:inst|PC[6], datapath:inst|PC[7], datapath:inst|PC[8],    ;
-;                                                              ;                           ; datapath:inst|PC[9], datapath:inst|PC[10], datapath:inst|PC[11], datapath:inst|PC[12], ;
-;                                                              ;                           ; datapath:inst|PC[13]                                                                   ;
+;                                                              ;                           ; datapath:inst|values[12][1], datapath:inst|values[12][0],                              ;
+;                                                              ;                           ; datapath:inst|values[11][0], datapath:inst|values[10][10],                             ;
+;                                                              ;                           ; datapath:inst|values[9][10], datapath:inst|PC[4], datapath:inst|PC[5],                 ;
+;                                                              ;                           ; datapath:inst|PC[6], datapath:inst|PC[7], datapath:inst|PC[8], datapath:inst|PC[9],    ;
+;                                                              ;                           ; datapath:inst|PC[10], datapath:inst|PC[11], datapath:inst|PC[12], datapath:inst|PC[13] ;
 ; datapath:inst|MAR[6]                                         ; Stuck at GND              ; datapath:inst|reggy[4][15], datapath:inst|reggy[4][14], datapath:inst|reggy[4][13],    ;
 ;                                                              ; due to stuck port data_in ; datapath:inst|reggy[4][12], datapath:inst|reggy[4][11], datapath:inst|reggy[4][10],    ;
 ;                                                              ;                           ; datapath:inst|reggy[4][9], datapath:inst|reggy[4][8], datapath:inst|reggy[4][7],       ;
@@ -751,8 +791,11 @@ Encoding Type:  One-Hot
 ;                                                              ;                           ; datapath:inst|reggy[5][7], datapath:inst|reggy[5][6], datapath:inst|reggy[5][5],       ;
 ;                                                              ;                           ; datapath:inst|reggy[5][4], datapath:inst|reggy[5][3], datapath:inst|reggy[5][2],       ;
 ;                                                              ;                           ; datapath:inst|reggy[5][1], datapath:inst|reggy[5][0]                                   ;
-; datapath:inst|MAR[7]                                         ; Stuck at GND              ; datapath:inst|reggu[0][2], datapath:inst|values[8][15], datapath:inst|values[8][14],   ;
-;                                                              ; due to stuck port data_in ; datapath:inst|values[8][13], datapath:inst|values[8][12],                              ;
+; datapath:inst|MAR[7]                                         ; Stuck at GND              ; datapath:inst|reggu[0][2], datapath:inst|values[9][8], datapath:inst|values[9][7],     ;
+;                                                              ; due to stuck port data_in ; datapath:inst|values[9][6], datapath:inst|values[9][5], datapath:inst|values[9][4],    ;
+;                                                              ;                           ; datapath:inst|values[9][3], datapath:inst|values[9][2], datapath:inst|values[9][1],    ;
+;                                                              ;                           ; datapath:inst|values[9][0], datapath:inst|values[8][15], datapath:inst|values[8][14],  ;
+;                                                              ;                           ; datapath:inst|values[8][13], datapath:inst|values[8][12],                              ;
 ;                                                              ;                           ; datapath:inst|values[8][11], datapath:inst|values[8][10], datapath:inst|values[8][9],  ;
 ;                                                              ;                           ; datapath:inst|values[8][8], datapath:inst|values[8][7], datapath:inst|values[8][6],    ;
 ;                                                              ;                           ; datapath:inst|values[8][5], datapath:inst|values[8][4], datapath:inst|values[8][3],    ;
@@ -767,12 +810,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 255   ;
+; Total registers                              ; 203   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 203   ;
+; Number of registers using Clock Enable       ; 150   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -782,20 +825,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_A[6]                                                                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_A[5]                                                                            ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |final|datapath:inst|REG_B[10]                                                                           ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[12]                                           ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|REG_D[2]                                                                            ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[0][1]                                                                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[1][14]                                                                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[2][1]                                                                         ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |final|datapath:inst|ALU:alu1|Logicas:unidad_logica|salida[11]                                           ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |final|datapath:inst|REG_D[10]                                                                           ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[0][9]                                                                         ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[1][13]                                                                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[2][6]                                                                         ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |final|datapath:inst|reggy[3][13]                                                                        ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|PC[0]                                                                               ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[8]                                                                           ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[0]                                                                           ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; Yes        ; |final|datapath:inst|PC[4]                                                                               ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[10]                                                                          ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |final|datapath:inst|OFFSET[1]                                                                           ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |final|datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult|fullA10b:multi7|negativoP:negativo|Add0 ;
-; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux7                                                                       ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux9                                                                       ;
+; 19:1               ; 7 bits    ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux3                                                                       ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 20 LEs               ; 28 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux11                                                                      ;
 ; 19:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |final|datapath:inst|ALU:alu1|Mux14                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 
@@ -1258,26 +1301,27 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 74                          ;
-; cycloneiii_ff         ; 255                         ;
-;     ENA               ; 191                         ;
+; boundary_port         ; 70                          ;
+; cycloneiii_ff         ; 203                         ;
+;     ENA               ; 137                         ;
 ;     ENA CLR           ; 4                           ;
 ;     ENA CLR SCLR SLD  ; 4                           ;
 ;     ENA SCLR          ; 4                           ;
-;     plain             ; 52                          ;
-; cycloneiii_lcell_comb ; 988                         ;
+;     ENA SLD           ; 1                           ;
+;     plain             ; 53                          ;
+; cycloneiii_lcell_comb ; 961                         ;
 ;     arith             ; 220                         ;
 ;         2 data inputs ; 41                          ;
 ;         3 data inputs ; 179                         ;
-;     normal            ; 768                         ;
+;     normal            ; 741                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 104                         ;
-;         3 data inputs ; 153                         ;
-;         4 data inputs ; 505                         ;
+;         2 data inputs ; 103                         ;
+;         3 data inputs ; 155                         ;
+;         4 data inputs ; 477                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 16.89                       ;
+; Average LUT depth     ; 17.82                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1286,7 +1330,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1295,113 +1339,137 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Wed Jan 18 04:01:44 2023
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Wed Jan 18 10:23:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final -c final
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file divisorsito.vhd
-    Info (12022): Found design unit 1: Divisorsito-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 12
-    Info (12023): Found entity 1: Divisorsito File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 4
+    Info (12022): Found design unit 1: Divisorsito-Behavioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 12
+    Info (12023): Found entity 1: Divisorsito File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file uapro.vhd
-    Info (12022): Found design unit 1: uapro-Beahvioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 14
-    Info (12023): Found entity 1: uapro File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 4
+    Info (12022): Found design unit 1: uapro-Beahvioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 14
+    Info (12023): Found entity 1: uapro File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file tablero.vhd
-    Info (12022): Found design unit 1: tablero-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/tablero.vhd Line: 15
-    Info (12023): Found entity 1: tablero File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/tablero.vhd Line: 5
+    Info (12022): Found design unit 1: tablero-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/tablero.vhd Line: 15
+    Info (12023): Found entity 1: tablero File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/tablero.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file negativop.vhd
-    Info (12022): Found design unit 1: negativoP-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd Line: 13
-    Info (12023): Found entity 1: negativoP File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd Line: 5
+    Info (12022): Found design unit 1: negativoP-Behavioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd Line: 13
+    Info (12023): Found entity 1: negativoP File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/negativoP.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file multp.vhd
-    Info (12022): Found design unit 1: multP-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 12
-    Info (12023): Found entity 1: multP File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 4
+    Info (12022): Found design unit 1: multP-Behavioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 12
+    Info (12023): Found entity 1: multP File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file move.vhd
-    Info (12022): Found design unit 1: MOVE-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/MOVE.vhd Line: 16
-    Info (12023): Found entity 1: MOVE File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/MOVE.vhd Line: 5
+    Info (12022): Found design unit 1: MOVE-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/MOVE.vhd Line: 16
+    Info (12023): Found entity 1: MOVE File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/MOVE.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file matrizrgb.vhd
-    Info (12022): Found design unit 1: matrizRGB-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/matrizRGB.vhd Line: 20
-    Info (12023): Found entity 1: matrizRGB File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/matrizRGB.vhd Line: 7
+    Info (12022): Found design unit 1: matrizRGB-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/matrizRGB.vhd Line: 20
+    Info (12023): Found entity 1: matrizRGB File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/matrizRGB.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file logicas.vhd
-    Info (12022): Found design unit 1: Logicas-ArqLogicas File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd Line: 16
-    Info (12023): Found entity 1: Logicas File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd Line: 5
+    Info (12022): Found design unit 1: Logicas-ArqLogicas File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd Line: 16
+    Info (12023): Found entity 1: Logicas File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Logicas.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
-    Info (12022): Found design unit 1: fullAdder-fAdd File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd Line: 11
-    Info (12023): Found entity 1: fullAdder File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd Line: 4
+    Info (12022): Found design unit 1: fullAdder-fAdd File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd Line: 11
+    Info (12023): Found entity 1: fullAdder File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullAdder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file fulla10b.vhd
-    Info (12022): Found design unit 1: fullA10b-fa10b File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 13
-    Info (12023): Found entity 1: fullA10b File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 5
+    Info (12022): Found design unit 1: fullA10b-fa10b File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 13
+    Info (12023): Found entity 1: fullA10b File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
-    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/divisor.vhd Line: 13
-    Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/divisor.vhd Line: 4
+    Info (12022): Found design unit 1: frecuencia_5Hz-Contador File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/divisor.vhd Line: 13
+    Info (12023): Found entity 1: frecuencia_5Hz File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/divisor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file debounce_dir.vhd
-    Info (12022): Found design unit 1: debounce_dir-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/debounce_dir.vhd Line: 12
-    Info (12023): Found entity 1: debounce_dir File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/debounce_dir.vhd Line: 4
+    Info (12022): Found design unit 1: debounce_dir-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/debounce_dir.vhd Line: 12
+    Info (12023): Found entity 1: debounce_dir File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/debounce_dir.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
-    Info (12022): Found design unit 1: datapath-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 16
-    Info (12023): Found entity 1: datapath File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 7
+    Info (12022): Found design unit 1: datapath-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 16
+    Info (12023): Found entity 1: datapath File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file controlador.vhd
-    Info (12022): Found design unit 1: controlador-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd Line: 14
-    Info (12023): Found entity 1: controlador File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd Line: 5
+    Info (12022): Found design unit 1: controlador-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd Line: 13
+    Info (12023): Found entity 1: controlador File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparador16.vhd
-    Info (12022): Found design unit 1: comparador16-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 11
-    Info (12023): Found entity 1: comparador16 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 4
+    Info (12022): Found design unit 1: comparador16-Behavioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 11
+    Info (12023): Found entity 1: comparador16 File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file compara1.vhd
-    Info (12022): Found design unit 1: compara1-Behavioral File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd Line: 10
-    Info (12023): Found entity 1: compara1 File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd Line: 4
+    Info (12022): Found design unit 1: compara1-Behavioral File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd Line: 10
+    Info (12023): Found entity 1: compara1 File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/compara1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file barrelshifters.vhd
-    Info (12022): Found design unit 1: barrelShifters-shifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd Line: 14
-    Info (12023): Found entity 1: barrelShifters File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd Line: 5
+    Info (12022): Found design unit 1: barrelShifters-shifters File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd Line: 14
+    Info (12023): Found entity 1: barrelShifters File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/barrelShifters.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-bhr File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 15
-    Info (12023): Found entity 1: ALU File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 5
+    Info (12022): Found design unit 1: ALU-bhr File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 15
+    Info (12023): Found entity 1: ALU File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file final.bdf
     Info (12023): Found entity 1: final
 Info (12127): Elaborating entity "final" for the top level hierarchy
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:inst"
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(11): used implicit default value for signal "player1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(11): used implicit default value for signal "player2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 11
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "zflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "ovflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "cflag" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at datapath.vhd(38): used explicit default value for signal "posPlayer1" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 38
-Warning (10540): VHDL Signal Declaration warning at datapath.vhd(39): used explicit default value for signal "posPlayer2" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 39
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 213
-Warning (10540): VHDL Signal Declaration warning at ALU.vhd(18): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "b_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "d_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "a_aux" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 22
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "z_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "s_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "ov_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "cf_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "cf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "z_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "ov_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "s_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "gtt_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "eqq_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "ltt_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
-Info (12128): Elaborating entity "uapro" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 115
-Warning (10540): VHDL Signal Declaration warning at uapro.vhd(31): used explicit default value for signal "auxC4" because signal was never assigned a value File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 31
-Warning (10036): Verilog HDL or VHDL warning at uapro.vhd(35): object "auxx" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 35
-Info (12128): Elaborating entity "fullA10b" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 63
-Warning (10873): Using initial value X (don't care) for net "Si[15]" at fullA10b.vhd(9) File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 9
-Info (12128): Elaborating entity "fullAdder" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 63
-Info (12128): Elaborating entity "negativoP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 78
-Info (12128): Elaborating entity "multP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 65
-Warning (10036): Verilog HDL or VHDL warning at multP.vhd(19): object "Sfmm" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 19
-Info (12128): Elaborating entity "Divisorsito" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 66
-Warning (10620): VHDL warning at Divisorsito.vhd(40): comparison between unequal length operands always returns FALSE File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "aS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "bS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 57
-Info (12128): Elaborating entity "Logicas" for hierarchy "datapath:inst|ALU:alu1|Logicas:unidad_logica" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 116
-Info (12128): Elaborating entity "barrelShifters" for hierarchy "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 117
-Info (12128): Elaborating entity "comparador16" for hierarchy "datapath:inst|ALU:alu1|comparador16:comparador" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 118
-Warning (10036): Verilog HDL or VHDL warning at comparador16.vhd(12): object "eqs" assigned a value but never read File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 12
-Info (12128): Elaborating entity "compara1" for hierarchy "datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0" File: C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(11): used implicit default value for signal "player1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(11): used implicit default value for signal "player2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 11
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "zflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "ovflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(33): object "cflag" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(37): used implicit default value for signal "cursor_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 37
+Warning (10540): VHDL Signal Declaration warning at datapath.vhd(38): used explicit default value for signal "posPlayer1" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at datapath.vhd(39): used explicit default value for signal "posPlayer2" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 39
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:inst|ALU:alu1" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/datapath.vhd Line: 216
+Warning (10540): VHDL Signal Declaration warning at ALU.vhd(18): used explicit default value for signal "sel_aux_2" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "b_aux" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(21): object "d_aux" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at ALU.vhd(22): object "a_aux" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "z_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "s_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "ov_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at ALU.vhd(23): used implicit default value for signal "cf_aux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "cf_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "z_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "ov_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "s_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "gtt_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "eqq_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Warning (10492): VHDL Process Statement warning at ALU.vhd(107): signal "ltt_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 107
+Info (12128): Elaborating entity "uapro" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 115
+Warning (10540): VHDL Signal Declaration warning at uapro.vhd(31): used explicit default value for signal "auxC4" because signal was never assigned a value File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at uapro.vhd(35): object "auxx" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 35
+Info (12128): Elaborating entity "fullA10b" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 63
+Warning (10873): Using initial value X (don't care) for net "Si[15]" at fullA10b.vhd(9) File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 9
+Info (12128): Elaborating entity "fullAdder" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|fullAdder:s0" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 63
+Info (12128): Elaborating entity "negativoP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|fullA10b:suma|negativoP:negativo" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/fullA10b.vhd Line: 78
+Info (12128): Elaborating entity "multP" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|multP:mult" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 65
+Warning (10036): Verilog HDL or VHDL warning at multP.vhd(19): object "Sfmm" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/multP.vhd Line: 19
+Info (12128): Elaborating entity "Divisorsito" for hierarchy "datapath:inst|ALU:alu1|uapro:unidad_aritmetica|Divisorsito:divi" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/uapro.vhd Line: 66
+Warning (10620): VHDL warning at Divisorsito.vhd(40): comparison between unequal length operands always returns FALSE File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 40
+Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "aS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at Divisorsito.vhd(57): signal "bS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/Divisorsito.vhd Line: 57
+Info (12128): Elaborating entity "Logicas" for hierarchy "datapath:inst|ALU:alu1|Logicas:unidad_logica" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 116
+Info (12128): Elaborating entity "barrelShifters" for hierarchy "datapath:inst|ALU:alu1|barrelShifters:barrel_shifters" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 117
+Info (12128): Elaborating entity "comparador16" for hierarchy "datapath:inst|ALU:alu1|comparador16:comparador" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/ALU.vhd Line: 118
+Warning (10036): Verilog HDL or VHDL warning at comparador16.vhd(12): object "eqs" assigned a value but never read File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 12
+Info (12128): Elaborating entity "compara1" for hierarchy "datapath:inst|ALU:alu1|comparador16:comparador|compara1:comp0" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/comparador16.vhd Line: 20
+Info (12128): Elaborating entity "controlador" for hierarchy "controlador:inst1"
+Info (12128): Elaborating entity "debounce_dir" for hierarchy "controlador:inst1|debounce_dir:debouncer1" File: C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/controlador.vhd Line: 45
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "A[11]" is stuck at GND
+    Warning (13410): Pin "A[10]" is stuck at GND
+    Warning (13410): Pin "A[9]" is stuck at GND
+    Warning (13410): Pin "A[8]" is stuck at GND
+    Warning (13410): Pin "A[7]" is stuck at GND
+    Warning (13410): Pin "A[6]" is stuck at GND
+    Warning (13410): Pin "A[5]" is stuck at GND
+    Warning (13410): Pin "A[4]" is stuck at GND
+    Warning (13410): Pin "A[3]" is stuck at GND
+    Warning (13410): Pin "A[2]" is stuck at GND
+    Warning (13410): Pin "A[1]" is stuck at GND
+    Warning (13410): Pin "A[0]" is stuck at GND
     Warning (13410): Pin "instrucciones[7]" is stuck at GND
     Warning (13410): Pin "instrucciones[6]" is stuck at GND
     Warning (13410): Pin "instrucciones[2]" is stuck at GND
+    Warning (13410): Pin "mov[8]" is stuck at GND
+    Warning (13410): Pin "mov[7]" is stuck at GND
+    Warning (13410): Pin "mov[6]" is stuck at GND
+    Warning (13410): Pin "mov[5]" is stuck at GND
+    Warning (13410): Pin "mov[4]" is stuck at GND
+    Warning (13410): Pin "mov[3]" is stuck at GND
+    Warning (13410): Pin "mov[2]" is stuck at GND
+    Warning (13410): Pin "mov[1]" is stuck at GND
+    Warning (13410): Pin "mov[0]" is stuck at GND
     Warning (13410): Pin "p1[8]" is stuck at GND
     Warning (13410): Pin "p1[7]" is stuck at GND
     Warning (13410): Pin "p1[6]" is stuck at GND
@@ -1424,14 +1492,20 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 213 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1217 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "up"
+    Warning (15610): No output dependent on input pin "down"
+    Warning (15610): No output dependent on input pin "izq"
+    Warning (15610): No output dependent on input pin "der"
+    Warning (15610): No output dependent on input pin "put"
+Info (21057): Implemented 1139 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 63 output pins
-    Info (21061): Implemented 1143 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Wed Jan 18 04:01:51 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 1069 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Wed Jan 18 10:24:00 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -6,14 +6,13 @@ ENTITY controlador IS
 	PORT(
 		up, down, izq, der, put, clk : IN STD_LOGIC;
 		sal : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-		put_sal : OUT STD_LOGIC;
-		salP1, salP2: OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+		put_sal : OUT STD_LOGIC
 	);
 END ENTITY controlador;
 
 ARCHITECTURE bhr OF controlador IS
 	SIGNAL upD, downD, izqD, derD, putD : STD_LOGIC;
-	SIGNAL player : STD_LOGIC_VECTOR(8 DOWNTO 0) := "100000000";
+	SIGNAL player : STD_LOGIC_VECTOR(8 DOWNTO 0) := "000000001";
 
 	COMPONENT debounce_dir IS
 		PORT(
@@ -41,9 +40,6 @@ BEGIN
 	END PROCESS;
 	sal <= player;
 	put_sal <= putD;
-	--PRUEBAS
-	salP1 <= "010101010";
-	salP2 <= "001010101";
 	
 	
 debouncer1: debounce_dir PORT MAP(up, down, izq, der, put, clk, upD, downD, izqD, derD, putD);

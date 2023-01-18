@@ -34,7 +34,7 @@ ARCHITECTURE bhr OF datapath IS
 	SIGNAL OP, dir : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	
 	------------APARTADO NUEVO------------------
-	SIGNAL cursor_aux : STD_LOGIC_VECTOR(8 DOWNTO 0) := mov;
+	SIGNAL cursor_aux : STD_LOGIC_VECTOR(8 DOWNTO 0);
 	SIGNAL posPlayer1 : STD_LOGIC_VECTOR(8 DOWNTO 0):= "000000001";
 	SIGNAL posPlayer2 : STD_LOGIC_VECTOR(8 DOWNTO 0):= "000000010";
 	SIGNAL enable : STD_LOGIC := '0';
@@ -83,22 +83,22 @@ ARCHITECTURE bhr OF datapath IS
 	
 	
 	CONSTANT INSTRUCTIONS : list := (
-		0 => "1101"&"0000"&"1001", -- LOAD CURSOR
-		1 => "1101"&"0001"&"1010", -- LOAD POS1
-		2 => "1101"&"0010"&"1011", -- LOAD POS2
-		3 => "0011"&"0001"&"0000", -- AND POS1 CURSOR
-		4 => "1011"&"0000"&"0001", -- COMPARE AND_RES POS1
-		5 => "1110"&"0000"&"0010", -- JUMP 15 WHEN EQ
-		6 => "0011"&"0010"&"0000", -- AND POS1 CURSOR
-		7 => "1011"&"0000"&"0010", -- COMPARE AND_RES POS2
-		8 => "1110"&"0000"&"0010", -- JUMP 15 WHEN EQ
-		9 => "0000"&"0000"&"0000",
-		10 => "0000"&"0000"&"0000",
-		11 => "0000"&"0000"&"0000",
-		12 => "0000"&"0000"&"0000",
-		13 => "0000"&"0000"&"0000",
-		14 => "0000"&"0000"&"0000",
-		15 => "1111"&"0000"&"0000"
+		0 => "1100"&"0000"&"0001", 
+		1 => "1100"&"0000"&"0010", 
+		2 => "1100"&"0000"&"0011", 
+		3 => "1101"&"0000"&"1001",-- LOAD CURSOR         
+		4 => "1101"&"0001"&"1010",-- LOAD POS1           
+		5 => "1101"&"0010"&"1011",-- LOAD POS2           
+		6 => "0011"&"0001"&"0000",-- AND POS1 CURSOR     
+		7 => "1011"&"0000"&"0001",-- COMPARE AND_RES POS1
+		8 => "1110"&"0000"&"0010",-- JUMP 15 WHEN EQ     
+		9 => "0011"&"0010"&"0000",-- AND POS2 CURSOR     
+		10 =>"1011"&"0000"&"0010",-- COMPARE AND_RES POS2
+		11 =>"1110"&"0000"&"0010",-- JUMP 15 WHEN EQ     
+		12 =>"0000"&"0000"&"0000",
+		13 =>"0000"&"0000"&"0000",
+		14 =>"0000"&"0000"&"0000",
+		15 =>"1111"&"0000"&"0000"
 	);
 	
 	COMPONENT ALU IS 
@@ -121,11 +121,8 @@ BEGIN
 			PC <= 0;
 		ELSIF (RISING_EDGE(clk)) THEN
 			IF(enable = '0') THEN
-				IF(mov /= cursor_aux) THEN
+				IF(cursor_aux /= mov) THEN
 					cursor_aux <= mov;
-					values(9) <= "0000000" & cursor_aux;
-					values(10) <= "0000000" & posPlayer1;
-					values(11) <= "0000000" & posPlayer2;
 					enable <= '1';
 				ELSE
 					enable <= '0';
@@ -165,6 +162,13 @@ BEGIN
 									END IF;
 									
 								ELSIF (MAR(11 DOWNTO 8) = "1100") THEN
+									IF (MAR(3 DOWNTO 0) = "0001") THEN
+										values(9) <= "0000000" & cursor_aux;
+									ELSIF (MAR(3 DOWNTO 0) = "0010") THEN
+										values(10) <="0000000" & posPlayer1;
+									ELSIF (MAR(3 DOWNTO 0) = "0011") THEN
+										values(11) <="0000000" & posPlayer2;
+									END IF;
 									REG_D <= values(to_integer(unsigned(MAR(3 DOWNTO 0))));
 								ELSE
 									-- El resto de operaciones son controladas por la ALU
@@ -207,7 +211,7 @@ BEGIN
 	END PROCESS;
 	
 	cursor <= cursor_aux;
-	salA <= reggy(1)(11 DOWNTO 0);
+	salA <= values(9)(11 DOWNTO 0);
 	salB <= reggy(2)(11 DOWNTO 0);
 	ins <= MAR;
 	alu1: ALU PORT MAP(REG_A, REG_B, OP, MBR, clk, rst, zflag, sflag, ovflag, cflag);
