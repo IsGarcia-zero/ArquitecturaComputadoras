@@ -116,11 +116,151 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "sp1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sp3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sp4[1]",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "down",
 					"strict" : false
 				},
 				{
@@ -129,10 +269,6 @@
 				},
 				{
 					"name" : "up",
-					"strict" : false
-				},
-				{
-					"name" : "down",
 					"strict" : false
 				},
 				{

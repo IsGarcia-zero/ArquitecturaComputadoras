@@ -3,39 +3,39 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'frecuencia_5Hz:inst3|salida'
-Slack : -30.599
-TNS   : -2211.665
+Slack : -32.489
+TNS   : -4325.274
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.213
-TNS   : -58.116
+Slack : -4.273
+TNS   : -60.371
 
 Type  : Slow 1200mV 85C Model Hold 'frecuencia_5Hz:inst3|salida'
-Slack : 0.453
+Slack : 0.425
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.510
+Slack : 0.509
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'frecuencia_5Hz:inst3|salida'
 Slack : -3.201
-TNS   : -334.802
+TNS   : -540.462
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -43.149
 
 Type  : Slow 1200mV 0C Model Setup 'frecuencia_5Hz:inst3|salida'
-Slack : -28.208
-TNS   : -2071.053
+Slack : -29.606
+TNS   : -4064.512
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.931
-TNS   : -50.164
+Slack : -3.990
+TNS   : -52.294
 
 Type  : Slow 1200mV 0C Model Hold 'frecuencia_5Hz:inst3|salida'
-Slack : 0.402
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -44,22 +44,22 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst3|salida'
 Slack : -3.201
-TNS   : -334.802
+TNS   : -540.462
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -43.149
 
 Type  : Fast 1200mV 0C Model Setup 'frecuencia_5Hz:inst3|salida'
-Slack : -12.745
-TNS   : -845.707
+Slack : -13.501
+TNS   : -1698.652
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.241
-TNS   : -10.333
+Slack : -1.266
+TNS   : -11.267
 
 Type  : Fast 1200mV 0C Model Hold 'frecuencia_5Hz:inst3|salida'
-Slack : 0.187
+Slack : 0.149
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -68,10 +68,10 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -31.768
+TNS   : -31.769
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'frecuencia_5Hz:inst3|salida'
 Slack : -1.000
-TNS   : -224.000
+TNS   : -360.000
 
 ------------------------------------------------------------
