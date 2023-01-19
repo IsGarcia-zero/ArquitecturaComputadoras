@@ -6,8 +6,7 @@ ENTITY barrelShifters IS
     PORT (
         a : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
         cntrl, clk, iniciar : IN STD_LOGIC;
-        salShifters : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-        salPrub : OUT STD_LOGIC
+        salShifters : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
 END ENTITY barrelShifters;
 
@@ -15,21 +14,25 @@ ARCHITECTURE shifters OF barrelShifters IS
     SIGNAL aux : STD_LOGIC_VECTOR(15 DOWNTO 0);
     --signal i: INTEGER RANGE 0 TO 3 := 0;
 BEGIN
-    --Las opciones del shifter
-    Shifter : PROCESS (clk, cntrl, iniciar)
-    BEGIN
-        IF iniciar = '0' THEN
-            aux <= "0000000000000000";
-        ELSIF (rising_edge(clk)) THEN
-            IF (cntrl = '0') THEN
-                --LSL
-                aux <= a(14 DOWNTO 0) & '0';
-                --salShifters <= aux(2 DOWNTO 0);
-            ELSE
-                aux <= a(15) & a(15 DOWNTO 1); --ASR
-            END IF;
-            salShifters <= aux;
-        END IF;
-    END PROCESS Shifter;
-    salPrub <= clk;
+--    --Las opciones del shifter
+--    Shifter : PROCESS (clk, cntrl, iniciar)
+--    BEGIN
+--        IF iniciar = '0' THEN
+--            aux <= "0000000000000000";
+--        ELSIF (rising_edge(clk)) THEN
+--            IF (cntrl = '0') THEN
+--                --LSL
+--                aux <= a(14 DOWNTO 0) & '0';
+--                --salShifters <= aux(2 DOWNTO 0);
+--            ELSE
+--                aux <= a(15) & a(15 DOWNTO 1); --ASR
+--            END IF;
+--            salShifters <= aux;
+--        END IF;
+--    END PROCESS Shifter;
+	WITH cntrl SELECT salShifters <=
+		"0000000"&(a(0) & a(8 DOWNTO 1)) WHEN '0',
+		"0000000"&(a(7 DOWNTO 0) & a(8)) WHEN '1';
+	 
+	 
 END ARCHITECTURE shifters;

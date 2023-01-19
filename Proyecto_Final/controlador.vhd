@@ -5,6 +5,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY controlador IS
 	PORT(
 		up, down, izq, der, put, clk : IN STD_LOGIC;
+		cnt : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
 		sal : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
 		put_sal : OUT STD_LOGIC
 	);
@@ -12,7 +13,7 @@ END ENTITY controlador;
 
 ARCHITECTURE bhr OF controlador IS
 	SIGNAL upD, downD, izqD, derD, putD : STD_LOGIC;
-	SIGNAL player : STD_LOGIC_VECTOR(8 DOWNTO 0) := "000000001";
+	SIGNAL player : STD_LOGIC_VECTOR(8 DOWNTO 0);
 
 	COMPONENT debounce_dir IS
 		PORT(
@@ -26,6 +27,7 @@ BEGIN
 	PROCESS(upD, downD, izqD, derD, putD, clk)
 	BEGIN
 		IF (RISING_EDGE(clk)) THEN
+			player <= cnt;
 		-- Direcciones
 			IF (izqD = '1') THEN
 				player <= player(7 DOWNTO 0) & player(8);
@@ -40,7 +42,5 @@ BEGIN
 	END PROCESS;
 	sal <= player;
 	put_sal <= putD;
-	
-	
 debouncer1: debounce_dir PORT MAP(up, down, izq, der, put, clk, upD, downD, izqD, derD, putD);
 END ARCHITECTURE;

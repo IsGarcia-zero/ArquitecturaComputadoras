@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name TOP_LEVEL_ENTITY final
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:13:48  JANUARY 17, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -82,4 +82,43 @@ set_global_assignment -name BDF_FILE final.bdf
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_location_assignment PIN_30 -to filas[0]
+set_location_assignment PIN_31 -to filas[1]
+set_location_assignment PIN_32 -to filas[2]
+set_location_assignment PIN_33 -to filas[3]
+set_location_assignment PIN_51 -to filas[4]
+set_location_assignment PIN_52 -to filas[5]
+set_location_assignment PIN_53 -to filas[6]
+set_location_assignment PIN_54 -to filas[7]
+set_location_assignment PIN_132 -to R[0]
+set_location_assignment PIN_129 -to R[1]
+set_location_assignment PIN_128 -to R[2]
+set_location_assignment PIN_127 -to R[3]
+set_location_assignment PIN_126 -to R[4]
+set_location_assignment PIN_125 -to R[5]
+set_location_assignment PIN_124 -to R[6]
+set_location_assignment PIN_121 -to R[7]
+set_location_assignment PIN_120 -to B[0]
+set_location_assignment PIN_119 -to B[1]
+set_location_assignment PIN_115 -to B[2]
+set_location_assignment PIN_114 -to B[3]
+set_location_assignment PIN_113 -to B[4]
+set_location_assignment PIN_112 -to B[5]
+set_location_assignment PIN_111 -to B[6]
+set_location_assignment PIN_110 -to B[7]
+set_location_assignment PIN_38 -to G[7]
+set_location_assignment PIN_39 -to G[6]
+set_location_assignment PIN_42 -to G[5]
+set_location_assignment PIN_43 -to G[4]
+set_location_assignment PIN_44 -to G[3]
+set_location_assignment PIN_46 -to G[2]
+set_location_assignment PIN_49 -to G[1]
+set_location_assignment PIN_50 -to G[0]
+set_location_assignment PIN_91 -to clk
+set_location_assignment PIN_60 -to der
+set_location_assignment PIN_58 -to down
+set_location_assignment PIN_59 -to izq
+set_location_assignment PIN_64 -to put
+set_location_assignment PIN_73 -to rst
+set_location_assignment PIN_55 -to up
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

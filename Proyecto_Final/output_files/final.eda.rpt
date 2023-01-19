@@ -1,6 +1,6 @@
 EDA Netlist Writer report for final
-Wed Jan 18 11:36:47 2023
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Thu Jan 19 04:23:05 2023
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jan 18 11:36:47 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Jan 19 04:23:05 2023 ;
 ; Revision Name             ; final                                 ;
 ; Top-level Entity Name     ; final                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                          ;
-+-----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                     ;
-+-----------------------------------------------------------------------------------------------------+
-; C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/simulation/activehdl/final.vho ;
-+-----------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                    ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                               ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/simulation/activehdl/final.vho ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,14 +80,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Wed Jan 18 11:36:45 2023
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Thu Jan 19 04:23:05 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off final -c final
-Info (204019): Generated file final.vho in folder "C:/Users/Iljim/Desktop/Arqui/ArquitecturaComputadoras/Proyecto_Final/simulation/activehdl/" for EDA simulation tool
+Info (204019): Generated file final.vho in folder "C:/Users/Angel/Documents/Documentos de ESCOM/5to Semestre/Arquitectura de Computadoras/ArquitecturaComputadoras/Proyecto_Final/simulation/activehdl/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Wed Jan 18 11:36:47 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Thu Jan 19 04:23:05 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 

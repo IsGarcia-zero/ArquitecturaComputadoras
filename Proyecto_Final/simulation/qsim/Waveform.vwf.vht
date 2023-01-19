@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "01/18/2023 04:10:23"
+-- Generated on "01/19/2023 00:11:30"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -37,23 +37,31 @@ ARCHITECTURE final_arch OF final_vhd_vec_tst IS
 SIGNAL A : STD_LOGIC_VECTOR(11 DOWNTO 0);
 SIGNAL B : STD_LOGIC_VECTOR(11 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
+SIGNAL der : STD_LOGIC;
+SIGNAL down : STD_LOGIC;
 SIGNAL instrucciones : STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL izq : STD_LOGIC;
 SIGNAL mov : STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL p1 : STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL p2 : STD_LOGIC_VECTOR(8 DOWNTO 0);
-SIGNAL player : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL put : STD_LOGIC;
 SIGNAL rst : STD_LOGIC;
+SIGNAL up : STD_LOGIC;
 COMPONENT final
 	PORT (
 	A : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	B : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	clk : IN STD_LOGIC;
+	der : IN STD_LOGIC;
+	down : IN STD_LOGIC;
 	instrucciones : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	izq : IN STD_LOGIC;
 	mov : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
 	p1 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
 	p2 : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-	player : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-	rst : IN STD_LOGIC
+	put : IN STD_LOGIC;
+	rst : IN STD_LOGIC;
+	up : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -63,12 +71,16 @@ BEGIN
 	A => A,
 	B => B,
 	clk => clk,
+	der => der,
+	down => down,
 	instrucciones => instrucciones,
+	izq => izq,
 	mov => mov,
 	p1 => p1,
 	p2 => p2,
-	player => player,
-	rst => rst
+	put => put,
+	rst => rst,
+	up => up
 	);
 
 -- clk
@@ -79,71 +91,48 @@ LOOP
 	WAIT FOR 200 ps;
 	clk <= '1';
 	WAIT FOR 200 ps;
-	IF (NOW >= 50000 ps) THEN WAIT; END IF;
+	IF (NOW >= 200000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
--- player[8]
-t_prcs_player_8: PROCESS
+
+-- up
+t_prcs_up: PROCESS
 BEGIN
-	player(8) <= '0';
+	up <= '0';
 WAIT;
-END PROCESS t_prcs_player_8;
--- player[7]
-t_prcs_player_7: PROCESS
+END PROCESS t_prcs_up;
+
+-- down
+t_prcs_down: PROCESS
 BEGIN
-	player(7) <= '0';
+	down <= '0';
 WAIT;
-END PROCESS t_prcs_player_7;
--- player[6]
-t_prcs_player_6: PROCESS
+END PROCESS t_prcs_down;
+
+-- der
+t_prcs_der: PROCESS
 BEGIN
-	player(6) <= '0';
+	der <= '0';
+	WAIT FOR 23000 ps;
+	der <= '1';
+	WAIT FOR 1000 ps;
+	der <= '0';
 WAIT;
-END PROCESS t_prcs_player_6;
--- player[5]
-t_prcs_player_5: PROCESS
+END PROCESS t_prcs_der;
+
+-- izq
+t_prcs_izq: PROCESS
 BEGIN
-	player(5) <= '0';
+	izq <= '0';
 WAIT;
-END PROCESS t_prcs_player_5;
--- player[4]
-t_prcs_player_4: PROCESS
+END PROCESS t_prcs_izq;
+
+-- put
+t_prcs_put: PROCESS
 BEGIN
-	player(4) <= '0';
+	put <= '0';
 WAIT;
-END PROCESS t_prcs_player_4;
--- player[3]
-t_prcs_player_3: PROCESS
-BEGIN
-	player(3) <= '0';
-WAIT;
-END PROCESS t_prcs_player_3;
--- player[2]
-t_prcs_player_2: PROCESS
-BEGIN
-	player(2) <= '0';
-WAIT;
-END PROCESS t_prcs_player_2;
--- player[1]
-t_prcs_player_1: PROCESS
-BEGIN
-	player(1) <= '0';
-	WAIT FOR 12000 ps;
-	player(1) <= '1';
-	WAIT FOR 19000 ps;
-	player(1) <= '0';
-WAIT;
-END PROCESS t_prcs_player_1;
--- player[0]
-t_prcs_player_0: PROCESS
-BEGIN
-	player(0) <= '1';
-	WAIT FOR 12000 ps;
-	player(0) <= '0';
-	WAIT FOR 19000 ps;
-	player(0) <= '1';
-WAIT;
-END PROCESS t_prcs_player_0;
+END PROCESS t_prcs_put;
 
 -- rst
 t_prcs_rst: PROCESS

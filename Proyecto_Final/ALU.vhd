@@ -41,9 +41,7 @@ COMPONENT Logicas IS
 		a, b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 		cntrl : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		clk : IN STD_LOGIC;
-		salida : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-		s_op : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-		sf : OUT STD_LOGIC
+		salida : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT Logicas;
 
@@ -51,8 +49,7 @@ COMPONENT barrelShifters IS
     PORT (
         a : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
         cntrl, clk, iniciar : IN STD_LOGIC;
-        salShifters : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-        salPrub : OUT STD_LOGIC
+        salShifters : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
 END COMPONENT barrelShifters;
 
@@ -70,7 +67,7 @@ BEGIN
 	BEGIN
 		CASE sel IS
 			WHEN "0000" => 
-				R <= "1111000011110000";
+				R <= "0000000000000000";
 				sel_aux <= "00";
 			WHEN "0001" => -- NOT
 				sel_aux <= "10";
@@ -104,7 +101,7 @@ BEGIN
 				R <= ua_sal;
 			WHEN "1011" => --Comparacion
 				sel_aux <= "00";
-				R <= "000000000" & cf_aux & z_aux & ov_aux & s_aux & gtt_aux & eqq_aux & ltt_aux;
+				R <= "0000000000000" & gtt_aux & eqq_aux & ltt_aux;
 			WHEN OTHERS => 
 				R <= "1111111111111111";
 				sel_aux <= "00";
@@ -113,8 +110,8 @@ BEGIN
 	
 
 unidad_aritmetica: uapro PORT MAP(A(14 DOWNTO 0),B(14 DOWNTO 0),sel_aux, clk,rst,A(15),B(15),ua_sal,c_flag, z_flag,ov_flag, s_flag  );
-unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk, log_sal,a_aux,b_aux);
-barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal, d_aux);
+unidad_logica: Logicas PORT MAP(A,B, sel_aux, clk,log_sal);
+barrel_shifters: barrelShifters PORT MAP(A,sel_aux_2,clk, '1', bar_sal);
 comparador: comparador16 PORT MAP(A,B,'0','0',gtt_aux,eqq_aux,ltt_aux);
 
 

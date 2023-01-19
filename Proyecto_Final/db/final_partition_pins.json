@@ -4,67 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "A[8]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B[11]",
-					"strict" : false
-				},
-				{
-					"name" : "B[10]",
-					"strict" : false
-				},
-				{
-					"name" : "B[9]",
-					"strict" : false
-				},
-				{
-					"name" : "B[8]",
-					"strict" : false
-				},
-				{
 					"name" : "B[7]",
 					"strict" : false
 				},
 				{
 					"name" : "B[6]",
-					"strict" : false
-				},
-				{
-					"name" : "B[5]",
 					"strict" : false
 				},
 				{
@@ -76,10 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
 					"name" : "B[1]",
 					"strict" : false
 				},
@@ -88,75 +28,91 @@
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[11]",
+					"name" : "filas[7]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[10]",
+					"name" : "filas[6]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[9]",
+					"name" : "filas[5]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[8]",
+					"name" : "filas[4]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[5]",
+					"name" : "filas[3]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[4]",
+					"name" : "filas[2]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[3]",
+					"name" : "filas[1]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[1]",
+					"name" : "filas[0]",
 					"strict" : false
 				},
 				{
-					"name" : "instrucciones[0]",
+					"name" : "G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[8]",
+					"name" : "G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[7]",
+					"name" : "G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[6]",
+					"name" : "G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[5]",
+					"name" : "G[1]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[4]",
+					"name" : "G[0]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[3]",
+					"name" : "R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[2]",
+					"name" : "R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[1]",
+					"name" : "R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "mov[0]",
+					"name" : "R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R[0]",
 					"strict" : false
 				},
 				{
@@ -168,11 +124,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "izq",
-					"strict" : false
-				},
-				{
-					"name" : "der",
+					"name" : "put",
 					"strict" : false
 				},
 				{
@@ -184,7 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "put",
+					"name" : "izq",
+					"strict" : false
+				},
+				{
+					"name" : "der",
 					"strict" : false
 				}
 			]
